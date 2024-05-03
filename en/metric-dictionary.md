@@ -29,7 +29,7 @@
 ### Metric List
 | 한국어              | 리소스명    | 기본 범례(Legend)                                                              | 단위(Unit)         |
 |------------------|---------|----------------------------------------------------------------------------|------------------|
-| CPU 사용률  CPU     | CPU     |                                                                            | 백분율(0-100)       |
+| CPU 사용률          | CPU     |                                                                            | 백분율(0-100)       |
 | 코어별 CPU 사용률      | CPU     | {{nhncloud_instance_id}} cpu={{cpu}}                                       | 백분율(0-100)       |
 | CPU 상세(user)     | CPU     | {{nhncloud_instance_id}}                                                   | 비율(0.00 - 1.00)  |
 | CPU 상세(nice)     | CPU     | {{nhncloud_instance_id}}                                                   | 비율(0.00 - 1.00)  |
@@ -75,13 +75,13 @@
 - Instance 지표에 대해 범례를 적용할 수 있습니다.
 - 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
 
-| 범례 명                 | 설명                     |
-|----------------------|------------------------|
-| nhncloud_instance_id | instance의 이름           |
-| cpu                  | instance의 CPU 번호       |
-| device               | instance의 디스크 장치       |
-| fstype               | instance의 파일 시스템 종류    |
-| path                 | instance의 디스크 마운트 경로   |
+| 범례 명                 | 설명                      |
+|----------------------|-------------------------|
+| nhncloud_instance_id | instance의 이름            |
+| cpu                  | instance의 CPU 번호        |
+| device               | instance의 디스크 장치        |
+| fstype               | instance의 파일 시스템 종류     |
+| path                 | instance의 디스크 마운트 경로    |
 | interface            | instance의 네트워크 인터페이스 이름 |
 
 ## NCS
