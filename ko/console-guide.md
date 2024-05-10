@@ -36,15 +36,15 @@
 
 ### 2) 대시보드 생성
 
-![대시보드 생성 후](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_02-1.png)
+![대시보드 추가 모달](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_02-1.png)
 
 **조회 모드**에서 대시보드 탭 우측의 `[+]` 버튼을 누르면 대시보드 추가 모달이 열립니다.
 
 ![빈 대시보드](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_02-2.png)
 
-만약 생성된 대시보드가 없다면 `[+ 대시보드 추가]` 버튼이 표시됩니다.
+만약 생성된 대시보드가 없다면 `[+ 대시보드 생성]` 버튼이 표시됩니다.
 
-![대시보드 추가 모달](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_02-1.png)
+![대시보드 생성 후](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_02-3.png)
 
 대시보드 **이름**은 필수 값이므로 반드시 입력해 주셔야 합니다. 대시보드 이름은 서로 중복되어도 생성이 가능하지만, 되도록 고유한 이름을 사용하시는 것을 권장합니다.
 대시보드 **설명**은 선택 값으로, 대시보드를 설명할 수 있는 내용을 입력하시면 됩니다.
@@ -56,7 +56,7 @@
 
 ![위젯 예시](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03-2.png)
 
-`위젯`은 대시보드를 구성하는 최소 단위이며, 위젯은 `[+ 위젯 추가]` 버튼 및 `위젯 추가`, `위젯 템플릿 추가` 메뉴를 통해서 생성할 수 있습니다. `위젯`의 크기와 위치는 대시보드 **편집 모드**에서 자유롭게 변경할 수 있습니다.
+`위젯`은 대시보드를 구성하는 최소 단위이며, 위젯은 `[+ 위젯 추가]` 버튼과 `위젯 추가`, `위젯 템플릿 추가` 메뉴를 통해서 생성할 수 있습니다. `위젯`의 크기와 위치는 대시보드 **편집 모드**에서 자유롭게 변경할 수 있습니다.
 
 ![위젯 그룹 예시](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03-3.png)
 
@@ -84,7 +84,7 @@
 
 ![위젯 추가 화면 미리 보기 레이어](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_a_01-3.png)
 
-그래프 유형을 변경하거나 지표 항목 필터를 수정해서 최종 반영될 차트 위젯의 모습을 확인하고 싶을 때, 화면 우측 상단의 미리 보기 토글 버튼을 통해서 필터와 범례 값을 적용한 차트 위젯을 실시간으로 확인할 수 있는 미리보기 레이어를 여닫을 수 있습니다. 미리보기 레이어는 조금 더 넓게 볼 수 있도록 좌/우 너비 조절이 가능합니다.
+그래프 유형을 변경하거나 지표 항목 필터를 수정해서 최종 반영될 차트 위젯의 모습을 확인하고 싶을 때, 화면 우측 상단의 `[미리 보기] 토글 버튼`을 통해서 필터와 범례 값을 적용한 차트 위젯을 실시간으로 확인할 수 있는 미리보기 레이어를 여닫을 수 있습니다. 미리보기 레이어는 조금 더 넓게 볼 수 있도록 좌/우 너비 조절이 가능합니다.
 
 
 ##### ii) 위젯 템플릿 추가
@@ -118,11 +118,15 @@
 `대시보드 내 위젯 복제` 메뉴를 사용해서 대시보드에 위젯을 복제할 수 있습니다. 복제된 위젯은 최 하단에 추가됩니다.
 `다른 대시보드에 위젯 복제` 메뉴를 사용해서 다른 대시보드에 위젯을 복제할 수 있습니다. 이때, 위젯을 추가할 대시보드를 선택할 수 있는 모달이 열립니다.
 
+![다른 대시보드에 위젯 복제 모달](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-2.png)
+
 #### c. 알림 생성
-![위젯 context 메뉴](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_c_01-1.png)
+![위젯 context 메뉴](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-3.png)
 
 알림 생성 메뉴를 선택하면 `알림 관리 > 알림 생성` 화면으로 이동하며, 해당 위젯의 정보가 입력된 상태로 간편하게 알림을 생성할 수 있습니다. 위젯 이름, 서비스, 지표 항목, 지표 항목 필터 정보가 이관됩니다.
 알림 조건 및 알림 수신 대상만 입력하면 간편하게 알림을 생성할 수 있습니다.
+
+![위젯 알림 생성으로 접근한 경우](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_c-1.png)
 
 
 ### 4) 대시보드 관리
@@ -141,7 +145,7 @@
 ![위젯 데이터 다운로드 메뉴](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_05-1.png)
 
 대시보드의 모든 위젯 데이터를 PNG 이미지나, CSV 파일, XLSX 파일로 다운로드 할 수 있습니다. 저장되는 파일명은 대시보드 이름이 되며, CSV 다운로드 타입의 경우, 대시보드 이름으로 압축한 ZIP 파일로 다운로드 됩니다. 내부에는 각 위젯 이름으로 된 개별 CSV 파일이 들어있습니다.
-CSV, XLSX 다운로드 타입의 경우, 시작 일시 기준으로 최대 3개월간의 데이터만 다운로드할 수 있습니다. 조회 기간이 1개월 미만일 경우 5분 간격으로 데이터를 제공하며, 1개월 이상은 1일 간격으로 데이터를 제공합니다.
+CSV, XLSX 다운로드 타입의 경우, **시작 일시 기준으로 최대 3개월간의 데이터만 다운로드**할 수 있습니다. 조회 기간이 1개월 미만일 경우 5분 간격으로 데이터를 제공하며, 1개월 이상은 1일 간격으로 데이터를 제공합니다.
 지정한 조회 기간이 길거나 위젯과 위젯에 포함된 지표 데이터가 많을수록 다운로드에 소요되는 시간이 오래 걸릴 수 있습니다.
 
 ## 2. 알림 관리
@@ -233,3 +237,6 @@ CSV, XLSX 다운로드 타입의 경우, 시작 일시 기준으로 최대 3개�
 
 지표 수집을 중단한 경우, 해당 서비스의 지표를 사용해서 생성해 둔 위젯에서 해당 지표가 더 이상 노출되지 않고 해당 지표의 범례가 비활성화됩니다.
 
+## 4. 예시 화면
+
+![대시보드 예시](https://static.toastoven.net/prod_cloud_monitoring/Overview.png)
