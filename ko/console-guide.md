@@ -151,9 +151,11 @@ CSV, XLSX 다운로드 타입의 경우, **시작 일시 기준으로 최대 3�
 ## 2. 알림 관리
 **Monitoring > Cloud Monitoring > 알림 설정**에서는 NHN Cloud 자원에 알림을 추가할 수 있고, 알림 발생 이력을 확인할 수 있습니다.
 
+![알림 설정 목록 화면](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01-1.png)
+
 ### 1) 알림 설정
 
-![알림 설정 목록 화면](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01-1.png)
+![알림 설정 목록 화면 - 생성 함](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_a-4.png)
 
 알림 설정 화면에서는 생성한 알림의 정보를 확인할 수 있는 테이블이 노출되며, '알림 명', '알림 사용 여부', '생성 일시'로 테이블의 정렬을 변경할 수 있습니다.
 `알림 사용 여부 토글`을 통해서 알림을 활성화 또는 비활성화할 수 있습니다.
@@ -176,7 +178,6 @@ CSV, XLSX 다운로드 타입의 경우, **시작 일시 기준으로 최대 3�
 
 알림 수신 대상은 1개 이상 선택해야 합니다. 알림 수신 대상 유형은 `알림 수신 그룹`만 지원되며, `프로젝트 관리 > 알림 수신 그룹 관리` 화면에서 관리할 수 있습니다.
 
-![알림 설정 목록 화면 - 생성 함](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_a-4.png)
 
 #### b. 알림 상세 보기 모달
 
@@ -193,7 +194,6 @@ CSV, XLSX 다운로드 타입의 경우, **시작 일시 기준으로 최대 3�
 
 > 참고: 지속 시간은 알림 발생 시점에서 알림 종료 시점까지의 시간을 나타냅니다.
 > 알림이 발생한 상태에서 해당 알림이 종료되기 전에 알림을 비활성화한다면, 명시적으로 알림이 종료되지 않았기 때문에 `지속 시간이 계속 증가`할 수 있습니다.
-> 위의 경우, 알림 자체는 비활성화되었기 때문에 알림이 발송되지는 않습니다.
 
 #### a. 알림 발생 이력 조회
 
