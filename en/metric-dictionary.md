@@ -19,8 +19,8 @@
 ### Legend
 - You can apply a legend for metrics.
 - When you apply a legend, the metric is applied in legend format.
-  - For example, if you apply {{nhncloud_region}} to the legend, each metric will be named with the region, such as kr1, kr2.
-- Common legends are shown below.
+  - For example, if you apply {{nhncloud_region}} to the legend, each metric appears as the region, such as kr1, kr2.
+- Common legends are as follows.
 
 | Filter name             | Description           | Value                                                                  |
 |-----------------|--------------|--------------------------------------------------------------------|
@@ -97,10 +97,10 @@
 | CPUs assigned to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
 | Memory usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
 | Memory allocated to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megabytes (MiB)      |
-| GPU Usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
-| GPU Memory Usage   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
-| GPU Power Usage    | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megawatts (mW)        |
-| GPU Temperature        | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Celsius (℃)           |
+| GPU usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
+| GPU memory usage   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
+| GPU power usage    | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megawatts (mW)        |
+| GPU temperature        | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Celsius (℃)           |
 | GPUs assigned to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
 | Network data reception   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Bytes per second (bytes/s) |
 | Network data transmission   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Bytes per second (bytes/s) |
@@ -135,10 +135,10 @@
 ### Metric List
 | Korean         | Resource Name | Default legend (Legend) | Unit   |
 |-------------|------|---------------|------------|
-| GPU Usage     | 3.10  | None            | Percentage (0-100) |
-| GPU Temperature      | 3.10  | None            | Celsius (℃)      |
-| GPU Memory Usage | 3.10  | None            | Percentage (0-100) |
-| GPU Power Usage  | 3.10  | None            | Watts (W)      |
+| GPU usage     | 3.10  | None            | Percentage (0-100) |
+| GPU yemperature      | 3.10  | None            | Celsius (℃)      |
+| GPU memory usage | 3.10  | None            | Percentage (0-100) |
+| GPU power usage  | 3.10  | None            | Watts (W)      |
 
 ### GPU Filter
 - You can apply filters for GPU metrics.
