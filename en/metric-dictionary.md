@@ -136,7 +136,7 @@
 | Korean         | Resource Name | Default legend (Legend) | Unit   |
 |-------------|------|---------------|------------|
 | GPU usage     | 3.10  | None            | Percentage (0-100) |
-| GPU yemperature      | 3.10  | None            | Celsius (℃)      |
+| GPU temperature      | 3.10  | None            | Celsius (℃)      |
 | GPU memory usage | 3.10  | None            | Percentage (0-100) |
 | GPU power usage  | 3.10  | None            | Watts (W)      |
 
