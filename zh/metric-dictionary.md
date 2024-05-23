@@ -1,157 +1,157 @@
 ## Monitoring > Cloud Monitoring > Metric Dictionary
 
 ## Metric Dictionary
-- NHN Cloud 내 서비스에 대한 모니터링을 위한 지표들을 정의한 목록입니다.
-- 지표 사전을 통해 모니터링 대상 서비스의 지표를 확인하고, 이해할 수 있습니다.
-- 위젯 구성 시 필요한 지표를 찾아 사용할 수 있습니다. 자세한 내용은 [콘솔 사용 가이드](console-guide.md)를 참고하십시오.
-- **Metric List**에서 각 서비스별 지표 사전 목록을 확인할 수 있습니다.
+- This is a list of defined metrics for monitoring services in NHN Cloud.
+- Metric Dictionary helps you view and understand metrics for the services you monitor.
+- You can find and use the metrics you need when configuring widgets. For more information, see the [console user guide](console-guide.md).
+- In **Metric List**, you can see a list of metric dictionaries for each service.
 
-### 필터(Filter)
-- 지표에 대해 필터를 적용할 수 있습니다.
-- 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
-  - 예를 들어 리전 필터에 kr1을 적용하면 지표들 중 kr1 리전에 해당하는 지표만 표시됩니다.
-- 공통 필터는 아래와 같습니다.
+### Filter
+- You can apply filters to metrics.
+- When you apply a filter, you'll only see metrics that match that filter.
+  - For example, if you apply KR1 to the region filter, you will only see metrics that fall within the KR1 region among your metrics.
+- Common filters are as follows.
 
-| 필터명 | 설명           | 값                                                                  |
+| Filter name | Description           | Value                                                                  |
 |-----|--------------|--------------------------------------------------------------------|
-| 리전  | NHN Cloud 리전 | kr1: 한국(판교), kr2: 한국(평촌), kr3: 한국(광주), us1: 미국(캘리포니아), jp1: 일본(도쿄) |
+| Region  | NHN Cloud Region | kr1: Korea (Pangyo), kr2: Korea (Pyeongchon), kr3: Korea (Gwangju), us1: United States (California), jp1: Japan (Tokyo) |
 
-### 범례(Legend)
-- 지표에 대해 범례를 적용할 수 있습니다.
-- 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
-  - 예를 들어 범례에 {{nhncloud_region}}를 적용하면 각 지표들의 이름이 kr1, kr2와 같이 리전명으로 표시됩니다.
-- 공통 범례는 아래와 같습니다.
+### Legend
+- You can apply a legend for metrics.
+- When you apply a legend, the metric is applied in legend format.
+  - For example, if you apply {{nhncloud_region}} to the legend, each metric appears as the region, such as kr1, kr2.
+- Common legends are as follows.
 
-| 필터명             | 설명           | 값                                                                  |
+| Filter name             | Description           | Value                                                                  |
 |-----------------|--------------|--------------------------------------------------------------------|
-| nhncloud_region | NHN Cloud 리전 | kr1: 한국(판교), kr2: 한국(평촌), kr3: 한국(광주), us1: 미국(캘리포니아), jp1: 일본(도쿄) |
+| nhncloud_region | NHN Cloud Region | kr1: Korea (Pangyo), kr2: Korea (Pyeongchon), kr3: Korea (Gwangju), us1: United States (California), jp1: Japan (Tokyo) |
 
 ## Instance
-- NHN Cloud에서 제공하는 인스턴스 서버 지표에 대한 사전입니다.
+- A dictionary of instance server metrics provided by NHN Cloud.
 
 ### Metric List
-| 한국어              | 리소스명    | 기본 범례(Legend)                                                              | 단위(Unit)         |
+| Korean              | Resource Name    | Default legend (Legend)                                                              | Unit         |
 |------------------|---------|----------------------------------------------------------------------------|------------------|
-| CPU 사용률          | CPU     |                                                                            | 백분율(0-100)       |
-| 코어별 CPU 사용률      | CPU     | {{nhncloud_instance_id}} cpu={{cpu}}                                       | 백분율(0-100)       |
-| CPU 상세(user)     | CPU     | {{nhncloud_instance_id}}                                                   | 비율(0.00 - 1.00)  |
-| CPU 상세(nice)     | CPU     | {{nhncloud_instance_id}}                                                   | 비율(0.00 - 1.00)  |
-| CPU 상세(system)   | CPU     | {{nhncloud_instance_id}}                                                   | 비율(0.00 - 1.00)  |
-| CPU 상세(iowait)   | CPU     | {{nhncloud_instance_id}}                                                   | 비율(0.00 - 1.00)  |
-| CPU 평균 부하(1m)    | CPU     | {{nhncloud_instance_id}}                                                   | 숫자               |
-| CPU 평균 부하(5m)    | CPU     | {{nhncloud_instance_id}}                                                   | 숫자               |
-| CPU 평균 부하(15m)   | CPU     | {{nhncloud_instance_id}}                                                   | 숫자               |
-| 디스크 사용률          | Disk    | {{nhncloud_instance_id}}                                                   | 비율(0.00 - 1.00)  |
-| 마운트별 디스크 사용률     | Disk    | {{nhncloud_instance_id}} device={{device}} fstype={{fstype}} path={{path}} | 비율(0.00 - 1.00)  |
-| 디스크 읽기           | Disk    | {{nhncloud_instance_id}}                                                   | 초당 바이트(bytes/s)  |
-| 디스크 쓰기           | Disk    | {{nhncloud_instance_id}}                                                   | 초당 바이트(bytes/s)  |
-| 장치별 디스크 읽기       | Disk    | {{nhncloud_instance_id}} fstype={{fstype}}                                 | 초당 바이트(bytes/s)  |
-| 장치별 디스크 쓰기       | Disk    | {{nhncloud_instance_id}} fstype={{fstype}}                                 | 초당 바이트(bytes/s)  |
-| 메모리 사용률          | Memory  | {{nhncloud_instance_id}}                                                   | 백분율(0-100)       |
-| 메모리 상세(used)     | Memory  | {{nhncloud_instance_id}}                                                   | 바이트(bytes)       |
-| 메모리 상세(buffered) | Memory  | {{nhncloud_instance_id}}                                                   | 바이트(bytes)       |
-| 메모리 상세(cached)   | Memory  | {{nhncloud_instance_id}}                                                   | 바이트(bytes)       |
-| 메모리 상세(free)     | Memory  | {{nhncloud_instance_id}}                                                   | 바이트(bytes)       |
-| 네트워크 데이터 송신      | Network | {{nhncloud_instance_id}}                                                   | 초당 바이트(bytes/s)  |
-| 네트워크 데이터 수신      | Network | {{nhncloud_instance_id}}                                                   | 초당 바이트(bytes/s)  |
-| 장치별 네트워크 데이터 송신  | Network | {{nhncloud_instance_id}} interface={{interface}}                           | 초당 바이트(bytes/s)  |
-| 장치별 네트워크 데이터 수신  | Network | {{nhncloud_instance_id}} interface={{interface}}                           | 초당 바이트(bytes/s)  |
-| 네트워크 패킷 송신       | Network | {{nhncloud_instance_id}}                                                   | 초당 패킷(packets/s) |
-| 네트워크 패킷 수신       | Network | {{nhncloud_instance_id}}                                                   | 초당 패킷(packets/s) |
-| 장치별 네트워크 패킷 송신   | Network | {{nhncloud_instance_id}} interface={{interface}}                           | 초당 패킷(packets/s) |
-| 장치별 네트워크 패킷 수신   | Network | {{nhncloud_instance_id}} interface={{interface}}                           | 초당 패킷(packets/s) |
-| 프로세스 개수          | Process | {{nhncloud_instance_id}}                                                   | 숫자               |
-| 스왑 사용량(used)     | Swap    | {{nhncloud_instance_id}}                                                   | 바이트(bytes)       |
-| 스왑 사용량(free)     | Swap    | {{nhncloud_instance_id}}                                                   | 바이트(bytes)       |
-| 스왑 사용량(total)    | Swap    | {{nhncloud_instance_id}}                                                   | 바이트(bytes)       |
-| 스왑 사용률           | Swap    | {{nhncloud_instance_id}}                                                   | 비율(0.00 - 1.00)  |
+| CPU usage          | 3.10     |                                                                            | Percentage (0-100)       |
+| CPU usage by core      | 3.10     | {{nhncloud_instance_id}} cpu={{cpu}}                                       | Percentage (0-100)       |
+| CPU details (user)     | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| CPU details (nice)     | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| CPU details (system)   | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| CPU details (iowait)   | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| CPU average load (1m)    | 3.10     | {{nhncloud_instance_id}}                                                   | Number               |
+| CPU average load (5m)    | 3.10     | {{nhncloud_instance_id}}                                                   | Number               |
+| CPU average load (15m)   | 3.10     | {{nhncloud_instance_id}}                                                   | Number               |
+| Disk usage          | Disk    | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| Disk usage by mount     | Disk    | {{nhncloud_instance_id}} device={{device}} fstype={{fstype}} path={{path}} | Ratio (0.00 - 1.00)  |
+| Read disk           | Disk    | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
+| Write to disk           | Disk    | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
+| Read disk by device       | Disk    | {{nhncloud_instance_id}} fstype={{fstype}}                                 | Bytes per second (bytes/s)  |
+| Write to disk by device       | Disk    | {{nhncloud_instance_id}} fstype={{fstype}}                                 | Bytes per second (bytes/s)  |
+| Memory usage          | Memory  | {{nhncloud_instance_id}}                                                   | Percentage (0-100)       |
+| Memory details (used)     | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
+| Memory details (buffered) | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
+| Memory details (cached)   | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
+| Memory details (free)     | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
+| Network data transmission      | Network | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
+| Network data reception      | Network | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
+| Network data transmission per device  | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Bytes per second (bytes/s)  |
+| Network data reception per device  | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Bytes per second (bytes/s)  |
+| Network data packet trasmission       | Network | {{nhncloud_instance_id}}                                                   | Packets per second (packets/s) |
+| Network packet reception       | Network | {{nhncloud_instance_id}}                                                   | Packets per second (packets/s) |
+| Network packet transmission per device   | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Packets per second (packets/s) |
+| Network packet reception per device   | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Packets per second (packets/s) |
+| Number of processes          | Process | {{nhncloud_instance_id}}                                                   | Number               |
+| Swap usage (used)     | Swap    | {{nhncloud_instance_id}}                                                   | bytes       |
+| Swap usage (free)     | Swap    | {{nhncloud_instance_id}}                                                   | bytes       |
+| Swap usage (total)    | Swap    | {{nhncloud_instance_id}}                                                   | bytes       |
+| Swap Usage           | Swap    | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
 
-### Instance 필터(Filter)
-- Instance 지표에 대해 필터를 적용할 수 있습니다.
-- 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
+### Instance Filter
+- You can apply filters to the Instance metric.
+- When you apply a filter, you'll only see metrics that match that filter.
 
-| 필터명  | 설명                                      |
+| Filter name  | Description                                      |
 |------|-----------------------------------------|
-| 인스턴스 | NHN Cloud Instance 서비스에서 사용 중인 인스턴스의 이름 |
+| Instance | Name of the instance in use by the NHN Cloud Instance service |
 
-### Instance 범례(Legend)
-- Instance 지표에 대해 범례를 적용할 수 있습니다.
-- 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
+### Instance Legend
+- You can apply a legend for the Instance metric.
+- When you apply a legend, the metric is applied in legend format.
 
-| 범례명                  | 설명                  |
+| Legend Name                  | Description                  |
 |----------------------|---------------------|
-| nhncloud_instance_id | 인스턴스의 이름            |
-| cpu                  | 인스턴스의 CPU 번호        |
-| device               | 인스턴스의 디스크 장치        |
-| fstype               | 인스턴스의 파일 시스템 종류     |
-| path                 | 인스턴스의 디스크 마운트 경로    |
-| interface            | 인스턴스의 네트워크 인터페이스 이름 |
+| nhncloud_instance_id | Instance name            |
+| cpu                  | CPU number of the instance        |
+| device               | Disk device in the instance        |
+| fstype               | File system type of the instance     |
+| path                 | Disk mount path to the instance    |
+| interface            | Name of the instance's network interface |
 
 ## NHN Container Service(NCS)
-- NCS의 지표에 대한 사전입니다.
+- A dictionary for metrics in NCS.
 
 ### Metric List
-| 한국어           | 리소스명 | 기본 범례(Legend)                                                            | 단위(Unit)        |
+| Korean           | Resource Name | Default legend (Legend)                                                            | Unit        |
 |---------------|------|--------------------------------------------------------------------------|-----------------|
-| CPU 사용률       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}} container={{container}} | 백분율(0-100)      |
-| 워크로드에 할당된 CPU | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 숫자              |
-| 메모리 사용률       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 백분율(0-100)      |
-| 워크로드에 할당된 메모리 | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 메비바이트(MiB)      |
-| GPU 사용률       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 백분율(0-100)      |
-| GPU 메모리 사용률   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 백분율(0-100)      |
-| GPU 전력 사용량    | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 메가와트(mW)        |
-| GPU 온도        | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 섭씨(℃)           |
-| 워크로드에 할당된 GPU | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 숫자              |
-| 네트워크 데이터 수신   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 초당 바이트(bytes/s) |
-| 네트워크 데이터 송신   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 초당 바이트(bytes/s) |
-| 디스크 사용률       | NCS  | {{workload_id}} {{type}}                                                 | 백분율(0-100)      |
-| 활성화 상태별 작업 수  | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 숫자              |
-| 컨테이너의 프로세스 수  | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 숫자              |
+| CPU usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}} container={{container}} | Percentage (0-100)      |
+| CPUs assigned to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
+| Memory usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
+| Memory allocated to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megabytes (MiB)      |
+| GPU usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
+| GPU memory usage   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
+| GPU power usage    | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megawatts (mW)        |
+| GPU temperature        | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Celsius (℃)           |
+| GPUs assigned to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
+| Network data reception   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Bytes per second (bytes/s) |
+| Network data transmission   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Bytes per second (bytes/s) |
+| Disk usage       | NCS  | {{workload_id}} {{type}}                                                 | Percentage (0-100)      |
+| Number of tasks by activation status  | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
+| Number of processes in a container  | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
 
 ### NCS Filter
-- NCS 지표에 대해 필터를 적용할 수 있습니다.
-- 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
+- You can apply filters to NCS metrics.
+- When you apply a filter, you'll only see metrics that match that filter.
 
-| 필터명  | 설명                               |
+| Filter name  | Description                               |
 |------|----------------------------------|
-| 워크로드 | NHN Cloud NCS 내에서 사용 중인 워크로드의 이름 |
-| 타입   | 스토리지 종류                          |
+| Workload | Name of the workload in use by NHN Cloud NCS |
+| Type   | Storage type                          |
 
 
 ### NCS Legend
-- NCS 지표에 대해 범례를 적용할 수 있습니다.
-- 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
+- You can apply a legend for NCS metrics.
+- When you apply a legend, the metric is applied in legend format.
 
-| 범례명                                          | 설명                             |
+| Legend Name                                          | Description                             |
 |----------------------------------------------|--------------------------------|
-| label_ncs_container_nhncloud_com_workload_id | NHN Cloud NCS에서 사용 중인 워크로드의 이름 |
-| workload_id                                  | NHN Cloud NCS에서 사용 중인 워크로드의 이름 |
-| type                                         | 스토리지 종류                        |
-| container                                    | 컨테이너의 이름                       |
+| label_ncs_container_nhncloud_com_workload_id | Name of the workload in use by NHN Cloud NCS |
+| workload_id                                  | Name of the workload in use by NHN Cloud NCS |
+| String                                         | Storage type                        |
+| container                                    | Container Name                       |
 
-## GPU
-- NHN Cloud에서 제공하는 GPU 서비스의 지표에 대한 사전입니다.
+## 3.10
+- A dictionary of metrics for GPU services provided by NHN Cloud.
 
 ### Metric List
-| 한국어         | 리소스명 | 기본 범례(Legend) | 단위(Unit)   |
+| Korean         | Resource Name | Default legend (Legend) | Unit   |
 |-------------|------|---------------|------------|
-| GPU 사용률     | GPU  | 없음            | 백분율(0-100) |
-| GPU 온도      | GPU  | 없음            | 섭씨(℃)      |
-| GPU 메모리 사용률 | GPU  | 없음            | 백분율(0-100) |
-| GPU 전력 사용량  | GPU  | 없음            | 와트(W)      |
+| GPU usage     | 3.10  | None            | Percentage (0-100) |
+| GPU temperature      | 3.10  | None            | Celsius (℃)      |
+| GPU memory usage | 3.10  | None            | Percentage (0-100) |
+| GPU power usage  | 3.10  | None            | Watts (W)      |
 
-### GPU 필터(Filter)
-- GPU 지표에 대해 필터를 적용할 수 있습니다.
-- 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
+### GPU Filter
+- You can apply filters for GPU metrics.
+- When you apply a filter, you'll only see metrics that match that filter.
 
-| 필터명  | 설명           |
+| Filter name  | Description           |
 |------|--------------|
-| 인스턴스 | GPU 인스턴스의 이름 |
+| Instance | Name of the GPU instance |
 
-### GPU 범례(Legend)
-- GPU 지표에 대해 범례를 적용할 수 있습니다.
-- 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
+### GPU Legend
+- You can apply a legend for GPU metrics.
+- When you apply a legend, the metric is applied in legend format.
 
-| 필터명                  | 설명           |
+| Filter name                  | Description           |
 |----------------------|--------------|
-| nhncloud_instance_id | GPU 인스턴스의 이름 |
+| nhncloud_instance_id | Name of the GPU instance |
