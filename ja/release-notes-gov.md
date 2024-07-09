@@ -1,6 +1,6 @@
 ## Monitoring > Cloud Monitoring > リリースノート
 
-### 2024. 07. 23.
+### 2024. 07. 25.
 
 #### 新規サービスリリース
 Cloud Monitoringは、NHN Cloudのリソースの指標を収集/提供し、異常に対する通知を提供するサービスです。

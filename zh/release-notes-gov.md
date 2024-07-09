@@ -1,6 +1,6 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
-### July 23, 2024
+### July 25, 2024
 
 #### Release of a New Service
 Cloud Monitoring collects and provides metrics for resources in NHN Cloud and provides notifications about abnormalities. 
