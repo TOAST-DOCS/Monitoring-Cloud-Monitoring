@@ -5,7 +5,7 @@ Cloud Monitoringを使用する手順は次のとおりです。
 - サービス選択<br>
   Cloud Monitoringはプロジェクト作成時に基本的に提供されるサービスです。<br>
  したがって、別途の作業なしでプロジェクトを作成した後、サービスを使用できます。<br>
- プロジェクトを作成する方法は[NHN Cloudコンソール使用ガイド](https://docs.gov-nhncloud.com/ja/nhncloud/ja/console-guide/gov)を参照してください。
+ プロジェクトを作成する方法は[NHN Cloudコンソール使用ガイド](https://docs.gov-nhncloud.com/ja/nhncloud/ja/console-guide-gov/)を参照してください。
 - 指標収集設定<br>
  サービスごとに指標収集を設定します。
 - ダッシュボード構成<br>
