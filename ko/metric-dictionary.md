@@ -244,7 +244,7 @@
 
 | 필터명 | 설명 |
 | --- | --- |
-| 라우팅 테이블 | NHN Cloud Network 서비스에서 사용 중인 라우팅 테이블 |
+| 라우팅 테이블 | NHN Cloud의 Network 서비스에서 사용 중인 라우팅 테이블 |
 
 ### Internet Gateway 범례(Legend)
 - Internet Gateway 지표에 대해 범례를 적용할 수 있습니다.
