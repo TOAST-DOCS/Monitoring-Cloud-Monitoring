@@ -124,8 +124,8 @@
 
 | 범례명                                          | 설명                             |
 |----------------------------------------------|--------------------------------|
-| label_ncs_container_nhncloud_com_workload_id | NHN Cloud NCS에서 사용 중인 워크로드의 이름 |
-| workload_id                                  | NHN Cloud NCS에서 사용 중인 워크로드의 이름 |
+| label_ncs_container_nhncloud_com_workload_id | NHN Cloud의 NCS 서비스에서 사용 중인 워크로드의 이름 |
+| workload_id                                  | NHN Cloud의 NCS 서비스에서 사용 중인 워크로드의 이름 |
 | type                                         | 스토리지 종류                        |
 | container                                    | 컨테이너의 이름                       |
 
