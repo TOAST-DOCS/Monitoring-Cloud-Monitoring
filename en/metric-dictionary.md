@@ -97,10 +97,10 @@
 | CPUs assigned to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
 | Memory usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
 | Memory allocated to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megabytes (MiB)      |
-| GPU Usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
-| GPU Memory Usage   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
-| GPU Power Usage    | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megawatts (mW)        |
-| GPU Temperature        | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Celsius (℃)           |
+| GPU usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
+| GPU memory usage   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
+| GPU power usage    | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megawatts (mW)        |
+| GPU temperature        | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Celsius (℃)           |
 | GPUs assigned to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
 | Network data reception   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Bytes per second (bytes/s) |
 | Network data transmission   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Bytes per second (bytes/s) |
