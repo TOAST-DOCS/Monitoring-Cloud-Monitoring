@@ -19,8 +19,8 @@
 ### Legend
 - You can apply a legend for metrics.
 - When you apply a legend, the metric is applied in legend format.
-  - For example, if you apply {{nhncloud_region}} to the legend, each metric will be named with the region, such as kr1, kr2.
-- Common legends are shown below.
+  - For example, if you apply {{nhncloud_region}} to the legend, each metric appears as the region, such as kr1, kr2.
+- Common legends are as follows.
 
 | Filter name             | Description           | Value                                                                  |
 |-----------------|--------------|--------------------------------------------------------------------|
