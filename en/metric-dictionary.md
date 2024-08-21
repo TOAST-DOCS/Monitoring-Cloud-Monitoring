@@ -112,10 +112,10 @@
 - You can apply filters to NCS metrics.
 - When you apply a filter, you'll only see metrics that match that filter.
 
-| Filter name  | Description                                  |
-|------|-------------------------------------|
-| Workload | Name of the workload being used by the NCS service on NHN Cloud |
-| Type   | Storage type                             |
+| Filter name  | Description                               |
+|------|----------------------------------|
+| Workload | Name of the workload being used by the NCS service on NHN Cloud  |
+| Type   | Storage type                          |
 
 
 ### NCS Legend
