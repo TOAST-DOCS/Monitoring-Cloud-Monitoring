@@ -144,9 +144,10 @@
 - You can apply filters for GPU metrics.
 - When you apply a filter, you'll only see metrics that match that filter.
 
-| Filter name  | Description                                  |
-|------|-------------------------------------|
-| Instance | The name of the instance being used by the GPU service on NHN Cloud. |
+
+| Filter name  | Description           |
+|------|--------------|
+| Instance | Name of the instance being used by the GPU service on NHN Cloud. |
 
 ### GPU Legend
 - You can apply a legend for GPU metrics.
