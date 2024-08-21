@@ -70,8 +70,8 @@
 - You can apply filters to the Instance metric.
 - When you apply a filter, you'll only see metrics that match that filter.
 
-| Filter name  | Description                                       |
-|------|------------------------------------------|
+| Filter name  | Description                                      |
+|------|-----------------------------------------|
 | Instance | Name of the instance being used by the Instance service on NHN Cloud. |
 
 ### Instance Legend
