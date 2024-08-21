@@ -1,7 +1,7 @@
 ## Monitoring > Cloud Monitoring > Metric Dictionary
 
 ## Metric Dictionary
-- This is a list of defined metrics for monitoring services in NHN Cloud.
+- This is a list of defined metrics for monitoring services on NHN Cloud.
 - Metric Dictionary helps you view and understand metrics for the services you monitor.
 - You can find and use the metrics you need when configuring widgets. For more information, see the [console user guide](console-guide.md).
 - In **Metric List**, you can see a list of metric dictionaries for each service.
@@ -19,15 +19,15 @@
 ### Legend
 - You can apply a legend for metrics.
 - When you apply a legend, the metric is applied in legend format.
-  - For example, if you apply {{nhncloud_region}} to the legend, each metric appears as the region, such as kr1, kr2.
-- Common legends are as follows.
+  - For example, if you apply {{nhncloud_region}} to the legend, each metric will be named with the region, such as kr1, kr2.
+- Common legends are shown below.
 
 | Filter name             | Description           | Value                                                                  |
 |-----------------|--------------|--------------------------------------------------------------------|
 | nhncloud_region | NHN Cloud Region | kr1: Korea (Pangyo), kr2: Korea (Pyeongchon), kr3: Korea (Gwangju), us1: United States (California), jp1: Japan (Tokyo) |
 
 ## Instance
-- A dictionary of instance server metrics provided by NHN Cloud.
+- A dictionary that defines metrics that can be monitored for the Instance service on NHN Cloud.
 
 ### Metric List
 | Korean              | Resource Name    | Default legend (Legend)                                                              | Unit         |
@@ -70,9 +70,9 @@
 - You can apply filters to the Instance metric.
 - When you apply a filter, you'll only see metrics that match that filter.
 
-| Filter name  | Description                                      |
-|------|-----------------------------------------|
-| Instance | Name of the instance in use by the NHN Cloud Instance service |
+| Filter name  | Description                                       |
+|------|------------------------------------------|
+| Instance | Name of the instance being used by the Instance service on NHN Cloud. |
 
 ### Instance Legend
 - You can apply a legend for the Instance metric.
@@ -88,7 +88,7 @@
 | interface            | Name of the instance's network interface |
 
 ## NHN Container Service(NCS)
-- A dictionary for metrics in NCS.
+- A dictionary that defines metrics that can be monitored for NCS services on NHN Cloud.
 
 ### Metric List
 | Korean           | Resource Name | Default legend (Legend)                                                            | Unit        |
@@ -97,10 +97,10 @@
 | CPUs assigned to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
 | Memory usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
 | Memory allocated to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megabytes (MiB)      |
-| GPU usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
-| GPU memory usage   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
-| GPU power usage    | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megawatts (mW)        |
-| GPU temperature        | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Celsius (℃)           |
+| GPU Usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
+| GPU Memory Usage   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Percentage (0-100)      |
+| GPU Power Usage    | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Megawatts (mW)        |
+| GPU Temperature        | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Celsius (℃)           |
 | GPUs assigned to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
 | Network data reception   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Bytes per second (bytes/s) |
 | Network data transmission   | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Bytes per second (bytes/s) |
@@ -112,10 +112,10 @@
 - You can apply filters to NCS metrics.
 - When you apply a filter, you'll only see metrics that match that filter.
 
-| Filter name  | Description                               |
-|------|----------------------------------|
-| Workload | Name of the workload in use by NHN Cloud NCS |
-| Type   | Storage type                          |
+| Filter name  | Description                                  |
+|------|-------------------------------------|
+| Workload | Name of the workload being used by the NCS service on NHN Cloud |
+| Type   | Storage type                             |
 
 
 ### NCS Legend
@@ -124,29 +124,29 @@
 
 | Legend Name                                          | Description                             |
 |----------------------------------------------|--------------------------------|
-| label_ncs_container_nhncloud_com_workload_id | Name of the workload in use by NHN Cloud NCS |
-| workload_id                                  | Name of the workload in use by NHN Cloud NCS |
+| label_ncs_container_nhncloud_com_workload_id | Name of the workload being used by the NCS service on NHN Cloud |
+| workload_id                                  | Name of the workload being used by the NCS service on NHN Cloud |
 | String                                         | Storage type                        |
 | container                                    | Container Name                       |
 
 ## 3.10
-- A dictionary of metrics for GPU services provided by NHN Cloud.
+- A dictionary that defines metrics that can be monitored for GPU services on NHN Cloud.
 
 ### Metric List
 | Korean         | Resource Name | Default legend (Legend) | Unit   |
 |-------------|------|---------------|------------|
-| GPU usage     | 3.10  | None            | Percentage (0-100) |
-| GPU temperature      | 3.10  | None            | Celsius (℃)      |
-| GPU memory usage | 3.10  | None            | Percentage (0-100) |
-| GPU power usage  | 3.10  | None            | Watts (W)      |
+| GPU Usage     | 3.10  | None            | Percentage (0-100) |
+| GPU Temperature      | 3.10  | None            | Celsius (℃)      |
+| GPU Memory Usage | 3.10  | None            | Percentage (0-100) |
+| GPU Power Usage  | 3.10  | None            | Watts (W)      |
 
 ### GPU Filter
 - You can apply filters for GPU metrics.
 - When you apply a filter, you'll only see metrics that match that filter.
 
-| Filter name  | Description           |
-|------|--------------|
-| Instance | Name of the GPU instance |
+| Filter name  | Description                                  |
+|------|-------------------------------------|
+| Instance | The name of the instance being used by the GPU service on NHN Cloud. |
 
 ### GPU Legend
 - You can apply a legend for GPU metrics.
@@ -155,3 +155,101 @@
 | Filter name                  | Description           |
 |----------------------|--------------|
 | nhncloud_instance_id | Name of the GPU instance |
+
+## Transit Hub
+- A dictionary that defines metrics that can be monitored for the Transit Hub service on NHN Cloud.
+
+### Metric List
+| Korean                                | Resource Name | Default legend (Legend) | Unit   |
+|------------------------------------|------|---------------|------------|
+| Network transmitted bytes                        | Transit Hub  | {{id}} | 5 min accumulated bytes |
+| Network received bytes                        | Transit Hub  | {{id}} | 5 min accumulated bytes |
+| Network transmitted packets                         | Transit Hub  | {{id}} | 5 min accumulated packets  |
+| Network received packets                         | Transit Hub  | {{id}} | 5 min accumulated packets  |
+| Network packets deleted due to route mismatch            | Transit Hub  | {{id}} | 5 min accumulated packets  |
+| Network bytes deleted due to route mismatch           | Transit Hub  | {{id}} | 5 min accumulated bytes |
+| Network packets deleted due to blackhole route match           | Transit Hub  | {{id}} | 5 min accumulated packets  |
+| Network bytes deleted due to blackhole route match          | Transit Hub  | {{id}} | 5 min accumulated bytes |
+| Network transmitted bytes                        | Attachment  | {{id}} | 5 min accumulated bytes |
+| Network received bytes                        | Attachment  | {{id}} | 5 min accumulated bytes |
+| Network transmitted packets                         | Attachment  | {{id}} | 5 min accumulated packets  |
+| Network received packets                         | Attachment  | {{id}} | 5 min accumulated packets  |
+| Network packets deleted due to route mismatch            | Attachment  | {{id}} | 5 min accumulated packets  |
+| Network bytes deleted due to route mismatch           | Attachment  | {{id}} | 5 min accumulated bytes |
+| Network packets deleted due to blackhole route match           | Attachment  | {{id}} | 5 min accumulated packets  |
+| Network bytes deleted due to blackhole route match          | Attachment  | {{id}} | 5 min accumulated bytes |
+| Network transmitted bits per second (bps)               | Transit Hub  | {{id}} |  Bits per second (bits/s)  |
+| Network received bits per second (bps)               | Transit Hub  | {{id}} |  Bits per second (bits/s)  |
+| Network transmitted packets per second (pps)               | Transit Hub  | {{id}} |  Packets per second (packets/s)  |
+| Network received packets per second               | Transit Hub  | {{id}} |  Packets per second (packets/s)  |
+| Network packets per second (pps) due to route mismatch  | Transit Hub  | {{id}} |  Packets per second (packets/s)  |
+| Network bits per second (bps) due to route mismatch  | Transit Hub  | {{id}} |  Bits per second (bits/s)  |
+| Network packets per second (pps) deleted due to blackhole route match | Transit Hub  | {{id}} |  Packets per second (packets/s)  |
+| Network bits per second (bps) deleted due to blackhole route match | Transit Hub  | {{id}} |  Bits per second (bits/s)  |
+| Network transmitted bits per second (bps)               | Attachment  | {{id}} |  Bits per second (bits/s)  |
+| Network received bits per second (bps)               | Attachment  | {{id}} | Bits per second (bits/s)  |
+| Network transmitted packets per second (pps)               | Attachment  | {{id}} |  Packets per second (packets/s)  |
+| Network received packets per second               | Attachment  | {{id}} |  Packets per second (packets/s)  |
+| Network packets per second (pps) due to route mismatch  | Attachment  | {{id}} |  Packets per second (packets/s)  |
+| Network bits per second (bps) due to route mismatch  | Attachment  | {{id}} |  Bits per second (bits/s)  |
+| Network packets per second (pps) deleted due to blackhole route match | Attachment  | {{id}} |  Packets per second (packets/s)  |
+| Network bits per second (bps) deleted due to blackhole route match | Attachment  | {{id}} |  Bits per second (bits/s)  |
+
+
+### Transit Hub Filter
+- You can apply filters to Transit Hub metrics.
+- When you apply a filter, only metrics that meet the criteria of that filter are displayed.
+
+#### Resource Type > Applicable Filters for Transit Hub
+
+| Filter name | Description |
+| --- | --- |
+| Transit Hub | Transit hub used by the Network service on NHN Cloud |
+
+#### Resource Type > Applicable filters for Attachment
+
+| Filter name | Description                                      |
+| --- |-----------------------------------------|
+| Transit Hub | Transit hub related to attachment |
+| Attachment | Connect the transit hub used by Network services on NHN Cloud |
+
+### Transit Hub Legend
+- You can apply a legend for Transit Hub metrics.
+- When you apply a legend, the metric is applied in legend format.
+
+| Legend Name            | Description                         |
+|----------------|----------------------------|
+| id             | Transit hub or attachment name            |
+| transit_hub_id | Transit hub name (if the resource is `attachment`) |
+
+## Internet Gateway
+- A dictionary that defines metrics that can be monitored for the Internet Gateway service on NHN Cloud.
+
+### Metric List
+
+| Korean                          | Resource Name    | Default legend (Legend)          | Unit         |
+|------------------------------|---------|------------------------|------------------|
+| Network transmitted bytes                 | Routing Table | {{id}} | 5 min accumulated bytes        |
+| Network received bytes                 | Routing Table | {{id}} | 5 min accumulated bytes        |
+| Network transmitted packets                  | Routing Table | {{id}} | 5 min accumulated packets         |
+| Network received packets                  | Routing Table | {{id}} | 5 min accumulated packets         |
+| Network transmitted bits per second (bps)        | Routing Table | {{id}} | Bits per second (bits/s)    | 
+| Network received bits per second (bps)	    | Routing Table | {{id}} | Bits per second (bits/s)    | 
+| Network transmitted packets per second (pps)	    | Routing Table | {{id}} | Packets per second (packets/s) | 
+| Network received packets per second	    | Routing Table | {{id}} | Packets per second (packets/s) | 
+
+### Internet Gateway Filter
+- You can apply filters to the Internet Gateway metrics.
+- When you apply a filter, only metrics that meet the criteria of that filter are displayed.
+
+| Filter name | Description |
+| --- | --- |
+| Routing Table | Routing table used by Network service on NHN Cloud |
+
+### Internet Gateway Legend
+- You can apply a legend for the Internet Gateway metrics.
+- When you apply a legend, the metric is applied in legend format.
+
+| Legend Name            | Description                                     |
+|----------------|----------------------------------------|
+| id             | Routing table name  |

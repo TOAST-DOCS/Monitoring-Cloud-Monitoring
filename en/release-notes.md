@@ -1,5 +1,14 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
+### August 27, 2024
+
+#### Add New Service to View Metrics
+
+Added a new service for which metrics can be viewed in Cloud Monitoring  
+Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+* Transit Hub
+* Internet Gateway
+
 ### July 23, 2024
 
 ### Bug Fixes
