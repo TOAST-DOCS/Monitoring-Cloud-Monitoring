@@ -135,10 +135,10 @@
 ### Metric List
 | Korean         | Resource Name | Default legend (Legend) | Unit   |
 |-------------|------|---------------|------------|
-| GPU Usage     | 3.10  | None            | Percentage (0-100) |
-| GPU Temperature      | 3.10  | None            | Celsius (℃)      |
-| GPU Memory Usage | 3.10  | None            | Percentage (0-100) |
-| GPU Power Usage  | 3.10  | None            | Watts (W)      |
+| GPU usage     | 3.10  | None            | Percentage (0-100) |
+| GPU temperature      | 3.10  | None            | Celsius (℃)      |
+| GPU memory usage | 3.10  | None            | Percentage (0-100) |
+| GPU power usage  | 3.10  | None            | Watts (W)      |
 
 ### GPU Filter
 - You can apply filters for GPU metrics.
