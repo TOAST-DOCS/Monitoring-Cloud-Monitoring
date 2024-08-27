@@ -27,7 +27,7 @@
 | nhncloud_region | NHN Cloud 리전 | kr1: 한국(판교), kr2: 한국(평촌) |
 
 ## Instance
-- NHN Cloud에서 제공하는 인스턴스 서버 지표에 대한 사전입니다.
+- NHN Cloud의 Instance 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
 ### Metric List
 | 한국어              | 리소스명    | 기본 범례(Legend)                                                              | 단위(Unit)         |
@@ -72,7 +72,7 @@
 
 | 필터명  | 설명                                      |
 |------|-----------------------------------------|
-| 인스턴스 | NHN Cloud Instance 서비스에서 사용 중인 인스턴스의 이름 |
+| 인스턴스 | NHN Cloud의 Instance 서비스에서 사용 중인 인스턴스의 이름 |
 
 ### Instance 범례(Legend)
 - Instance 지표에 대해 범례를 적용할 수 있습니다.
@@ -88,7 +88,7 @@
 | interface            | 인스턴스의 네트워크 인터페이스 이름 |
 
 ## NHN Container Service(NCS)
-- NCS의 지표에 대한 사전입니다.
+- NHN Cloud의 NCS 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
 ### Metric List
 | 한국어           | 리소스명 | 기본 범례(Legend)                                                            | 단위(Unit)        |
@@ -114,7 +114,7 @@
 
 | 필터명  | 설명                               |
 |------|----------------------------------|
-| 워크로드 | NHN Cloud NCS 내에서 사용 중인 워크로드의 이름 |
+| 워크로드 | NHN Cloud의 NCS 서비스에서 사용 중인 워크로드의 이름 |
 | 타입   | 스토리지 종류                          |
 
 
@@ -124,13 +124,13 @@
 
 | 범례명                                          | 설명                             |
 |----------------------------------------------|--------------------------------|
-| label_ncs_container_nhncloud_com_workload_id | NHN Cloud NCS에서 사용 중인 워크로드의 이름 |
-| workload_id                                  | NHN Cloud NCS에서 사용 중인 워크로드의 이름 |
+| label_ncs_container_nhncloud_com_workload_id | NHN Cloud의 NCS 서비스에서 사용 중인 워크로드의 이름 |
+| workload_id                                  | NHN Cloud의 NCS 서비스에서 사용 중인 워크로드의 이름 |
 | type                                         | 스토리지 종류                        |
 | container                                    | 컨테이너의 이름                       |
 
 ## GPU
-- NHN Cloud에서 제공하는 GPU 서비스의 지표에 대한 사전입니다.
+- NHN Cloud의 GPU 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
 ### Metric List
 | 한국어         | 리소스명 | 기본 범례(Legend) | 단위(Unit)   |
@@ -146,7 +146,7 @@
 
 | 필터명  | 설명           |
 |------|--------------|
-| 인스턴스 | GPU 인스턴스의 이름 |
+| 인스턴스 | NHN Cloud의 GPU 서비스에서 사용 중인 인스턴스의 이름 |
 
 ### GPU 범례(Legend)
 - GPU 지표에 대해 범례를 적용할 수 있습니다.
