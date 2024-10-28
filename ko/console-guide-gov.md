@@ -210,8 +210,8 @@
   | events[].operator | 비교 방법 | String | Enum (`EQUAL`, `NOT_EQUAL`, `GREATER_THAN`, `LESS_THAN`, `GREATER_THAN_OR_EQUAL`, `LESS_THAN_OR_EQUAL`) |
   | events[].duration | 지속 시간 | String | 조건에 설정된 값 |
   | events[].result | 감지된 값 | String | Double 형태의 문자열 |
-  | events[].startAt | 이벤트 발생 일시 | String | ex) `2024-10-29 08:44:22 UTC` |
-  | events[].endAt | 이벤트 종료 일시 | String | ex) `2024-10-29 08:44:22 UTC` |
+  | events[].startAt | 이벤트 발생 일시 | String | ex) `2024-10-29T08:44:22Z` |
+  | events[].endAt | 이벤트 종료 일시 | String | ex) `2024-10-29T08:44:22Z` |
   | events[].contMinutes | 이벤트 지속 시간(분) | Integer | 이벤트가 발생한 시간과 현재 시간의 차이(분) |
   | events[].labels | 발생 위치 | Map<String, String> | |
 
