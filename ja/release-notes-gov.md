@@ -1,5 +1,15 @@
 ## Monitoring > Cloud Monitoring > リリースノート
 
+### 2024. 10. 29.
+
+#### 権限の細分化を適用
+Cloud Monitoringにプロジェクトサービス利用ロールを追加しました。
+- Cloud Monitoring ADMIN: Cloud MonitoringサービスCreate(作成), Read(読み取り), Update(更新), Delete(削除)
+- Cloud Monitoring VIEWER: Cloud Monitoring Read(読み取り)
+
+#### カスタムWebフックサポート
+通知受信グループのカスタムWebフックを使用してCloud Monitoring通知をWebフックで受け取ることができます。
+
 ### 2024. 07. 25.
 
 #### 新規サービスリリース

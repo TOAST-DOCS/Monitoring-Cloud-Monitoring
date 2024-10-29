@@ -183,7 +183,37 @@
 
 ![通知設定リスト画面 - 通知受信対象](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_a-3.png)
 
-通知受信対象は1つ以上選択する必要があります。通知受信対象タイプは、通知受信グループのみサポートされ、**プロジェクト管理 > 通知受信グループ管理** 画面で管理できます。
+通知受信対象は1つ以上選択する必要があります。通知受信対象タイプは、通知受信グループのみサポートされ、**プロジェクト管理 > 通知受信グループ管理** 画面で管理できます。[[ガイドへ]](/nhncloud/ko/console-guide/#_34)
+
+通知受信グループのカスタムWebフックを通じてWebフックで通知を受け取ることができます。
+- カスタムWebフックリクエストデータとして提供するパラメータリスト
+
+  | 値 | 説明 | タイプ | 備考 |
+    | --- | --- | --- | --- |
+  | orgName | 組織名 | String |  |
+  | projectName | プロジェクト名 | String |  |
+  | tenantType | サービスタイプ | String | `organization`(カスタムダッシュボード)<br>`project`(Cloud Monitoring) |
+  | referenceKey | 組織またはプロジェクトID | String |  |
+  | serviceName | サービス名 | String |  |
+  | alertName | 通知名 | String |  |
+  | alertId | 通知ID | String |  |
+  | eventsCount | 発生イベント数 | Integer |  |
+  | events | 通知イベント | List\<Object\> | eventsパラメータリスト参照 |
+
+- eventsパラメータリスト
+
+  | 値 | 説明 | タイプ | 備考 |
+    | --- | --- | --- | --- |
+  | events[].resourceTypeName | リソースタイプ名(En) | String | |
+  | events[].enMetricName | 指標名(En) | String | |
+  | events[].threshold | しきい値 | String | Double形式の文字列 |
+  | events[].operator | 比較方法 | String | Enum (`EQUAL`, `NOT_EQUAL`, `GREATER_THAN`, `LESS_THAN`, `GREATER_THAN_OR_EQUAL`, `LESS_THAN_OR_EQUAL`) |
+  | events[].duration | 持続時間 | String | 条件に設定された値 |
+  | events[].result | 検出された値 | String | Double形式の文字列 |
+  | events[].startAt | イベント発生日時 | String | ex) `2024-10-29T08:44:22Z` |
+  | events[].endAt | イベント終了日時 | String | ex) `2024-10-29T08:44:22Z` |
+  | events[].contMinutes | イベント持続時間(分) | Integer | イベントが発生した時間と現在時間との差(分) |
+  | events[].labels | 発生位置 | Map<String, String> | |
 
 #### 通知詳細表示モーダル
 
