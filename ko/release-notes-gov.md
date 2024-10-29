@@ -1,5 +1,15 @@
 ## Monitoring > Cloud Monitoring > 릴리스 노트
 
+### 2024. 10. 29.
+
+#### 권한 세분화 적용
+Cloud Monitoring에 프로젝트 서비스 이용 역할이 추가되었습니다.
+- Cloud Monitoring ADMIN: Cloud Monitoring 서비스 Create(생성), Read(읽기), Update(갱신), Delete(삭제)
+- Cloud Monitoring VIEWER: Cloud Monitoring Read(읽기)
+
+#### 커스텀 웹훅 지원
+알림 수신 그룹의 커스텀 웹훅을 사용하여 Cloud Monitoring 알림을 웹훅으로 받을 수 있습니다.
+
 ### 2024. 07. 25.
 
 #### 신규 서비스 출시
