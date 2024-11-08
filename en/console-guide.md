@@ -183,7 +183,7 @@ You don't need to enter a filter for the metric entry, but you must enter at lea
 
 ![Notification Settings List Screen - Notification Recipients](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_a-3.png)
 
-You must select at least one notification recipient. Only notification recipient types are supported for notification recipient groups, which can be managed on the **Project Management > Notification Receiver Group Management** screen. [[Go to User Guide]](/nhncloud/ko/console-guide/#_34)
+You must select at least one notification recipient. Only notification recipient types are supported for notification recipient groups, which can be managed on the **Project Management > Notification Receiver Group Management** screen. [[Go to User Guide]](/nhncloud/en/console-guide/#notification-receiver-group-management)
 
 You can receive notifications as webhooks through custom webhooks in the Notification Receiver Group.
 - List of parameters to provide as custom webhook request data
