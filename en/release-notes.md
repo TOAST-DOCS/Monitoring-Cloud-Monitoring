@@ -1,5 +1,15 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
+### Oct 29, 2024
+
+#### Apply Permission Segmentation
+Added a role to use project services to Cloud Monitoring.
+- Cloud Monitoring ADMIN: Create, Read, Update, and Delete Cloud Monitoring
+- Cloud Monitoring VIEWER: Read Cloud Monitoring
+
+#### Support for Custom Webhooks
+You can receive Cloud Monitoring notifications as webhooks using custom webhooks in the notification receiver group.
+
 ### August 27, 2024
 
 #### Add New Service to View Metrics
