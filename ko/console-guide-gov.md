@@ -189,32 +189,32 @@
 
 - 커스텀 웹훅 요청 데이터로 제공하는 파라미터 목록
 
-  | 값 | 설명 | 타입 | 비고 |
-    | --- | --- | --- | --- |
-  | orgName | 조직 이름 | String |  |
-  | projectName | 프로젝트 이름 | String |  |
-  | tenantType | 서비스 타입 | String | `organization`(커스텀 대시보드)<br>`project`(Cloud Monitoring) |
-  | referenceKey | 조직 또는 프로젝트 ID | String |  |
-  | serviceName | 서비스 이름 | String |  |
-  | alertName | 알림 이름 | String |  |
-  | alertId | 알림 ID | String |  |
-  | eventsCount | 발생 이벤트 개수 | Integer |  |
-  | events | 알림 이벤트 | List\<Object> | events 파라미터 목록 참조 |
+| 값 | 설명 | 타입 | 비고 |
+| --- | --- | --- | --- |
+| orgName | 조직 이름 | String |  |
+| projectName | 프로젝트 이름 | String |  |
+| tenantType | 서비스 타입 | String | `organization`(커스텀 대시보드)<br>`project`(Cloud Monitoring) |
+| referenceKey | 조직 또는 프로젝트 ID | String |  |
+| serviceName | 서비스 이름 | String |  |
+| alertName | 알림 이름 | String |  |
+| alertId | 알림 ID | String |  |
+| eventsCount | 발생 이벤트 개수 | Integer |  |
+| events | 알림 이벤트 | List<Object\> | events 파라미터 목록 참조 |
 
 - events 파라미터 목록
 
-  | 값 | 설명 | 타입 | 비고 |
-    | --- | --- | --- | --- |
-  | events[].resourceTypeName | 리소스 타입 이름(En) | String | |
-  | events[].enMetricName | 지표 이름(En) | String | |
-  | events[].threshold | 임계치 | String | Double 형태의 문자열 |
-  | events[].operator | 비교 방법 | String | Enum (`EQUAL`, `NOT_EQUAL`, `GREATER_THAN`, `LESS_THAN`, `GREATER_THAN_OR_EQUAL`, `LESS_THAN_OR_EQUAL`) |
-  | events[].duration | 지속 시간 | String | 조건에 설정된 값 |
-  | events[].result | 감지된 값 | String | Double 형태의 문자열 |
-  | events[].startAt | 이벤트 발생 일시 | String | ex) `2024-10-29T08:44:22Z` |
-  | events[].endAt | 이벤트 종료 일시 | String | ex) `2024-10-29T08:44:22Z` |
-  | events[].contMinutes | 이벤트 지속 시간(분) | Integer | 이벤트가 발생한 시간과 현재 시간의 차이(분) |
-  | events[].labels | 발생 위치 | Map\<String, String> | |
+| 값 | 설명 | 타입 | 비고 |
+| --- | --- | --- | --- |
+| events[].resourceTypeName | 리소스 타입 이름(En) | String | |
+| events[].enMetricName | 지표 이름(En) | String | |
+| events[].threshold | 임계치 | String | Double 형태의 문자열 |
+| events[].operator | 비교 방법 | String | Enum (`EQUAL`, `NOT_EQUAL`, `GREATER_THAN`, `LESS_THAN`, `GREATER_THAN_OR_EQUAL`, `LESS_THAN_OR_EQUAL`) |
+| events[].duration | 지속 시간 | String | 조건에 설정된 값 |
+| events[].result | 감지된 값 | String | Double 형태의 문자열 |
+| events[].startAt | 이벤트 발생 일시 | String | ex) `2024-10-29T08:44:22Z` |
+| events[].endAt | 이벤트 종료 일시 | String | ex) `2024-10-29T08:44:22Z` |
+| events[].contMinutes | 이벤트 지속 시간(분) | Integer | 이벤트가 발생한 시간과 현재 시간의 차이(분) |
+| events[].labels | 발생 위치 | Map<String, String\> | |
 
 #### 알림 상세 보기 모달
 
