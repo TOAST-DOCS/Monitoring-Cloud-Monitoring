@@ -186,6 +186,7 @@ You don't need to enter a filter for the metric entry, but you must enter at lea
 You must select at least one notification recipient. Only notification recipient types are supported for notification recipient groups, which can be managed on the **Project Management > Notification Receiver Group Management** screen. [[Go to User Guide]](/nhncloud/en/console-guide/#notification-receiver-group-management)
 
 You can receive notifications as webhooks through custom webhooks in the Notification Receiver Group.
+
 - List of parameters to provide as custom webhook request data
   
   | Value | Description | Type | Remarks |
@@ -198,7 +199,7 @@ You can receive notifications as webhooks through custom webhooks in the Notific
   | alertName | Notification name | String |  |
   | alertId | Notification ID | String |  |
   | eventsCount | Number of events occurring | Integer |  |
-  | events | Notification event | List<Object> | See the events parameter list |
+  | events | Notification event | List\<Object> | See the events parameter list |
 
 - events parameter list
 
@@ -213,7 +214,7 @@ You can receive notifications as webhooks through custom webhooks in the Notific
   | events[].startAt | Event Occurred at | String | ex) `2024-10-29T08:44:22Z` |
   | events[].endAt | Event Ended at | String | ex) `2024-10-29T08:44:22Z` |
   | events[].contMinutes | Event duration (minutes) | Integer | The difference between the time the event occurred and the current time (minutes) |
-  | events[].labels | Where event occurred | Map<String, String> | |
+  | events[].labels | Where event occurred | Map\<String, String> | |
 
 
 #### View Notification Details Modal
