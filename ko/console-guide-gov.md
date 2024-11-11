@@ -186,6 +186,7 @@
 알림 수신 대상은 1개 이상 선택해야 합니다. 알림 수신 대상 유형은 알림 수신 그룹만 지원되며, **프로젝트 관리 > 알림 수신 그룹 관리** 화면에서 관리할 수 있습니다. [[가이드 바로 가기]](/nhncloud/ko/console-guide/#_35)
 
 알림 수신 그룹의 커스텀 웹훅을 통해 웹훅으로 알림을 받을 수 있습니다.
+
 - 커스텀 웹훅 요청 데이터로 제공하는 파라미터 목록
 
   | 값 | 설명 | 타입 | 비고 |
@@ -198,7 +199,7 @@
   | alertName | 알림 이름 | String |  |
   | alertId | 알림 ID | String |  |
   | eventsCount | 발생 이벤트 개수 | Integer |  |
-  | events | 알림 이벤트 | List\<Object\> | events 파라미터 목록 참조 |
+  | events | 알림 이벤트 | List\<Object> | events 파라미터 목록 참조 |
 
 - events 파라미터 목록
 
@@ -213,7 +214,7 @@
   | events[].startAt | 이벤트 발생 일시 | String | ex) `2024-10-29T08:44:22Z` |
   | events[].endAt | 이벤트 종료 일시 | String | ex) `2024-10-29T08:44:22Z` |
   | events[].contMinutes | 이벤트 지속 시간(분) | Integer | 이벤트가 발생한 시간과 현재 시간의 차이(분) |
-  | events[].labels | 발생 위치 | Map<String, String> | |
+  | events[].labels | 발생 위치 | Map\<String, String> | |
 
 #### 알림 상세 보기 모달
 
