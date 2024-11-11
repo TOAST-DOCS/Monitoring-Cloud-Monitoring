@@ -199,7 +199,7 @@
   | alertName | 알림 이름 | String |  |
   | alertId | 알림 ID | String |  |
   | eventsCount | 발생 이벤트 개수 | Integer |  |
-  | events | 알림 이벤트 | List\<Object> | events 파라미터 목록 참조 |
+  | events | 알림 이벤트 | List<Object\> | events 파라미터 목록 참조 |
 
 - events 파라미터 목록
 
@@ -214,7 +214,7 @@
   | events[].startAt | 이벤트 발생 일시 | String | ex) `2024-10-29T08:44:22Z` |
   | events[].endAt | 이벤트 종료 일시 | String | ex) `2024-10-29T08:44:22Z` |
   | events[].contMinutes | 이벤트 지속 시간(분) | Integer | 이벤트가 발생한 시간과 현재 시간의 차이(분) |
-  | events[].labels | 발생 위치 | Map\<String, String> | |
+  | events[].labels | 발생 위치 | Map<String, String\> | |
 
 #### 알림 상세 보기 모달
 
