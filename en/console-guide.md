@@ -183,8 +183,39 @@ You don't need to enter a filter for the metric entry, but you must enter at lea
 
 ![Notification Settings List Screen - Notification Recipients](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_a-3.png)
 
-You must select at least one notification recipient. Only notification recipient types are supported for notification recipient groups, which can be managed on the **Project Management > Notification Receiver Group Management
-** screen.
+You must select at least one notification recipient. Only notification recipient types are supported for notification recipient groups, which can be managed on the **Project Management > Notification Receiver Group Management** screen. [[Go to User Guide]](/nhncloud/en/console-guide/#notification-receiver-group-management)
+
+You can receive notifications as webhooks through custom webhooks in the Notification Receiver Group.
+
+- List of parameters to provide as custom webhook request data
+  
+| Value | Description | Type | Remarks |
+| --- | --- | --- | --- |
+| orgName | Organization name | String |  |
+| projectName | Project name | String |  |
+| tenantType | Service type | String | `organization`(custom dashboard)<br>`project`(Cloud Monitoring) |
+| referenceKey | Organization or project ID | String |  |
+| serviceName | Service name | String |  |
+| alertName | Notification name | String |  |
+| alertId | Notification ID | String |  |
+| eventsCount | Number of events occurring | Integer |  |
+| events | Notification event | List<Object\> | See the events parameter list |
+
+- events parameter list
+
+| Value | Description | Type | Remarks |
+| --- | --- | --- | --- |
+| events[].resourceTypeName | Resource type name (En) | String | |
+| events[].enMetricName | Metric name (En) | String | |
+| events[].threshold | Threshold | String | String as Double |
+| events[].operator | Comparison Method | String | Enum`(EQUAL`, `NOT_EQUAL`, `GREATER_THAN`, `LESS_THAN`, `GREATER_THAN_OR_EQUAL`, `LESS_THAN_OR_EQUAL`) |
+| events[].duration | Duration | String | The value set in the condition |
+| events[].result | Detected value | String | String as Double |
+| events[].startAt | Event Occurred at | String | ex) `2024-10-29T08:44:22Z` |
+| events[].endAt | Event Ended at | String | ex) `2024-10-29T08:44:22Z` |
+| events[].contMinutes | Event duration (minutes) | Integer | The difference between the time the event occurred and the current time (minutes) |
+| events[].labels | Where event occurred | Map<String, String\> | |
+
 
 #### View Notification Details Modal
 
