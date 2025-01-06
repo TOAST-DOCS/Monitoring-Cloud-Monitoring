@@ -5,7 +5,7 @@ Cloud Monitoring을 사용하는 순서는 다음과 같습니다. 
 - 서비스 선택<br>
   Cloud Monitoring은 프로젝트 생성 시 기본으로 제공되는 서비스입니다.<br>
   따라서 별도의 작업 없이 프로젝트를 생성한 후 서비스를 사용할 수 있습니다.<br>
-  프로젝트를 생성하는 방법은 [NHN Cloud 콘솔 사용 가이드](/ko/nhncloud/ko/console-guide-ncgn/)를 참고하십시오.
+  프로젝트를 생성하는 방법은 [NHN Cloud 콘솔 사용 가이드](/nhncloud/ko/console-guide-ncgn/)를 참고하십시오.
 - 지표 수집 설정<br>
   각 서비스별로 지표 수집을 설정합니다.
 - 대시보드 구성<br>
