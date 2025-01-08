@@ -1,6 +1,6 @@
 ## Monitoring > Cloud Monitoring > 릴리스 노트
 
-### 2025. 01. 21.
+### 2025. 01. 27.
 
 #### 신규 서비스 출시
 Cloud Monitoring은 NHN Cloud의 리소스에 대한 지표를 수집/제공하고 이상에 대한 알림을 제공하는 서비스입니다.
