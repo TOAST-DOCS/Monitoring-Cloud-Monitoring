@@ -129,7 +129,7 @@
 | String                                         | Storage type                        |
 | container                                    | Container Name                       |
 
-## 3.10
+## GPU
 - A dictionary that defines metrics that can be monitored for GPU services on NHN Cloud.
 
 ### Metric List
