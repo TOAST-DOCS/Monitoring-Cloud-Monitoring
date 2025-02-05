@@ -1,5 +1,14 @@
 ## Monitoring > Cloud Monitoring > 릴리스 노트
 
+### 2025. 02. 11.
+
+#### 지표 조회 가능 서비스 추가
+
+Cloud Monitoring에서 지표 조회가 가능한 서비스가 추가되었습니다.  
+아래 서비스의 지표는 지표 관리 화면에서 수집 설정 후, 대시보드에서 확인할 수 있습니다.
+* Colocation Gateway
+* Load Balancer
+
 ### 2024. 10. 29.
 
 #### 권한 세분화 적용

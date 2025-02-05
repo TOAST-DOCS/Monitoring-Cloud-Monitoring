@@ -253,3 +253,71 @@
 | 범례명            | 설명                                     |
 |----------------|----------------------------------------|
 | id             | 라우링 테이블 이름  |
+
+## Colocation Gateway
+- NHN Cloud의 Colocation Gateway 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 한국어                  | 리소스명        | 기본 범례(Legend)          | 단위(Unit)         |
+|----------------------|-------------|------------------------|------------------|
+| 네트워크 송신 바이트          | 코로케이션 게이트웨이 | {{id}} | 5분 누적 바이트        |
+| 네트워크 수신 바이트          | 코로케이션 게이트웨이 | {{id}} | 5분 누적 바이트        |
+| 네트워크 송신 패킷           | 코로케이션 게이트웨이 | {{id}} | 5분 누적 패킷         |
+| 네트워크 수신 패킷           | 코로케이션 게이트웨이 | {{id}} | 5분 누적 패킷         |
+| 네트워크 송신 초당 비트 수(bps) | 코로케이션 게이트웨이 | {{id}} | 초당 비트(bits/s)    | 
+| 네트워크 수신 초당 비트 수(bps)	| 코로케이션 게이트웨이 | {{id}} | 초당 비트(bits/s)    | 
+| 네트워크 송신 초당 패킷 수(pps)	| 코로케이션 게이트웨이 | {{id}} | 초당 패킷(packets/s) | 
+| 네트워크 수신 초당 패킷 수(pps)	| 코로케이션 게이트웨이 | {{id}} | 초당 패킷(packets/s) |
+
+### Colocation Gateway 필터(Filter)
+
+| 필터명 | 설명 |
+| --- | --- |
+| 코로케이션 게이트웨이 | NHN Cloud Network 서비스에서 사용 중인 코로케이션 게이트웨이 |
+
+### Colocation Gateway 범례(Legend)
+
+| 범례명 | 설명             |
+|----|----------------|
+| id | 코로케이션 게이트웨이 이름 |
+
+## Load Balancer
+- NHN Cloud의 Load Balancer 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 한국어                  | 리소스명        | 기본 범례(Legend)          | 단위(Unit)     |
+|----------------------|-------------|------------------------|--------------|
+| 네트워크 수신 바이트 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트    |
+| 네트워크 송신 바이트 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트    |
+| 네트워크 수신 초당 비트 수 (bps) | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
+| 네트워크 송신 초당 비트 수 (bps) | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
+| 현재 큐의 개수 상태 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
+| 현재 연결 중인 세션의 개수 상태 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
+| http 100번대 응답을 한 횟수 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
+| http 200번대 응답을 한 횟수 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
+| http 300번대 응답을 한 횟수 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
+| http 400번대 응답을 한 횟수 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
+| http 500번대 응답을 한 횟수 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
+| http에서 100번~500번이 아닌 다른 응답을 한 횟수 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
+| 해당 멤버로 로드 밸런싱이 되었던 총횟수 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
+| 에러가 발생했던 연결 횟수 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
+| 평균 응답시간 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ms           |
+| 해당 멤버의 활성 상태 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
+| http 응답이 정상적으로 반환된 총 횟수 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
+
+### Load Balancer 필터(Filter)
+
+| 필터명 | 설명                                  |
+| --- |-------------------------------------|
+| 로드밸런서 | NHN CLoud Network 서비스에서 사용 중인 로드밸런서 |
+
+### Load Balancer 범례(Legend)
+
+| 범례명             | 설명       |
+|-----------------|----------|
+| loadbalancer_id | 로드밸런서 이름 |
+| listener_id     | 리스너 이름   |
+| pool_id         | 멤버 그룹 이름 |
+| member_id       | 멤버 이름    |
