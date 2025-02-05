@@ -30,7 +30,7 @@
 - NHN Cloud의 Instance 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
 ### Metric List
-| 한국어              | 리소스명    | 기본 범례(Legend)                                                              | 단위(Unit)         |
+| 지표명              | 리소스명    | 기본 범례(Legend)                                                              | 단위(Unit)         |
 |------------------|---------|----------------------------------------------------------------------------|------------------|
 | CPU 사용률          | CPU     |                                                                            | 백분율(0-100)       |
 | 코어별 CPU 사용률      | CPU     | {{nhncloud_instance_id}} cpu={{cpu}}                                       | 백분율(0-100)       |
@@ -91,7 +91,7 @@
 - NHN Cloud의 NCS 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
 ### Metric List
-| 한국어           | 리소스명 | 기본 범례(Legend)                                                            | 단위(Unit)        |
+| 지표명           | 리소스명 | 기본 범례(Legend)                                                            | 단위(Unit)        |
 |---------------|------|--------------------------------------------------------------------------|-----------------|
 | CPU 사용률       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}} container={{container}} | 백분율(0-100)      |
 | 워크로드에 할당된 CPU | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 숫자              |
@@ -133,7 +133,7 @@
 - NHN Cloud의 GPU 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
 ### Metric List
-| 한국어         | 리소스명 | 기본 범례(Legend) | 단위(Unit)   |
+| 지표명         | 리소스명 | 기본 범례(Legend) | 단위(Unit)   |
 |-------------|------|---------------|------------|
 | GPU 사용률     | GPU  | 없음            | 백분율(0-100) |
 | GPU 온도      | GPU  | 없음            | 섭씨(℃)      |
@@ -160,7 +160,7 @@
 - NHN Cloud의 Transit Hub 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
 ### Metric List
-| 한국어                                | 리소스명 | 기본 범례(Legend) | 단위(Unit)   |
+| 지표명                                | 리소스명 | 기본 범례(Legend) | 단위(Unit)   |
 |------------------------------------|------|---------------|------------|
 | 네트워크 송신 바이트                        | 트랜짓 허브  | {{id}} | 5분 누적 바이트 |
 | 네트워크 수신 바이트                        | 트랜짓 허브  | {{id}} | 5분 누적 바이트 |
@@ -227,7 +227,7 @@
 
 ### Metric List
 
-| 한국어                          | 리소스명    | 기본 범례(Legend)          | 단위(Unit)         |
+| 지표명                          | 리소스명    | 기본 범례(Legend)          | 단위(Unit)         |
 |------------------------------|---------|------------------------|------------------|
 | 네트워크 송신 바이트                 | 라우팅 테이블 | {{id}} | 5분 누적 바이트        |
 | 네트워크 수신 바이트                 | 라우팅 테이블 | {{id}} | 5분 누적 바이트        |
@@ -259,65 +259,65 @@
 
 ### Metric List
 
-| 한국어                  | 리소스명        | 기본 범례(Legend)          | 단위(Unit)         |
-|----------------------|-------------|------------------------|------------------|
-| 네트워크 송신 바이트          | 코로케이션 게이트웨이 | {{id}} | 5분 누적 바이트        |
-| 네트워크 수신 바이트          | 코로케이션 게이트웨이 | {{id}} | 5분 누적 바이트        |
-| 네트워크 송신 패킷           | 코로케이션 게이트웨이 | {{id}} | 5분 누적 패킷         |
-| 네트워크 수신 패킷           | 코로케이션 게이트웨이 | {{id}} | 5분 누적 패킷         |
-| 네트워크 송신 초당 비트 수(bps) | 코로케이션 게이트웨이 | {{id}} | 초당 비트(bits/s)    | 
-| 네트워크 수신 초당 비트 수(bps)	| 코로케이션 게이트웨이 | {{id}} | 초당 비트(bits/s)    | 
-| 네트워크 송신 초당 패킷 수(pps)	| 코로케이션 게이트웨이 | {{id}} | 초당 패킷(packets/s) | 
-| 네트워크 수신 초당 패킷 수(pps)	| 코로케이션 게이트웨이 | {{id}} | 초당 패킷(packets/s) |
+| 지표명                   | 리소스명        | 기본 범례(Legend) | 단위(Unit)         |
+|-----------------------|-------------|---------------|------------------|
+| 네트워크 송신 바이트           | 코로케이션 게이트웨이 | {{id}}        | 5분 누적 바이트        |
+| 네트워크 수신 바이트           | 코로케이션 게이트웨이 | {{id}}        | 5분 누적 바이트        |
+| 네트워크 송신 패킷            | 코로케이션 게이트웨이 | {{id}}        | 5분 누적 패킷         |
+| 네트워크 수신 패킷            | 코로케이션 게이트웨이 | {{id}}        | 5분 누적 패킷         |
+| 네트워크 송신 초당 비트 수(bps)  | 코로케이션 게이트웨이 | {{id}}        | 초당 비트(bits/s)    | 
+| 네트워크 수신 초당 비트 수(bps)	 | 코로케이션 게이트웨이 | {{id}}        | 초당 비트(bits/s)    | 
+| 네트워크 송신 초당 패킷 수(pps)	 | 코로케이션 게이트웨이 | {{id}}        | 초당 패킷(packets/s) | 
+| 네트워크 수신 초당 패킷 수(pps)	 | 코로케이션 게이트웨이 | {{id}}        | 초당 패킷(packets/s) |
 
 ### Colocation Gateway 필터(Filter)
 
-| 필터명 | 설명 |
-| --- | --- |
+| 필터명         | 설명                                        |
+|-------------|-------------------------------------------|
 | 코로케이션 게이트웨이 | NHN Cloud Network 서비스에서 사용 중인 코로케이션 게이트웨이 |
 
 ### Colocation Gateway 범례(Legend)
 
 | 범례명 | 설명             |
-|----|----------------|
-| id | 코로케이션 게이트웨이 이름 |
+|-----|----------------|
+| id  | 코로케이션 게이트웨이 이름 |
 
 ## Load Balancer
 - NHN Cloud의 Load Balancer 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
 ### Metric List
 
-| 한국어                             | 리소스명        | 기본 범례(Legend)          | 단위(Unit)     |
-|---------------------------------|-------------|------------------------|--------------|
-| 네트워크 수신 바이트                     | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트    |
-| 네트워크 송신 바이트                     | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트    |
-| 네트워크 수신 초당 비트 수(bps)           | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
-| 네트워크 송신 초당 비트 수(bps)           | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
-| 처리 대기 중인 요청 개수                  | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
-| 연결 상태에 있는 세션 개수                 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
-| HTTP 100번대 응답을 한 횟수             | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
-| HTTP 200번대 응답을 한 횟수             | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
-| HTTP 300번대 응답을 한 횟수             | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
-| HTTP 400번대 응답을 한 횟수             | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
-| HTTP 500번대 응답을 한 횟수             | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
-| HTTP 응답 중 100번~500번 외 다른 응답을 한 횟수 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 개수     |
-| 해당 멤버로 로드 밸런싱된 총횟수          | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
-| 오류 발생 연결 횟수                 | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
-| 평균 응답시간                         | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ms           |
-| 해당 멤버의 활성 상태 값                    | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
-| HTTP 응답이 정상적으로 반환된 총횟수         | 로드밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 개수           |
+| 지표명                               | 리소스명      | 기본 범례(Legend)                                                 | 단위(Unit)      |
+|-----------------------------------|-----------|---------------------------------------------------------------|---------------|
+| 네트워크 수신 바이트                       | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트     |
+| 네트워크 송신 바이트                       | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트     |
+| 네트워크 수신 초당 비트 수(bps)              | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
+| 네트워크 송신 초당 비트 수(bps)              | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
+| 처리 대기 중인 요청 개수                    | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 연결 상태에 있는 세션 개수                   | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| HTTP 100번대 응답을 한 횟수               | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 200번대 응답을 한 횟수               | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 300번대 응답을 한 횟수               | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 400번대 응답을 한 횟수               | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 500번대 응답을 한 횟수               | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 응답 중 100번~500번 외 다른 응답을 한 횟수 | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| 해당 멤버로 로드 밸런싱된 총횟수                | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 오류 발생 연결 횟수                       | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 평균 응답시간                           | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ms            |
+| 해당 멤버의 활성 상태 값                    | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| HTTP 응답이 정상적으로 반환된 총횟수            | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
 
 ### Load Balancer 필터(Filter)
 
-| 필터명 | 설명                                  |
-| --- |-------------------------------------|
-| 로드밸런서 | NHN CLoud Network 서비스에서 사용 중인 로드밸런서 |
+| 필터명    | 설명                                   |
+|--------|--------------------------------------|
+| 로드 밸런서 | NHN CLoud Network 서비스에서 사용 중인 로드 밸런서 |
 
 ### Load Balancer 범례(Legend)
 
-| 범례명             | 설명       |
-|-----------------|----------|
-| loadbalancer_id | 로드밸런서 이름 |
-| listener_id     | 리스너 이름   |
-| pool_id         | 멤버 그룹 이름 |
-| member_id       | 멤버 이름    |
+| 범례명             | 설명        |
+|-----------------|-----------|
+| loadbalancer_id | 로드 밸런서 이름 |
+| listener_id     | 리스너 이름    |
+| pool_id         | 멤버 그룹 이름  |
+| member_id       | 멤버 이름     |

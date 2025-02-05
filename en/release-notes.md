@@ -1,6 +1,15 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
-### Oct 29, 2024
+### February 11, 2025
+
+#### Add New Service to View Metrics
+
+Added a new service for which metrics can be viewed in Cloud Monitoring  
+Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+* Colocation Gateway
+* Load Balancer
+
+### October 29, 2024
 
 #### Apply Permission Segmentation
 Added a role to use project services to Cloud Monitoring.

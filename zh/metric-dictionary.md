@@ -30,7 +30,7 @@
 - A dictionary that defines metrics that can be monitored for the Instance service on NHN Cloud.
 
 ### Metric List
-| Korean              | Resource Name    | Default legend (Legend)                                                              | Unit         |
+| Metric Name              | Resource Name    | Default legend (Legend)                                                              | Unit         |
 |------------------|---------|----------------------------------------------------------------------------|------------------|
 | CPU usage          | 3.10     |                                                                            | Percentage (0-100)       |
 | CPU usage by core      | 3.10     | {{nhncloud_instance_id}} cpu={{cpu}}                                       | Percentage (0-100)       |
@@ -91,7 +91,7 @@
 - A dictionary that defines metrics that can be monitored for NCS services on NHN Cloud.
 
 ### Metric List
-| Korean           | Resource Name | Default legend (Legend)                                                            | Unit        |
+| Metric Name           | Resource Name | Default legend (Legend)                                                            | Unit        |
 |---------------|------|--------------------------------------------------------------------------|-----------------|
 | CPU usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}} container={{container}} | Percentage (0-100)      |
 | CPUs assigned to the workload | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
@@ -133,7 +133,7 @@
 - A dictionary that defines metrics that can be monitored for GPU services on NHN Cloud.
 
 ### Metric List
-| Korean         | Resource Name | Default legend (Legend) | Unit   |
+| Metric Name         | Resource Name | Default legend (Legend) | Unit   |
 |-------------|------|---------------|------------|
 | GPU usage     | 3.10  | None            | Percentage (0-100) |
 | GPU temperature      | 3.10  | None            | Celsius (℃)      |
@@ -161,7 +161,7 @@
 - A dictionary that defines metrics that can be monitored for the Transit Hub service on NHN Cloud.
 
 ### Metric List
-| Korean                                | Resource Name | Default legend (Legend) | Unit   |
+| Metric Name                                | Resource Name | Default legend (Legend) | Unit   |
 |------------------------------------|------|---------------|------------|
 | Network transmitted bytes                        | Transit Hub  | {{id}} | 5 min accumulated bytes |
 | Network received bytes                        | Transit Hub  | {{id}} | 5 min accumulated bytes |
@@ -228,7 +228,7 @@
 
 ### Metric List
 
-| Korean                          | Resource Name    | Default legend (Legend)          | Unit         |
+| Metric Name                          | Resource Name    | Default legend (Legend)          | Unit         |
 |------------------------------|---------|------------------------|------------------|
 | Network transmitted bytes                 | Routing Table | {{id}} | 5 min accumulated bytes        |
 | Network received bytes                 | Routing Table | {{id}} | 5 min accumulated bytes        |
@@ -254,3 +254,71 @@
 | Legend Name            | Description                                     |
 |----------------|----------------------------------------|
 | id             | Routing table name  |
+
+## Colocation Gateway
+- A dictionary that defines metrics that can be monitored for the Colocation Gateway service on NHN Cloud.
+
+### Metric List
+
+| Metric Name                                  | Resource Name      | Default legend (Legend) | Unit                            |
+|----------------------------------------------|--------------------|-------------------------|---------------------------------|
+| Network transmitted bytes                    | Colocation Gateway | {{id}}                  | 5 min accumulated bytes         |
+| Network received bytes                       | Colocation Gateway | {{id}}                  | 5 min accumulated bytes         |
+| Network transmitted packets                  | Colocation Gateway | {{id}}                  | 5 min accumulated packets       |
+| Network received packets                     | Colocation Gateway | {{id}}                  | 5 min accumulated packets       |
+| Network transmitted bits per second (bps)    | Colocation Gateway | {{id}}                  | Bits per second (bits/s)        | 
+| Network received bits per second (bps)	      | Colocation Gateway | {{id}}                  | Bits per second (bits/s)        | 
+| Network transmitted packets per second (pps) | Colocation Gateway | {{id}}                  | Packets per second (packets/s)  | 
+| Network received packets per second	         | Colocation Gateway | {{id}}                  | Packets per second (packets/s)  | 
+
+### Colocation Gateway Filter
+
+| Filter name         | Description                                             |
+|---------------------|---------------------------------------------------------|
+| Colocation Gateway  | Colocation gateway used by Network service on NHN Cloud |
+
+### Colocation Gateway Legend
+
+| Legend Name | Description             |
+|-------------|-------------------------|
+| id          | Colocation gateway name |
+
+## Load Balancer
+- A dictionary that defines metrics that can be monitored for the Load Balancer service on NHN Cloud.
+
+### Metric List
+
+| Metric Name                                     | Resource Name | Default legend (Legend)                                       | Unit                     |
+|-------------------------------------------------|---------------|---------------------------------------------------------------|--------------------------|
+| Network Received Byte                           | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated bytes  |
+| Network Sent Byte                               | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated bytes  |
+| Number of Network Received Bit per Second (bps) | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Bits per second (bit/s)  |
+| Number of Network Sent Bit per Second (bps)     | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Bits per second (bit/s)  |
+| Number of Requests Pending Processing           | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Number of Sessions in Connection Status         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| HTTP 100 Response Count                         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| HTTP 200 Response Count                         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| HTTP 300 Response Count                         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| HTTP 400 Response Count                         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| HTTP 500 Response Count                         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| Other HTTP Responses Count                      | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| Total Number Load balanced with the Member      | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Number of Connections Error                     | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Average Response Time                           | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Millisecond              |
+| The Active Status Value of the Member           | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Total Number of Normal HTTP Responses Returned  | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+
+### Load Balancer Filter
+
+| Filter name    | Description                                        |
+|----------------|----------------------------------------------------|
+| Load Balancer  | Load balancer used by Network service on NHN Cloud |
+
+### Load Balancer Legend
+
+| Legend Name     | Description            |
+|-----------------|--------------------|
+| loadbalancer_id | Load balancer name |
+| listener_id     | Listener name      |
+| pool_id         | Member group name  |
+| member_id       | Member name        |
