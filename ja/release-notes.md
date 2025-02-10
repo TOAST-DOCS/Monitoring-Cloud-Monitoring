@@ -1,5 +1,14 @@
 ## Monitoring > Cloud Monitoring > リリースノート
 
+### 2025. 02. 11.
+
+#### 指標照会可能なサービスを追加
+
+Cloud Monitoringで指標照会が可能なサービスが追加されました。
+下記のサービスの指標は、指標管理画面で収集設定後、ダッシュボードで確認できます。
+* Colocation Gateway
+* Load Balancer
+
 ### 2024. 10. 29.
 
 #### 権限の細分化を適用
