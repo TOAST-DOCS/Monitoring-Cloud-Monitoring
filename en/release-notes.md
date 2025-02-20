@@ -6,6 +6,7 @@
 
 Added a new service for which metrics can be viewed in Cloud Monitoring  
 Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+
 * Direct Connect
 
 ### February 11, 2025
@@ -14,6 +15,7 @@ Metrics for the services below are available in the dashboard after setting up c
 
 Added a new service for which metrics can be viewed in Cloud Monitoring  
 Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+
 * Colocation Gateway
 * Load Balancer
 
@@ -21,8 +23,9 @@ Metrics for the services below are available in the dashboard after setting up c
 
 #### Apply Permission Segmentation
 Added a role to use project services to Cloud Monitoring.
-- Cloud Monitoring ADMIN: Create, Read, Update, and Delete Cloud Monitoring
-- Cloud Monitoring VIEWER: Read Cloud Monitoring
+
+* Cloud Monitoring ADMIN: Create, Read, Update, and Delete Cloud Monitoring
+* Cloud Monitoring VIEWER: Read Cloud Monitoring
 
 #### Support for Custom Webhooks
 You can receive Cloud Monitoring notifications as webhooks using custom webhooks in the notification receiver group.
@@ -33,6 +36,7 @@ You can receive Cloud Monitoring notifications as webhooks using custom webhooks
 
 Added a new service for which metrics can be viewed in Cloud Monitoring  
 Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+
 * Transit Hub
 * Internet Gateway
 
@@ -45,6 +49,7 @@ Metrics for the services below are available in the dashboard after setting up c
 
 #### Release of a New Service
 Cloud Monitoring collects and provides metrics for resources in NHN Cloud and provides notifications about abnormalities. 
+
 * Collects and provides system and service metrics for resources in NHN Cloud, such as Instance, GPU Instance, NCS, etc.
 * Creates and manages dashboards flexibly and easily checks resource health.
 * You can configure metric charts in the organization and project dashboards and monitoring console in any form you want, and when a metric reaches a certain threshold, notifications can be sent via email, SMS, and more to predetermined notification recipients.
