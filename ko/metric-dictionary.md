@@ -321,3 +321,31 @@
 | listener_id     | 리스너 이름    |
 | pool_id         | 멤버 그룹 이름  |
 | member_id       | 멤버 이름     |
+
+
+## Direct Connect
+- NHN Cloud의 Direct Connect 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)      |
+|----------------------|---------|---------------|---------------|
+| 연결 상태                | Network | {{id}}        | 숫자            |
+| 연결 수신 오류 수           | Network | {{id}}        | 숫자            |
+| 연결 송신 오류 수           | Network | {{id}}        | 숫자            |
+| 네트워크 송신 바이트          | Network | {{id}}        | 5분 누적 바이트     |
+| 네트워크 수신 바이트          | Network | {{id}}        | 5분 누적 바이트     |
+| 네트워크 송신 초당 비트 수(bps) | Network | {{id}}        | 초당 비트(bits/s) |
+| 네트워크 수신 초당 비트 수(bps) | Network | {{id}}        | 초당 비트(bits/s) |
+
+### Direct Connect 필터(Filter)
+
+| 필터명    | 설명                                              |
+|--------|-------------------------------------------------|
+| 서비스 ID | NHN Cloud의 Direct Connect 서비스에서 사용 중인 서비스 신청 ID |
+
+### Direct Connect 범례(Legend)
+
+| 범례명     | 설명        |
+|---------|-----------|
+| orderId | 서비스 신청 ID |

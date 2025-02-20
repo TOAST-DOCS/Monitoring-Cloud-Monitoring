@@ -1,5 +1,13 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
+### May 4, 2025
+
+#### Add New Service to View Metrics
+
+Added a new service for which metrics can be viewed in Cloud Monitoring  
+Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+* Direct Connect
+
 ### February 11, 2025
 
 #### Add New Service to View Metrics

@@ -316,9 +316,36 @@
 
 ### Load Balancer Legend
 
-| Legend Name     | Description            |
+| Legend Name     | Description        |
 |-----------------|--------------------|
 | loadbalancer_id | Load balancer name |
 | listener_id     | Listener name      |
 | pool_id         | Member group name  |
 | member_id       | Member name        |
+
+## Direct Connect
+- A dictionary that defines metrics that can be monitored for the Direct Connect service on NHN Cloud.
+
+### Metric List
+
+| Metric Name                               | Resource Name | Default legend (Legend) | Unit                     |
+|-------------------------------------------|---------------|-------------------------|--------------------------|
+| Connection Status                         | Network       | {{id}}                  | Number                   |
+| Number of connection receive errors       | Network       | {{id}}                  | Number                   |
+| Number of connection send errors          | Network       | {{id}}                  | Number                   |
+| Network transmitted bytes                 | Network       | {{id}}                  | 5 min accumulated bytes  |
+| Network received bytes                    | Network       | {{id}}                  | 5 min accumulated bytes  |
+| Network transmitted bits per second (bps) | Network       | {{id}}                  | Bits per second (bits/s) |
+| Network received bits per second (bps)    | Network       | {{id}}                  | Bits per second (bits/s) |
+
+### Direct Connect Filter
+
+| Filter name | Description                                          |
+|-------------|------------------------------------------------------|
+| Service ID  | Service apply ID used by Direct Connect on NHN Cloud |
+
+### Direct Connect Legend
+
+| Legend Name | Description      |
+|-------------|------------------|
+| orderId     | Service apply ID |
