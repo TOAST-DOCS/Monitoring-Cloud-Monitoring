@@ -329,13 +329,13 @@
 
 | 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
 |---------------------|---------|--------------|---------------|
-| 接続状態                | Network | {{id}}       | 数字            |
-| 接続受信エラー数            | Network | {{id}}       | 数字            |
-| 接続送信エラー数            | Network | {{id}}       | 数字            |
-| ネットワーク送信バイト         | Network | {{id}}       | 5分累積バイト       |
-| ネットワーク受信バイト         | Network | {{id}}       | 5分累積バイト       |
-| ネットワーク送信 ビット/秒(bps) | Network | {{id}}       | ビット/秒(bits/s) |
-| ネットワーク受信 ビット/秒(bps) | Network | {{id}}       | ビット/秒(bits/s) |
+| 接続状態                | Network | {{orderId}}  | 数字            |
+| 接続受信エラー数            | Network | {{orderId}}  | 数字            |
+| 接続送信エラー数            | Network | {{orderId}}  | 数字            |
+| ネットワーク送信バイト         | Network | {{orderId}}  | 5分累積バイト       |
+| ネットワーク受信バイト         | Network | {{orderId}}  | 5分累積バイト       |
+| ネットワーク送信 ビット/秒(bps) | Network | {{orderId}}  | ビット/秒(bits/s) |
+| ネットワーク受信 ビット/秒(bps) | Network | {{orderId}}  | ビット/秒(bits/s) |
 
 ### Direct Connectフィルタ(Filter)
 

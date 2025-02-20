@@ -330,13 +330,13 @@
 
 | Metric Name                               | Resource Name | Default legend (Legend) | Unit                     |
 |-------------------------------------------|---------------|-------------------------|--------------------------|
-| Connection Status                         | Network       | {{id}}                  | Number                   |
-| Number of connection receive errors       | Network       | {{id}}                  | Number                   |
-| Number of connection send errors          | Network       | {{id}}                  | Number                   |
-| Network transmitted bytes                 | Network       | {{id}}                  | 5 min accumulated bytes  |
-| Network received bytes                    | Network       | {{id}}                  | 5 min accumulated bytes  |
-| Network transmitted bits per second (bps) | Network       | {{id}}                  | Bits per second (bits/s) |
-| Network received bits per second (bps)    | Network       | {{id}}                  | Bits per second (bits/s) |
+| Connection Status                         | Network       | {{orderId}}             | Number                   |
+| Number of connection receive errors       | Network       | {{orderId}}             | Number                   |
+| Number of connection send errors          | Network       | {{orderId}}             | Number                   |
+| Network transmitted bytes                 | Network       | {{orderId}}             | 5 min accumulated bytes  |
+| Network received bytes                    | Network       | {{orderId}}             | 5 min accumulated bytes  |
+| Network transmitted bits per second (bps) | Network       | {{orderId}}             | Bits per second (bits/s) |
+| Network received bits per second (bps)    | Network       | {{orderId}}             | Bits per second (bits/s) |
 
 ### Direct Connect Filter
 

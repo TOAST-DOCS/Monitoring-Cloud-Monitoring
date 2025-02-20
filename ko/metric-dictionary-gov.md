@@ -163,13 +163,13 @@
 
 | 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)      |
 |----------------------|---------|---------------|---------------|
-| 연결 상태                | Network | {{id}}        | 숫자            |
-| 연결 수신 오류 수           | Network | {{id}}        | 숫자            |
-| 연결 송신 오류 수           | Network | {{id}}        | 숫자            |
-| 네트워크 송신 바이트          | Network | {{id}}        | 5분 누적 바이트     |
-| 네트워크 수신 바이트          | Network | {{id}}        | 5분 누적 바이트     |
-| 네트워크 송신 초당 비트 수(bps) | Network | {{id}}        | 초당 비트(bits/s) |
-| 네트워크 수신 초당 비트 수(bps) | Network | {{id}}        | 초당 비트(bits/s) |
+| 연결 상태                | Network | {{orderId}}   | 숫자            |
+| 연결 수신 오류 수           | Network | {{orderId}}   | 숫자            |
+| 연결 송신 오류 수           | Network | {{orderId}}   | 숫자            |
+| 네트워크 송신 바이트          | Network | {{orderId}}   | 5분 누적 바이트     |
+| 네트워크 수신 바이트          | Network | {{orderId}}   | 5분 누적 바이트     |
+| 네트워크 송신 초당 비트 수(bps) | Network | {{orderId}}   | 초당 비트(bits/s) |
+| 네트워크 수신 초당 비트 수(bps) | Network | {{orderId}}   | 초당 비트(bits/s) |
 
 ### Direct Connect 필터(Filter)
 
