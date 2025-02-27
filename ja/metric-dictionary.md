@@ -321,3 +321,31 @@
 | listener_id     | リスナー名     |
 | pool_id         | メンバーグループ名 |
 | member_id       | メンバー名     |
+
+## Direct Connect
+- NHN CloudのDirect Connectサービスに対してモニタリングできる指標を定義した辞書です。
+
+### Metric List
+
+| 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
+|---------------------|---------|--------------|---------------|
+| 接続状態                | Network | {{orderId}}  | 数字            |
+| 接続受信エラー数            | Network | {{orderId}}  | 数字            |
+| 接続送信エラー数            | Network | {{orderId}}  | 数字            |
+| ネットワーク送信バイト         | Network | {{orderId}}  | 5分累積バイト       |
+| ネットワーク受信バイト         | Network | {{orderId}}  | 5分累積バイト       |
+| ネットワーク送信 ビット/秒(bps) | Network | {{orderId}}  | ビット/秒(bits/s) |
+| ネットワーク受信 ビット/秒(bps) | Network | {{orderId}}  | ビット/秒(bits/s) |
+
+### Direct Connectフィルタ(Filter)
+
+| フィルタ名  | 説明                                        |
+|--------|-------------------------------------------|
+| サービスID | NHN CloudのDirect Connectサービスで使用中のサービス申請ID |
+
+
+### Direct Connect凡例(Legend)
+
+| 凡例名     | 説明       |
+|---------|----------|
+| orderId | サービス申請ID |
