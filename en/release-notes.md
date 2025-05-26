@@ -1,5 +1,17 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
+### May 27, 2025
+
+#### Added a new service to view metrics
+
+Added a new service for which metrics can be viewed in Cloud Monitoring.
+Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+
+* VPC
+* Subnet
+* Floating IP
+
+
 ### May 4, 2025
 
 #### Add New Service to View Metrics
