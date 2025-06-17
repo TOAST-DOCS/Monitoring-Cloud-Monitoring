@@ -5,7 +5,7 @@
 #### SMS 알림 내용 추가
 
 알림 발송 시 SMS 내용에 항목이 추가되었습니다.
-발생한 서비스가 Instance인 경우 Instance Name 항목이 추가되었습니다.
+알림 발생한 서비스가 Instance인 경우 Instance Name 항목이 추가되었습니다.
 
 ### 2025. 01. 21.
 
