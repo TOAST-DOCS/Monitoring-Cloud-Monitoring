@@ -1,5 +1,12 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
+### June 10, 2025
+
+#### Added SMS notification content
+
+Added a new item to the SMS content sent upon notification.
+When the notification is triggered by a service of type Instance, the Instance Name is included in the message.
+
 ### May 27, 2025
 
 #### Added a new service to view metrics
