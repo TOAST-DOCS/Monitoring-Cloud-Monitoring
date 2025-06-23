@@ -1,5 +1,21 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
+### June 24, 2025
+
+#### Added a new service to view metrics
+
+Added a new service for which metrics can be viewed in Cloud Monitoring.
+Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+
+* SMS
+
+### June 10, 2025
+
+#### Added SMS notification content
+
+Added a new item to the SMS content sent upon notification.
+When the notification is triggered by a service of type Instance, the Instance Name is included in the message.
+
 ### May 27, 2025
 
 #### Added a new service to view metrics
