@@ -410,3 +410,24 @@
 |全体Floating IP数|Floating IP|{{nhncloud_region}} - total|数字|
 |接続されたFloating IP数|Floating IP|{{nhncloud_region}} - {{status}}|数字|
 |接続されていないFloating IP数|Floating IP|{{nhncloud_region}} - {{status}}|数字|
+
+## SMS
+- NHN Cloudの SMSサービスに対してモニタリングできる指標を定義した辞書です。
+
+### Metric List
+
+| 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
+|----------------------|---------|---------------|-------------|
+|受信成功|メッセージ||数字|
+|受信失敗|メッセージ||数字|
+|送信失敗|メッセージ||数字|
+|受信成功|国際 SMS||数字|
+|受信失敗|国際 SMS||数字|
+|送信失敗|国際 SMS||数字|
+
+### SMSフィルタ(Filter)
+
+| フィルタ名 | 説明                                                                                          |
+| --- |---------------------------------------------------------------------------------------------|
+| メッセージタイプ | メッセージ送信タイプの種類(SMS、LMS、MMS、 AUTH)                                                            |
+| 結果コード | メッセージ送信及び受信結果に関するコード([参考ガイド](https://docs.nhncloud.com/ja/Notification/SMS/ja/error-code/)) |

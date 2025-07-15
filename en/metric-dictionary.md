@@ -408,3 +408,25 @@
 |Number of Floating IPs|Floating IP|{{nhncloud_region}} - total|Number|
 |Number of Associated Floating IPs|Floating IP|{{nhncloud_region}} - {{status}}|Number|
 |Number of Unassociated Floating IPs|Floating IP|{{nhncloud_region}} - {{status}}|Number|
+
+## SMS
+- A dictionary that defines metrics that can be monitored for the SMS service on NHN Cloud.
+
+### Metric List
+
+| Metric Name                               | Resource Name | Default legend (Legend) | Unit               |
+|----------------------|---------|---------------|-------------|
+|Delivered|Message||Number|
+|Delivery failed|Message||Number|
+|Send failed|Message||Number|
+|Delivered|International SMS||Number|
+|Delivery failed|International SMS||Number|
+|Send failed|International SMS||Number|
+
+### SMS 필터(Filter)
+
+| 필터명  | 설명                                                                                                |
+|------|---------------------------------------------------------------------------------------------------|
+| Message Type | Message sending type (SMS, LMS, MMS, AUTH)                                                                 |
+| Result code | Message send/receive result codes([Reference](https://docs.nhncloud.com/en/Notification/SMS/en/error-code/)) |
+
