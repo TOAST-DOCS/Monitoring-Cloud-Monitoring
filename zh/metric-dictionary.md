@@ -428,4 +428,4 @@
 | 필터명  | 설명                                                                                                           |
 |------|--------------------------------------------------------------------------------------------------------------|
 | Message Type | Message sending type (SMS, LMS, MMS, AUTH)                                                                   |
-| Result code | Message send/receive result codes([Reference](/zh/Notification/SMS/zh/error-code/)) |
+| Result code | Message send/receive result codes([Reference](https://docs.nhncloud.com/zh/Notification/SMS/zh/error-code/)) |
