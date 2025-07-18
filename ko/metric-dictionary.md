@@ -429,3 +429,31 @@
 |------|---------------------------------------------------------------------------------------------------|
 | 메시지유형 | 메시지 발송 유형 종류(SMS, LMS, MMS, AUTH)                                                                 |
 | 결과코드 | 메시지 발송 및 수신 결과에 대한 코드([사용자 가이드 참고](https://docs.nhncloud.com/ko/Notification/SMS/ko/error-code/)) |
+
+## Cloud Functions
+- NHN Cloud의 Cloud Functions 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)   |
+|----------------------|---------|---------------|------------|
+|호출 거부 수(실행 제한)|Cloud Functions|{{function_number}}-{{function_name}}| 숫자         |
+|최대 실행 시간|Cloud Functions|{{function_number}}-{{function_name}}| 초          |
+|오류 발생 횟수|Cloud Functions|{{function_number}}-{{function_name}}| 숫자         |
+|평균 실행 시간|Cloud Functions|{{function_number}}-{{function_name}}| 초          |
+|성공률|Cloud Functions|{{function_number}}-{{function_name}}| 백분율(0-100) |
+|함수 호출 횟수|Cloud Functions|{{function_number}}-{{function_name}}| 숫자         |
+
+### Cloud Functions 필터(Filter)
+
+| 필터명   | 설명                                                 |
+|-------|----------------------------------------------------|
+| 함수명   | 사용자 정의 함수 이름 |
+| 함수 ID | 함수의 키값 |
+
+### Cloud Functions 범례(Legend)
+
+| 범례명        | 설명    |
+|------------|-------|
+| function_name | 함수명 |
+| function_number | 함수 ID |

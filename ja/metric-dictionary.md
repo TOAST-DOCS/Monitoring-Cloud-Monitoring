@@ -431,3 +431,32 @@
 | --- |---------------------------------------------------------------------------------------------|
 | メッセージタイプ | メッセージ送信タイプの種類(SMS、LMS、MMS、 AUTH)                                                            |
 | 結果コード | メッセージ送信及び受信結果に関するコード([参考ガイド](https://docs.nhncloud.com/ja/Notification/SMS/ja/error-code/)) |
+
+## Cloud Functions
+- NHN CloudのCloud Functionsサービスに対してモニタリングできる指標を定義した辞書です。
+
+### Metric List
+
+| 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
+|---------------------|---------|--------------|---------------|
+|呼び出し拒否数(実行制限)|Cloud Functions|{{function_number}}-{{function_name}}| 数字|
+|最大実行時間|Cloud Functions|{{function_number}}-{{function_name}}|秒 |
+|エラー発生回数|Cloud Functions|{{function_number}}-{{function_name}}| 数字|
+|平均実行時間|Cloud Functions|{{function_number}}-{{function_name}}|秒 |
+|成功率|Cloud Functions|{{function_number}}-{{function_name}}| パーセンテージ(0-100) |
+|関数呼び出し回数|Cloud Functions|{{function_number}}-{{function_name}}|数字 |
+
+### Cloud Functionsフィルタ(Filter)
+
+| フィルタ名 | 説明                        |
+|-------|---------------------------|
+| 関数   | ユーザー定義関数名 |
+| 関数 ID | 関数のキー値 |
+
+
+### Cloud Functions凡例(Legend)
+
+| 凡例名    | 説明       |
+|--------|----------|
+| function_name | 関数 |
+| function_number | 関数 ID |

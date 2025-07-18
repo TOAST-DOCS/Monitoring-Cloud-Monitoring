@@ -423,10 +423,37 @@
 |Delivery failed|International SMS||Number|
 |Send failed|International SMS||Number|
 
-### SMS 필터(Filter)
+### SMS Filter
 
-| 필터명  | 설명                                                                                                |
+| Filter name | Description                         |
 |------|---------------------------------------------------------------------------------------------------|
 | Message Type | Message sending type (SMS, LMS, MMS, AUTH)                                                                 |
 | Result code | Message send/receive result codes([Reference](https://docs.nhncloud.com/en/Notification/SMS/en/error-code/)) |
 
+## Cloud Functions
+- A dictionary that defines metrics that can be monitored for the Cloud Functions service on NHN Cloud.
+
+### Metric List
+
+| Metric Name                               | Resource Name | Default legend (Legend) | Unit    |
+|----------------------|---------|---------------|---------|
+|Number of Call Reject (Execution Limit)|Cloud Functions|{{function_number}}-{{function_name}}| Number  |
+|Maximum Execution Time|Cloud Functions|{{function_number}}-{{function_name}}| Seconds |
+|Number of Errors|Cloud Functions|{{function_number}}-{{function_name}}| Number  |
+|Average Execution Time|Cloud Functions|{{function_number}}-{{function_name}}| Seconds        |
+|Success Rate|Cloud Functions|{{function_number}}-{{function_name}}|Percentage (0-100)|
+|Number of Function Calls|Cloud Functions|{{function_number}}-{{function_name}}| Number  |
+
+### Cloud Functions Filter
+
+| Filter name | Description                                       |
+|-------------|---------------------------------------------------|
+| Function    | User-defined function name |
+| Fucntion ID | Key value of the function   |
+
+### Cloud Functions Legend
+
+| Legend Name | Description   |
+|------------|---------------|
+| function_name | Function Name |
+| function_number | Function ID   |
