@@ -349,3 +349,111 @@
 | 범례명     | 설명        |
 |---------|-----------|
 | orderId | 서비스 신청 ID |
+
+## VPC
+- NHN Cloud의 VPC 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)    |
+|----------------------|---------|---------------|-------------|
+|VPC 전체 IP 개수|VPC|{{vpc_id}}| 숫자          |
+|서브넷 할당 IP 개수|VPC|{{vpc_id}}| 숫자          |
+|VPC 사용률|VPC|{{vpc_id}}| 백분율(0-100)  |
+
+
+### VPC 필터(Filter)
+
+| 필터명 | 설명                                |
+|-----|-----------------------------------|
+| VPC | NHN Cloud의 Network 서비스에서 사용 중인 VPC 이름 |
+
+### VPC 범례(Legend)
+
+| 범례명     | 설명        |
+|---------|-----------|
+| vpc_id | VPC 이름 |
+
+## Subnet
+- NHN Cloud의 Subnet 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)    |
+|----------------------|---------|---------------|-------------|
+|서브넷 전체 IP 개수|서브넷|{{subnet_id}}|숫자|
+|리소스 할당 IP 개수|서브넷|{{subnet_id}}|숫자|
+|서브넷 사용률|서브넷|{{subnet_id}}|백분율(0-100)|
+
+
+### Subnet 필터(Filter)
+
+| 필터명 | 설명                                   |
+|-----|--------------------------------------|
+| 서브넷 | NHN Cloud의 Network 서비스에서 사용 중인 서브넷 이름 |
+
+### Subnet 범례(Legend)
+
+| 범례명     | 설명     |
+|---------|--------|
+| subnet_id | 서브넷 이름 |
+
+## Floating IP
+- NHN Cloud의 Floating IP 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)    |
+|----------------------|---------|---------------|-------------|
+|전체 플로팅 IP 개수|플로팅 IP|{{nhncloud_region}} - total|숫자|
+|연결된 플로팅 IP 개수|플로팅 IP|{{nhncloud_region}} - {{status}}|숫자|
+|연결되지 않은 플로팅 IP 개수|플로팅 IP|{{nhncloud_region}} - {{status}}|숫자|
+
+## SMS
+- NHN Cloud의 SMS 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)    |
+|----------------------|---------|---------------|-------------|
+|수신 성공|메시지||숫자|
+|수신 실패|메시지||숫자|
+|발송 실패|메시지||숫자|
+|수신 성공|국제 SMS||숫자|
+|수신 실패|국제 SMS||숫자|
+|발송 실패|국제 SMS||숫자|
+
+### SMS 필터(Filter)
+
+| 필터명  | 설명                                                                                                |
+|------|---------------------------------------------------------------------------------------------------|
+| 메시지유형 | 메시지 발송 유형 종류(SMS, LMS, MMS, AUTH)                                                                 |
+| 결과코드 | 메시지 발송 및 수신 결과에 대한 코드([사용자 가이드 참고](https://docs.nhncloud.com/ko/Notification/SMS/ko/error-code/)) |
+
+## Cloud Functions
+- NHN Cloud의 Cloud Functions 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)   |
+|----------------------|---------|---------------|------------|
+|호출 거부 수(실행 제한)|Cloud Functions|{{function_number}}-{{function_name}}| 숫자         |
+|최대 실행 시간|Cloud Functions|{{function_number}}-{{function_name}}| 초          |
+|오류 발생 횟수|Cloud Functions|{{function_number}}-{{function_name}}| 숫자         |
+|평균 실행 시간|Cloud Functions|{{function_number}}-{{function_name}}| 초          |
+|성공률|Cloud Functions|{{function_number}}-{{function_name}}| 백분율(0-100) |
+|함수 호출 횟수|Cloud Functions|{{function_number}}-{{function_name}}| 숫자         |
+
+### Cloud Functions 필터(Filter)
+
+| 필터명   | 설명                                                 |
+|-------|----------------------------------------------------|
+| 함수명   | 사용자 정의 함수 이름 |
+| 함수 ID | 함수의 키값 |
+
+### Cloud Functions 범례(Legend)
+
+| 범례명        | 설명    |
+|------------|-------|
+| function_name | 함수명 |
+| function_number | 함수 ID |

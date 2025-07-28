@@ -349,3 +349,114 @@
 | 凡例名     | 説明       |
 |---------|----------|
 | orderId | サービス申請ID |
+
+## VPC
+- NHN CloudのVPCサービスに対してモニタリングできる指標を定義した辞書です。
+
+### Metric List
+
+| 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
+|---------------------|---------|--------------|---------------|
+|VPC全体のIP数|VPC|{{vpc_id}}|数字|
+|サブネット割り当てIP数|VPC|{{vpc_id}}|数字|
+|VPC使用率|VPC|{{vpc_id}}|パーセンテージ(0-100)|
+
+
+### VPCフィルタ(Filter)
+
+| フィルタ名 | 説明                        |
+|-------|---------------------------|
+| VPC   | NHN CloudのNetworkサービスで使用中のVPC |
+
+
+### VPC凡例(Legend)
+
+| 凡例名    | 説明       |
+|--------|----------|
+| vpc_id | VPCの名前 |
+
+## Subnet
+- NHN CloudのSubnetサービスに対してモニタリングできる指標を定義した辞書です。
+
+### Metric List
+
+| 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
+|---------------------|---------|--------------|---------------|
+|サブネット全体のIP数|Subnet|{{subnet_id}}|数字|
+|リソース割り当てIP数|Subnet|{{subnet_id}}|数字|
+|サブネット使用率|Subnet|{{subnet_id}}|パーセンテージ(0-100)|
+
+
+### Subnetフィルタ(Filter)
+
+| フィルタ名 | 説明                        |
+|-------|---------------------------|
+| サブネット   | NHN CloudのNetworkサービスで使用中のサブネット |
+
+
+### Subnet凡例(Legend)
+
+| 凡例名    | 説明       |
+|--------|----------|
+| subnet_id | サブネットの名前 |
+
+## Floating IP
+- NHN CloudのFloating IPサービスに対してモニタリングできる指標を定義した辞書です。
+
+### Metric List
+
+| 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
+|---------------------|---------|--------------|---------------|
+|全体Floating IP数|Floating IP|{{nhncloud_region}} - total|数字|
+|接続されたFloating IP数|Floating IP|{{nhncloud_region}} - {{status}}|数字|
+|接続されていないFloating IP数|Floating IP|{{nhncloud_region}} - {{status}}|数字|
+
+## SMS
+- NHN Cloudの SMSサービスに対してモニタリングできる指標を定義した辞書です。
+
+### Metric List
+
+| 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
+|----------------------|---------|---------------|-------------|
+|受信成功|メッセージ||数字|
+|受信失敗|メッセージ||数字|
+|送信失敗|メッセージ||数字|
+|受信成功|国際 SMS||数字|
+|受信失敗|国際 SMS||数字|
+|送信失敗|国際 SMS||数字|
+
+### SMSフィルタ(Filter)
+
+| フィルタ名 | 説明                                                                                          |
+| --- |---------------------------------------------------------------------------------------------|
+| メッセージタイプ | メッセージ送信タイプの種類(SMS、LMS、MMS、 AUTH)                                                            |
+| 結果コード | メッセージ送信及び受信結果に関するコード([参考ガイド](https://docs.nhncloud.com/ja/Notification/SMS/ja/error-code/)) |
+
+## Cloud Functions
+- NHN CloudのCloud Functionsサービスに対してモニタリングできる指標を定義した辞書です。
+
+### Metric List
+
+| 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
+|---------------------|---------|--------------|---------------|
+|呼び出し拒否数(実行制限)|Cloud Functions|{{function_number}}-{{function_name}}| 数字|
+|最大実行時間|Cloud Functions|{{function_number}}-{{function_name}}|秒 |
+|エラー発生回数|Cloud Functions|{{function_number}}-{{function_name}}| 数字|
+|平均実行時間|Cloud Functions|{{function_number}}-{{function_name}}|秒 |
+|成功率|Cloud Functions|{{function_number}}-{{function_name}}| パーセンテージ(0-100) |
+|関数呼び出し回数|Cloud Functions|{{function_number}}-{{function_name}}|数字 |
+
+### Cloud Functionsフィルタ(Filter)
+
+| フィルタ名 | 説明                        |
+|-------|---------------------------|
+| 関数   | ユーザー定義関数名 |
+| 関数 ID | 関数のキー値 |
+
+
+### Cloud Functions凡例(Legend)
+
+| 凡例名    | 説明       |
+|--------|----------|
+| function_name | 関数 |
+| function_number | 関数 ID |
