@@ -30,41 +30,41 @@
 - A dictionary that defines metrics that can be monitored for the Instance service on NHN Cloud.
 
 ### Metric List
-| Metric Name              | Resource Name    | Default legend (Legend)                                                              | Unit         |
-|------------------|---------|----------------------------------------------------------------------------|------------------|
-| CPU usage          | 3.10     |                                                                            | Percentage (0-100)       |
-| CPU usage by core      | 3.10     | {{nhncloud_instance_id}} cpu={{cpu}}                                       | Percentage (0-100)       |
-| CPU details (user)     | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
-| CPU details (nice)     | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
-| CPU details (system)   | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
-| CPU details (iowait)   | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
-| CPU average load (1m)    | 3.10     | {{nhncloud_instance_id}}                                                   | Number               |
-| CPU average load (5m)    | 3.10     | {{nhncloud_instance_id}}                                                   | Number               |
-| CPU average load (15m)   | 3.10     | {{nhncloud_instance_id}}                                                   | Number               |
-| Disk usage          | Disk    | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
-| Disk usage by mount     | Disk    | {{nhncloud_instance_id}} device={{device}} fstype={{fstype}} path={{path}} | Ratio (0.00 - 1.00)  |
-| Read disk           | Disk    | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
-| Write to disk           | Disk    | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
-| Read disk by device       | Disk    | {{nhncloud_instance_id}} fstype={{fstype}}                                 | Bytes per second (bytes/s)  |
-| Write to disk by device       | Disk    | {{nhncloud_instance_id}} fstype={{fstype}}                                 | Bytes per second (bytes/s)  |
-| Memory usage          | Memory  | {{nhncloud_instance_id}}                                                   | Percentage (0-100)       |
-| Memory details (used)     | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
-| Memory details (buffered) | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
-| Memory details (cached)   | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
-| Memory details (free)     | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
-| Network data transmission      | Network | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
-| Network data reception      | Network | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
-| Network data transmission per device  | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Bytes per second (bytes/s)  |
-| Network data reception per device  | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Bytes per second (bytes/s)  |
-| Network data packet trasmission       | Network | {{nhncloud_instance_id}}                                                   | Packets per second (packets/s) |
-| Network packet reception       | Network | {{nhncloud_instance_id}}                                                   | Packets per second (packets/s) |
-| Network packet transmission per device   | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Packets per second (packets/s) |
-| Network packet reception per device   | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Packets per second (packets/s) |
-| Number of processes          | Process | {{nhncloud_instance_id}}                                                   | Number               |
-| Swap usage (used)     | Swap    | {{nhncloud_instance_id}}                                                   | bytes       |
-| Swap usage (free)     | Swap    | {{nhncloud_instance_id}}                                                   | bytes       |
-| Swap usage (total)    | Swap    | {{nhncloud_instance_id}}                                                   | bytes       |
-| Swap Usage           | Swap    | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| Metric Name                            | Resource Name    | Default legend (Legend)                                                              | Unit         |
+|----------------------------------------|---------|----------------------------------------------------------------------------|------------------|
+| CPU usage                              | 3.10     |                                                                            | Percentage (0-100)       |
+| CPU usage by core                      | 3.10     | {{nhncloud_instance_id}} cpu={{cpu}}                                       | Percentage (0-100)       |
+| CPU details (user)                     | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| CPU details (nice)                     | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| CPU details (system)                   | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| CPU details (iowait)                   | 3.10     | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| CPU average load (1m)                  | 3.10     | {{nhncloud_instance_id}}                                                   | Number               |
+| CPU average load (5m)                  | 3.10     | {{nhncloud_instance_id}}                                                   | Number               |
+| CPU average load (15m)                 | 3.10     | {{nhncloud_instance_id}}                                                   | Number               |
+| Disk usage                             | Disk    | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
+| Disk usage by mount                    | Disk    | {{nhncloud_instance_id}} device={{device}} fstype={{fstype}} path={{path}} | Ratio (0.00 - 1.00)  |
+| Read disk                              | Disk    | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
+| Write to disk                          | Disk    | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
+| Read disk by device                    | Disk    | {{nhncloud_instance_id}} fstype={{fstype}}                                 | Bytes per second (bytes/s)  |
+| Write to disk by device                | Disk    | {{nhncloud_instance_id}} fstype={{fstype}}                                 | Bytes per second (bytes/s)  |
+| Memory usage                           | Memory  | {{nhncloud_instance_id}}                                                   | Percentage (0-100)       |
+| Memory details (used)                  | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
+| Memory details (buffered)              | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
+| Memory details (cached)                | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
+| Memory details (free)                  | Memory  | {{nhncloud_instance_id}}                                                   | bytes       |
+| Network data transmission              | Network | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
+| Network data reception                 | Network | {{nhncloud_instance_id}}                                                   | Bytes per second (bytes/s)  |
+| Network data transmission per device   | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Bytes per second (bytes/s)  |
+| Network data reception per device      | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Bytes per second (bytes/s)  |
+| Network data packet trasmission        | Network | {{nhncloud_instance_id}}                                                   | Packets per second (packets/s) |
+| Network packet reception               | Network | {{nhncloud_instance_id}}                                                   | Packets per second (packets/s) |
+| Network packet transmission per device | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Packets per second (packets/s) |
+| Network packet reception per device    | Network | {{nhncloud_instance_id}} interface={{interface}}                           | Packets per second (packets/s) |
+| Number of processes                    | Process | {{nhncloud_instance_id}}                                                   | Number               |
+| Swap usage (used)                      | Swap    | {{nhncloud_instance_id}}                                                   | bytes       |
+| Swap usage (free)                      | Swap    | {{nhncloud_instance_id}}                                                   | bytes       |
+| Swap usage (total)                     | Swap    | {{nhncloud_instance_id}}                                                   | bytes       |
+| Swap Usage                             | Swap    | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
 
 ### Instance Filter
 - You can apply filters to the Instance metric.
@@ -316,7 +316,7 @@
 
 ### Load Balancer Legend
 
-| Legend Name     | Description            |
+| Legend Name     | Description        |
 |-----------------|--------------------|
 | loadbalancer_id | Load balancer name |
 | listener_id     | Listener name      |
@@ -349,3 +349,111 @@
 | Legend Name | Description      |
 |-------------|------------------|
 | orderId     | Service apply ID |
+
+## VPC
+- A dictionary that defines metrics that can be monitored for the VPC service on NHN Cloud.
+
+### Metric List
+
+| Metric Name                               | Resource Name | Default legend (Legend) | Unit                |
+|-------------------------------------------|---------------|-------------------------|---------------------|
+|Number of IPs in VPC|VPC|{{vpc_id}}| Number              |
+|Number of Subnet Allocation IPs|VPC|{{vpc_id}}| Number              |
+|VPC Usage|VPC|{{vpc_id}}| Percentage (0-100)  |
+
+
+### VPC Filter
+
+| Filter name | Description                  |
+|-------------|------------------------------|
+| VPC         | VPC used by Network on NHN Cloud |
+
+### VPC Legend
+
+| Legend Name | Description |
+|-------------|-------------|
+| vpc_id      | VPC name    |
+
+## Subnet
+- A dictionary that defines metrics that can be monitored for the Subnet service on NHN Cloud.
+
+### Metric List
+
+| Metric Name                               | Resource Name | Default legend (Legend) | Unit               |
+|-------------------------------------------|---------------|-------------------------|--------------------|
+|Number of IPs in Subnet|Subnet|{{subnet_id}}| Number                   |
+|Number of Resource Allocation IPs|Subnet|{{subnet_id}}| Number             |
+|Subnet Usage|Subnet|{{subnet_id}}| Percentage (0-100) |
+
+
+### Subnet Filter
+
+| Filter name | Description                         |
+|-------------|-------------------------------------|
+| Subnet      | Subnet used by Network on NHN Cloud |
+
+### Subnet Legend
+
+| Legend Name | Description |
+|-------------|-------------|
+| subnet_id      | Subnet name |
+
+## Floating IP
+- A dictionary that defines metrics that can be monitored for the Floating IP service on NHN Cloud.
+
+### Metric List
+
+| Metric Name                               | Resource Name | Default legend (Legend) | Unit               |
+|-------------------------------------------|---------------|-------------------------|--------------------|
+|Number of Floating IPs|Floating IP|{{nhncloud_region}} - total|Number|
+|Number of Associated Floating IPs|Floating IP|{{nhncloud_region}} - {{status}}|Number|
+|Number of Unassociated Floating IPs|Floating IP|{{nhncloud_region}} - {{status}}|Number|
+
+## SMS
+- A dictionary that defines metrics that can be monitored for the SMS service on NHN Cloud.
+
+### Metric List
+
+| Metric Name                               | Resource Name | Default legend (Legend) | Unit               |
+|----------------------|---------|---------------|-------------|
+|Delivered|Message||Number|
+|Delivery failed|Message||Number|
+|Send failed|Message||Number|
+|Delivered|International SMS||Number|
+|Delivery failed|International SMS||Number|
+|Send failed|International SMS||Number|
+
+### SMS Filter
+
+| Filter name | Description                         |
+|------|---------------------------------------------------------------------------------------------------|
+| Message Type | Message sending type (SMS, LMS, MMS, AUTH)                                                                 |
+| Result code | Message send/receive result codes([Reference](https://docs.nhncloud.com/en/Notification/SMS/en/error-code/)) |
+
+## Cloud Functions
+- A dictionary that defines metrics that can be monitored for the Cloud Functions service on NHN Cloud.
+
+### Metric List
+
+| Metric Name                               | Resource Name | Default legend (Legend) | Unit    |
+|----------------------|---------|---------------|---------|
+|Number of Call Reject (Execution Limit)|Cloud Functions|{{function_number}}-{{function_name}}| Number  |
+|Maximum Execution Time|Cloud Functions|{{function_number}}-{{function_name}}| Seconds |
+|Number of Errors|Cloud Functions|{{function_number}}-{{function_name}}| Number  |
+|Average Execution Time|Cloud Functions|{{function_number}}-{{function_name}}| Seconds        |
+|Success Rate|Cloud Functions|{{function_number}}-{{function_name}}|Percentage (0-100)|
+|Number of Function Calls|Cloud Functions|{{function_number}}-{{function_name}}| Number  |
+
+### Cloud Functions Filter
+
+| Filter name | Description                                       |
+|-------------|---------------------------------------------------|
+| Function    | User-defined function name |
+| Fucntion ID | Key value of the function   |
+
+### Cloud Functions Legend
+
+| Legend Name | Description   |
+|------------|---------------|
+| function_name | Function Name |
+| function_number | Function ID   |
