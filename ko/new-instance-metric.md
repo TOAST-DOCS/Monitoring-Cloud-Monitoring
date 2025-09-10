@@ -6,8 +6,7 @@ Cloud Monitoring 서비스에서 Instance의 상세 지표를 수집하기 위�
 
 **전체 진행 순서:**
 1. 신규 Agent 설치
-2. 신규 Agent 동작 확인
-3. 구 Agent 삭제 (선택사항)
+2. 구 Agent 삭제 (선택사항)
 
 ## 신규 Agent 설치 가이드
 
@@ -101,5 +100,47 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 ```
 
 ## Metric Dictionary
-> TODO (이용희)
-> 신규 지표 사전 추가
+
+|지표명|리소스명|기본 범례(Legend)|단위(Unit)|
+|-------|-------|------|------|
+|CPU 사용률 (%)|CPU (New)|{{nhncloud_instance_id}}|백분율(0-100)|
+|CPU 코어 개수|CPU (New)|{{nhncloud_instance_id}}|숫자|
+|코어별 CPU 사용률 (%)|CPU (New)|{{nhncloud_instance_id}} cpu={{cpu}}|백분율(0-100)|
+|CPU 평균 부하(1m)|CPU (New)|{{nhncloud_instance_id}} - 1m|숫자|
+|CPU 평균 부하(5m)|CPU (New)|{{nhncloud_instance_id}} - 5m|숫자|
+|CPU 평균 부하(15m)|CPU (New)|{{nhncloud_instance_id}} - 15m|숫자|
+|CPU 상세(user) (%)|CPU (New)|{{nhncloud_instance_id}}|백분율(0-100)|
+|CPU 상세(nice) (%)|CPU (New)|{{nhncloud_instance_id}}|백분율(0-100)|
+|CPU 상세(system) (%)|CPU (New)|{{nhncloud_instance_id}}|백분율(0-100)|
+|CPU 상세(iowait) (%)|CPU (New)|{{nhncloud_instance_id}}|백분율(0-100)|
+|CPU 상세(steal) (%)|CPU (New)|{{nhncloud_instance_id}}|백분율(0-100)|
+|메모리 사용률 (%)|Memory (New)|{{nhncloud_instance_id}}|백분율(0-100)|
+|메모리 상세(used) (Bytes)|Memory (New)|{{nhncloud_instance_id}}|바이트(bytes)|
+|메모리 상세(free) (Bytes)|Memory (New)|{{nhncloud_instance_id}}|바이트(bytes)|
+|메모리 상세(cached) (Bytes)|Memory (New)|{{nhncloud_instance_id}}|바이트(bytes)|
+|메모리 상세(buffered) (Bytes)|Memory (New)|{{nhncloud_instance_id}}|바이트(bytes)|
+|디스크 사용률 (%)|Disk (New)|{{nhncloud_instance_id}}|백분율(0-100)|
+|장치별 디스크 사용률 (%)|Disk (New)|{{nhncloud_instance_id}} device={{device}} fstype={{fstype}} path={{path}}|백분율(0-100)|
+|디스크 읽기 (B/s)|Disk I/O (New)|{{nhncloud_instance_id}}|초당 바이트(bytes/s)|
+|디스크 쓰기 (B/s)|Disk I/O (New)|{{nhncloud_instance_id}}|초당 바이트(bytes/s)|
+|장치별 디스크 읽기 (B/s)|Disk I/O (New)|{{nhncloud_instance_id}} device={{name}}|초당 바이트(bytes/s)|
+|장치별 디스크 쓰기 (B/s)|Disk I/O (New)|{{nhncloud_instance_id}} device={{name}}|초당 바이트(bytes/s)|
+|장치별 처리 중인 작업 수|Disk I/O (New)|{{nhncloud_instance_id}} device={{name}}|숫자|
+|장치별 IO 사용률 (%)|Disk I/O (New)|{{nhncloud_instance_id}} device={{name}}|백분율(0-100)|
+|네트워크 데이터 수신 (B/s)|Network (New)|{{nhncloud_instance_id}}|초당 바이트(bytes/s)|
+|네트워크 데이터 송신 (B/s)|Network (New)|{{nhncloud_instance_id}}|초당 바이트(bytes/s)|
+|장치별 네트워크 데이터 수신 (B/s)|Network (New)|{{nhncloud_instance_id}} interface={{interface}}|초당 바이트(bytes/s)|
+|장치별 네트워크 데이터 송신 (B/s)|Network (New)|{{nhncloud_instance_id}} interface={{interface}}|초당 바이트(bytes/s)|
+|네트워크 데이터 수신 (bps)|Network (New)|{{nhncloud_instance_id}}|초당 비트(bit/s)|
+|네트워크 데이터 송신 (bps)|Network (New)|{{nhncloud_instance_id}}|초당 비트(bit/s)|
+|장치별 네트워크 데이터 수신 (bps)|Network (New)|{{nhncloud_instance_id}} interface={{interface}}|초당 비트(bit/s)|
+|장치별 네트워크 데이터 송신 (bps)|Network (New)|{{nhncloud_instance_id}} interface={{interface}}|초당 비트(bit/s)|
+|네트워크 패킷 수신 (pps)|Network (New)|{{nhncloud_instance_id}}|초당 패킷(packets/s)|
+|네트워크 패킷 송신 (pps)|Network (New)|{{nhncloud_instance_id}}|초당 패킷(packets/s)|
+|장치별 네트워크 패킷 수신 (pps)|Network (New)|{{nhncloud_instance_id}} interface={{interface}}|초당 패킷(packets/s)|
+|장치별 네트워크 패킷 송신 (pps)|Network (New)|{{nhncloud_instance_id}} interface={{interface}}|초당 패킷(packets/s)|
+|가동시간 (ms)|System (New)|{{nhncloud_instance_id}}|시간(millisecond)|
+|스왑 사용률 (%)|Swap (New)|{{nhncloud_instance_id}}|백분율(0-100)|
+|스왑 사용량(used) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
+|스왑 사용량(free) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
+|스왑 사용량(total) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
