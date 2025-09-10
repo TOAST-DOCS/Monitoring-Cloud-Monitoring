@@ -2,7 +2,11 @@
 
 ## 개요
 
-Cloud Monitoring 서비스에서 Instance의 상세 지표를 수집하기 위해서는 신규 Agent를 설치해야 합니다. 신규 Agent는 기존 Agent와는 별개로 동작하며, 더 정확하고 상세한 인스턴스 지표를 제공합니다.
+Cloud Monitoring 서비스에서 Instance의 상세 지표를 수집하기 위해서는 신규 Agent를 설치해야 합니다.
+신규 Agent는 기존 Agent와는 별개로 동작하며, 더 정확하고 상세한 인스턴스 지표를 제공합니다.
+
+**주의 사항**
+AutoScaling 그룹에 속한 인스턴스의 경우, AutoScaling 기능이 정상 동작 하지 않을 수 있습니다.
 
 **전체 진행 순서:**
 1. 신규 Agent 설치
