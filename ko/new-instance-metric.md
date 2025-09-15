@@ -120,6 +120,7 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |CPU 상세(steal) (%)|CPU (New)|{{nhncloud_instance_id}}|백분율(0-100)|
 |메모리 사용률 (%)|Memory (New)|{{nhncloud_instance_id}}|백분율(0-100)|
 |메모리 상세(used) (Bytes)|Memory (New)|{{nhncloud_instance_id}}|바이트(bytes)|
+|메모리 상세(available) (Bytes)|Memory (New)|{{nhncloud_instance_id}}|바이트(bytes)|
 |메모리 상세(free) (Bytes)|Memory (New)|{{nhncloud_instance_id}}|바이트(bytes)|
 |메모리 상세(cached) (Bytes)|Memory (New)|{{nhncloud_instance_id}}|바이트(bytes)|
 |메모리 상세(buffered) (Bytes)|Memory (New)|{{nhncloud_instance_id}}|바이트(bytes)|
