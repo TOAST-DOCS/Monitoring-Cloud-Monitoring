@@ -1,5 +1,12 @@
 ## Monitoring > Cloud Monitoring > 릴리스 노트
 
+### 2025. 09. 23.
+
+#### 신규 Cloud Monitoring Agnet 출시
+
+Cloud Monitoring 신규 Instance용 Agent가 출시되었습니다.
+* [신규 Agent 설치 가이드](new-instance-metric-gov.md)를 참고하여 설치 가능합니다.
+
 ### 2025. 06. 10.
 
 #### SMS 알림 내용 추가
