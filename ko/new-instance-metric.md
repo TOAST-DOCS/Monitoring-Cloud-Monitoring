@@ -2,15 +2,15 @@
 
 ## 개요
 
-Cloud Monitoring 서비스에서 Instance의 상세 지표를 수집하기 위해서는 신규 Agent를 설치해야 합니다.
+Cloud Monitoring 서비스에서 Instance의 상세 지표를 수집하려면 신규 Agent를 설치해야 합니다.
 신규 Agent는 기존 Agent와는 별개로 동작하며, 더 정확하고 상세한 인스턴스 지표를 제공합니다.
 
-**주의 사항**
-AutoScaling 그룹에 속한 인스턴스의 경우, AutoScaling 기능이 정상 동작 하지 않을 수 있습니다.
+> [주의]
+> 오토 스케일 그룹에 속한 인스턴스의 경우 오토 스케일링 기능이 정상 동작하지 않을 수 있습니다.
 
-**전체 진행 순서:**
+전체 진행 순서는 다음과 같습니다.
 1. 신규 Agent 설치
-2. 구 Agent 삭제 (선택사항)
+2. 구 Agent 삭제(선택 사항)
 
 ## 신규 Agent 설치 가이드
 
@@ -31,8 +31,8 @@ sudo systemctl status nhncloud-telegraf
 
 ### Windows 인스턴스 Agent 설치
 * PowerShell을 관리자 권한으로 실행
-   - 시작 메뉴에서 "PowerShell" 검색
-   - "Windows PowerShell" 우클릭 후 "관리자 권한으로 실행" 선택
+   - 시작 메뉴에서 **PowerShell**을 검색합니다.
+   - **Windows PowerShell**을 마우스 오른쪽 버튼으로 클릭한 뒤 **관리자 권한으로 실행**을 선택합니다.
 
 #### 설치 스크립트
 ```powershell
@@ -46,13 +46,14 @@ powershell -ExecutionPolicy Bypass -File install-nhncloud-telegraf.ps1
 Get-Service -Name "nhncloud-telegraf"
 ```
 
-## 구 Agent 삭제 가이드 (선택사항)
+## 구 Agent 삭제 가이드(선택 사항)
 
-> 💡 **참고**: 신규 Agent와 구 Agent를 동시에 사용할 수도 있습니다.
+> [참고]
+> 신규 Agent와 구 Agent를 동시에 사용할 수도 있습니다.
 
-기존 System Monitoring Agent를 제거하기 위한 삭제 가이드입니다. **신규 Agent와 구 Agent는 동시에 설치되어 있어도 문제없이 동작합니다.**
+기존 System Monitoring Agent를 제거하기 위한 삭제 가이드입니다. 신규 Agent와 구 Agent는 동시에 설치되어 있어도 문제없이 동작합니다.
 
-### 삭제 시 주의사항
+### 삭제 시 주의 사항
 - **삭제 전 필수 확인**: 신규 Agent가 정상적으로 설치되고 동작하는지 확인
 
 ### Linux 인스턴스 구 Agent 삭제
@@ -65,7 +66,7 @@ sudo ./uninstall-sysmon-agent.sh
 ```
 
 #### 삭제 확인
-* 구 Agent 서비스 상태 확인 (서비스가 없어야 정상)
+* 구 Agent 서비스 상태 확인(서비스가 없어야 정상)
 ```bash
 sudo systemctl status toast-sysmon
 ```
@@ -82,7 +83,7 @@ sudo systemctl status toast-sysmon
 Get-Process -Name "toastmon" -ErrorAction SilentlyContinue
 ```
 
-### 신규 Agent 삭제 (필요시)
+### 신규 Agent 삭제(필요시)
 
 #### Linux 인스턴스 신규 Agent 삭제
 
