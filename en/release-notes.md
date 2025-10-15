@@ -1,5 +1,12 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
+### September 23, 2025
+
+#### Release of a New Cloud Monitoring Agnet
+
+Cloud Monitoring Agent for new instances has been released.
+* You can install it by referring to the [New Agent Installation Guide](new-instance-metric.md).
+
 ### July 29, 2025
 
 #### Added a new service to view metrics
