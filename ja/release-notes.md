@@ -1,5 +1,12 @@
 ## Monitoring > Cloud Monitoring > リリースノート
 
+### 2025. 09. 23.
+
+#### 新規Cloud Monitoring Agentのリリース
+
+Cloud MonitoringのInstance向け新規Agentがリリースされました。
+* [新規Agentインストールガイド](new-instance-metric.md)を参照してインストールできます。
+
 ### 2025. 06. 24.
 
 #### 指標照会可能サービス追加
