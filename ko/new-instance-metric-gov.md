@@ -145,7 +145,7 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |네트워크 패킷 송신 (pps)|Network (New)|{{nhncloud_instance_id}}|초당 패킷(packets/s)|
 |장치별 네트워크 패킷 수신 (pps)|Network (New)|{{nhncloud_instance_id}} interface={{interface}}|초당 패킷(packets/s)|
 |장치별 네트워크 패킷 송신 (pps)|Network (New)|{{nhncloud_instance_id}} interface={{interface}}|초당 패킷(packets/s)|
-|가동시간 (ms)|System (New)|{{nhncloud_instance_id}}|시간(millisecond)|
+|가동시간 (s)|System (New)|{{nhncloud_instance_id}}|시간(second)|
 |스왑 사용률 (%)|Swap (New)|{{nhncloud_instance_id}}|백분율(0-100)|
 |스왑 사용량(used) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
 |스왑 사용량(free) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
