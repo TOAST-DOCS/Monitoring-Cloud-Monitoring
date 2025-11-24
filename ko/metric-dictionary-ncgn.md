@@ -86,3 +86,43 @@
 | fstype               | 인스턴스의 파일 시스템 종류     |
 | path                 | 인스턴스의 디스크 마운트 경로    |
 | interface            | 인스턴스의 네트워크 인터페이스 이름 |
+
+## Load Balancer
+- NHN Cloud의 Load Balancer 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 지표명                               | 리소스명      | 기본 범례(Legend)                                                 | 단위(Unit)      |
+|-----------------------------------|-----------|---------------------------------------------------------------|---------------|
+| 네트워크 수신 바이트                       | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트     |
+| 네트워크 송신 바이트                       | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트     |
+| 네트워크 수신 초당 비트 수(bps)              | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
+| 네트워크 송신 초당 비트 수(bps)              | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
+| 처리 대기 중인 요청 개수                    | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 연결 상태에 있는 세션 개수                   | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| HTTP 100번대 응답을 한 횟수               | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 200번대 응답을 한 횟수               | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 300번대 응답을 한 횟수               | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 400번대 응답을 한 횟수               | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 500번대 응답을 한 횟수               | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 응답 중 100번~500번 외 다른 응답을 한 횟수 | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| 해당 멤버로 로드 밸런싱된 총횟수                | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 오류 발생 연결 횟수                       | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 평균 응답시간                           | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ms            |
+| 해당 멤버의 활성 상태 값                    | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| HTTP 응답이 정상적으로 반환된 총횟수            | 로드 밸런서 멤버 | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+
+### Load Balancer 필터(Filter)
+
+| 필터명    | 설명                                   |
+|--------|--------------------------------------|
+| 로드 밸런서 | NHN CLoud Network 서비스에서 사용 중인 로드 밸런서 |
+
+### Load Balancer 범례(Legend)
+
+| 범례명             | 설명        |
+|-----------------|-----------|
+| loadbalancer_id | 로드 밸런서 이름 |
+| listener_id     | 리스너 이름    |
+| pool_id         | 멤버 그룹 이름  |
+| member_id       | 멤버 이름     |
