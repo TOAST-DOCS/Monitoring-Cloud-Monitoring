@@ -287,40 +287,66 @@
 
 ### Metric List
 
-| 指標名                                 | リソース名    | 基本凡例(Legend)                                                  | 単位(Unit)      |
-|-------------------------------------|----------|---------------------------------------------------------------|---------------|
-| ネットワーク受信バイト                         | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積バイト       |
-| ネットワーク送信バイト                         | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積バイト       |
-| ネットワーク受信ビット/秒(bps)                  | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ビット/秒(bits/s) |
-| ネットワーク送信ビット/秒(bps)                  | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ビット/秒(bits/s) |
-| 処理待機中のリクエスト数                        | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字            |
-| 接続状態にあるセッション数                       | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字            |
-| HTTP 100番台レスポンスをした回数                | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値        |
-| HTTP 200番台レスポンスをした回数                | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値        |
-| HTTP 300番台レスポンスをした回数                | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値        |
-| HTTP 400番台レスポンスをした回数                | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値        |
-| HTTP 500番台レスポンスをした回数                | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値        |
-| HTTPレスポンスのうち、100番～500番以外のレスポンスをした回数 | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値        |
-| 当該メンバーでロードバランシングされた合計回数             | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字            |
-| エラー発生接続回数                           | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字            |
-| 平均レスポンス時間                           | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ミリ秒           |
-| 該当メンバーのアクティブ状態値                     | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字            |
-| HTTPレスポンスが正常に返された合計回数               | ロードバランサー | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字            |
+| 指標名                                          | リソース名           | 基本凡例(Legend)                                                  | 単位(Unit)       |
+|----------------------------------------------|-----------------|---------------------------------------------------------------|----------------|
+| CPU使用率(作業負荷)                                 | ロードバランサー        | {{loadbalancer_id}}                                           | パーセント(0-100)   |
+| リスナー接続状態にあるセッション数                            | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーリクエスト拒否数                                 | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーレスポンス拒否数                                 | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーの誤ったリクエスト数                               | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナー毎秒セッション数                                 | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナー毎秒セッション数最大値                              | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーHTTP 100番台のレスポンス回数                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーHTTP 200番台のレスポンス回数                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーHTTP 300番台のレスポンス回数                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーHTTP 400番台のレスポンス回数                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーHTTP 500番台のレスポンス回数                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーHTTPレスポンスのうち100～500番台以外のレスポンス回数          | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーHTTP成功レスポンス                              | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナー毎秒リクエストセッション数                            | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナー毎秒リクエストセッション数最大値                         | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーリクエスト総数                                  | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーネットワーク受信ビット/秒(bps)                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | ビット/秒(bit/s)   |
+| リスナーネットワーク送信ビット/秒(bps)                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | ビット/秒(bit/s)   |
+| SYN_SENTソケット数                                | ロードバランサーメンバー    | {{loadbalancer_id}}/{{member_id}}                             | 数字             |
+| ESTABLISHEDソケット数                             | ロードバランサーメンバー    | {{loadbalancer_id}}/{{member_id}}                             | 数字             |
+| TIME_WAITソケット数                               | ロードバランサーメンバー    | {{loadbalancer_id}}/{{member_id}}                             | 数字             |
+| 毎秒セッション数                                     | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| ネットワーク受信バイト                                  | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積バイト        |
+| ネットワーク送信バイト                                  | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積バイト        |
+| ネットワーク受信ビット/秒(bps)                           | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ビット/秒(bit/s)   |
+| ネットワーク送信ビット/秒(bps)                           | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ビット/秒(bit/s)   |
+| 当該メンバーでロードバランシングされた合計回数                      | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 平均レスポンス時間                                    | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ミリ秒            |
+| 接続状態にあるセッション数                                | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 処理待機中のリクエスト数                                 | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| HTTP 100番台レスポンスをした回数                         | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値         |
+| HTTP 200番台レスポンスをした回数                         | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値         |
+| HTTP 300番台レスポンスをした回数                         | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値         |
+| HTTP 400番台レスポンスをした回数                         | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値         |
+| HTTP 500番台レスポンスをした回数                         | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値         |
+| HTTPレスポンスのうち、100番～500番以外のレスポンスをした回数          | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5分累積数値         |
+| HTTPレスポンスが正常に返された合計回数                        | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| エラー発生接続回数                                    | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 該当メンバーのアクティブ状態値                              | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
 
 ### Load Balancerフィルタ(Filter)
 
-| フィルタ名    | 説明                                 |
-|----------|------------------------------------|
-| ロードバランサー | NHN CloudのNetworkサービスで使用中のロードバランサー |
+| フィルタ名      | 説明                                 |
+|------------|------------------------------------|
+| ロードバランサー   | NHN CloudのNetworkサービスで使用中のロードバランサー |
+| リスナー       | ロードバランサーに属するリスナー                   |
+| メンバーグループ   | リスナーに属するメンバーグループ                   |
+| メンバー       | メンバーグループに属するメンバー                   |
 
 ### Load Balancer凡例(Legend)
 
-| 凡例名             | 説明        |
-|-----------------|-----------|
-| loadbalancer_id | ロードバランサー名 |
-| listener_id     | リスナー名     |
-| pool_id         | メンバーグループ名 |
-| member_id       | メンバー名     |
+| 凡例名             | 説明          |
+|-----------------|-------------|
+| loadbalancer_id | ロードバランサー名   |
+| listener_id     | リスナー名       |
+| pool_id         | メンバーグループ名   |
+| member_id       | メンバー名       |
 
 ## Direct Connect
 - NHN CloudのDirect Connectサービスに対してモニタリングできる指標を定義した辞書です。
