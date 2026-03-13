@@ -288,31 +288,57 @@
 
 ### Metric List
 
-| Metric Name                                     | Resource Name | Default legend (Legend)                                       | Unit                     |
-|-------------------------------------------------|---------------|---------------------------------------------------------------|--------------------------|
-| Network Received Byte                           | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated bytes  |
-| Network Sent Byte                               | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated bytes  |
-| Number of Network Received Bit per Second (bps) | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Bits per second (bit/s)  |
-| Number of Network Sent Bit per Second (bps)     | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Bits per second (bit/s)  |
-| Number of Requests Pending Processing           | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
-| Number of Sessions in Connection Status         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
-| HTTP 100 Response Count                         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
-| HTTP 200 Response Count                         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
-| HTTP 300 Response Count                         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
-| HTTP 400 Response Count                         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
-| HTTP 500 Response Count                         | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
-| Other HTTP Responses Count                      | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
-| Total Number Load balanced with the Member      | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
-| Number of Connections Error                     | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
-| Average Response Time                           | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Millisecond              |
-| The Active Status Value of the Member           | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
-| Total Number of Normal HTTP Responses Returned  | Load Balancer | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Metric Name                                                   | Resource Name          | Default Legend                                                 | Unit                     |
+|---------------------------------------------------------------|------------------------|---------------------------------------------------------------|--------------------------|
+| CPU Usage (Workload)                                          | Load Balancer          | {{loadbalancer_id}}                                           | Percentage (0-100)       |
+| Sessions in Listener Connection State                         | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener Rejected Requests                                    | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener Rejected Responses                                   | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener Invalid Requests                                     | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener Sessions per Second                                  | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener Peak Sessions per Second                             | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener HTTP 100 Series Responses                            | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener HTTP 200 Series Responses                            | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener HTTP 300 Series Responses                            | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener HTTP 400 Series Responses                            | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener HTTP 500 Series Responses                            | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener HTTP Responses Outside the 100~500 Series            | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener Successful HTTP Responses                            | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener Requests per Second                                  | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener Peak Requests per Second                             | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Total Listener Requests                                       | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Number of Network Received Bit per Second for Listener (bps)  | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bits per second (bit/s)  |
+| Number of Network Sent Bit per Second for Listener (bps)      | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bits per second (bit/s)  |
+| SYN_SENT Sockets                                              | Load Balancer Member   | {{loadbalancer_id}}/{{member_id}}                             | Number                   |
+| ESTABLISHED Sockets                                           | Load Balancer Member   | {{loadbalancer_id}}/{{member_id}}                             | Number                   |
+| TIME_WAIT Sockets                                             | Load Balancer Member   | {{loadbalancer_id}}/{{member_id}}                             | Number                   |
+| Sessions per Second                                           | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Network Received Byte                                         | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated bytes  |
+| Network Sent Byte                                             | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated bytes  |
+| Number of Network Received Bit per Second (bps)               | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Bits per second (bit/s)  |
+| Number of Network Sent Bit per Second (bps)                   | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Bits per second (bit/s)  |
+| Total Number Load Balanced with the Member                    | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Average Response Time                                         | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Millisecond              |
+| Number of Sessions in Connection Status                       | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Number of Requests Pending Processing                         | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| HTTP 100 Response Count                                       | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| HTTP 200 Response Count                                       | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| HTTP 300 Response Count                                       | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| HTTP 400 Response Count                                       | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| HTTP 500 Response Count                                       | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| Other HTTP Responses Count                                    | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5 min accumulated Number |
+| Total Number of Normal HTTP Responses Returned                | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Number of Connections Error                                   | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| The Active Status Value of the Member                         | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
 
 ### Load Balancer Filter
 
-| Filter name    | Description                                        |
+| Filter Name    | Description                                        |
 |----------------|----------------------------------------------------|
 | Load Balancer  | Load balancer used by Network service on NHN Cloud |
+| Listener       | Listener belonging to the load balancer            |
+| Member Group   | Member group belonging to the listener             |
+| Member         | Member belonging to the member group               |
 
 ### Load Balancer Legend
 
