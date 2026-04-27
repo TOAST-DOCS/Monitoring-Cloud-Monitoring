@@ -32,7 +32,7 @@ In the edit mode, you can edit the name or description of a dashboard, or clone 
 
 ![Full save notification modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_01-5.png)
 
-Any changes you make to the widget, such as adding a widget or modifying its location and size, don't take effect until you click Save All. If you don't, you'll see a save notification modal, and any unsaved changes will disappear.
+Any changes you make to the widget, such as adding a widget or modifying its location and size, don't take effect until you click **Save All**. If you don't, you'll see a save notification modal, and any unsaved changes will disappear.
 
 ### Create a Dashboard
 
@@ -48,6 +48,19 @@ If no dashboards have been created, you'll see **+ Create Dashboard**.
 
 Enter a **dashboard name** and **dashboard description**. The **dashboard name** is a required value, and can be set to a duplicate name, but we recommend using a unique name whenever possible.
 **Dashboard description** is an optional value and you can enter something descriptive of the dashboard.
+
+#### Dashboard Template
+
+Configure a dashboard manually or start with a preconfigured template. Select whether to use the **Dashboard Template** option.
+
+- **Enable**: The template selection area is displayed. Selecting a service displays the list of templates for the service.
+- **Disable** (default): An empty dashboard is created without a template.
+
+If you select to use a template, select a service and a template respectively. When a template is selected, the template name is automatically entered in the dashboard name field, and the name can be modified even after it has been automatically entered.
+
+Click the **Preview** button in the template list to open the template preview modal.
+
+In the preview modal, you can preview the widget configuration and layout included in the template. Sample data is displayed in the preview screen, and you can view the actual data after the dashboard is created.
 
 ### Set up a Dashboard
 
@@ -73,7 +86,7 @@ Widgets and widget groups can be added in both view mode and edit modes. However
 
 ![About the Add Widget screen](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_a_01-1.png)
 
-Add widget gives you the freedom to create your own chart widget with the metrics and filters you want.
+Adding widget allows you to create your own chart widget with the metrics and filters you want.
 The widget name, graph type, service, and Metrics settings > Metrics are required values and must be filled in.
 A single widget can only represent a single service. However, you can select multiple metric items.
 
@@ -85,7 +98,58 @@ You can only label one metric filter per type, and all filters are finally appli
 The legend is a name to distinguish the metric data viewed by each metric item. When you add a metric item, it automatically populates a suggested name by default.You can add any text before or after the placeholder wrapped in double curly braces syntax `{{ }}`. If you don't enter any text, it will concatenate and expose any label properties the indicator item has.
 Select Units to specify the y-axis title and units to be exposed in the chart. The actual value of the metric item is exposed to 15 decimal places (rounded to the 16th place, except when `Percent (0.0-1.0`) is selected, in which case the value is converted to 0-100 and exposed), without support for separate formatting based on units. The Y-axis position setting allows you to choose between **Auto**, **Left**, and **Right** for the Y-axis position of the metric item. When adding a metric item, the Auto value is selected by default. If all metric items are selected Auto, they will be sequentially positioned on the Y-axis as either Left or Right. If a metric exists with a left or right y-axis position, it will be placed in the same y-axis direction. If any metric items have the same unit and y-axis position, they are represented on the same y-axis.
 
-![Add widget screen preview layer](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_a_01-3.png)
+###### Query Settings Block
+
+When a metric item is selected, a metric settings block for that metric is added, and one query settings block is included in the metric settings block by default.
+
+A query settings block is a unit for configuring filters, legends, aggregation, and more for each individual query. Multiple query settings blocks can be added within a single metric settings block, and each query is automatically numbered in alphabetical order (A, B, C, ...).
+
+- **Add**: Click the **+** icon in the metric settings block to add a query settings block at the bottom.
+- **Copy**: Click the copy icon in the query settings block to add a query with all filter, legend, and aggregation settings duplicated.
+- **Delete**: The delete icon is activated when there are two or more query settings blocks.
+- **Collapse/Expand**: When a query settings block is collapsed, key summary information such as filters and aggregation is displayed in the title area.
+
+Filter, aggregation, and other settings values can be duplicated across query settings blocks. Each is treated as an independent query, so even if the settings values are identical, all queries are displayed in the widget.
+
+###### Aggregation Settings
+
+When the query period is extended, the data interval displayed in the chart is automatically adjusted. In this case, individual data points within the data interval may not be reflected in the chart.
+Using the aggregation feature allows all data within the data interval to be calculated using aggregation functions such as average, minimum, and maximum, and displayed in the chart.
+The aggregation settings area is displayed only for metrics that support aggregation.
+
+- **Disable** (default): Displays the actual data value at each point without processing. Depending on the query period, some data within the data interval may not be reflected in the chart.
+- **Enable**: Allows you to select an aggregation item (average, minimum, maximum). Since all data that occurred within the data interval is aggregated and reflected, it is easier to identify the overall flow and trend.
+
+The data intervals by query period are as follows:
+
+| Query period | Data interval |
+|---------|----------|
+| ~ 5 min     | 15 sec     |
+| ~ 30 min    | 30 sec     |
+| ~ 1 hr   | 1 min      |
+| ~ 6 hr   | 5 min      |
+| ~ 12 hr  | 10 min     |
+| ~ 24 hr  | 20 min     |
+| ~ 2 days    | 30 min     |
+| ~ 7 days    | 2 hr    |
+| ~ 14 days   | 3 hr    |
+| ~ 27 days   | 6 hr    |
+| ~ 366 days  | 24 hr   |
+
+For example, if the query period is set to 24 hours, the data interval becomes 20 minutes, and data between intervals is not directly displayed in the chart. Using aggregation allows all data within the 20-minute interval to be reflected.
+
+The following is an example of aggregation applied with a 5-minute data interval. Gray dots represent the original collected data, and red dots represent the values actually displayed in the chart.
+
+![Aggregation comparison](https://static.toastoven.net/prod_cloud_monitoring/20260407_aggregation_compare_en.png)
+
+Aggregation Off is the case where aggregation is not used. Only the data at 12:05 and 12:10 are displayed in the chart, and the data collected in between (0.8, 5.0, 1.0) cannot be confirmed in the chart.
+Aggregation On is the case where average aggregation is used. Since the average of all data within each interval is calculated and displayed in the chart, data collected between intervals is also reflected in the results.
+
+###### Apply Dynamic Filter
+
+The **Apply Dynamic Filter** toggle allows you to configure whether to apply the dynamic filter conditions selected at the top of the dashboard to the widget. The default value is **Enable**. When dynamic filters are applied, the conditions selected in the dashboard top filter are always applied.
+
+![Widget Add Screen Preview Layer](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_a_01-3.png)
 
 After you change the graph type or modify the metric item filters, you can preview how the chart widget will look with your changes. Click the **Preview** toggle in the top-right corner of the screen to open or close the preview layer, where you can see the chart widget in real time with your filters and legend values applied. The preview layer is adjustable for left and right width.
 
@@ -94,13 +158,13 @@ After you change the graph type or modify the metric item filters, you can previ
 ![Add Widget Template Modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_a_02-1.png)
 
 Widget templates are a quick and easy way to create widgets using pre-configured widget metric items. After adding the widget, you can edit the widget to add filters to the metric items or change the metric items and names.
-Note that some widgets added through widget templates can only be deleted and not edited.
+Note that some widgets added with widget templates can only be deleted and not edited.
 
 ##### Add a Widget Group
 
 ![Add Widget Group Modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_a_03-1.png)
 
-You can add a group of widgets to your dashboard through Add widget group. To add a widget to a widget group, simply drag the title area at the top of the widget in edit mode and move it inside the widget group.
+You can add a group of widgets to your dashboard. To add a widget to a widget group, simply drag the title area at the top of the widget in edit mode and move it inside the widget group.
 
 Widget groups can be edited just like widgets, and to edit a widget group, you need to enter edit mode.
 
@@ -114,7 +178,7 @@ Widget groups can be edited just like widgets, and to edit a widget group, you n
 
 ![Resizing widgets](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-1.gif)
 
-Once you're in edit mode, you can resize the widget by dragging the bottom right corner, or reposition it by dragging the top area of the widget.
+Once you're in Edit mode, you can resize the widget by dragging the bottom right corner, or reposition it by dragging the top area of the widget.
 
 ![Widget context menu](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-3.png)
 
@@ -132,6 +196,46 @@ Clicking **Create Notification** takes you to the **Manage Notifications** > **C
 You can easily create a notification entering only the notification condition and the recipient of the notification.
 
 ![If you accessed the Create widget notification](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_c-1.png)
+
+### Dynamic filter
+
+The dynamic filter is a feature that filters data across all widgets at once from the common filter area at the top of the dashboard, without modifying individual widgets one by one.
+
+Dynamic filters are grouped and arranged by service. They are automatically arranged from left to right according to internally defined priorities based on the dependencies between filter items.
+
+When a dynamic filter item is changed, it is immediately reflected in the widgets on the dashboard. When the selected value of a left filter is changed, the items in the right filter are updated to match the changed conditions, and the selection state of the right filter is reset.
+
+The dynamic filter is displayed as follows depending on the selection state:
+
+| Selection state | Display format | Example |
+|---------|---------|------|
+| All selected (default) | `All` | All |
+| 1 item selected | Selected filter value | Korea (Pangyo) |
+| 2 or more items selected | `{filter value} and N more` | Korea (Pangyo) and 2 more |
+| No items selected | `No items selected` | No items selected |
+| No items available | `No items available` | No items available |
+
+> Note: Dynamic filters are applied only to widgets with the **Apply Dynamic Filter** toggle enabled in the widget add/edit screen.
+
+#### Dynamic Filter Management
+
+Click the **Dynamic Filter Management** button in view mode to open the dynamic filter management modal. The Dynamic Filter Management button is not displayed in edit mode.
+
+Dynamic filters are managed independently for each dashboard. The name of the dashboard to which the dynamic filter currently being configured applies is displayed at the top of the modal.
+
+- **Add**: Click the **Add** button to add a new row at the bottom of the dynamic filter list. Enter the following items:
+  - **Filter name**: Enter the name of the filter to be displayed at the top of the dashboard.
+  - **Service**: Select the service to apply the dynamic filter to. (e.g., Instance, Load Balancer)
+  - **Label**: Select the label available for the selected service. (e.g., when Instance service is selected, region, instance, etc.)
+- **Edit**: Click the **Edit** button of an existing dynamic filter to modify the filter name, service, and label.
+- **Delete**: Click the **Delete** button to delete the dynamic filter.
+
+The same combination of service and label cannot be added as a duplicate.
+
+!!! tip "Note"
+    When selecting an instance in the dynamic filter for the Instance service, both instances with existing agents and instances with new agents installed are displayed.
+    Since the supported metrics differ depending on the agent type, metrics that do not correspond to the agent type of the selected instance may not display data.
+    For metrics supported by the new agent, refer to the [New Agent Installation Guide](new-instance-metric.md).
 
 ### Manage a Dashboard
 
@@ -164,11 +268,11 @@ In **Monitoring > Cloud Monitoring > Notification Settings**, you can add notifi
 
 ![Notification Settings List Screen - Created](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_a-4.png)
 
-The Notification settings screen exposes a table where you can view information about the notifications you've created, and you can sort the table by notification name, whether the notification is enabled, and when it was created.
+The Notification settings screen displays a table where you can view information about the notifications you've created, and you can sort the table by notification name, whether the notification is enabled, and when it was created.
 - You can enable or disable notifications by clicking the **Enable Notifications** toggle.
 - Click **View** in the **View Notification Details** column to display the **Notification Details** modal.
 - Click **Edit** in the **Edit** column to go to the **Edit Notification** screen.
-- Clicking on each row of notifications takes you to the **Notification Occurred History** tab, where the notifications are automatically looked up and exposed.
+- Clicking on each row of notifications takes you to the **Notification Occurred History** tab, where the notifications are automatically looked up and displayed.
 
 #### Create/Edit Notifications
 
@@ -179,13 +283,16 @@ You can only select a single service for the notification, but you can select mu
 
 ![Create/Edit Notification Screen - Metrics Selected](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_a-2.png)
 
+When a metric item is selected, a metric settings block for that metric is added, and one query settings block is included in the metric settings block by default. A query settings block is a unit for configuring filters, aggregation, conditions, and more for each individual query, and multiple query settings blocks can be added within a single metric settings block.
+For metrics that support aggregation, the aggregation settings area is displayed within the query settings block. Selecting **Enable** allows you to select an aggregation item (average, minimum, maximum), and selecting **Disable** (default) evaluates alerts based on the original data.
+
 You don't need to enter a filter for the metric entry, but you must enter at least one condition. Set the conditions you want to be notified on with a combination of comparison method, threshold, and duration.
 
 ![Notification Settings List Screen - Notification Recipients](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_a-3.png)
 
 You must select at least one notification recipient. Only notification recipient types are supported for notification recipient groups, which can be managed on the **Project Management > Notification Receiver Group Management** screen. [[Go to User Guide]](/nhncloud/en/console-guide/#notification-receiver-group-management)
 
-You can receive notifications as webhooks through custom webhooks in the Notification Receiver Group.
+You can receive notifications as custom webhooks in the Notification Receiver Group.
 
 - List of parameters to provide as custom webhook request data
   
@@ -221,14 +328,14 @@ You can receive notifications as webhooks through custom webhooks in the Notific
 
 ![View Notification Details Modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_b-1.png)
 
-The notification details modal lets you view the details of the notifications you've set up. You can see the name of the notification, description, service, metric item filters and notification conditions, and who will receive the notification.
+In the alert details modal, you can view the detailed information of the configured alert. You can view the alert name, description, service, metric item filters and alert conditions, aggregation settings, and alert recipients. For metrics that support aggregation, the configured aggregation value (disable/average/maximum/minimum) is displayed, and for metrics that do not support aggregation, - is displayed.
 
 ### Notification History
 
 ![Notification occurrence history view screen](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_02-1.png)
 
 You can use search filters and tables to view the history of notifications that have occurred, and tables to view the information of notifications that have occurred.
-You can check the notification name, occurrence date, end date, service, resource, metric item, result value, and duration. You can change the table sort by occurrence date and end date.
+You can view the alert name, occurrence time, end time, service, resource, metric item, aggregation, result value, and duration. For metrics that support aggregation, the configured aggregation value is displayed, and for metrics that do not support aggregation, - is displayed. You can change the table sort order by occurrence time or end time.
 
 > Notes: Duration refers to the time from when the notification occurs to when the notification ends.
 If you disable a notification before it ends while it is still occurring, the duration can continue to increase because the notification was not explicitly ended.
@@ -246,7 +353,7 @@ For each notification, click **View** in the **View Notification Send History** 
 
 ![View Notification Send History Modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_02_b-1.png)
 
-In the history modal, you can view detailed information on notification settings such as **Occurred Date**, ** Duration**, **Metric Item**, **Result**, **Notification Conditions** and **Occurred Location**.
+In the history modal, you can view detailed information on notification settings such as **Occurred Date**, ** Duration**, **Metric Item**, **집계**, **Result**, **Notification Conditions**, and **Occurred Location**.
 
 The actual history of sending notifications is also provided in a table. You can see the notification sending date, notification method, recipient, and notification result for each notification sending history.
 You can change the table sorting by notification date, notification method, and notification time.
@@ -259,7 +366,7 @@ In **Monitoring > Cloud Monitoring > Manage Metrics**, you can set whether to co
 
 ![Manage metrics screen](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-1.png)
 
-A table exposes where you can set up metric collection by service.
+A table displays where you can set up metric collection by service.
 For each service, you can see the **category**, **service**, **whether the service is enabled**, and **metric collection settings**, and you can click the **Metric Collection Settings** toggle to set whether metrics are collected.
 
 ![Confirmation to start collecting metrics modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-2.png)
@@ -272,7 +379,7 @@ When you start/stop collecting metrics, a confirmation modal opens.
 
 ![Example of the widget when metrics are being collected](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-5.png)
 
-If you stop collecting metrics, the metrics are no longer exposed in widgets that you've created using metrics from that service, and the metrics' legends are disabled.
+If you stop collecting metrics, the metrics are no longer displayed in widgets that you've created using metrics from that service, and the metrics' legends are disabled.
 
 ## Example Screen
 
