@@ -339,16 +339,16 @@
 | Total session count                                           | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
 | Last session elapsed time                                     | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
 | Maximum sessions per second                                   | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
-| Pool current queue count                                      | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
-| Pool maximum queue count                                      | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
-| Pool current session count                                    | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
-| Pool maximum session count                                    | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
-| Pool session limit                                            | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
-| Pool total session count                                      | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
-| Pool sessions per second                                      | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
-| Pool maximum sessions per second                              | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
-| Pool total load balancing count                               | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
-| Pool time elapsed since last session                          | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group current queue count                              | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group maximum queue count                              | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group current session count                            | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group maximum session count                            | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group session limit                                    | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group total session count                              | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group sessions per second                              | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group maximum sessions per second                      | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group total load balancing count                       | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group time elapsed since last session                  | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
 
 ### Load Balancer Filter
 
@@ -356,7 +356,7 @@
 |----------------|----------------------------------------------------|
 | Load Balancer  | Load balancer used by Network service on NHN Cloud |
 | Listener       | Listener belonging to the load balancer            |
-| Member Group   | Member group belonging to the listener             |
+| Member group   | Member group belonging to the listener             |
 | Member         | Member belonging to the member group               |
 
 ### Load Balancer Legend

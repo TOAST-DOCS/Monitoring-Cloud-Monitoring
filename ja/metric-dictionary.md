@@ -338,16 +338,16 @@
 | 総セッション数                                      | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
 | 最終セッション経過時間                                  | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
 | 最大秒間セッション数                                   | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
-| プール現在のキュー数                                   | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
-| プール最大キュー数                                    | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
-| プール現在のセッション数                                 | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
-| プール最大セッション数                                  | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
-| プールセッション制限数                                  | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
-| プール総セッション数                                   | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
-| プール秒間セッション数                                  | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
-| プール最大秒間セッション数                                | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
-| プールロードバランシング合計回数                             | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
-| プール最終セッション経過時間                               | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ現在キュー数                              | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ最大キュー数                              | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ現在セッション数                            | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ最大セッション数                            | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループセッション制限数                            | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ総セッション数                             | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ秒間セッション数                            | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ秒間セッション数最大値                        | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループロードバランシング総回数                       | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ最終セッション経過時間                        | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
 
 ### Load Balancerフィルタ(Filter)
 
