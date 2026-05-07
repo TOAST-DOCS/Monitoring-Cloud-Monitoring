@@ -308,6 +308,10 @@
 | リスナーリクエスト総数                                  | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
 | リスナーネットワーク受信ビット/秒(bps)                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | ビット/秒(bit/s)   |
 | リスナーネットワーク送信ビット/秒(bps)                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | ビット/秒(bit/s)   |
+| リスナー最大セッション数                                 | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーセッション制限数                                 | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナー総セッション数                                  | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーSSLハンドシェイク失敗数                            | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
 | SYN_SENTソケット数                                | ロードバランサーメンバー    | {{loadbalancer_id}}/{{member_id}}                             | 数字             |
 | ESTABLISHEDソケット数                             | ロードバランサーメンバー    | {{loadbalancer_id}}/{{member_id}}                             | 数字             |
 | TIME_WAITソケット数                               | ロードバランサーメンバー    | {{loadbalancer_id}}/{{member_id}}                             | 数字             |
@@ -329,6 +333,21 @@
 | HTTPレスポンスが正常に返された合計回数                        | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
 | エラー発生接続回数                                    | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
 | 該当メンバーのアクティブ状態値                              | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 最大キュー数                                       | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 最大セッション数                                     | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 総セッション数                                      | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 最終セッション経過時間                                  | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 最大秒間セッション数                                   | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| プール現在のキュー数                                   | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| プール最大キュー数                                    | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| プール現在のセッション数                                 | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| プール最大セッション数                                  | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| プールセッション制限数                                  | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| プール総セッション数                                   | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| プール秒間セッション数                                  | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| プール最大秒間セッション数                                | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| プールロードバランシング合計回数                             | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| プール最終セッション経過時間                               | ロードバランサープール     | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
 
 ### Load Balancerフィルタ(Filter)
 

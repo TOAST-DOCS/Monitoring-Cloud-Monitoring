@@ -309,6 +309,10 @@
 | Total Listener Requests                                       | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
 | Number of Network Received Bit per Second for Listener (bps)  | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bits per second (bit/s)  |
 | Number of Network Sent Bit per Second for Listener (bps)      | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bits per second (bit/s)  |
+| Listener maximum session count                                | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener session limit                                        | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener total session count                                  | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener SSL handshake failure count                          | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
 | SYN_SENT Sockets                                              | Load Balancer Member   | {{loadbalancer_id}}/{{member_id}}                             | Number                   |
 | ESTABLISHED Sockets                                           | Load Balancer Member   | {{loadbalancer_id}}/{{member_id}}                             | Number                   |
 | TIME_WAIT Sockets                                             | Load Balancer Member   | {{loadbalancer_id}}/{{member_id}}                             | Number                   |
@@ -330,6 +334,21 @@
 | Total Number of Normal HTTP Responses Returned                | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
 | Number of Connections Error                                   | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
 | The Active Status Value of the Member                         | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Maximum queue count                                           | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Maximum session count                                         | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Total session count                                           | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Last session elapsed time                                     | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Maximum sessions per second                                   | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Pool current queue count                                      | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Pool maximum queue count                                      | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Pool current session count                                    | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Pool maximum session count                                    | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Pool session limit                                            | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Pool total session count                                      | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Pool sessions per second                                      | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Pool maximum sessions per second                              | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Pool total load balancing count                               | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Pool time elapsed since last session                          | Load Balancer Pool     | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
 
 ### Load Balancer Filter
 
