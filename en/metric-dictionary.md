@@ -307,6 +307,8 @@
 | Listener Requests per Second                                  | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
 | Listener Peak Requests per Second                             | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
 | Total Listener Requests                                       | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener Incoming Bytes                                       | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bytes                    |
+| Listener Outgoing Bytes                                       | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bytes                    |
 | Number of Network Received Bit per Second for Listener (bps)  | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bits per second (bit/s)  |
 | Number of Network Sent Bit per Second for Listener (bps)      | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bits per second (bit/s)  |
 | Listener maximum session count                                | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |

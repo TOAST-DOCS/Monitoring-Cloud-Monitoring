@@ -306,6 +306,8 @@
 | リスナー毎秒リクエストセッション数                            | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
 | リスナー毎秒リクエストセッション数最大値                         | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
 | リスナーリクエスト総数                                  | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナー受信バイト                                    | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | バイト            |
+| リスナー送信バイト                                    | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | バイト            |
 | リスナーネットワーク受信ビット/秒(bps)                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | ビット/秒(bit/s)   |
 | リスナーネットワーク送信ビット/秒(bps)                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | ビット/秒(bit/s)   |
 | リスナー最大セッション数                                 | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
