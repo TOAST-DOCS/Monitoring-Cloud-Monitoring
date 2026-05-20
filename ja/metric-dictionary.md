@@ -306,8 +306,14 @@
 | リスナー毎秒リクエストセッション数                            | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
 | リスナー毎秒リクエストセッション数最大値                         | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
 | リスナーリクエスト総数                                  | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナー受信バイト                                    | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | バイト            |
+| リスナー送信バイト                                    | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | バイト            |
 | リスナーネットワーク受信ビット/秒(bps)                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | ビット/秒(bit/s)   |
 | リスナーネットワーク送信ビット/秒(bps)                       | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | ビット/秒(bit/s)   |
+| リスナー最大セッション数                                 | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーセッション制限数                                 | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナー総セッション数                                  | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
+| リスナーSSLハンドシェイク失敗数                            | ロードバランサーリスナー    | {{loadbalancer_id}}/{{listener_id}}                           | 数字             |
 | SYN_SENTソケット数                                | ロードバランサーメンバー    | {{loadbalancer_id}}/{{member_id}}                             | 数字             |
 | ESTABLISHEDソケット数                             | ロードバランサーメンバー    | {{loadbalancer_id}}/{{member_id}}                             | 数字             |
 | TIME_WAITソケット数                               | ロードバランサーメンバー    | {{loadbalancer_id}}/{{member_id}}                             | 数字             |
@@ -329,6 +335,21 @@
 | HTTPレスポンスが正常に返された合計回数                        | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
 | エラー発生接続回数                                    | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
 | 該当メンバーのアクティブ状態値                              | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 最大キュー数                                       | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 最大セッション数                                     | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 総セッション数                                      | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 最終セッション経過時間                                  | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| 最大秒間セッション数                                   | ロードバランサーメンバー    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 数字             |
+| メンバーグループ現在キュー数                              | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ最大キュー数                              | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ現在セッション数                            | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ最大セッション数                            | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループセッション制限数                            | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ総セッション数                             | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ秒間セッション数                            | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ秒間セッション数最大値                        | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループロードバランシング総回数                       | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
+| メンバーグループ最終セッション経過時間                        | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
 
 ### Load Balancerフィルタ(Filter)
 

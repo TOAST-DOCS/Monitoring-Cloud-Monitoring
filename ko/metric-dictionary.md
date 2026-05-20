@@ -306,8 +306,14 @@
 | 리스너 초당 요청 세션 수                         | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
 | 리스너 초당 요청 세션 수 최대값                     | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
 | 리스너 요청 총 횟수                            | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 수신 바이트                              | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 바이트            |
+| 리스너 송신 바이트                              | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 바이트            |
 | 네트워크 수신 초당 비트 수 (bps)                  | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 초당 비트 (bit/s) |
 | 네트워크 송신 초당 비트 수 (bps)                  | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 초당 비트 (bit/s) |
+| 리스너 최대 세션 수                           | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 세션 제한 수                           | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 총 세션 수                            | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 SSL 핸드셰이크 실패 수                    | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
 | SYN_SENT 소켓 수                          | 로드밸런서 멤버    | {{loadbalancer_id}}/{{member_id}}                             | 숫자            |
 | ESTABLISHED 소켓 수                       | 로드밸런서 멤버    | {{loadbalancer_id}}/{{member_id}}                             | 숫자            |
 | TIME_WAIT 소켓 수                         | 로드밸런서 멤버    | {{loadbalancer_id}}/{{member_id}}                             | 숫자            |
@@ -329,6 +335,21 @@
 | HTTP 응답이 정상적으로 반환된 총횟수                 | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
 | 오류 발생 연결 횟수                            | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
 | 해당 멤버의 활성 상태 값                         | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 최대 큐 수                                 | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 최대 세션 수                                | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 총 세션 수                                 | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 마지막 세션 경과 시간                           | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 초당 세션 수 최댓값                            | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 멤버 그룹 현재 큐 수                          | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
+| 멤버 그룹 최대 큐 수                          | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
+| 멤버 그룹 현재 세션 수                         | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
+| 멤버 그룹 최대 세션 수                         | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
+| 멤버 그룹 세션 제한 수                         | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
+| 멤버 그룹 총 세션 수                          | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
+| 멤버 그룹 초당 세션 수                         | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
+| 멤버 그룹 초당 세션 수 최댓값                     | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
+| 멤버 그룹 로드 밸런싱 총 횟수                     | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
+| 멤버 그룹 마지막 세션 경과 시간                    | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
 
 ### Load Balancer 필터(Filter)
 
