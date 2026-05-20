@@ -306,6 +306,8 @@
 | 리스너 초당 요청 세션 수                         | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
 | 리스너 초당 요청 세션 수 최대값                     | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
 | 리스너 요청 총 횟수                            | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 수신 바이트                              | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 바이트            |
+| 리스너 송신 바이트                              | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 바이트            |
 | 네트워크 수신 초당 비트 수 (bps)                  | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 초당 비트 (bit/s) |
 | 네트워크 송신 초당 비트 수 (bps)                  | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 초당 비트 (bit/s) |
 | 리스너 최대 세션 수                           | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
