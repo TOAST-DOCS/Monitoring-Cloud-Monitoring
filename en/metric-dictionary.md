@@ -307,8 +307,14 @@
 | Listener Requests per Second                                  | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
 | Listener Peak Requests per Second                             | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
 | Total Listener Requests                                       | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener Incoming Bytes                                       | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bytes                    |
+| Listener Outgoing Bytes                                       | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bytes                    |
 | Number of Network Received Bit per Second for Listener (bps)  | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bits per second (bit/s)  |
 | Number of Network Sent Bit per Second for Listener (bps)      | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Bits per second (bit/s)  |
+| Listener maximum session count                                | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener session limit                                        | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener total session count                                  | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
+| Listener SSL handshake failure count                          | Load Balancer Listener | {{loadbalancer_id}}/{{listener_id}}                           | Number                   |
 | SYN_SENT Sockets                                              | Load Balancer Member   | {{loadbalancer_id}}/{{member_id}}                             | Number                   |
 | ESTABLISHED Sockets                                           | Load Balancer Member   | {{loadbalancer_id}}/{{member_id}}                             | Number                   |
 | TIME_WAIT Sockets                                             | Load Balancer Member   | {{loadbalancer_id}}/{{member_id}}                             | Number                   |
@@ -330,6 +336,21 @@
 | Total Number of Normal HTTP Responses Returned                | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
 | Number of Connections Error                                   | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
 | The Active Status Value of the Member                         | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Maximum queue count                                           | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Maximum session count                                         | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Total session count                                           | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Last session elapsed time                                     | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Maximum sessions per second                                   | Load Balancer Member   | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | Number                   |
+| Member group current queue count                              | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group maximum queue count                              | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group current session count                            | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group maximum session count                            | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group session limit                                    | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group total session count                              | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group sessions per second                              | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group maximum sessions per second                      | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group total load balancing count                       | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
+| Member group time elapsed since last session                  | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
 
 ### Load Balancer Filter
 
@@ -337,7 +358,7 @@
 |----------------|----------------------------------------------------|
 | Load Balancer  | Load balancer used by Network service on NHN Cloud |
 | Listener       | Listener belonging to the load balancer            |
-| Member Group   | Member group belonging to the listener             |
+| Member group   | Member group belonging to the listener             |
 | Member         | Member belonging to the member group               |
 
 ### Load Balancer Legend
