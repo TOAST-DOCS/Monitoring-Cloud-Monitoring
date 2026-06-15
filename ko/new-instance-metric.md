@@ -150,3 +150,63 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |스왑 사용량(used) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
 |스왑 사용량(free) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
 |스왑 사용량(total) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
+
+## GPU Instance Metric Dictionary
+
+> [참고]
+> GPU 지표는 GPU Instance에서 DCGM(Data Center GPU Manager) 기반으로 수집되며, 신규 Cloud Monitoring Agent가 설치된 GPU Instance에서만 조회할 수 있습니다.
+> GPU 모델(V100/A100/T4) 및 드라이버 버전에 따라 일부 지표는 수집되지 않을 수 있습니다.
+
+|지표명|리소스명|기본 범례(Legend)|단위(Unit)|
+|-------|-------|------|------|
+|GPU 사용률 (%)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|백분율(0-100)|
+|GPU 메모리 사용률 (%)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|백분율(0-100)|
+|GPU 메모리 대역폭 사용률 (%)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|백분율(0-100)|
+|GPU 전력 사용량 (W)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|와트(W)|
+|GPU 온도 (°C)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|섭씨(℃)|
+|GPU 메모리 온도 (°C)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|섭씨(℃)|
+|SM 클럭 (MHz)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|메가헤르츠(MHz)|
+|메모리 클럭 (MHz)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|메가헤르츠(MHz)|
+|인코더 사용률 (%)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|백분율(0-100)|
+|디코더 사용률 (%)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|백분율(0-100)|
+|GPU 여유 메모리 (MiB)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|메비바이트(MiB)|
+|GPU 예약 메모리 (MiB)|GPU 성능|{{nhncloud_instance_id}} - gpu={{gpu}}|메비바이트(MiB)|
+|PCIe 재전송 비율 (count/s)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 카운트(count/s)|
+|XID 에러|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|ECC 단일비트 에러 - 누적 (count)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|ECC 단일비트 에러 - 변동 (count)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|ECC 이중비트 에러 - 누적 (count)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|ECC 이중비트 에러 - 변동 (count)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|격리 페이지 - SBE (count)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|격리 페이지 - DBE (count)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|격리 대기 페이지 (count)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|리매핑 행 - 교정 가능 (count)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|리매핑 행 - 교정 불가 (count)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|리매핑 실패 여부|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|숫자|
+|NVLink CRC Flit 에러 비율 (count/s)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 카운트(count/s)|
+|NVLink CRC Data 에러 비율 (count/s)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 카운트(count/s)|
+|NVLink Replay 에러 비율 (count/s)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 카운트(count/s)|
+|NVLink Recovery 에러 비율 (count/s)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 카운트(count/s)|
+|NVLink 대역폭 - Total (KiB/s)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 키비바이트(KiB/s)|
+|NVLink 대역폭 - L0 (B/s)|GPU 상태|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 바이트(bytes/s)|
+|전력 스로틀링 비율 (µs/s)|GPU 클럭 이벤트|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 마이크로초(µs/s)|
+|온도 스로틀링 비율 (µs/s)|GPU 클럭 이벤트|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 마이크로초(µs/s)|
+|보드 제한 스로틀링 비율 (µs/s)|GPU 클럭 이벤트|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 마이크로초(µs/s)|
+|저사용률 스로틀링 비율 (µs/s)|GPU 클럭 이벤트|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 마이크로초(µs/s)|
+|동기 부스트 스로틀링 비율 (µs/s)|GPU 클럭 이벤트|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 마이크로초(µs/s)|
+|신뢰성 스로틀링 비율 (µs/s)|GPU 클럭 이벤트|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 마이크로초(µs/s)|
+
+### GPU Instance 필터(Filter)
+
+|필터명|설명|
+|------|------|
+|리전|GPU Instance가 위치한 리전|
+|인스턴스|GPU Instance의 이름|
+|GPU|인스턴스 내 GPU 장치 번호|
+
+### GPU Instance 범례(Legend)
+
+|범례명|설명|
+|------|------|
+|nhncloud_instance_id|GPU Instance의 이름|
+|gpu|인스턴스 내 GPU 장치 번호|
