@@ -10,7 +10,7 @@ The new agent operates separately from the existing agent and provides more accu
 
 The overall process is as follows:
 1. Install new Agent
-2. Delete old Agent (optional)
+2. Delete existing Agent (optional)
 
 ## New Agent Installation Guide
 
@@ -46,17 +46,17 @@ powershell -ExecutionPolicy Bypass -File install-nhncloud-telegraf.ps1
 Get-Service -Name "nhncloud-telegraf"
 ```
 
-## Old Agent Deletion Guide (optional)
+## Existing Agent Deletion Guide (optional)
 
 > [Note]
-> You can use both new Agent and old Agent simultaneously.
+> You can use both new Agent and existing Agent simultaneously.
 
-It is a deletion guide for removing the existing System Monitoring Agent. New agents and old agents work without problems even if they are installed at the same time.
+It is a guide to delete the existing System Monitoring Agent. New agents and existing agents work without problems even if they are installed at the same time.
 
 ### Precautions when Deleting
-- **Required confirmation before deletion **: check that new agents are installed and operated normally
+- You must check that new agents are installed and operated normally before deleting the existing Agent.
 
-### Delete Linux Instance Old Agent
+### Delete Linux Instance Existing Agent
 
 #### Deletion Script
 ```bash
@@ -66,19 +66,19 @@ sudo ./uninstall-sysmon-agent.sh
 ```
 
 #### Check Deletion
-* Check old agent service status (normal when there is no service)
+Check existing agent service status. (normal when there is no service)
 ```bash
 sudo systemctl status toast-sysmon
 ```
 
-### Delete Windows Instance Old Agent
+### Delete Windows Instance Existing Agent
 #### Deletion Script
 ```powershell
 & "C:\Program Files (x86)\NHN\TOAST\uninst.exe"
 ```
 
 #### Check Deletion
-* Check old agent process termination
+Check if the existing agent process has been terminated.
 ```powershell
 Get-Process -Name "toastmon" -ErrorAction SilentlyContinue
 ```
@@ -150,3 +150,63 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |Swap utilization (used) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|Bytes|
 |Swap usage (free) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|Bytes|
 |Swap usage (total) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|Bytes|
+
+## GPU Instance Metric Dictionary
+
+> [Note]
+> GPU metrics are collected from GPU instances based on DCGM (Data Center GPU Manager) and can only be retrieved from GPU instances with the new Cloud Monitoring Agent installed.
+> Some metrics may not be collected depending on the GPU model (V100/A100/T4) and driver version.
+
+| Metric Name | Resource Name | Default Legend | Unit |
+|-------|-------|------|------|
+| GPU utilization (%) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Percentage (0–100) |
+| GPU memory utilization (%) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Percentage (0–100) |
+| GPU memory bandwidth utilization (%) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Percentage (0–100) |
+| GPU power usage (W) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Watts (W) |
+| GPU temperature (°C) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Celsius (°C) |
+| GPU memory temperature (°C) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Celsius (°C) |
+| SM clock (MHz) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Megahertz (MHz) |
+| Memory clock (MHz) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Megahertz (MHz) |
+| Encoder utilization (%) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Percentage (0–100) |
+| Decoder utilization (%) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Percentage (0–100) |
+| GPU free memory (MiB) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Mebibytes (MiB) |
+| GPU reserved memory (MiB) | GPU performance | {{nhncloud_instance_id}} - gpu={{gpu}} | Mebibytes (MiB) |
+| PCIe retransmit rate (count/s) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Count per second (count/s) |
+| XID errors | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| ECC single-bit errors - cumulative (count) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| ECC single-bit errors - volatile (count) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| ECC double-bit errors - cumulative (count) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| ECC double-bit errors - volatile (count) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| Retired pages - SBE (count) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| Retired pages - DBE (count) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| Pending retired pages (count) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| Remapped rows - correctable (count) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| Remapped rows - uncorrectable (count) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| Remapping failure status | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Number |
+| NVLink CRC flit error rate (count/s) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Count per second (count/s) |
+| NVLink CRC data error rate (count/s) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Count per second (count/s) |
+| NVLink replay error rate (count/s) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Count per second (count/s) |
+| NVLink recovery error rate (count/s) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Count per second (count/s) |
+| NVLink bandwidth - Total (KiB/s) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Kibibytes per second (KiB/s) |
+| NVLink bandwidth - L0 (B/s) | GPU status | {{nhncloud_instance_id}} - gpu={{gpu}} | Bytes per second (bytes/s) |
+| Power throttling rate (µs/s) | GPU clock events | {{nhncloud_instance_id}} - gpu={{gpu}} | Microseconds per second (µs/s) |
+| Thermal throttling rate (µs/s) | GPU clock events | {{nhncloud_instance_id}} - gpu={{gpu}} | Microseconds per second (µs/s) |
+| Board limit throttling rate (µs/s) | GPU clock events | {{nhncloud_instance_id}} - gpu={{gpu}} | Microseconds per second (µs/s) |
+| Low utilization throttling rate (µs/s) | GPU clock events | {{nhncloud_instance_id}} - gpu={{gpu}} | Microseconds per second (µs/s) |
+| Sync boost throttling rate (µs/s) | GPU clock events | {{nhncloud_instance_id}} - gpu={{gpu}} | Microseconds per second (µs/s) |
+| Reliability throttling rate (µs/s) | GPU clock events | {{nhncloud_instance_id}} - gpu={{gpu}} | Microseconds per second (µs/s) |
+
+### GPU Instance Filter
+
+| Filter Name | Description |
+|------|------|
+| Region | Region where the GPU instance is located |
+| Instance | Name of the GPU instance |
+| GPU | GPU device number within the instance |
+
+### GPU Instance Legend
+
+| Legend Name | Description |
+|------|------|
+| nhncloud_instance_id | Name of the GPU instance |
+| gpu | GPU device number within the instance |

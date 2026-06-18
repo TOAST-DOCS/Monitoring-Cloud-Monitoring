@@ -1,120 +1,129 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
-### April 28, 2026
+## June 23, 2026
 
-#### Added a dashboard template feature
+#### Added Features
 
-Added a feature to easily create dashboards by selecting a pre-configured template when creating a dashboard.
-Added a feature to select a template by service and preview the widget configuration and layout.
+* Added detailed metrics for GPU instances
+    * Detailed metrics for GPU instances can now be collected through the new Cloud Monitoring Agent.
+    * Provides metrics for GPU performance, GPU status, and GPU clock events based on DCGM (Data Center GPU Manager).
+    * For installation, see the [New Agent Installation Guide](new-instance-metric.md).
 
-#### Added a dynamic filter feature
+## April 28, 2026
 
-Added a feature to filter data across all widgets on a dashboard at once using the dynamic filter at the top of the dashboard.
-Added a feature to add or modify filters in the dynamic filter management modal, and configure whether to apply dynamic filters per widget.
+### Added Features
 
-#### Added an aggregation feature
+* Added dashboard template feature
+    * When creating a dashboard, you can select a pre-configured template to create a dashboard quickly.
+    * You can select a template by service and check the widget configuration and layout in the preview.
+* Added dynamic filter feature
+    * The dynamic filter at the top of the dashboard allows you to filter data across all widgets in the dashboard at once.
+    * Filters can be added or modified in the dynamic filter management modal, and you can configure whether to apply the dynamic filter for each widget.
+* Added aggregation feature
+    * Metric data collected in widgets and notifications can be automatically calculated and displayed using aggregation functions such as average, minimum, and maximum.
+    * When the data interval is automatically adjusted based on the retrieval period, all data within the interval is aggregated and reflected, allowing you to understand the overall trend without missing any data.
+    * You can choose whether to use aggregation for each metric. If aggregation is not used, the raw data is displayed as before.
 
-Added a feature to automatically calculate and display collected metric data in widgets and alerts using aggregation functions such as average, minimum, and maximum.
-Added a feature to aggregate all data within intervals when data intervals are automatically adjusted based on the query period, ensuring no data is missed and the overall trend is captured.
-Added a feature to select whether to use aggregation per metric; if aggregation is not used, the original data is displayed as before.
+## September 23, 2025
 
-### September 23, 2025
+### Added Features
 
-#### Release of a New Cloud Monitoring Agent
+* Released new Cloud Monitoring Agent
+    * A new Agent for Cloud Monitoring instances has been released.
+    * For installation, see the [New Agent Installation Guide](new-instance-metric.md).
 
-Cloud Monitoring Agent for new instances has been released.
-* You can install it by referring to the [New Agent Installation Guide](new-instance-metric.md).
+## July 29, 2026
 
-### July 29, 2025
+### Added Features
 
-#### Added a new service to view metrics
+* Added services available for metric retrieval
+    * Added services for which metrics can be retrieved in Cloud Monitoring.
+    * Metrics for the following services can be viewed on the dashboard after configuring collection settings in the metric management screen.
+        * Cloud Functions
 
-Added a new service for which metrics can be viewed in Cloud Monitoring.
-Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+## June 24, 2025
 
-* Cloud Functions
+### Added Features
 
-### June 24, 2025
+* Added services available for metric retrieval
+    * Added services for which metrics can be retrieved in Cloud Monitoring.
+    * Metrics for the following services can be viewed on the dashboard after configuring collection settings in the metric management screen.
+        * SMS
 
-#### Added a new service to view metrics
+## June 10, 2025
 
-Added a new service for which metrics can be viewed in Cloud Monitoring.
-Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+### Feature Updates
 
-* SMS
+* Added SMS notification content
+    * An item has been added to the SMS content when sending notifications.
+    * The Instance Name item has been added when the service that triggered the notification is Instance.
 
-### June 10, 2025
+## May 27, 2025
 
-#### Added SMS notification content
+### Added Features
 
-Added a new item to the SMS content sent upon notification.
-When the notification is triggered by a service of type Instance, the Instance Name is included in the message.
+* Added services available for metric retrieval
+    * Added services for which metrics can be retrieved in Cloud Monitoring.
+    * Metrics for the following services can be viewed on the dashboard after configuring collection settings in the metric management screen.
+        * VPC
+        * Subnet
+        * Floating IP
 
-### May 27, 2025
+## March 4, 2025
 
-#### Added a new service to view metrics
+### Added Features
 
-Added a new service for which metrics can be viewed in Cloud Monitoring.
-Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+* Added services available for metric retrieval
+    * Added services for which metrics can be retrieved in Cloud Monitoring.
+    * Metrics for the following services can be viewed on the dashboard after configuring collection settings in the metric management screen.
+        * Direct Connect
 
-* VPC
-* Subnet
-* Floating IP
+## February 11, 2025
 
-### May 4, 2025
+### Added Features
 
-#### Add New Service to View Metrics
+* Added services available for metric retrieval
+    * Added services for which metrics can be retrieved in Cloud Monitoring.
+    * Metrics for the following services can be viewed on the dashboard after configuring collection settings in the metric management screen.
+        * Colocation Gateway
+        * Load Balancer
 
-Added a new service for which metrics can be viewed in Cloud Monitoring  
-Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+## October 29, 2024
 
-* Direct Connect
+### Added Features
 
-### February 11, 2025
+* Added custom webhook support
+    * Cloud Monitoring notifications can now be received via webhook using the custom webhook in the notification recipient group.
 
-#### Add New Service to View Metrics
+### Feature Updates
 
-Added a new service for which metrics can be viewed in Cloud Monitoring  
-Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
+* Applied granular permissions
+    * Project service usage roles have been added to Cloud Monitoring.
+    * Cloud Monitoring ADMIN: Cloud Monitoring service Create, Read, Update, Delete
+    * Cloud Monitoring VIEWER: Cloud Monitoring service Read
 
-* Colocation Gateway
-* Load Balancer
+## August 27, 2024
 
-### October 29, 2024
+### Added Features
 
-#### Apply Permission Segmentation
+* Added services available for metric retrieval
+    * Added services for which metrics can be retrieved in Cloud Monitoring.
+    * Metrics for the following services can be viewed on the dashboard after configuring collection settings in the metric management screen.
+        * Transit Hub
+        * Internet Gateway
 
-Added a role to use project services to Cloud Monitoring.
-
-* Cloud Monitoring ADMIN: Create, Read, Update, and Delete Cloud Monitoring
-* Cloud Monitoring VIEWER: Read Cloud Monitoring
-
-#### Support for Custom Webhooks
-
-You can receive Cloud Monitoring notifications as webhooks using custom webhooks in the notification receiver group.
-
-### August 27, 2024
-
-#### Add New Service to View Metrics
-
-Added a new service for which metrics can be viewed in Cloud Monitoring  
-Metrics for the services below are available in the dashboard after setting up collection in the Manage Metrics screen.
-
-* Transit Hub
-* Internet Gateway
-
-### July 23, 2024
+## July 23, 2024
 
 ### Bug Fixes
 
-* [Console] Fixed an issue where, when pressing the enter key on the text entry window from the Add/Modify Widgets and Notifications page, an unintended save attempt occurs.
+* [Console] Fixed an issue where pressing the Enter key in the text input field on the widget and notification add/edit page unintentionally attempted to save.
 
-### May 28, 2024
+## May 28, 2024
 
-#### Release of a New Service
+### Added Features
 
-Cloud Monitoring collects and provides metrics for resources in NHN Cloud and provides notifications about abnormalities. 
-
-* Collects and provides system and service metrics for resources in NHN Cloud, such as Instance, GPU Instance, NCS, etc.
-* Creates and manages dashboards flexibly and checks resource health easily.
-* You can configure metric charts in the organization and project dashboards and monitoring console in any form you want, and when a metric reaches a certain threshold, notifications can be sent via email, SMS, and more to predetermined notification recipients.
+* Released new service
+    * Cloud Monitoring is a service that collects and provides resource metrics from NHN Cloud and sends notifications when anomalies occur.
+    * Collects and provides system and service metrics for resources within NHN Cloud, including Instance, GPU Instance, and NCS.
+    * Flexible dashboard creation and management features allow you to easily monitor resource status.
+    * You can configure metric charts of your preferred type on the organization and project dashboard or the monitoring console, and set up notifications to be sent by email, SMS, and more to pre-designated notification recipients when metrics reach a specific threshold.
