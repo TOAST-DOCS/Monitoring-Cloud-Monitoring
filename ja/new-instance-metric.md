@@ -2,19 +2,19 @@
 
 ## 概要
 
-Cloud Monitoring サービスで Instance の詳細メトリクスを収集するには、新規 Agent をインストールする必要があります。
-新規 Agent は既存의 Agent とは別個で動作し、より正確で詳細なインスタンスメトリクスを提供します。
+Cloud MonitoringサービスでInstanceの詳細メトリクスを収集するには、新規Agentをインストールする必要があります。
+新規Agentは既存Agentとは別個で動作し、より正確で詳細なインスタンスメトリクスを提供します。
 
 > [注意]
 > オートスケーリンググループに属するインスタンスの場合、オートスケーリング機能が正常に動作しないことがあります。
 
 全体の進行手順は次の通りです。
-1. 新規 Agent のインストール
-2. 既存の Agent の削除(任意)
+1. 新規Agentのインストール
+2. 既存Agentの削除(任意)
 
-## 新規 Agent インストールガイド
+## 新規Agentインストールガイド
 
-### Linux インスタンス Agent インストール
+### LinuxインスタンスAgentインストール
 
 #### インストールスクリプト
 ```bash
@@ -29,7 +29,7 @@ sudo ./install-nhncloud-telegraf.sh
 sudo systemctl status nhncloud-telegraf
 ```
 
-### Windows インスタンス Agent インストール
+### WindowsインスタンスAgentインストール
 * PowerShell を管理者権限で実行
    - スタートメニューから **PowerShell** を検索します。
    - **Windows PowerShell** を右クリックし、**管理者として実行**を選択します。
@@ -46,17 +46,17 @@ powershell -ExecutionPolicy Bypass -File install-nhncloud-telegraf.ps1
 Get-Service -Name "nhncloud-telegraf"
 ```
 
-## 既存の Agent 削除ガイド(任意)
+## 既存Agent削除ガイド(任意)
 
 > [参考]
-> 新規 Agent と既存の Agent を同時に使用することもできます。
+> 新規Agentと既存Agentを同時に使用することもできます。
 
-既存の System Monitoring Agent を削除するガイドです。新規 Agent と既存の Agent は、同時にインストールされていても問題なく動作します。
+既存のSystem Monitoring Agentを削除するガイドです。新規Agentと既存Agentは、同時にインストールされていても問題なく動作します。
 
 ### 削除時の注意事項
-既存の Agent を削除する前に、新規 Agent が正常にインストールされて動作しているか必ず確認します。
+既存Agentを削除する前に、新規Agentが正常にインストールされて動作しているか必ず確認します。
 
-### Linux インスタンス 既存の Agent 削除
+### Linuxインスタンス既存Agent削除
 
 #### 削除スクリプト
 ```bash
@@ -66,26 +66,26 @@ sudo ./uninstall-sysmon-agent.sh
 ```
 
 #### 削除確認
-既存の Agent のサービス状態を確認します(サービスがない状態が正常です)。
+既存Agentのサービス状態を確認します(サービスがない状態が正常です)。
 ```bash
 sudo systemctl status toast-sysmon
 ```
 
-### Windows インスタンス 既存の Agent 削除
+### Windowsインスタンス既存Agent削除
 #### 削除スクリプト
 ```powershell
 & "C:\Program Files (x86)\NHN\TOAST\uninst.exe"
 ```
 
 #### 削除確認
-既存の Agent プロセスが終了したか確認します。
+既存Agentのプロセスが終了したか確認します。
 ```powershell
 Get-Process -Name "toastmon" -ErrorAction SilentlyContinue
 ```
 
-### 新規 Agent 削除(必要な場合)
+### 新規Agent削除(必要な場合)
 
-#### Linux インスタンス 新規 Agent 削除
+#### Linuxインスタンス新規Agent削除
 
 ##### 削除スクリプト
 ```bash
