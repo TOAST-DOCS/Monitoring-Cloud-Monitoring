@@ -1,9 +1,9 @@
-## Monitoring > Cloud Monitoring > Instance 新規指標連携ガイド
+## Monitoring > Cloud Monitoring > Instance 新規メトリクス連携ガイド
 
 ## 概要
 
-Cloud Monitoring サービスで Instance の詳細指標を収集するには、新規 Agent をインストールする必要があります。
-新規 Agent は既存の Agent とは別個で動作し、より正確で詳細なインスタンス指標を提供します。
+Cloud Monitoring サービスで Instance の詳細メトリクスを収集するには、新規 Agent をインストールする必要があります。
+新規 Agent は既存의 Agent とは別個で動作し、より正確で詳細なインスタンスメトリクスを提供します。
 
 > [注意]
 > オートスケーリンググループに属するインスタンスの場合、オートスケーリング機能が正常に動作しないことがあります。
@@ -106,7 +106,7 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 
 ## Metric Dictionary
 
-|指標名|リソース名|デフォルト凡例(Legend)|単位(Unit)|
+|メトリクス名|リソース名|デフォルト凡例(Legend)|単位(Unit)|
 |-------|-------|------|------|
 |CPU 使用率(%)|CPU (New)|{{nhncloud_instance_id}}|パーセント(0～100)|
 |CPU コア数|CPU (New)|{{nhncloud_instance_id}}|数値|
@@ -154,10 +154,10 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 ## GPU Instance Metric Dictionary
 
 > [参考]
-> GPU指標は、GPU InstanceでDCGM(Data Center GPU Manager)ベースで収集され、新規Cloud Monitoring AgentがインストールされたGPU Instanceでのみ確認できます。
-> GPUモデル(V100/A100/T4)及びドライバーのバージョンによっては、一部の指標が収集されない場合があります。
+> GPUメトリクスは、GPU InstanceでDCGM(Data Center GPU Manager)ベースで収集され、新規Cloud Monitoring AgentがインストールされたGPU Instanceでのみ確認できます。
+> GPUモデル(V100/A100/T4)およびドライバーのバージョンによっては、一部のメトリクスが収集されない場合があります。
 
-|指標名|リソース名|デフォルト凡例(Legend)|単位(Unit)|
+|メトリクス名|リソース名|デフォルト凡例(Legend)|単位(Unit)|
 |-------|-------|------|------|
 |GPU使用率(%)|GPU性能|{{nhncloud_instance_id}} - gpu={{gpu}}|パーセント(0～100)|
 |GPUメモリ使用率(%)|GPU性能|{{nhncloud_instance_id}} - gpu={{gpu}}|パーセント(0～100)|
