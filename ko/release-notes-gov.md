@@ -1,5 +1,14 @@
 ## Monitoring > Cloud Monitoring > 릴리스 노트
 
+### 2026. 06. 23.
+
+#### 신규 기능 추가
+
+* GPU Instance 상세 지표 추가
+    * 신규 Cloud Monitoring Agent를 통해 GPU Instance의 상세 지표를 수집할 수 있습니다.
+    * DCGM(Data Center GPU Manager) 기반으로 GPU 성능, GPU 상태, GPU 클럭 이벤트 영역의 지표를 제공합니다.
+    * [신규 Agent 설치 가이드](new-instance-metric.md)를 참고하여 설치할 수 있습니다.
+
 ### 2026. 04. 28.
 
 #### 대시보드 템플릿 기능 추가
