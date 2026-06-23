@@ -1,6 +1,10 @@
+<!-- pre-align:aligned sig=b0f664ff690f -->
+
 ## Monitoring > Cloud Monitoring > コンソール使用ガイド
 
 コンソール使用ガイドでは、Cloud Monitoringサービスの基本的な使用方法を案内します。
+
+<a id="dashboard"></a>
 
 ## ダッシュボード
 
@@ -13,6 +17,8 @@
 ![照会期間ユーザー指定](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01-2.png)
 
 ユーザー指定期間を設定すると、自動更新は使用できません。
+
+<a id="view-modeedit-mode"></a>
 
 ### 照会モード/編集モード
 
@@ -34,6 +40,8 @@
 
 ウィジェットを追加したり、ウィジェットの位置やサイズなどを修正した内容は、**全体保存**をクリックすることで適用されます。保存しなかった場合、保存通知モーダルが表示され、保存しなかった変更内容は消えます。
 
+<a id="create-a-dashboard"></a>
+
 ### ダッシュボードの作成
 
 ![ダッシュボード追加モーダル](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_02-1.png)
@@ -49,6 +57,8 @@
 **ダッシュボード名**と**ダッシュボード説明**を入力してください。**ダッシュボード名**は必ず入力しなければならない必須値であり、重複した名前で設定できますが、なるべくユニークな名前を使用することを推奨します。
 **ダッシュボードの説明**は選択値で、そのダッシュボードを説明できる内容を入力します。
 
+<a id="dashboard-template"></a>
+
 #### ダッシュボードテンプレート
 
 ダッシュボードを独自に構成するか、あらかじめ構成されたテンプレートから開始できます。**ダッシュボードテンプレート**項目で、使用有無を選択します。
@@ -61,6 +71,8 @@
 テンプレート一覧から**プレビュー**ボタンをクリックすると、テンプレートのプレビューモーダルが開きます。
 
 プレビューモーダルでは、テンプレートに含まれるウィジェットの構成とレイアウトを事前に確認できます。プレビュー画面にはサンプルデータが表示され、ダッシュボードの作成後に実際のデータを確認できます。
+
+<a id="set-up-a-dashboard"></a>
 
 ### ダッシュボード構成
 
@@ -75,6 +87,8 @@
 ![ウィジェットグループ例](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03-3.png)
 
 ウィジェットグループを使用すると、複数のウィジェットをグループ化して管理できます。ウィジェットグループを折りたたんだり広げたりして、複数のウィジェットを隠したり、表示したりすることができ、ウィジェットグループの高さと幅はグループ内のウィジェットサイズに応じて自動的に調整されます。
+
+<a id="addedit-a-widget-and-widget-group"></a>
 
 #### ウィジェット及びウィジェットグループの追加/修正
 
@@ -174,6 +188,8 @@ Aggregation Onは、平均集計を使用した場合です。各区間内の全
 - **グループ削除**をクリックすると、ウィジェットの位置やサイズ情報はそのまま残り、グループのみ削除されます。
 - **グループ及び下位ウィジェット全体削除**をクリックすると、グループ内のウィジェットまで削除されます。
 
+<a id="moveclonedelete-a-widget"></a>
+
 #### ウィジェットの移動/複製/削除
 
 ![ウィジェットサイズ調整](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-1.gif)
@@ -188,6 +204,8 @@ Aggregation Onは、平均集計を使用した場合です。各区間内の全
 
 ![他のダッシュボードにウィジェット複製モーダル](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-2.png)
 
+<a id="create-a-notification"></a>
+
 #### 通知作成
 
 ![ウィジェットコンテキストメニュー](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-3.png)
@@ -196,6 +214,8 @@ Aggregation Onは、平均集計を使用した場合です。各区間内の全
 通知条件と通知受信対象を入力するだけで、簡単に通知を作成できます。
 
 ![ウィジェット通知作成でアクセスした場合](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_c-1.png)
+
+<a id="dynamic-filter"></a>
 
 ### 動的フィルタ
 
@@ -217,6 +237,8 @@ Aggregation Onは、平均集計を使用した場合です。各区間内の全
 
 > 参考：動的フィルタは、ウィジェットの追加/編集画面で**動的フィルタ適用**トグルを有効にしたウィジェットにのみ適用されます。
 
+<a id="dynamic-filter-management"></a>
+
 #### 動的フィルタの管理
 
 照会モードで**動的フィルタの管理**ボタンをクリックすると、動的フィルタ管理モーダルが開きます。編集モードでは、動的フィルタ管理ボタンは表示されません。
@@ -237,6 +259,8 @@ Instanceサービスの動的フィルタでインスタンスを選択する際
 Agentのタイプによってサポートされる指標が異なるため、選択したインスタンスのAgentタイプに該当しない指標はデータが表示されない場合があります。
 新規Agentがサポートする指標については、[新規Agentインストールガイド](new-instance-metric.md)をご参照ください。
 
+<a id="manage-a-dashboard"></a>
+
 ### ダッシュボード管理
 
 ![照会モードヘッダ](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_04-1.png)
@@ -250,6 +274,8 @@ Agentのタイプによってサポートされる指標が異なるため、選
 各ダッシュボードの**編集**列の修正または削除アイコンをクリックして、そのダッシュボードの名前と説明を修正したり、ダッシュボードを削除することができます。
 **プロジェクトダッシュボードの表示設定**トグルをクリックして、プロジェクトカスタムダッシュボード画面でそのダッシュボードの表示の有無を設定できます。公開設定を解除しても、Cloud Monitoringサービスでは常に公開されます。
 
+<a id="download-widget-data"></a>
+
 ### ウィジェットデータのダウンロード
 
 ![ウィジェットデータダウンロードメニュー](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_05-1.png)
@@ -258,11 +284,15 @@ Agentのタイプによってサポートされる指標が異なるため、選
 .csv、.xlsxファイルの場合、開始日時を基準に最大3か月間のデータのみダウンロードできます。照会期間が1か月未満の場合、5分間隔でデータを提供し、1か月以上は1日間隔でデータを提供します。
 指定した照会期間が長かったり、ウィジェットとウィジェットに含まれる指標データが多いほど、ダウンロードにかかる時間が長くなる場合があります。
 
+<a id="manage-notifications"></a>
+
 ## 通知管理
 
 **Monitoring > Cloud Monitoring > 通知設定**では、NHN Cloudリソースに通知を追加することができ、通知の発生履歴を確認できます。
 
 ![通知設定リスト画面](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01-1.png)
+
+<a id="notification-settings"></a>
 
 ### 通知設定
 
@@ -273,6 +303,8 @@ Agentのタイプによってサポートされる指標が異なるため、選
 - **通知詳細表示**列の**表示**をクリックすると、**通知詳細情報**モーダルが表示されます。
 - **修正**列の**修正**をクリックすると、**通知修正**画面に移動します。
 - 各通知行をクリックすると、**通知発生履歴**タブに移動し、その通知が自動照会されて表示されます。
+
+<a id="createedit-notifications"></a>
 
 #### 通知の作成/修正
 
@@ -324,11 +356,15 @@ Agentのタイプによってサポートされる指標が異なるため、選
 | events[].contMinutes | イベント持続時間(分) | Integer | イベントが発生した時間と現在時間との差(分) |
 | events[].labels | 発生位置 | Map<String, String\> | |
 
+<a id="view-notification-details-modal"></a>
+
 #### 通知詳細表示モーダル
 
 ![通知詳細表示モーダル](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_b-1.png)
 
 通知詳細表示モーダルでは、設定した通知の詳細情報を確認できます。通知名、説明、サービス、指標項目のフィルタ及び通知条件、集計設定情報、通知受信対象を確認できます。集計をサポートする指標の場合は、設定された集計値(使用しない/平均/最大/最小)が表示され、集計をサポートしない指標の場合は`-`と表示されます。
+
+<a id="notification-history"></a>
 
 ### 通知発生履歴
 
@@ -340,11 +376,15 @@ Agentのタイプによってサポートされる指標が異なるため、選
 > 参考：持続時間は、通知発生時点から通知終了時点までの時間を示します。
 > 通知が発生した状態で、その通知が終了する前に通知を無効にすると、明示的に通知が終了していないため、持続時間が継続的に増加する可能性があります。
 
+<a id="view-the-history-of-notification-occurrences"></a>
+
 #### 通知発生履歴照会
 
 ![通知発生履歴照会検索フィルタ](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_02_a-1.png)
 
 通知名、通知状態、指標項目、発生時間フィルタを使用して通知発生履歴を照会できます。**初期化**を押すと、検索フィルタが初期化されます。
+
+<a id="view-notification-send-history-modal"></a>
 
 #### 通知送信履歴表示モーダル
 
@@ -358,9 +398,13 @@ Agentのタイプによってサポートされる指標が異なるため、選
 通知を実際に送信した履歴も表形式で提供します。各通知送信履歴の通知送信日時、通知方法、受信対象、通知送信結果を確認できます。
 通知送信日時、通知方法でテーブルのソートを変更できます。
 
+<a id="manage-metrics"></a>
+
 ## 指標管理
 
 **Monitoring > Cloud Monitoring > 指標管理**では、NHN Cloudリソースのサービス別の指標を収集するかどうかを設定できます。
+
+<a id="set-up-metric-collection"></a>
 
 ### 指標収集設定
 
@@ -380,6 +424,8 @@ Agentのタイプによってサポートされる指標が異なるため、選
 ![指標収集中のウィジェットの例](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-5.png)
 
 指標の収集を中断した場合、当該サービスの指標を使用して作成したウィジェットでは、当該指標が表示されなくなり、当該指標の凡例が無効になります。
+
+<a id="example-screen"></a>
 
 ## 例画面
 
