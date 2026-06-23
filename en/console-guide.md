@@ -1,6 +1,10 @@
+<!-- pre-align:aligned sig=b0f664ff690f -->
+
 ## Monitoring > Cloud Monitoring > Console User Guide
 
 This document explains the basics of using the Cloud Monitoring service.
+
+<a id="dashboard"></a>
 
 ## Dashboard
 
@@ -13,6 +17,8 @@ The metric data view period for user dashboards defaults to retrieving data up t
 ![Customize the view period](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01-2.png)
 
 If you set a custom duration, auto-refresh is disabled.
+
+<a id="view-modeedit-mode"></a>
 
 ### View Mode/Edit Mode
 
@@ -34,6 +40,8 @@ In the edit mode, you can edit the name or description of a dashboard, or clone 
 
 Any changes you make to the widget, such as adding a widget or modifying its location and size, don't take effect until you click **Save All**. If you don't, you'll see a save notification modal, and any unsaved changes will disappear.
 
+<a id="create-a-dashboard"></a>
+
 ### Create a Dashboard
 
 ![Add Dashboard Modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_02-1.png)
@@ -49,6 +57,8 @@ If no dashboards have been created, you'll see **+ Create Dashboard**.
 Enter a **dashboard name** and **dashboard description**. The **dashboard name** is a required value, and can be set to a duplicate name, but we recommend using a unique name whenever possible.
 **Dashboard description** is an optional value and you can enter something descriptive of the dashboard.
 
+<a id="dashboard-template"></a>
+
 #### Dashboard Template
 
 Configure a dashboard manually or start with a preconfigured template. Select whether to use the **Dashboard Template** option.
@@ -61,6 +71,8 @@ If you select to use a template, select a service and a template respectively. W
 Click the **Preview** button in the template list to open the template preview modal.
 
 In the preview modal, you can preview the widget configuration and layout included in the template. Sample data is displayed in the preview screen, and you can view the actual data after the dashboard is created.
+
+<a id="set-up-a-dashboard"></a>
 
 ### Set up a Dashboard
 
@@ -75,6 +87,8 @@ Widgets are the smallest unit of organization for a dashboard. They can be creat
 ![Widget group example](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03-3.png)
 
 Widget groups allow you to manage multiple widgets by grouping them together. Widget groups can be collapsed or expanded to hide and show multiple widgets, and the height and width of the widget group automatically adjusts to the size of the widgets within the group.
+
+<a id="addedit-a-widget-and-widget-group"></a>
 
 #### Add/Edit a Widget and Widget Group
 
@@ -174,6 +188,8 @@ Widget groups can be edited just like widgets, and to edit a widget group, you n
 - Click **Delete Group** to remove only the group, leaving the widget's location and size information intact.
 - Click **Delete Groups and Child Widgets** to delete all widgets within the group.
 
+<a id="moveclonedelete-a-widget"></a>
+
 #### Move/Clone/Delete a Widget
 
 ![Resizing widgets](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-1.gif)
@@ -188,6 +204,8 @@ Once you're in Edit mode, you can resize the widget by dragging the bottom right
 
 ![Clone widget to another dashboard modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-2.png)
 
+<a id="create-a-notification"></a>
+
 #### Create a Notification
 
 ![Widget context menu](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-3.png)
@@ -196,6 +214,8 @@ Clicking **Create Notification** takes you to the **Manage Notifications** > **C
 You can easily create a notification entering only the notification condition and the recipient of the notification.
 
 ![If you accessed the Create widget notification](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_c-1.png)
+
+<a id="dynamic-filter"></a>
 
 ### Dynamic filter
 
@@ -217,6 +237,8 @@ The dynamic filter is displayed as follows depending on the selection state:
 
 > Note: Dynamic filters are applied only to widgets with the **Apply Dynamic Filter** toggle enabled in the widget add/edit screen.
 
+<a id="dynamic-filter-management"></a>
+
 #### Dynamic Filter Management
 
 Click the **Dynamic Filter Management** button in view mode to open the dynamic filter management modal. The Dynamic Filter Management button is not displayed in edit mode.
@@ -237,6 +259,8 @@ The same combination of service and label cannot be added as a duplicate.
     Since the supported metrics differ depending on the agent type, metrics that do not correspond to the agent type of the selected instance may not display data.
     For metrics supported by the new agent, refer to the [New Agent Installation Guide](new-instance-metric.md).
 
+<a id="manage-a-dashboard"></a>
+
 ### Manage a Dashboard
 
 ![View Mode Header](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_04-1.png)
@@ -250,6 +274,8 @@ Click **Manage Dashboards** to display the Manage dashboards modal. You can view
 You can click the **Edit** or Delete icon in each dashboard's **Edit** column to edit the name and description of that dashboard or delete the dashboard.
 You can click the**Project Dashboard Visibility Settings** toggle to set the visibility of that dashboard on the Project custom dashboards screen. Even if you turn off the visibility setting, it is always visible in the Cloud Monitoring service.
 
+<a id="download-widget-data"></a>
+
 ### Download Widget Data
 
 ![Download Widget Data menu](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_05-1.png)
@@ -258,11 +284,15 @@ You can download all the widget data for a dashboard as a .png, .csv, or .xlsx f
 For .csv and .xlsx files, you can only download up to 3 months of data based on the start date. If the view period is less than one month, data is provided in 5-minute intervals, and if it is more than one month, data is provided in 1-day intervals.
 The longer the view period you specify or the more metric data the widget and the widget contains, the longer the download might take.
 
+<a id="manage-notifications"></a>
+
 ## Manage Notifications
 
 In **Monitoring > Cloud Monitoring > Notification Settings**, you can add notifications to your NHN Cloud resources and check the history of notification occurrences.
 
 ![Notification settings list screen](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01-1.png)
+
+<a id="notification-settings"></a>
 
 ### Notification Settings
 
@@ -273,6 +303,8 @@ The Notification settings screen displays a table where you can view information
 - Click **View** in the **View Notification Details** column to display the **Notification Details** modal.
 - Click **Edit** in the **Edit** column to go to the **Edit Notification** screen.
 - Clicking on each row of notifications takes you to the **Notification Occurred History** tab, where the notifications are automatically looked up and displayed.
+
+<a id="createedit-notifications"></a>
 
 #### Create/Edit Notifications
 
@@ -324,11 +356,15 @@ You can receive notifications as custom webhooks in the Notification Receiver Gr
 | events[].labels | Where event occurred | Map<String, String\> | |
 
 
+<a id="view-notification-details-modal"></a>
+
 #### View Notification Details Modal
 
 ![View Notification Details Modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_b-1.png)
 
 In the alert details modal, you can view the detailed information of the configured alert. You can view the alert name, description, service, metric item filters and alert conditions, aggregation settings, and alert recipients. For metrics that support aggregation, the configured aggregation value (disable/average/maximum/minimum) is displayed, and for metrics that do not support aggregation, - is displayed.
+
+<a id="notification-history"></a>
 
 ### Notification History
 
@@ -340,11 +376,15 @@ You can view the alert name, occurrence time, end time, service, resource, metri
 > Notes: Duration refers to the time from when the notification occurs to when the notification ends.
 If you disable a notification before it ends while it is still occurring, the duration can continue to increase because the notification was not explicitly ended.
 
+<a id="view-the-history-of-notification-occurrences"></a>
+
 #### View the history of notification occurrences
 
 ![Notification history search filters](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_02_a-1.png)
 
 You can use the notification name, notification status, Metric item, and Occurrence time filters to view the history of notification occurrences. Click **Initialize** to initialize the search filters.
+
+<a id="view-notification-send-history-modal"></a>
 
 #### View Notification Send History Modal
 
@@ -358,9 +398,13 @@ In the history modal, you can view detailed information on notification settings
 The actual history of sending notifications is also provided in a table. You can see the notification sending date, notification method, recipient, and notification result for each notification sending history.
 You can change the table sorting by notification date, notification method, and notification time.
 
+<a id="manage-metrics"></a>
+
 ## Manage Metrics
 
 In **Monitoring > Cloud Monitoring > Manage Metrics**, you can set whether to collect service-specific metrics for NHN Cloud resources.
+
+<a id="set-up-metric-collection"></a>
 
 ### Set up Metric Collection
 
@@ -380,6 +424,8 @@ When you start/stop collecting metrics, a confirmation modal opens.
 ![Example of the widget when metrics are being collected](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-5.png)
 
 If you stop collecting metrics, the metrics are no longer displayed in widgets that you've created using metrics from that service, and the metrics' legends are disabled.
+
+<a id="example-screen"></a>
 
 ## Example Screen
 
