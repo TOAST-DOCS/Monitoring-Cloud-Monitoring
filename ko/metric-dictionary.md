@@ -1,10 +1,16 @@
+<!-- pre-align:aligned sig=0995eb4cdef4 -->
+
 ## Monitoring > Cloud Monitoring > Metric Dictionary
+
+<a id="metric-dictionary"></a>
 
 ## Metric Dictionary
 - NHN Cloud 내 서비스에 대한 모니터링을 위한 지표들을 정의한 목록입니다.
 - 지표 사전을 통해 모니터링 대상 서비스의 지표를 확인하고, 이해할 수 있습니다.
 - 위젯 구성 시 필요한 지표를 찾아 사용할 수 있습니다. 자세한 내용은 [콘솔 사용 가이드](console-guide.md)를 참고하십시오.
 - **Metric List**에서 각 서비스별 지표 사전 목록을 확인할 수 있습니다.
+
+<a id="filter"></a>
 
 ### 필터(Filter)
 - 지표에 대해 필터를 적용할 수 있습니다.
@@ -16,6 +22,8 @@
 |-----|--------------|--------------------------------------------------------------------|
 | 리전  | NHN Cloud 리전 | kr1: 한국(판교), kr2: 한국(평촌), kr3: 한국(광주), us1: 미국(캘리포니아), jp1: 일본(도쿄) |
 
+<a id="legend"></a>
+
 ### 범례(Legend)
 - 지표에 대해 범례를 적용할 수 있습니다.
 - 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
@@ -26,8 +34,12 @@
 |-----------------|--------------|--------------------------------------------------------------------|
 | nhncloud_region | NHN Cloud 리전 | kr1: 한국(판교), kr2: 한국(평촌), kr3: 한국(광주), us1: 미국(캘리포니아), jp1: 일본(도쿄) |
 
+<a id="instance"></a>
+
 ## Instance
 - NHN Cloud의 Instance 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list"></a>
 
 ### Metric List
 | 지표명              | 리소스명    | 기본 범례(Legend)                                                              | 단위(Unit)         |
@@ -66,6 +78,8 @@
 | 스왑 사용량(total)    | Swap    | {{nhncloud_instance_id}}                                                   | 바이트(bytes)       |
 | 스왑 사용률           | Swap    | {{nhncloud_instance_id}}                                                   | 비율(0.00 - 1.00)  |
 
+<a id="instance-filter"></a>
+
 ### Instance 필터(Filter)
 - Instance 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
@@ -73,6 +87,8 @@
 | 필터명  | 설명                                       |
 |------|------------------------------------------|
 | 인스턴스 | NHN Cloud의 Instance 서비스에서 사용 중인 인스턴스의 이름 |
+
+<a id="instance-legend"></a>
 
 ### Instance 범례(Legend)
 - Instance 지표에 대해 범례를 적용할 수 있습니다.
@@ -87,8 +103,12 @@
 | path                 | 인스턴스의 디스크 마운트 경로    |
 | interface            | 인스턴스의 네트워크 인터페이스 이름 |
 
+<a id="nhn-container-servicencs"></a>
+
 ## NHN Container Service(NCS)
 - NHN Cloud의 NCS 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-2"></a>
 
 ### Metric List
 | 지표명           | 리소스명 | 기본 범례(Legend)                                                            | 단위(Unit)        |
@@ -108,6 +128,8 @@
 | 활성화 상태별 작업 수  | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 숫자              |
 | 컨테이너의 프로세스 수  | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 숫자              |
 
+<a id="ncs-filter"></a>
+
 ### NCS Filter
 - NCS 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
@@ -117,6 +139,8 @@
 | 워크로드 | NHN Cloud의 NCS 서비스에서 사용 중인 워크로드의 이름 |
 | 타입   | 스토리지 종류                             |
 
+
+<a id="ncs-legend"></a>
 
 ### NCS Legend
 - NCS 지표에 대해 범례를 적용할 수 있습니다.
@@ -129,8 +153,12 @@
 | type                                         | 스토리지 종류                        |
 | container                                    | 컨테이너의 이름                       |
 
+<a id="10"></a>
+
 ## GPU
 - NHN Cloud의 GPU 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-3"></a>
 
 ### Metric List
 | 지표명         | 리소스명 | 기본 범례(Legend) | 단위(Unit)   |
@@ -140,6 +168,8 @@
 | GPU 메모리 사용률 | GPU  | 없음            | 백분율(0-100) |
 | GPU 전력 사용량  | GPU  | 없음            | 와트(W)      |
 
+<a id="gpu-filter"></a>
+
 ### GPU 필터(Filter)
 - GPU 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
@@ -147,6 +177,8 @@
 | 필터명  | 설명                                  |
 |------|-------------------------------------|
 | 인스턴스 | NHN Cloud의 GPU 서비스에서 사용 중인 인스턴스의 이름 |
+
+<a id="gpu-legend"></a>
 
 ### GPU 범례(Legend)
 - GPU 지표에 대해 범례를 적용할 수 있습니다.
@@ -156,8 +188,12 @@
 |----------------------|--------------|
 | nhncloud_instance_id | GPU 인스턴스의 이름 |
 
+<a id="transit-hub"></a>
+
 ## Transit Hub
 - NHN Cloud의 Transit Hub 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-4"></a>
 
 ### Metric List
 | 지표명                                | 리소스명 | 기본 범례(Legend) | 단위(Unit)   |
@@ -196,9 +232,13 @@
 | 블랙홀 경로와 일치하여 삭제된 네트워크 초당 비트 수(bps) | 연결  | {{id}} |  초당 비트(bits/s)  |
 
 
+<a id="transit-hub-filter"></a>
+
 ### Transit Hub 필터(Filter)
 - Transit Hub 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터 조건에 해당하는 지표만 표시됩니다.
+
+<a id="resource-type-applicable-filters-for-transit-hub"></a>
 
 #### 리소스 유형 > 트랜짓 허브인 경우 적용 가능한 필터
 
@@ -206,12 +246,16 @@
 | --- | --- |
 | 트랜짓 허브 | NHN Cloud의 Network 서비스에서 사용 중인 트랜짓 허브 |
 
+<a id="resource-type-applicable-filters-for-attachment"></a>
+
 #### 리소스 유형 > 연결인 경우 적용 가능한 필터
 
 | 필터명 | 설명                                      |
 | --- |-----------------------------------------|
 | 트랜짓 허브 | 연결과 관련된 트랜짓 허브 |
 | 연결 | NHN Cloud의 Network 서비스에서 사용 중인 트랜짓 허브 연결 |
+
+<a id="transit-hub-legend"></a>
 
 ### Transit Hub 범례(Legend)
 - Transit Hub 지표에 대해 범례를 적용할 수 있습니다.
@@ -222,8 +266,12 @@
 | id             | 트랜짓 허브 또는 연결 이름            |
 | transit_hub_id | 트랜짓 허브 이름(리소스가 `연결`인 경우) |
 
+<a id="internet-gateway"></a>
+
 ## Internet Gateway
 - NHN Cloud의 Internet Gateway 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-5"></a>
 
 ### Metric List
 
@@ -238,6 +286,8 @@
 | 네트워크 송신 초당 패킷 수(pps)	    | 라우팅 테이블 | {{id}} | 초당 패킷(packets/s) | 
 | 네트워크 수신 초당 패킷 수(pps)	    | 라우팅 테이블 | {{id}} | 초당 패킷(packets/s) | 
 
+<a id="internet-gateway-filter"></a>
+
 ### Internet Gateway 필터(Filter)
 - Internet Gateway 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터 조건에 해당하는 지표만 표시됩니다.
@@ -245,6 +295,8 @@
 | 필터명 | 설명 |
 | --- | --- |
 | 라우팅 테이블 | NHN Cloud의 Network 서비스에서 사용 중인 라우팅 테이블 |
+
+<a id="internet-gateway-legend"></a>
 
 ### Internet Gateway 범례(Legend)
 - Internet Gateway 지표에 대해 범례를 적용할 수 있습니다.
@@ -254,8 +306,12 @@
 |----------------|----------------------------------------|
 | id             | 라우링 테이블 이름  |
 
+<a id="colocation-gateway"></a>
+
 ## Colocation Gateway
 - NHN Cloud의 Colocation Gateway 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-6"></a>
 
 ### Metric List
 
@@ -270,11 +326,15 @@
 | 네트워크 송신 초당 패킷 수(pps)	 | 코로케이션 게이트웨이 | {{id}}        | 초당 패킷(packets/s) | 
 | 네트워크 수신 초당 패킷 수(pps)	 | 코로케이션 게이트웨이 | {{id}}        | 초당 패킷(packets/s) |
 
+<a id="colocation-gateway-filter"></a>
+
 ### Colocation Gateway 필터(Filter)
 
 | 필터명         | 설명                                        |
 |-------------|-------------------------------------------|
 | 코로케이션 게이트웨이 | NHN Cloud Network 서비스에서 사용 중인 코로케이션 게이트웨이 |
+
+<a id="colocation-gateway-legend"></a>
 
 ### Colocation Gateway 범례(Legend)
 
@@ -282,8 +342,12 @@
 |-----|----------------|
 | id  | 코로케이션 게이트웨이 이름 |
 
+<a id="load-balancer"></a>
+
 ## Load Balancer
 - NHN Cloud의 Load Balancer 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-7"></a>
 
 ### Metric List
 
@@ -351,6 +415,8 @@
 | 멤버 그룹 로드 밸런싱 총 횟수                     | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
 | 멤버 그룹 마지막 세션 경과 시간                    | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
 
+<a id="load-balancer-filter"></a>
+
 ### Load Balancer 필터(Filter)
 
 | 필터명    | 설명                                    |
@@ -359,6 +425,8 @@
 | 리스너    | 로드밸런서에 속한 리스너                         |
 | 멤버 그룹  | 리스너에 속한 멤버 그룹                         |
 | 멤버     | 멤버 그룹에 속한 멤버                          |
+
+<a id="load-balancer-legend"></a>
 
 ### Load Balancer 범례(Legend)
 
@@ -370,8 +438,12 @@
 | member_id       | 멤버 이름     |
 
 
+<a id="direct-connect"></a>
+
 ## Direct Connect
 - NHN Cloud의 Direct Connect 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-8"></a>
 
 ### Metric List
 
@@ -385,11 +457,15 @@
 | 네트워크 송신 초당 비트 수(bps) | Network | {{orderId}}   | 초당 비트(bits/s) |
 | 네트워크 수신 초당 비트 수(bps) | Network | {{orderId}}   | 초당 비트(bits/s) |
 
+<a id="direct-connect-filter"></a>
+
 ### Direct Connect 필터(Filter)
 
 | 필터명    | 설명                                              |
 |--------|-------------------------------------------------|
 | 서비스 ID | NHN Cloud의 Direct Connect 서비스에서 사용 중인 서비스 신청 ID |
+
+<a id="direct-connect-legend"></a>
 
 ### Direct Connect 범례(Legend)
 
@@ -397,8 +473,12 @@
 |---------|-----------|
 | orderId | 서비스 신청 ID |
 
+<a id="vpc"></a>
+
 ## VPC
 - NHN Cloud의 VPC 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-9"></a>
 
 ### Metric List
 
@@ -409,11 +489,15 @@
 |VPC 사용률|VPC|{{vpc_id}}| 백분율(0-100)  |
 
 
+<a id="vpc-filter"></a>
+
 ### VPC 필터(Filter)
 
 | 필터명 | 설명                                |
 |-----|-----------------------------------|
 | VPC | NHN Cloud의 Network 서비스에서 사용 중인 VPC 이름 |
+
+<a id="vpc-legend"></a>
 
 ### VPC 범례(Legend)
 
@@ -421,8 +505,12 @@
 |---------|-----------|
 | vpc_id | VPC 이름 |
 
+<a id="subnet"></a>
+
 ## Subnet
 - NHN Cloud의 Subnet 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-10"></a>
 
 ### Metric List
 
@@ -433,11 +521,15 @@
 |서브넷 사용률|서브넷|{{subnet_id}}|백분율(0-100)|
 
 
+<a id="subnet-filter"></a>
+
 ### Subnet 필터(Filter)
 
 | 필터명 | 설명                                   |
 |-----|--------------------------------------|
 | 서브넷 | NHN Cloud의 Network 서비스에서 사용 중인 서브넷 이름 |
+
+<a id="subnet-legend"></a>
 
 ### Subnet 범례(Legend)
 
@@ -445,8 +537,12 @@
 |---------|--------|
 | subnet_id | 서브넷 이름 |
 
+<a id="floating-ip"></a>
+
 ## Floating IP
 - NHN Cloud의 Floating IP 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-11"></a>
 
 ### Metric List
 
@@ -456,8 +552,12 @@
 |연결된 플로팅 IP 개수|플로팅 IP|{{nhncloud_region}} - {{status}}|숫자|
 |연결되지 않은 플로팅 IP 개수|플로팅 IP|{{nhncloud_region}} - {{status}}|숫자|
 
+<a id="sms"></a>
+
 ## SMS
 - NHN Cloud의 SMS 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-12"></a>
 
 ### Metric List
 
@@ -470,6 +570,8 @@
 |수신 실패|국제 SMS||숫자|
 |발송 실패|국제 SMS||숫자|
 
+<a id="sms-filter"></a>
+
 ### SMS 필터(Filter)
 
 | 필터명  | 설명                                                                                                |
@@ -477,8 +579,12 @@
 | 메시지유형 | 메시지 발송 유형 종류(SMS, LMS, MMS, AUTH)                                                                 |
 | 결과코드 | 메시지 발송 및 수신 결과에 대한 코드([사용자 가이드 참고](https://docs.nhncloud.com/ko/Notification/SMS/ko/error-code/)) |
 
+<a id="cloud-functions"></a>
+
 ## Cloud Functions
 - NHN Cloud의 Cloud Functions 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+<a id="metric-list-13"></a>
 
 ### Metric List
 
@@ -491,12 +597,16 @@
 |성공률|Cloud Functions|{{function_number}}-{{function_name}}| 백분율(0-100) |
 |함수 호출 횟수|Cloud Functions|{{function_number}}-{{function_name}}| 숫자         |
 
+<a id="cloud-functions-filter"></a>
+
 ### Cloud Functions 필터(Filter)
 
 | 필터명   | 설명                                                 |
 |-------|----------------------------------------------------|
 | 함수명   | 사용자 정의 함수 이름 |
 | 함수 ID | 함수의 키값 |
+
+<a id="cloud-functions-legend"></a>
 
 ### Cloud Functions 범례(Legend)
 
