@@ -1,6 +1,10 @@
+<!-- pre-align:aligned sig=b0f664ff690f -->
+
 ## Monitoring > Cloud Monitoring > 콘솔 사용 가이드
 
 콘솔 사용 가이드에서는 Cloud Monitoring 서비스의 기본적인 사용법을 안내합니다.
+
+<a id="dashboard"></a>
 
 ## 대시보드
 
@@ -13,6 +17,8 @@
 ![조회 기간 사용자 지정](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01-2.png)
 
 사용자 지정 기간을 설정하면 자동 새로고침은 사용할 수 없습니다.
+
+<a id="view-modeedit-mode"></a>
 
 ### 조회 모드/편집 모드
 
@@ -34,6 +40,8 @@
 
 위젯을 추가하거나 위젯의 위치 및 크기 등을 수정한 내용은 **전체 저장**을 클릭해야 적용됩니다. 저장하지 않은 경우 저장 알림 모달이 표시되며, 저장하지 않은 변경 사항은 사라집니다.
 
+<a id="create-a-dashboard"></a>
+
 ### 대시보드 생성
 
 ![대시보드 추가 모달](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_02-1.png)
@@ -49,6 +57,8 @@
 **대시보드 이름**과 **대시보드 설명**을 입력합니다. **대시보드 이름**은 반드시 입력해야 하는 필수 값이며, 중복된 이름으로 설정할 수 있으나 되도록 고유한 이름을 사용할 것을 권장합니다.
 **대시보드 설명**은 선택 값으로, 해당 대시보드를 설명할 수 있는 내용을 입력합니다.
 
+<a id="dashboard-template"></a>
+
 #### 대시보드 템플릿
 
 대시보드를 직접 구성하거나 미리 구성된 템플릿으로 시작할 수 있습니다. **대시보드 템플릿** 항목에서 사용 여부를 선택합니다.
@@ -61,6 +71,8 @@
 템플릿 목록에서 **미리보기** 버튼을 클릭하면 템플릿 미리보기 모달이 열립니다.
 
 미리보기 모달에서는 템플릿에 포함된 위젯 구성과 레이아웃을 미리 확인할 수 있습니다. 미리보기 화면에는 샘플 데이터가 표시되며, 대시보드 생성 후 실제 데이터를 확인할 수 있습니다.
+
+<a id="set-up-a-dashboard"></a>
 
 ### 대시보드 구성
 
@@ -75,6 +87,8 @@
 ![위젯 그룹 예시](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03-3.png)
 
 위젯 그룹을 사용하면 여러 위젯을 그룹으로 묶어 관리할 수 있습니다. 위젯 그룹을 접거나 펼쳐서 여러 위젯을 숨기고 나타낼 수 있으며, 위젯 그룹의 높이 및 너비는 그룹 내의 위젯 크기에 따라 자동으로 조절됩니다.
+
+<a id="addedit-a-widget-and-widget-group"></a>
 
 #### 위젯 및 위젯 그룹 추가/수정
 
@@ -174,6 +188,8 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 - **그룹 삭제**를 클릭하면 위젯의 위치나 크기 정보는 그대로 남고, 그룹만 제거됩니다.
 - **그룹 및 하위 위젯 전체 삭제**를 클릭하면 그룹 내의 위젯까지 전체 삭제됩니다.
 
+<a id="moveclonedelete-a-widget"></a>
+
 #### 위젯 이동/복제/삭제
 
 ![위젯 크기 조정](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-1.gif)
@@ -188,6 +204,8 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 
 ![다른 대시보드에 위젯 복제 모달](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-2.png)
 
+<a id="create-a-notification"></a>
+
 #### 알림 생성
 
 ![위젯 컨텍스트 메뉴](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_b_01-3.png)
@@ -196,6 +214,8 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 알림 조건 및 알림 수신 대상만 입력하면 간편하게 알림을 생성할 수 있습니다.
 
 ![위젯 알림 생성으로 접근한 경우](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_03_c-1.png)
+
+<a id="dynamic-filter"></a>
 
 ### 동적 필터
 
@@ -217,6 +237,8 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 
 > 참고: 동적 필터는 위젯 추가/편집 화면에서 **동적 필터 적용** 토글을 활성화한 위젯에만 적용됩니다.
 
+<a id="dynamic-filter-management"></a>
+
 #### 동적 필터 관리
 
 조회 모드에서 **동적 필터 관리** 버튼을 클릭하면 동적 필터 관리 모달이 열립니다. 편집 모드에서는 동적 필터 관리 버튼이 표시되지 않습니다.
@@ -237,6 +259,8 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
     Agent 유형에 따라 지원하는 지표가 다르므로, 선택한 인스턴스의 Agent 유형에 해당하지 않는 지표는 데이터가 표시되지 않을 수 있습니다.
     신규 Agent 지원 지표는 [신규 Agent 설치 가이드](new-instance-metric.md)를 참고합니다.
 
+<a id="manage-a-dashboard"></a>
+
 ### 대시보드 관리
 
 ![조회 모드 헤더](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_04-1.png)
@@ -250,6 +274,8 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 각 대시보드 **편집** 열의 수정 또는 삭제 아이콘을 클릭해 해당 대시보드의 이름 및 설명을 수정하거나 대시보드를 삭제할 수 있습니다.
 **프로젝트 대시보드 노출 설정** 토글을 클릭해 프로젝트 커스텀 대시보드 화면에서 해당 대시보드의 노출 여부를 설정할 수 있습니다. 노출 설정을 해제하더라도 Cloud Monitoring 서비스에서는 항상 노출됩니다.
 
+<a id="download-widget-data"></a>
+
 ### 위젯 데이터 다운로드
 
 ![위젯 데이터 다운로드 메뉴](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_01_05-1.png)
@@ -258,11 +284,15 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 .csv, .xlsx 파일의 경우 시작 일시를 기준으로 최대 3개월간의 데이터만 다운로드할 수 있습니다. 조회 기간이 1개월 미만일 경우 5분 간격으로 데이터를 제공하며, 1개월 이상은 1일 간격으로 데이터를 제공합니다.
 지정한 조회 기간이 길거나 위젯과 위젯에 포함된 지표 데이터가 많을수록 다운로드에 소요되는 시간이 오래 걸릴 수 있습니다.
 
+<a id="manage-notifications"></a>
+
 ## 알림 관리
 
 **Monitoring > Cloud Monitoring > 알림 설정**에서는 NHN Cloud 리소스에 알림을 추가할 수 있고, 알림 발생 이력을 확인할 수 있습니다.
 
 ![알림 설정 목록 화면](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01-1.png)
+
+<a id="notification-settings"></a>
 
 ### 알림 설정
 
@@ -273,6 +303,8 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 - **알림 상세 보기** 열의 **보기**를 클릭하면 **알림 상세 정보** 모달이 표시됩니다.
 - **수정** 열의 **수정**을 클릭하면 **알림 수정** 화면으로 이동합니다.
 - 각 알림 행을 클릭하면 **알림 발생 이력** 탭으로 이동하며, 해당 알림이 자동 조회되어 표시됩니다.
+
+<a id="createedit-notifications"></a>
 
 #### 알림 생성/수정
 
@@ -324,11 +356,15 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 | events[].contMinutes | 이벤트 지속 시간(분) | Integer | 이벤트가 발생한 시간과 현재 시간의 차이(분) |
 | events[].labels | 발생 위치 | Map<String, String\> | |
 
+<a id="view-notification-details-modal"></a>
+
 #### 알림 상세 보기 모달
 
 ![알림 상세 보기 모달](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_01_b-1.png)
 
 알림 상세 보기 모달에서는 설정한 알림의 상세 정보를 확인할 수 있습니다. 알림의 이름, 설명, 서비스, 지표 항목 필터 및 알림 조건, 집계 설정 정보, 알림 수신 대상을 확인할 수 있습니다. 집계를 지원하는 지표의 경우 설정된 집계값(사용 안 함/평균/최대/최소)이 표시되며, 집계를 지원하지 않는 지표의 경우 `-`로 표시됩니다.
+
+<a id="notification-history"></a>
 
 ### 알림 발생 이력
 
@@ -340,11 +376,15 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 > 참고: 지속 시간은 알림 발생 시점에서 알림 종료 시점까지의 시간을 나타냅니다.
 > 알림이 발생한 상태에서 해당 알림이 종료되기 전에 알림을 비활성화한다면, 명시적으로 알림이 종료되지 않았기 때문에 지속 시간이 계속 증가할 수 있습니다.
 
+<a id="view-the-history-of-notification-occurrences"></a>
+
 #### 알림 발생 이력 조회
 
 ![알림 발생 이력 조회 검색 필터](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_02_a-1.png)
 
 알림명, 알림 상태, 지표 항목, 발생 시간 필터를 사용하여 알림 발생 이력을 조회할 수 있습니다. **초기화**를 누르면 검색 필터가 초기화됩니다.
+
+<a id="view-notification-send-history-modal"></a>
 
 #### 알림 발송 이력 보기 모달
 
@@ -358,9 +398,13 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 알림을 실제로 발송한 이력도 테이블 형태로 제공합니다. 각 알림 발송 이력의 알림 발송 일시, 알림 방법, 수신 대상, 알림 발송 결과를 확인할 수 있습니다.
 알림 발송 일시, 알림 방법으로 테이블 정렬을 변경할 수 있습니다.
 
+<a id="manage-metrics"></a>
+
 ## 지표 관리
 
 **Monitoring > Cloud Monitoring > 지표 관리**에서는 NHN Cloud 리소스에 대한 서비스별 지표 수집 여부를 설정할 수 있습니다.
+
+<a id="set-up-metric-collection"></a>
 
 ### 지표 수집 설정
 
@@ -380,6 +424,8 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 ![지표 수집 중일 때 위젯의 예시](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-5.png)
 
 지표 수집을 중단한 경우, 해당 서비스의 지표를 사용해서 생성해 둔 위젯에서 해당 지표가 더 이상 표시되지 않고 해당 지표의 범례가 비활성화됩니다.
+
+<a id="example-screen"></a>
 
 ## 예시 화면
 
