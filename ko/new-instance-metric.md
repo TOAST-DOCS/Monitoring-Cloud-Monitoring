@@ -1,4 +1,8 @@
+<!-- pre-align:aligned sig=e480d3f4c60f -->
+
 ## Monitoring > Cloud Monitoring > Instance 신규 지표 연동 가이드
+
+<a id="overview"></a>
 
 ## 개요
 
@@ -12,9 +16,15 @@ Cloud Monitoring 서비스에서 Instance의 상세 지표를 수집하려면 �
 1. 신규 Agent 설치
 2. 기존 Agent 삭제(선택 사항)
 
+<a id="new-agent-installation-guide"></a>
+
 ## 신규 Agent 설치 가이드
 
+<a id="install-linux-instance-agent"></a>
+
 ### Linux 인스턴스 Agent 설치
+
+<a id="installation-script"></a>
 
 #### 설치 스크립트
 ```bash
@@ -24,15 +34,21 @@ chmod 755 ./install-nhncloud-telegraf.sh
 sudo ./install-nhncloud-telegraf.sh
 ```
 
+<a id="check-installation"></a>
+
 #### 설치 확인
 ```bash
 sudo systemctl status nhncloud-telegraf
 ```
 
+<a id="install-windows-instance-agent"></a>
+
 ### Windows 인스턴스 Agent 설치
 * PowerShell을 관리자 권한으로 실행
    - 시작 메뉴에서 **PowerShell**을 검색합니다.
    - **Windows PowerShell**을 마우스 오른쪽 버튼으로 클릭한 뒤 **관리자 권한으로 실행**을 선택합니다.
+
+<a id="installation-script-2"></a>
 
 #### 설치 스크립트
 ```powershell
@@ -41,10 +57,14 @@ Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-am
 powershell -ExecutionPolicy Bypass -File install-nhncloud-telegraf.ps1
 ```
 
+<a id="check-installation-2"></a>
+
 #### 설치 확인
 ```powershell
 Get-Service -Name "nhncloud-telegraf"
 ```
+
+<a id="existing-agent-deletion-guide-optional"></a>
 
 ## 기존 Agent 삭제 가이드(선택 사항)
 
@@ -53,10 +73,16 @@ Get-Service -Name "nhncloud-telegraf"
 
 기존 System Monitoring Agent를 삭제하는 가이드입니다. 신규 Agent와 기존 Agent는 동시에 설치되어 있어도 문제없이 동작합니다.
 
+<a id="precautions-when-deleting"></a>
+
 ### 삭제 시 주의 사항
 기존 Agent를 삭제하기 전에 신규 Agent가 정상적으로 설치되고 동작하는지 반드시 확인합니다.
 
+<a id="delete-linux-instance-existing-agent"></a>
+
 ### Linux 인스턴스 기존 Agent 삭제
+
+<a id="deletion-script"></a>
 
 #### 삭제 스크립트
 ```bash
@@ -65,17 +91,25 @@ chmod 755 ./uninstall-sysmon-agent.sh
 sudo ./uninstall-sysmon-agent.sh
 ```
 
+<a id="check-deletion"></a>
+
 #### 삭제 확인
 기존 Agent의 서비스 상태를 확인합니다(서비스가 없어야 정상).
 ```bash
 sudo systemctl status toast-sysmon
 ```
 
+<a id="delete-windows-instance-existing-agent"></a>
+
 ### Windows 인스턴스 기존 Agent 삭제
+<a id="deletion-script-2"></a>
+
 #### 삭제 스크립트
 ```powershell
 & "C:\Program Files (x86)\NHN\TOAST\uninst.exe"
 ```
+
+<a id="check-deletion-2"></a>
 
 #### 삭제 확인
 기존 Agent 프로세스가 종료되었는지 확인합니다.
@@ -83,7 +117,11 @@ sudo systemctl status toast-sysmon
 Get-Process -Name "toastmon" -ErrorAction SilentlyContinue
 ```
 
+<a id="delete-new-agent-if-necessary"></a>
+
 ### 신규 Agent 삭제(필요 시)
+
+<a id="delete-linux-instance-new-agent"></a>
 
 #### Linux 인스턴스 신규 Agent 삭제
 
@@ -95,6 +133,8 @@ chmod 755 ./uninstall-nhncloud-telegraf.sh
 sudo ./uninstall-nhncloud-telegraf.sh
 ```
 
+<a id="delete-windows-instance-new-agent"></a>
+
 #### Windows 인스턴스 신규 Agent 삭제
 
 ##### 삭제 스크립트
@@ -103,6 +143,8 @@ Remove-Item uninstall-nhncloud-telegraf.ps1 -ErrorAction SilentlyContinue
 Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-amd64/uninstall-nhncloud-telegraf.ps1' -OutFile 'uninstall-nhncloud-telegraf.ps1'
 powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 ```
+
+<a id="metric-dictionary"></a>
 
 ## Metric Dictionary
 
@@ -151,6 +193,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |스왑 사용량(free)(Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
 |스왑 사용량(total)(Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
 
+<a id="gpu-instance-metric-dictionary"></a>
+
 ## GPU Instance Metric Dictionary
 
 > [참고]
@@ -196,6 +240,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |동기 부스트 스로틀링 비율(µs/s)|GPU 클럭 이벤트|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 마이크로초(µs/s)|
 |신뢰성 스로틀링 비율(µs/s)|GPU 클럭 이벤트|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 마이크로초(µs/s)|
 
+<a id="gpu-instance-filter"></a>
+
 ### GPU Instance 필터(Filter)
 
 |필터명|설명|
@@ -203,6 +249,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |리전|GPU Instance가 위치한 리전|
 |인스턴스|GPU Instance의 이름|
 |GPU|인스턴스 내 GPU 장치 번호|
+
+<a id="gpu-instance-legend"></a>
 
 ### GPU Instance 범례(Legend)
 
