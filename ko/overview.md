@@ -1,12 +1,20 @@
+<!-- pre-align:aligned sig=3003ec81cbab -->
+
 ## Monitoring > Cloud Monitoring > 개요
 **Monitoring > Cloud Monitoring** 서비스에서는 Instance 서버를 비롯한 NHN Cloud 내 자원들에 대한 시스템/서비스 지표를 수집, 제공합니다.
 조직 및 프로젝트 대시보드, 모니터링 콘솔에 원하는 형태의 지표 차트를 구성할 수 있으며,
 지표가 특정 임계치에 도달할 경우 알림 수신 대상을 지정하여 이메일, SMS 등의 방식으로 알림을 보내도록 설정할 수 있습니다.
 
+<a id="main-features"></a>
+
 ## 제공 기능
+<a id="compute-instance-server-monitoring"></a>
+
 ### Compute > Instance 서버 모니터링
 인스턴스 서버의 경우 Cloud Monitoring은 각 인스턴스 서버에 설치된 Cloud Monitoring Agent로 시스템 지표를 수집합니다.
 기본적으로 Agent는 인스턴스의 이미지에 포함되어있기 때문에 인스턴스 구동시 자동으로 수집을 시작합니다.
+
+<a id="metric-dashboard"></a>
 
 ### 지표 대시보드 제공
 **Compute > Instance**에서 생성한 서버 인스턴스의 각종 시스템 지표 및 NHN Cloud 내 자원들에 대한 차트로 제공해 각 서버의 상태를 파악할 수 있습니다.
@@ -14,13 +22,19 @@
 
 지표는 1분 단위로 수집되며 최대 52주간 보관됩니다.
 
+<a id="notification-conditions"></a>
+
 ### 지표 알림 조건 설정
 수집된 지표의 임계치를 설정해 NHN Cloud 자원을 항상 감시할 수 있으며 이상 징후를 파악할 수 있습니다.
 예를 들어, 인스턴스 서버의 CPU 사용률이 90%를 넘는 경우, 특정 NIC의 사용량이 1000pps를 넘은 경우 등 서버의 상태를 파악할 수 있는 다양한 감시 항목을 제공합니다.
 
+<a id="notification-methods-email-sms"></a>
+
 ### 알림 방법 선택: 이메일, SMS
 설정한 알림 조건을 충족하는 상황이 발생했을 때 어떤 방법으로 알림을 받을지 선택할 수 있습니다.
 이메일이나 SMS로 알림을 받을 수 있습니다.
+
+<a id="glossary"></a>
 
 ## 용어 설명
 | 용어       | 설명                                                                                                 |
