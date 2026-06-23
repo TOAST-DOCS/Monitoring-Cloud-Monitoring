@@ -1,6 +1,12 @@
+<!-- pre-align:aligned sig=1ffdaddde230 -->
+
 ## Monitoring > Cloud Monitoring > リリースノート
 
+<a id="june-23-2026"></a>
+
 ## 2026. 06. 23.
+
+<a id="added-features"></a>
 
 ### 新機能の追加
 
@@ -9,7 +15,11 @@
 * DCGM(Data Center GPU Manager)ベースで、GPU性能、GPU状態、GPUクロックイベント領域のメトリクスを提供します。
     * [新規Agentインストールガイド](new-instance-metric.md)を参照してインストールできます。
 
+<a id="april-28-2026"></a>
+
 ## 2026. 04. 28.
+
+<a id="added-features-2"></a>
 
 ### 新機能の追加
 
@@ -24,7 +34,11 @@
     * 検索期間に応じてデータ間隔が自動調整される際、間隔内の全てのデータを集計して反映するため、データを取りこぼすことなく全体的な流れを把握できます。
 * メトリクスごとに集計を使用するかどうかを選択でき、集計を使用しない場合は従来と同様に元のデータを表示します。
 
+<a id="september-23-2025"></a>
+
 ## 2025. 09. 23.
+
+<a id="added-features-3"></a>
 
 ### 新機能の追加
 
@@ -32,7 +46,11 @@
     * Cloud Monitoringの新規Instance用Agentがリリースされました。
     * [新規Agentインストールガイド](new-instance-metric.md)を参照してインストールできます。
 
+<a id="july-29-2026"></a>
+
 ## 2025. 07. 29.
+
+<a id="added-features-4"></a>
 
 ### 新機能の追加
 
@@ -41,7 +59,11 @@
 * 以下のサービスのメトリクスは、メトリクス管理画面で収集設定を行った後、ダッシュボードで確認できます。
         * Cloud Functions
 
+<a id="june-24-2025"></a>
+
 ## 2025. 06. 24.
+
+<a id="added-features-5"></a>
 
 ### 新機能の追加
 
@@ -50,7 +72,11 @@
 * 以下のサービスのメトリクスは、メトリクス管理画面で収集設定を行った後、ダッシュボードで確認できます。
         * SMS
 
+<a id="june-10-2025"></a>
+
 ## 2025. 06. 10.
+
+<a id="feature-updates"></a>
 
 ### 機能の改善/変更
 
@@ -58,7 +84,11 @@
     * 通知の送信時にSMS内容に項目が追加されました。
     * 通知が発生したサービスがInstanceである場合、Instance Name項目が追加されました。
 
+<a id="may-27-2025"></a>
+
 ## 2025. 05. 27.
+
+<a id="added-features-6"></a>
 
 ### 新機能の追加
 
@@ -69,7 +99,11 @@
         * Subnet
         * Floating IP
 
+<a id="march-4-2025"></a>
+
 ## 2025. 03. 04.
+
+<a id="added-features-7"></a>
 
 ### 新機能の追加
 
@@ -78,7 +112,11 @@
 * 以下のサービスのメトリクスは、メトリクス管理画面で収集設定を行った後、ダッシュボードで確認できます。
         * Direct Connect
 
+<a id="february-11-2025"></a>
+
 ## 2025. 02. 11.
+
+<a id="added-features-8"></a>
 
 ### 新機能の追加
 
@@ -88,12 +126,18 @@
         * Colocation Gateway
         * Load Balancer
 
+<a id="october-29-2024"></a>
+
 ## 2024. 10. 29.
+
+<a id="added-features-9"></a>
 
 ### 新機能の追加
 
 * カスタムWebhookのサポート
     * 通知受信グループのカスタムWebhookを使用して、Cloud Monitoringの通知をWebhookで受け取ることができます。
+
+<a id="feature-updates-2"></a>
 
 ### 機能の改善/変更
 
@@ -102,7 +146,11 @@
     * Cloud Monitoring ADMIN: Cloud MonitoringサービスのCreate(作成)、Read(読み取り)、Update(更新)、Delete(削除)
     * Cloud Monitoring VIEWER: Cloud MonitoringサービスのRead(読み取り)
 
+<a id="august-27-2024"></a>
+
 ## 2024. 08. 27.
+
+<a id="added-features-10"></a>
 
 ### 新機能の追加
 
@@ -112,13 +160,21 @@
         * Transit Hub
         * Internet Gateway
 
+<a id="july-23-2024"></a>
+
 ## 2024. 07. 23.
+
+<a id="bug-fixes"></a>
 
 ### バグ修正
 
 * [コンソール] ウィジェット及び通知の追加/変更ページのテキスト入力ウィンドウで、Enterキー入力時に意図せず保存が試行される現象を修正しました。
 
+<a id="may-28-2024"></a>
+
 ## 2024. 05. 28.
+
+<a id="added-features-11"></a>
 
 ### 新機能の追加
 
