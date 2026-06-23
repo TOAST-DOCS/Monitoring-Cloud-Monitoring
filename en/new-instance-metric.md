@@ -1,4 +1,8 @@
+<!-- pre-align:aligned sig=e480d3f4c60f -->
+
 ## Monitoring > Cloud Monitoring > Instance New Metrics Integration Guide
+
+<a id="overview"></a>
 
 ## Overview
 
@@ -12,9 +16,15 @@ The overall process is as follows:
 1. Install new Agent
 2. Delete existing Agent (optional)
 
+<a id="new-agent-installation-guide"></a>
+
 ## New Agent Installation Guide
 
+<a id="install-linux-instance-agent"></a>
+
 ### Install Linux Instance Agent
+
+<a id="installation-script"></a>
 
 #### Installation Script
 ```bash
@@ -24,15 +34,21 @@ chmod 755 ./install-nhncloud-telegraf.sh
 sudo ./install-nhncloud-telegraf.sh
 ```
 
+<a id="check-installation"></a>
+
 #### Check Installation
 ```bash
 sudo systemctl status nhncloud-telegraf
 ```
 
+<a id="install-windows-instance-agent"></a>
+
 ### Install Windows Instance Agent
 * Run PowerShell as an administrator
    - Search for **PowerShell** in the Start menu.
    - Right-click **Windows PowerShell** and select **Run as administrator**.
+
+<a id="installation-script-2"></a>
 
 #### Installation Script
 ```powershell
@@ -41,10 +57,14 @@ Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-am
 powershell -ExecutionPolicy Bypass -File install-nhncloud-telegraf.ps1
 ```
 
+<a id="check-installation-2"></a>
+
 #### Check Installation
 ```powershell
 Get-Service -Name "nhncloud-telegraf"
 ```
+
+<a id="existing-agent-deletion-guide-optional"></a>
 
 ## Existing Agent Deletion Guide (optional)
 
@@ -53,10 +73,16 @@ Get-Service -Name "nhncloud-telegraf"
 
 It is a guide to delete the existing System Monitoring Agent. New agents and existing agents work without problems even if they are installed at the same time.
 
+<a id="precautions-when-deleting"></a>
+
 ### Precautions when Deleting
 - You must check that new agents are installed and operated normally before deleting the existing Agent.
 
+<a id="delete-linux-instance-existing-agent"></a>
+
 ### Delete Linux Instance Existing Agent
+
+<a id="deletion-script"></a>
 
 #### Deletion Script
 ```bash
@@ -65,17 +91,25 @@ chmod 755 ./uninstall-sysmon-agent.sh
 sudo ./uninstall-sysmon-agent.sh
 ```
 
+<a id="check-deletion"></a>
+
 #### Check Deletion
 Check existing agent service status. (normal when there is no service)
 ```bash
 sudo systemctl status toast-sysmon
 ```
 
+<a id="delete-windows-instance-existing-agent"></a>
+
 ### Delete Windows Instance Existing Agent
+<a id="deletion-script-2"></a>
+
 #### Deletion Script
 ```powershell
 & "C:\Program Files (x86)\NHN\TOAST\uninst.exe"
 ```
+
+<a id="check-deletion-2"></a>
 
 #### Check Deletion
 Check if the existing agent process has been terminated.
@@ -83,7 +117,11 @@ Check if the existing agent process has been terminated.
 Get-Process -Name "toastmon" -ErrorAction SilentlyContinue
 ```
 
+<a id="delete-new-agent-if-necessary"></a>
+
 ### Delete New Agent (if necessary)
+
+<a id="delete-linux-instance-new-agent"></a>
 
 #### Delete Linux Instance New Agent
 
@@ -95,6 +133,8 @@ chmod 755 ./uninstall-nhncloud-telegraf.sh
 sudo ./uninstall-nhncloud-telegraf.sh
 ```
 
+<a id="delete-windows-instance-new-agent"></a>
+
 #### Delete Windows Instance New Agent
 
 ##### Deletion Script
@@ -103,6 +143,8 @@ Remove-Item uninstall-nhncloud-telegraf.ps1 -ErrorAction SilentlyContinue
 Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-amd64/uninstall-nhncloud-telegraf.ps1' -OutFile 'uninstall-nhncloud-telegraf.ps1'
 powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 ```
+
+<a id="metric-dictionary"></a>
 
 ## Metric Dictionary
 
@@ -151,6 +193,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |Swap usage (free) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|Bytes|
 |Swap usage (total) (Bytes)|Swap (New)|{{nhncloud_instance_id}}|Bytes|
 
+<a id="gpu-instance-metric-dictionary"></a>
+
 ## GPU Instance Metric Dictionary
 
 > [Note]
@@ -196,6 +240,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 | Sync boost throttling rate (µs/s) | GPU clock events | {{nhncloud_instance_id}} - gpu={{gpu}} | Microseconds per second (µs/s) |
 | Reliability throttling rate (µs/s) | GPU clock events | {{nhncloud_instance_id}} - gpu={{gpu}} | Microseconds per second (µs/s) |
 
+<a id="gpu-instance-filter"></a>
+
 ### GPU Instance Filter
 
 | Filter Name | Description |
@@ -203,6 +249,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 | Region | Region where the GPU instance is located |
 | Instance | Name of the GPU instance |
 | GPU | GPU device number within the instance |
+
+<a id="gpu-instance-legend"></a>
 
 ### GPU Instance Legend
 
