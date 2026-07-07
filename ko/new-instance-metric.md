@@ -1,4 +1,8 @@
+<!-- pre-align:aligned sig=2ccb0a65d100 -->
+
 ## Monitoring > Cloud Monitoring > Instance 신규 지표 연동 가이드
+
+<a id="overview"></a>
 
 ## 개요
 
@@ -12,9 +16,15 @@ Cloud Monitoring 서비스에서 Instance의 상세 지표를 수집하려면 �
 1. 신규 Agent 설치
 2. 구 Agent 삭제(선택 사항)
 
+<a id="new-agent-installation-guide"></a>
+
 ## 신규 Agent 설치 가이드
 
+<a id="install-linux-instance-agent"></a>
+
 ### Linux 인스턴스 Agent 설치
+
+<a id="installation-script"></a>
 
 #### 설치 스크립트
 ```bash
@@ -24,15 +34,21 @@ chmod 755 ./install-nhncloud-telegraf.sh
 sudo ./install-nhncloud-telegraf.sh
 ```
 
+<a id="check-installation"></a>
+
 #### 설치 확인
 ```bash
 sudo systemctl status nhncloud-telegraf
 ```
 
+<a id="install-windows-instance-agent"></a>
+
 ### Windows 인스턴스 Agent 설치
 * PowerShell을 관리자 권한으로 실행
    - 시작 메뉴에서 **PowerShell**을 검색합니다.
    - **Windows PowerShell**을 마우스 오른쪽 버튼으로 클릭한 뒤 **관리자 권한으로 실행**을 선택합니다.
+
+<a id="install-windows-instance-agent-installation-script"></a>
 
 #### 설치 스크립트
 ```powershell
@@ -41,10 +57,14 @@ Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-am
 powershell -ExecutionPolicy Bypass -File install-nhncloud-telegraf.ps1
 ```
 
+<a id="install-windows-instance-agent-check-installation"></a>
+
 #### 설치 확인
 ```powershell
 Get-Service -Name "nhncloud-telegraf"
 ```
+
+<a id="old-agent-deletion-guide-optional"></a>
 
 ## 구 Agent 삭제 가이드(선택 사항)
 
@@ -53,10 +73,16 @@ Get-Service -Name "nhncloud-telegraf"
 
 기존 System Monitoring Agent를 제거하기 위한 삭제 가이드입니다. 신규 Agent와 구 Agent는 동시에 설치되어 있어도 문제없이 동작합니다.
 
+<a id="precautions-when-deleting"></a>
+
 ### 삭제 시 주의 사항
 - **삭제 전 필수 확인**: 신규 Agent가 정상적으로 설치되고 동작하는지 확인
 
+<a id="delete-linux-instance-old-agent"></a>
+
 ### Linux 인스턴스 구 Agent 삭제
+
+<a id="deletion-script"></a>
 
 #### 삭제 스크립트
 ```bash
@@ -65,17 +91,25 @@ chmod 755 ./uninstall-sysmon-agent.sh
 sudo ./uninstall-sysmon-agent.sh
 ```
 
+<a id="check-deletion"></a>
+
 #### 삭제 확인
 * 구 Agent 서비스 상태 확인(서비스가 없어야 정상)
 ```bash
 sudo systemctl status toast-sysmon
 ```
 
+<a id="delete-windows-instance-old-agent"></a>
+
 ### Windows 인스턴스 구 Agent 삭제
+<a id="delete-windows-instance-old-agent-deletion-script"></a>
+
 #### 삭제 스크립트
 ```powershell
 & "C:\Program Files (x86)\NHN\TOAST\uninst.exe"
 ```
+
+<a id="delete-windows-instance-old-agent-check-deletion"></a>
 
 #### 삭제 확인
 * 구 Agent 프로세스 종료 확인
@@ -83,7 +117,11 @@ sudo systemctl status toast-sysmon
 Get-Process -Name "toastmon" -ErrorAction SilentlyContinue
 ```
 
+<a id="delete-new-agent-if-necessary"></a>
+
 ### 신규 Agent 삭제(필요시)
+
+<a id="delete-linux-instance-new-agent"></a>
 
 #### Linux 인스턴스 신규 Agent 삭제
 
@@ -95,6 +133,8 @@ chmod 755 ./uninstall-nhncloud-telegraf.sh
 sudo ./uninstall-nhncloud-telegraf.sh
 ```
 
+<a id="delete-windows-instance-new-agent"></a>
+
 #### Windows 인스턴스 신규 Agent 삭제
 
 ##### 삭제 스크립트
@@ -103,6 +143,8 @@ Remove-Item uninstall-nhncloud-telegraf.ps1 -ErrorAction SilentlyContinue
 Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-amd64/uninstall-nhncloud-telegraf.ps1' -OutFile 'uninstall-nhncloud-telegraf.ps1'
 powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 ```
+
+<a id="metric-dictionary"></a>
 
 ## Metric Dictionary
 

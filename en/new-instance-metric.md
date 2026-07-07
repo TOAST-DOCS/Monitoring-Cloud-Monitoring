@@ -1,4 +1,8 @@
+<!-- pre-align:aligned sig=2ccb0a65d100 -->
+
 ## Monitoring > Cloud Monitoring > Instance New Metrics Integration Guide
+
+<a id="overview"></a>
 
 ## Overview
 
@@ -12,9 +16,15 @@ The overall process is as follows:
 1. Install new Agent
 2. Delete old Agent (optional)
 
+<a id="new-agent-installation-guide"></a>
+
 ## New Agent Installation Guide
 
+<a id="install-linux-instance-agent"></a>
+
 ### Install Linux Instance Agent
+
+<a id="installation-script"></a>
 
 #### Installation Script
 ```bash
@@ -24,15 +34,21 @@ chmod 755 ./install-nhncloud-telegraf.sh
 sudo ./install-nhncloud-telegraf.sh
 ```
 
+<a id="check-installation"></a>
+
 #### Check Installation
 ```bash
 sudo systemctl status nhncloud-telegraf
 ```
 
+<a id="install-windows-instance-agent"></a>
+
 ### Install Windows Instance Agent
 * Run PowerShell as an administrator
    - Search for **PowerShell** in the Start menu.
    - Right-click **Windows PowerShell** and select **Run as administrator**.
+
+<a id="install-windows-instance-agent-installation-script"></a>
 
 #### Installation Script
 ```powershell
@@ -41,10 +57,14 @@ Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-am
 powershell -ExecutionPolicy Bypass -File install-nhncloud-telegraf.ps1
 ```
 
+<a id="install-windows-instance-agent-check-installation"></a>
+
 #### Check Installation
 ```powershell
 Get-Service -Name "nhncloud-telegraf"
 ```
+
+<a id="old-agent-deletion-guide-optional"></a>
 
 ## Old Agent Deletion Guide (optional)
 
@@ -53,10 +73,16 @@ Get-Service -Name "nhncloud-telegraf"
 
 It is a deletion guide for removing the existing System Monitoring Agent. New agents and old agents work without problems even if they are installed at the same time.
 
+<a id="precautions-when-deleting"></a>
+
 ### Precautions when Deleting
 - **Required confirmation before deletion **: check that new agents are installed and operated normally
 
+<a id="delete-linux-instance-old-agent"></a>
+
 ### Delete Linux Instance Old Agent
+
+<a id="deletion-script"></a>
 
 #### Deletion Script
 ```bash
@@ -65,17 +91,25 @@ chmod 755 ./uninstall-sysmon-agent.sh
 sudo ./uninstall-sysmon-agent.sh
 ```
 
+<a id="check-deletion"></a>
+
 #### Check Deletion
 * Check old agent service status (normal when there is no service)
 ```bash
 sudo systemctl status toast-sysmon
 ```
 
+<a id="delete-windows-instance-old-agent"></a>
+
 ### Delete Windows Instance Old Agent
+<a id="delete-windows-instance-old-agent-deletion-script"></a>
+
 #### Deletion Script
 ```powershell
 & "C:\Program Files (x86)\NHN\TOAST\uninst.exe"
 ```
+
+<a id="delete-windows-instance-old-agent-check-deletion"></a>
 
 #### Check Deletion
 * Check old agent process termination
@@ -83,7 +117,11 @@ sudo systemctl status toast-sysmon
 Get-Process -Name "toastmon" -ErrorAction SilentlyContinue
 ```
 
+<a id="delete-new-agent-if-necessary"></a>
+
 ### Delete New Agent (if necessary)
+
+<a id="delete-linux-instance-new-agent"></a>
 
 #### Delete Linux Instance New Agent
 
@@ -95,6 +133,8 @@ chmod 755 ./uninstall-nhncloud-telegraf.sh
 sudo ./uninstall-nhncloud-telegraf.sh
 ```
 
+<a id="delete-windows-instance-new-agent"></a>
+
 #### Delete Windows Instance New Agent
 
 ##### Deletion Script
@@ -103,6 +143,8 @@ Remove-Item uninstall-nhncloud-telegraf.ps1 -ErrorAction SilentlyContinue
 Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-amd64/uninstall-nhncloud-telegraf.ps1' -OutFile 'uninstall-nhncloud-telegraf.ps1'
 powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 ```
+
+<a id="metric-dictionary"></a>
 
 ## Metric Dictionary
 

@@ -1,16 +1,26 @@
+<!-- pre-align:aligned sig=65c2cd2df3e6 -->
+
 ## Monitoring > Cloud Monitoring > リリースノート
 
+<a id="april-28-2026"></a>
+
 ### 2026. 04. 28.
+
+<a id="added-a-dashboard-template-feature"></a>
 
 #### ダッシュボードテンプレート機能の追加
 
 ダッシュボード作成時に、あらかじめ構成されたテンプレートを選択して簡単にダッシュボードを作成できます。
 サービスごとのテンプレートを選択し、プレビューでウィジェットの構成とレイアウトを確認できます。
 
+<a id="added-a-dynamic-filter-feature"></a>
+
 #### 動的フィルタ機能の追加
 
 ダッシュボード上部の動的フィルタを使用して、ダッシュボード内の全てのウィジェットのデータを一括でフィルタリングできます。
 動的フィルタ管理モーダルでフィルタを追加または変更でき、ウィジェットごとに動的フィルタの適用有無を設定できます。
+
+<a id="added-an-aggregation-feature"></a>
 
 #### 集計機能の追加
 
@@ -18,14 +28,34 @@
 照会期間に応じてデータ間隔が自動調整される際、間隔内の全てのデータを集計して反映するため、データを取りこぼすことなく全体的な流れを把握できます。
 指標ごとに集計の使用有無を選択でき、集計を使用しない場合は従来と同様に元のデータを表示します。
 
+<a id="september-23-2025"></a>
+
 ### 2025. 09. 23.
+
+<a id="release-of-a-new-cloud-monitoring-agent"></a>
 
 #### 新規Cloud Monitoring Agentのリリース
 
 Cloud MonitoringのInstance向け新規Agentがリリースされました。
 * [新規Agentインストールガイド](new-instance-metric.md)を参照してインストールできます。
 
+<a id="july-29-2025"></a>
+
+### 2025. 07. 29.
+
+<!-- TODO: translate body -->
+
+<a id="added-a-new-service-to-view-metrics"></a>
+
+#### 指標照会可能サービスの追加
+
+<!-- TODO: translate body -->
+
+<a id="june-24-2025"></a>
+
 ### 2025. 06. 24.
+
+<a id="june-24-2025-added-a-new-service-to-view-metrics"></a>
 
 #### 指標照会可能サービス追加
 
@@ -34,14 +64,22 @@ Cloud Monitoringで指標照会が可能なサービスを追加しました。
 
 * SMS
 
+<a id="june-10-2025"></a>
+
 ### 2025. 06. 10.
+
+<a id="added-sms-notification-content"></a>
 
 #### SMS通知内容追加
 
 通知送信時にSMSの内容に項目が追加されました。
 通知が発生したサービスがInstanceの場合、Instance Name項目が追加されました。
 
+<a id="may-27-2025"></a>
+
 ### 2025. 05. 27.
+
+<a id="may-27-2025-added-a-new-service-to-view-metrics"></a>
 
 #### 指標照会可能サービス追加
 
@@ -52,7 +90,11 @@ Cloud Monitoringで指標照会が可能なサービスを追加しました。
 * Subnet
 * Floating IP
 
+<a id="section-1"></a>
+
 ### 2025. 03. 04.
+
+<a id="section-1-1"></a>
 
 #### 指標照会可能なサービスを追加
 
@@ -61,7 +103,11 @@ Cloud Monitoringで指標照会が可能なサービスが追加されました�
 
 * Direct Connect
 
+<a id="february-11-2025"></a>
+
 ### 2025. 02. 11.
+
+<a id="add-new-service-to-view-metrics"></a>
 
 #### 指標照会可能なサービスを追加
 
@@ -71,7 +117,11 @@ Cloud Monitoringで指標照会が可能なサービスが追加されました�
 * Colocation Gateway
 * Load Balancer
 
+<a id="october-29-2024"></a>
+
 ### 2024. 10. 29.
+
+<a id="apply-permission-segmentation"></a>
 
 #### 権限の細分化を適用
 
@@ -80,11 +130,17 @@ Cloud Monitoringにプロジェクトサービス利用ロールを追加しま�
 * Cloud Monitoring ADMIN: Cloud MonitoringサービスCreate(作成), Read(読み取り), Update(更新), Delete(削除)
 * Cloud Monitoring VIEWER: Cloud Monitoring Read(読み取り)
 
+<a id="support-for-custom-webhooks"></a>
+
 #### カスタムWebフックサポート
 
 通知受信グループのカスタムWebフックを使用してCloud Monitoring通知をWebフックで受け取ることができます。
 
+<a id="august-27-2024"></a>
+
 ### 2024. 08. 27.
+
+<a id="august-27-2024-add-new-service-to-view-metrics"></a>
 
 #### 指標照会可能なサービスを追加
 
@@ -94,13 +150,21 @@ Cloud Monitoringで指標照会が可能なサービスが追加されました�
 * Transit Hub
 * Internet Gateway
 
+<a id="july-23-2024"></a>
+
 ### 2024. 07. 23.
+
+<a id="bug-fixes"></a>
 
 #### バグ修正
 
 * [Console]ウィジェット及び通知追加/修正ページのテキスト入力ウィンドウでEnterキーを押すと、意図せずに保存が試行される現象を修正しました。
 
+<a id="may-28-2024"></a>
+
 ### 2024. 05. 28.
+
+<a id="release-of-a-new-service"></a>
 
 #### 新規サービスリリース
 
