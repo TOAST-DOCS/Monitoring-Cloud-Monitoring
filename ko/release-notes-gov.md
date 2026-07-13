@@ -7,8 +7,8 @@
 * 위젯 범례 영역 확장 기능 추가
     * 위젯의 범례 항목이 많은 경우, 범례 영역에 마우스를 올리면 확장된 형태의 범례 영역이 노출됩니다.
     * 확장된 영역에서 범례 항목을 한눈에 확인하고, 원하는 항목을 선택하여 데이터를 편리하게 필터링할 수 있습니다.
-* 알림 이메일 발생일시 시간대 변경
-    * 알림 이메일에 표시되는 발생일시가 UTC에서 한국 시간(KST) 기준으로 변경되었습니다.
+* 알림 이메일 발생 일시 시간대 변경
+    * 알림 이메일에 표시되는 발생 일시가 UTC에서 한국 시간(KST) 기준으로 변경되었습니다.
 
 ## 2026. 06. 23.
 
@@ -17,7 +17,7 @@
 * GPU Instance 상세 지표 추가
     * 신규 Cloud Monitoring Agent를 통해 GPU Instance의 상세 지표를 수집할 수 있습니다.
     * DCGM(Data Center GPU Manager) 기반으로 GPU 성능, GPU 상태, GPU 클럭 이벤트 영역의 지표를 제공합니다.
-    * [신규 Agent 설치 가이드](new-instance-metric.md)를 참고하여 설치할 수 있습니다.
+    * [신규 Agent 설치 가이드](new-instance-metric-gov.md)를 참고하여 설치할 수 있습니다.
 
 ## 2026. 04. 28.
 
@@ -77,7 +77,7 @@ Cloud Monitoring에서 지표 조회가 가능한 서비스가 추가되었습�
 Cloud Monitoring에 프로젝트 서비스 이용 역할이 추가되었습니다.
 
 * Cloud Monitoring ADMIN: Cloud Monitoring 서비스 Create(생성), Read(읽기), Update(갱신), Delete(삭제)
-* Cloud Monitoring VIEWER: Cloud Monitoring Read(읽기)
+* Cloud Monitoring VIEWER: Cloud Monitoring 서비스 Read(읽기)
 
 ### 커스텀 웹훅 지원
 
@@ -89,6 +89,6 @@ Cloud Monitoring에 프로젝트 서비스 이용 역할이 추가되었습니�
 
 Cloud Monitoring은 NHN Cloud의 리소스에 대한 지표를 수집·제공하고, 이상이 발생하면 알림을 제공하는 서비스입니다.
 
-* Instance, GPU Instance, NCS 등 NHN Cloud 내 리소스에 대한 시스템 및 서비스 지표를 수집, 제공합니다.
+* Instance, GPU Instance, NCS 등 NHN Cloud 내 리소스에 대한 시스템 및 서비스 지표를 수집·제공합니다.
 * 유연한 대시보드 생성 및 관리 기능으로 리소스 상태를 쉽게 파악할 수 있습니다.
 * 조직 및 프로젝트 대시보드 또는 모니터링 콘솔에서 원하는 형태의 지표 차트를 구성할 수 있으며, 지표가 특정 임계치에 도달할 경우 알림 수신 대상을 지정하여 이메일, SMS 등으로 알림을 보내도록 설정할 수 있습니다.

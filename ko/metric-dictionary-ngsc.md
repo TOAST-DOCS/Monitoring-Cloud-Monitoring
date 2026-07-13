@@ -3,7 +3,7 @@
 ## Metric Dictionary
 - NHN Cloud 내 서비스에 대한 모니터링을 위한 지표들을 정의한 목록입니다.
 - 지표 사전을 통해 모니터링 대상 서비스의 지표를 확인하고, 이해할 수 있습니다.
-- 위젯 구성 시 필요한 지표를 찾아 사용할 수 있습니다. 자세한 내용은 [콘솔 사용 가이드](console-guide-ngsc.md)를 참고하십시오.
+- 위젯 구성 시 필요한 지표를 찾아 사용할 수 있습니다. 자세한 내용은 [콘솔 사용 가이드](console-guide-ngsc.md)를 참고하세요.
 - **Metric List**에서 각 서비스별 지표 사전 목록을 확인할 수 있습니다.
 
 ### 필터(Filter)
@@ -22,7 +22,7 @@
   - 예를 들어 범례에 {{nhncloud_region}}를 적용하면 각 지표들의 이름이 kr1, kr2와 같이 리전명으로 표시됩니다.
 - 공통 범례는 아래와 같습니다.
 
-| 필터명             | 설명           | 값                        |
+| 범례명             | 설명           | 값                        |
 |-----------------|--------------|--------------------------|
 | nhncloud_region | NHN Cloud 리전 | kr1: 한국(판교), kr2: 한국(평촌) |
 
@@ -105,53 +105,53 @@
 
 | 지표명                                    | 리소스명        | 기본 범례(Legend)                                                 | 단위(Unit)      |
 |----------------------------------------|-------------|---------------------------------------------------------------|---------------|
-| CPU 사용률(작업부하)                          | 로드밸런서       | {{loadbalancer_id}}                                           | 백분율(0-100)    |
-| 리스너 연결 상태에 있는 세션 개수                    | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 요청 거부 개수                           | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 응답 거부 개수                           | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 잘못된 요청 개수                          | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 초당 세션 수                            | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 초당 세션 수 최대값                        | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 HTTP 100번대 응답을 한 횟수                | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 HTTP 200번대 응답을 한 횟수                | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 HTTP 300번대 응답을 한 횟수                | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 HTTP 400번대 응답을 한 횟수                | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 HTTP 500번대 응답을 한 횟수                | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 HTTP 응답 중 100번~500번 외 다른 응답을 한 횟수 | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 HTTP 성공 응답                         | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 초당 요청 세션 수                         | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 초당 요청 세션 수 최대값                     | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 리스너 요청 총 횟수                            | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
-| 네트워크 수신 초당 비트 수 (bps)                  | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 초당 비트 (bit/s) |
-| 네트워크 송신 초당 비트 수 (bps)                  | 로드밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 초당 비트 (bit/s) |
-| SYN_SENT 소켓 수                          | 로드밸런서 멤버    | {{loadbalancer_id}}/{{member_id}}                             | 숫자            |
-| ESTABLISHED 소켓 수                       | 로드밸런서 멤버    | {{loadbalancer_id}}/{{member_id}}                             | 숫자            |
-| TIME_WAIT 소켓 수                         | 로드밸런서 멤버    | {{loadbalancer_id}}/{{member_id}}                             | 숫자            |
-| 초당 세션 수                                | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
-| 네트워크 수신 바이트                            | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트     |
-| 네트워크 송신 바이트                            | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트     |
-| 네트워크 수신 초당 비트 수(bps)                   | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
-| 네트워크 송신 초당 비트 수(bps)                   | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
-| 해당 멤버로 로드 밸런싱된 총횟수                     | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
-| 평균 응답시간                                | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ms            |
-| 연결 상태에 있는 세션 개수                        | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
-| 처리 대기 중인 요청 개수                         | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
-| HTTP 100번대 응답을 한 횟수                    | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
-| HTTP 200번대 응답을 한 횟수                    | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
-| HTTP 300번대 응답을 한 횟수                    | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
-| HTTP 400번대 응답을 한 횟수                    | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
-| HTTP 500번대 응답을 한 횟수                    | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
-| HTTP 응답 중 100번~500번 외 다른 응답을 한 횟수      | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
-| HTTP 응답이 정상적으로 반환된 총횟수                 | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
-| 오류 발생 연결 횟수                            | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
-| 해당 멤버의 활성 상태 값                         | 로드밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| CPU 사용률(작업부하)                          | 로드 밸런서       | {{loadbalancer_id}}                                           | 백분율(0-100)    |
+| 리스너 연결 상태에 있는 세션 개수                    | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 요청 거부 개수                           | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 응답 거부 개수                           | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 잘못된 요청 개수                          | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 초당 세션 수                            | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 초당 세션 수 최대값                        | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 HTTP 100번대 응답을 한 횟수                | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 HTTP 200번대 응답을 한 횟수                | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 HTTP 300번대 응답을 한 횟수                | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 HTTP 400번대 응답을 한 횟수                | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 HTTP 500번대 응답을 한 횟수                | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 HTTP 응답 중 100번~500번 외 다른 응답을 한 횟수 | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 HTTP 성공 응답                         | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 초당 요청 세션 수                         | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 초당 요청 세션 수 최대값                     | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 리스너 요청 총 횟수                            | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 숫자            |
+| 네트워크 수신 초당 비트 수 (bps)                  | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 초당 비트 (bit/s) |
+| 네트워크 송신 초당 비트 수 (bps)                  | 로드 밸런서 리스너   | {{loadbalancer_id}}/{{listener_id}}                           | 초당 비트 (bit/s) |
+| SYN_SENT 소켓 수                          | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{member_id}}                             | 숫자            |
+| ESTABLISHED 소켓 수                       | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{member_id}}                             | 숫자            |
+| TIME_WAIT 소켓 수                         | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{member_id}}                             | 숫자            |
+| 초당 세션 수                                | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 네트워크 수신 바이트                            | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트     |
+| 네트워크 송신 바이트                            | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 바이트     |
+| 네트워크 수신 초당 비트 수(bps)                   | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
+| 네트워크 송신 초당 비트 수(bps)                   | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 초당 비트 (bit/s) |
+| 해당 멤버로 로드 밸런싱된 총 횟수                     | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 평균 응답시간                                | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | ms            |
+| 연결 상태에 있는 세션 개수                        | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 처리 대기 중인 요청 개수                         | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| HTTP 100번대 응답을 한 횟수                    | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 200번대 응답을 한 횟수                    | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 300번대 응답을 한 횟수                    | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 400번대 응답을 한 횟수                    | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 500번대 응답을 한 횟수                    | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 응답 중 100번~500번 외 다른 응답을 한 횟수      | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 5분 누적 숫자      |
+| HTTP 응답이 정상적으로 반환된 총 횟수                 | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 오류 발생 연결 횟수                            | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
+| 해당 멤버의 활성 상태 값                         | 로드 밸런서 멤버    | {{loadbalancer_id}}/{{listener_id}}/{{pool_id}}/{{member_id}} | 숫자            |
 
 ### Load Balancer 필터(Filter)
 
 | 필터명    | 설명                                    |
 |--------|---------------------------------------|
-| 로드밸런서  | NHN Cloud Network 서비스에서 사용 중인 로드밸런서   |
-| 리스너    | 로드밸런서에 속한 리스너                         |
+| 로드 밸런서  | NHN Cloud Network 서비스에서 사용 중인 로드 밸런서   |
+| 리스너    | 로드 밸런서에 속한 리스너                         |
 | 멤버 그룹  | 리스너에 속한 멤버 그룹                         |
 | 멤버     | 멤버 그룹에 속한 멤버                          |
 
@@ -159,7 +159,7 @@
 
 | 범례명             | 설명        |
 |-----------------|-----------|
-| loadbalancer_id | 로드밸런서 이름  |
+| loadbalancer_id | 로드 밸런서 이름  |
 | listener_id     | 리스너 이름    |
 | pool_id         | 멤버 그룹 이름  |
 | member_id       | 멤버 이름     |
