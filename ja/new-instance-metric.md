@@ -1,6 +1,10 @@
-## Monitoring > Cloud Monitoring > Instance新規メトリクス連携ガイド
+<!-- pre-align:aligned sig=e71d3552a2ca -->
 
-## 概要
+<a id="monitoring-cloud-monitoring-instance-new-metrics-integration-guide"></a>
+## Monitoring > Cloud Monitoring > Instance新規メトリクス連携ガイド { #monitoring-cloud-monitoring-instance-new-metrics-integration-guide }
+
+<a id="overview"></a>
+## 概要 { #overview }
 
 Cloud MonitoringサービスでInstanceの詳細なメトリクスを収集するには、新しいAgentをインストールする必要があります。
 新しいAgentは既存のAgentとは別に動作し、より正確で詳細なインスタンスのメトリクスを提供します。
@@ -12,10 +16,13 @@ Cloud MonitoringサービスでInstanceの詳細なメトリクスを収集す�
 1. 新規Agentのインストール
 2. 旧Agentの削除（任意）
 
-## 新規Agentインストールガイド
+<a id="new-agent-installation-guide"></a>
+## 新規Agentインストールガイド { #new-agent-installation-guide }
 
-### LinuxインスタンスへのAgentインストール
+<a id="install-linux-instance-agent"></a>
+### LinuxインスタンスへのAgentインストール { #install-linux-instance-agent }
 
+<a id="install-linux-instance-agent-installation-script"></a>
 #### インストールスクリプト
 ```bash
 rm -f ./install-nhncloud-telegraf.sh
@@ -24,16 +31,19 @@ chmod 755 ./install-nhncloud-telegraf.sh
 sudo ./install-nhncloud-telegraf.sh
 ```
 
+<a id="install-linux-instance-agent-check-installation"></a>
 #### インストールの確認
 ```bash
 sudo systemctl status nhncloud-telegraf
 ```
 
-### WindowsインスタンスへのAgentインストール
+<a id="install-windows-instance-agent"></a>
+### WindowsインスタンスへのAgentインストール { #install-windows-instance-agent }
 * PowerShellを管理者権限で実行
    - スタートメニューで**PowerShell**を検索します。
    - **Windows PowerShell**を右クリックし、**管理者として実行**を選択します。
 
+<a id="install-windows-instance-agent-installation-script"></a>
 #### インストールスクリプト
 ```powershell
 Remove-Item install-nhncloud-telegraf.ps1 -ErrorAction SilentlyContinue
@@ -41,23 +51,28 @@ Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-am
 powershell -ExecutionPolicy Bypass -File install-nhncloud-telegraf.ps1
 ```
 
+<a id="install-windows-instance-agent-check-installation"></a>
 #### インストールの確認
 ```powershell
 Get-Service -Name "nhncloud-telegraf"
 ```
 
-## 旧Agent削除ガイド（任意）
+<a id="old-agent-deletion-guide-optional"></a>
+## 旧Agent削除ガイド（任意） { #old-agent-deletion-guide-optional }
 
 > [参考]
 > 新規Agentと旧Agentは、同時に使用することも可能です。
 
 既存のSystem Monitoring Agentをアンインストールするための削除ガイドです。新規Agentと旧Agentは、同時にインストールされていても問題なく動作します。
 
-### 削除時の注意事項
+<a id="precautions-when-deleting"></a>
+### 削除時の注意事項 { #precautions-when-deleting }
 - **削除前の必須確認事項**：新規Agentが正常にインストールされ、動作しているかを確認
 
-### Linuxインスタンスの旧Agent削除
+<a id="delete-linux-instance-old-agent"></a>
+### Linuxインスタンスの旧Agent削除 { #delete-linux-instance-old-agent }
 
+<a id="delete-linux-instance-old-agent-deletion-script"></a>
 #### 削除スクリプト
 ```bash
 curl -s -o uninstall-sysmon-agent.sh 'http://169.254.169.231/monitoring/cloud-agent/linux-amd64/uninstall-sysmon-agent.sh'
@@ -65,26 +80,32 @@ chmod 755 ./uninstall-sysmon-agent.sh
 sudo ./uninstall-sysmon-agent.sh
 ```
 
+<a id="delete-linux-instance-old-agent-check-deletion"></a>
 #### 削除の確認
 * 旧Agentのサービス状態を確認（サービスが存在しないのが正常な状態です）
 ```bash
 sudo systemctl status toast-sysmon
 ```
 
-### Windowsインスタンスの旧Agent削除
+<a id="delete-windows-instance-old-agent"></a>
+### Windowsインスタンスの旧Agent削除 { #delete-windows-instance-old-agent }
+<a id="delete-windows-instance-old-agent-deletion-script"></a>
 #### 削除スクリプト
 ```powershell
 & "C:\Program Files (x86)\NHN\TOAST\uninst.exe"
 ```
 
+<a id="delete-windows-instance-old-agent-check-deletion"></a>
 #### 削除の確認
 * 旧Agentのプロセス終了を確認
 ```powershell
 Get-Process -Name "toastmon" -ErrorAction SilentlyContinue
 ```
 
-### 新規Agentの削除（必要な場合）
+<a id="delete-new-agent-if-necessary"></a>
+### 新規Agentの削除（必要な場合） { #delete-new-agent-if-necessary }
 
+<a id="delete-new-agent-if-necessary-delete-linux-instance-new-agent"></a>
 #### Linuxインスタンスの新規Agent削除
 
 ##### 削除スクリプト
@@ -95,6 +116,7 @@ chmod 755 ./uninstall-nhncloud-telegraf.sh
 sudo ./uninstall-nhncloud-telegraf.sh
 ```
 
+<a id="delete-new-agent-if-necessary-delete-windows-instance-new-agent"></a>
 #### Windowsインスタンスの新規Agent削除
 
 ##### 削除スクリプト
@@ -104,7 +126,8 @@ Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-am
 powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 ```
 
-## Metric Dictionary
+<a id="metric-dictionary"></a>
+## Metric Dictionary { #metric-dictionary }
 
 |メトリクス名|リソース名|デフォルトの凡例(Legend)|単位(Unit)|
 |-------|-------|------|------|
