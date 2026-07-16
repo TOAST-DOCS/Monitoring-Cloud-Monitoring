@@ -1,5 +1,15 @@
 ## Monitoring > Cloud Monitoring > Release Notes
 
+## July 28, 2026
+
+### Feature Updates
+
+* Added widget legend area expansion feature
+    * When a widget has many legend items, hovering over the legend area displays an expanded legend area.
+    * In the expanded area, legend items can be viewed at a glance, and data can be conveniently filtered by selecting the desired items.
+* Changed the time zone for notification email occurrence time
+    * The occurrence time displayed in notification emails has been changed from UTC to Korea Standard Time (KST).
+
 ## June 23, 2026
 
 #### Added Features
