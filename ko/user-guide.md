@@ -1,4 +1,7 @@
-## Monitoring > Cloud Monitoring > 사용 시나리오
+<!-- pre-align:aligned sig=a00742233e58 -->
+
+<a id="monitoring-cloud-monitoring-usage-scenarios"></a>
+## Monitoring > Cloud Monitoring > 사용 시나리오 { #monitoring-cloud-monitoring-usage-scenarios }
 대시보드 구성부터 알림 생성까지 전반적인 사용 시나리오를 다룹니다.<br>
 Cloud Monitoring을 사용하는 순서는 다음과 같습니다. 
 
@@ -13,7 +16,8 @@ Cloud Monitoring을 사용하는 순서는 다음과 같습니다. 
 - 알림 생성<br>
   임계치를 설정하여 이벤트 발생 시 알림을 받을 수 있습니다.
 
-## 지표 수집 설정
+<a id="enable-metric-collection"></a>
+## 지표 수집 설정 { #enable-metric-collection }
 대시보드를 구성하기 위해 먼저 서비스별로 지표 수집 설정을 합니다.
 
 1. **Cloud Monitoring > 지표 관리**를 선택합니다.
@@ -28,12 +32,14 @@ Cloud Monitoring을 사용하는 순서는 다음과 같습니다. 
 - 활성화된 서비스만 지표가 수집됩니다. 서비스 활성화 여부를 확인하십시오.
 - **지표 수집 설정** 토글을 클릭해 비활성화하면 해당 지표의 수집이 중단되며, 대시보드에서 표시되지 않습니다.
 
-## 대시보드 구성
+<a id="configure-the-dashboard"></a>
+## 대시보드 구성 { #configure-the-dashboard }
 이제 대시보드를 구성할 수 있는 준비가 되었습니다.<br>
 대시보드를 생성하고 위젯을 추가해보겠습니다.
 
 
-### 대시보드 생성
+<a id="create-a-dashboard"></a>
+### 대시보드 생성 { #create-a-dashboard }
 1. **+대시보드 생성**을 클릭합니다.
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_02_01-1.png)
 2. **대시보드 이름**과 **설명**을 입력한 뒤 **확인**을 클릭합니다.
@@ -41,7 +47,8 @@ Cloud Monitoring을 사용하는 순서는 다음과 같습니다. 
 3. 생성된 대시보드를 확인합니다.
 
 
-### 위젯 추가
+<a id="add-widgets"></a>
+### 위젯 추가 { #add-widgets }
 1. **위젯 추가**를 클릭하여 위젯 추가 페이지로 이동합니다.
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_02_02-1.png)
 2. **위젯 이름**을 입력하고, **그래프 유형**과 **서비스**를 선택합니다.
@@ -66,7 +73,8 @@ Cloud Monitoring을 사용하는 순서는 다음과 같습니다. 
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_02_02-4.png)
 
 
-### 대시보드 편집
+<a id="edit-dashboard"></a>
+### 대시보드 편집 { #edit-dashboard }
 대시보드에 추가된 위젯을 확인하고 원하는 형태로 편집합니다.
 
 1. 대시보드 우측 상단의 토글을 클릭해 **조회 모드**에서 **편집 모드**로 변경합니다.
@@ -74,10 +82,12 @@ Cloud Monitoring을 사용하는 순서는 다음과 같습니다. 
    - **위젯 그룹 추가**를 클릭하면 하단에 그룹이 추가됩니다. 위젯을 그룹으로 드래그 앤 드롭하여 배치합니다.
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_02_03-1.png)
 
-## 알림 설정
+<a id="notification-settings"></a>
+## 알림 설정 { #notification-settings }
 더 효율적인 모니터링을 위해 이벤트 발생 시 알림을 수신 받을 수 있도록 설정합니다.
 
-### 알림 생성
+<a id="create-a-notification"></a>
+### 알림 생성 { #create-a-notification }
 1. **Cloud Monitoring > 알림 관리 > 알림 설정**을 선택합니다.
 2. **알림 생성**을 클릭해 생성 페이지로 이동합니다.
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_03_01-1.png)
@@ -108,7 +118,8 @@ Cloud Monitoring을 사용하는 순서는 다음과 같습니다. 
 
 이제 설정한 임계치를 달성하면 알림이 발생되며, 발생 이력은 **알림 관리 > 알림 발생 이력**에서 확인할 수 있습니다.
 
-## 프로젝트 대시보드 노출 설정
+<a id="project-dashboard-visibility-settings"></a>
+## 프로젝트 대시보드 노출 설정 { #project-dashboard-visibility-settings }
 Cloud Monitoring 서비스에서 생성한 대시보드를 프로젝트 메인 화면에서 확인할 수 있습니다.
 
 1. **Cloud Monitoring > 대시보드 > 대시보드 관리**를 클릭합니다.

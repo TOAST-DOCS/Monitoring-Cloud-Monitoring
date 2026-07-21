@@ -1,12 +1,17 @@
-## Monitoring > Cloud Monitoring > Metric Dictionary
+<!-- pre-align:aligned sig=1868d30c1606 -->
 
-## Metric Dictionary
+<a id="monitoring-cloud-monitoring-metric-dictionary"></a>
+## Monitoring > Cloud Monitoring > Metric Dictionary { #monitoring-cloud-monitoring-metric-dictionary }
+
+<a id="metric-dictionary"></a>
+## Metric Dictionary { #metric-dictionary }
 - This is a list of defined metrics for monitoring services on NHN Cloud.
 - Metric Dictionary helps you view and understand metrics for the services you monitor.
 - You can find and use the metrics you need when configuring widgets. For more information, see the [console user guide](console-guide.md).
 - In **Metric List**, you can see a list of metric dictionaries for each service.
 
-### Filter
+<a id="filter"></a>
+### Filter { #filter }
 - You can apply filters to metrics.
 - When you apply a filter, you'll only see metrics that match that filter.
   - For example, if you apply KR1 to the region filter, you will only see metrics that fall within the KR1 region among your metrics.
@@ -16,7 +21,8 @@
 |-----|--------------|--------------------------------------------------------------------|
 | Region  | NHN Cloud Region | kr1: Korea (Pangyo), kr2: Korea (Pyeongchon), kr3: Korea (Gwangju), us1: United States (California), jp1: Japan (Tokyo) |
 
-### Legend
+<a id="legend"></a>
+### Legend { #legend }
 - You can apply a legend for metrics.
 - When you apply a legend, the metric is applied in legend format.
   - For example, if you apply {{nhncloud_region}} to the legend, each metric appears as the region, such as kr1, kr2.
@@ -26,10 +32,12 @@
 |-----------------|--------------|--------------------------------------------------------------------|
 | nhncloud_region | NHN Cloud Region | kr1: Korea (Pangyo), kr2: Korea (Pyeongchon), kr3: Korea (Gwangju), us1: United States (California), jp1: Japan (Tokyo) |
 
-## Instance
+<a id="instance"></a>
+## Instance { #instance }
 - A dictionary that defines metrics that can be monitored for the Instance service on NHN Cloud.
 
-### Metric List
+<a id="metric-list"></a>
+### Metric List { #metric-list }
 | Metric Name                            | Resource Name    | Default legend (Legend)                                                              | Unit         |
 |----------------------------------------|---------|----------------------------------------------------------------------------|------------------|
 | CPU usage                              | 3.10     |                                                                            | Percentage (0-100)       |
@@ -66,7 +74,8 @@
 | Swap usage (total)                     | Swap    | {{nhncloud_instance_id}}                                                   | bytes       |
 | Swap Usage                             | Swap    | {{nhncloud_instance_id}}                                                   | Ratio (0.00 - 1.00)  |
 
-### Instance Filter
+<a id="instance-filter"></a>
+### Instance Filter { #instance-filter }
 - You can apply filters to the Instance metric.
 - When you apply a filter, you'll only see metrics that match that filter.
 
@@ -74,7 +83,8 @@
 |------|-----------------------------------------|
 | Instance | Name of the instance being used by the Instance service on NHN Cloud. |
 
-### Instance Legend
+<a id="instance-legend"></a>
+### Instance Legend { #instance-legend }
 - You can apply a legend for the Instance metric.
 - When you apply a legend, the metric is applied in legend format.
 
@@ -87,10 +97,12 @@
 | path                 | Disk mount path to the instance    |
 | interface            | Name of the instance's network interface |
 
-## NHN Container Service(NCS)
+<a id="nhn-container-servicencs"></a>
+## NHN Container Service(NCS) { #nhn-container-servicencs }
 - A dictionary that defines metrics that can be monitored for NCS services on NHN Cloud.
 
-### Metric List
+<a id="nhn-container-servicencs-metric-list"></a>
+### Metric List { #nhn-container-servicencs-metric-list }
 | Metric Name           | Resource Name | Default legend (Legend)                                                            | Unit        |
 |---------------|------|--------------------------------------------------------------------------|-----------------|
 | CPU usage       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}} container={{container}} | Percentage (0-100)      |
@@ -108,7 +120,8 @@
 | Number of tasks by activation status  | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
 | Number of processes in a container  | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | Number              |
 
-### NCS Filter
+<a id="ncs-filter"></a>
+### NCS Filter { #ncs-filter }
 - You can apply filters to NCS metrics.
 - When you apply a filter, you'll only see metrics that match that filter.
 
@@ -118,7 +131,8 @@
 | Type   | Storage type                          |
 
 
-### NCS Legend
+<a id="ncs-legend"></a>
+### NCS Legend { #ncs-legend }
 - You can apply a legend for NCS metrics.
 - When you apply a legend, the metric is applied in legend format.
 
@@ -129,10 +143,12 @@
 | String                                         | Storage type                        |
 | container                                    | Container Name                       |
 
-## 3.10
+<a id="10"></a>
+## 3.10 { #10 }
 - A dictionary that defines metrics that can be monitored for GPU services on NHN Cloud.
 
-### Metric List
+<a id="10-metric-list"></a>
+### Metric List { #10-metric-list }
 | Metric Name         | Resource Name | Default legend (Legend) | Unit   |
 |-------------|------|---------------|------------|
 | GPU usage     | 3.10  | None            | Percentage (0-100) |
@@ -140,7 +156,8 @@
 | GPU memory usage | 3.10  | None            | Percentage (0-100) |
 | GPU power usage  | 3.10  | None            | Watts (W)      |
 
-### GPU Filter
+<a id="gpu-filter"></a>
+### GPU Filter { #gpu-filter }
 - You can apply filters for GPU metrics.
 - When you apply a filter, you'll only see metrics that match that filter.
 
@@ -149,7 +166,8 @@
 |------|--------------|
 | Instance | Name of the instance being used by the GPU service on NHN Cloud. |
 
-### GPU Legend
+<a id="gpu-legend"></a>
+### GPU Legend { #gpu-legend }
 - You can apply a legend for GPU metrics.
 - When you apply a legend, the metric is applied in legend format.
 
@@ -157,10 +175,12 @@
 |----------------------|--------------|
 | nhncloud_instance_id | Name of the GPU instance |
 
-## Transit Hub
+<a id="transit-hub"></a>
+## Transit Hub { #transit-hub }
 - A dictionary that defines metrics that can be monitored for the Transit Hub service on NHN Cloud.
 
-### Metric List
+<a id="transit-hub-metric-list"></a>
+### Metric List { #transit-hub-metric-list }
 | Metric Name                                | Resource Name | Default legend (Legend) | Unit   |
 |------------------------------------|------|---------------|------------|
 | Network transmitted bytes                        | Transit Hub  | {{id}} | 5 min accumulated bytes |
@@ -197,16 +217,19 @@
 | Network bits per second (bps) deleted due to blackhole route match | Attachment  | {{id}} |  Bits per second (bits/s)  |
 
 
-### Transit Hub Filter
+<a id="transit-hub-filter"></a>
+### Transit Hub Filter { #transit-hub-filter }
 - You can apply filters to Transit Hub metrics.
 - When you apply a filter, only metrics that meet the criteria of that filter are displayed.
 
+<a id="transit-hub-filter-resource-type-applicable-filters-for-transit-hub"></a>
 #### Resource Type > Applicable Filters for Transit Hub
 
 | Filter name | Description |
 | --- | --- |
 | Transit Hub | Transit hub used by the Network service on NHN Cloud |
 
+<a id="transit-hub-filter-resource-type-applicable-filters-for-attachment"></a>
 #### Resource Type > Applicable filters for Attachment
 
 | Filter name | Description                                      |
@@ -214,7 +237,8 @@
 | Transit Hub | Transit hub related to attachment |
 | Attachment | Connect the transit hub used by Network services on NHN Cloud |
 
-### Transit Hub Legend
+<a id="transit-hub-legend"></a>
+### Transit Hub Legend { #transit-hub-legend }
 - You can apply a legend for Transit Hub metrics.
 - When you apply a legend, the metric is applied in legend format.
 
@@ -223,10 +247,12 @@
 | id             | Transit hub or attachment name            |
 | transit_hub_id | Transit hub name (if the resource is `attachment`) |
 
-## Internet Gateway
+<a id="internet-gateway"></a>
+## Internet Gateway { #internet-gateway }
 - A dictionary that defines metrics that can be monitored for the Internet Gateway service on NHN Cloud.
 
-### Metric List
+<a id="internet-gateway-metric-list"></a>
+### Metric List { #internet-gateway-metric-list }
 
 | Metric Name                          | Resource Name    | Default legend (Legend)          | Unit         |
 |------------------------------|---------|------------------------|------------------|
@@ -239,7 +265,8 @@
 | Network transmitted packets per second (pps)	    | Routing Table | {{id}} | Packets per second (packets/s) | 
 | Network received packets per second	    | Routing Table | {{id}} | Packets per second (packets/s) | 
 
-### Internet Gateway Filter
+<a id="internet-gateway-filter"></a>
+### Internet Gateway Filter { #internet-gateway-filter }
 - You can apply filters to the Internet Gateway metrics.
 - When you apply a filter, only metrics that meet the criteria of that filter are displayed.
 
@@ -247,7 +274,8 @@
 | --- | --- |
 | Routing Table | Routing table used by Network service on NHN Cloud |
 
-### Internet Gateway Legend
+<a id="internet-gateway-legend"></a>
+### Internet Gateway Legend { #internet-gateway-legend }
 - You can apply a legend for the Internet Gateway metrics.
 - When you apply a legend, the metric is applied in legend format.
 
@@ -255,10 +283,12 @@
 |----------------|----------------------------------------|
 | id             | Routing table name  |
 
-## Colocation Gateway
+<a id="colocation-gateway"></a>
+## Colocation Gateway { #colocation-gateway }
 - A dictionary that defines metrics that can be monitored for the Colocation Gateway service on NHN Cloud.
 
-### Metric List
+<a id="colocation-gateway-metric-list"></a>
+### Metric List { #colocation-gateway-metric-list }
 
 | Metric Name                                  | Resource Name      | Default legend (Legend) | Unit                            |
 |----------------------------------------------|--------------------|-------------------------|---------------------------------|
@@ -271,22 +301,26 @@
 | Network transmitted packets per second (pps) | Colocation Gateway | {{id}}                  | Packets per second (packets/s)  | 
 | Network received packets per second	         | Colocation Gateway | {{id}}                  | Packets per second (packets/s)  | 
 
-### Colocation Gateway Filter
+<a id="colocation-gateway-filter"></a>
+### Colocation Gateway Filter { #colocation-gateway-filter }
 
 | Filter name         | Description                                             |
 |---------------------|---------------------------------------------------------|
 | Colocation Gateway  | Colocation gateway used by Network service on NHN Cloud |
 
-### Colocation Gateway Legend
+<a id="colocation-gateway-legend"></a>
+### Colocation Gateway Legend { #colocation-gateway-legend }
 
 | Legend Name | Description             |
 |-------------|-------------------------|
 | id          | Colocation gateway name |
 
-## Load Balancer
+<a id="load-balancer"></a>
+## Load Balancer { #load-balancer }
 - A dictionary that defines metrics that can be monitored for the Load Balancer service on NHN Cloud.
 
-### Metric List
+<a id="load-balancer-metric-list"></a>
+### Metric List { #load-balancer-metric-list }
 
 | Metric Name                                                   | Resource Name          | Default Legend                                                 | Unit                     |
 |---------------------------------------------------------------|------------------------|---------------------------------------------------------------|--------------------------|
@@ -352,7 +386,8 @@
 | Member group total load balancing count                       | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
 | Member group time elapsed since last session                  | Load Balancer Member group | {{loadbalancer_id}}/{{pool_id}}                               | Number                   |
 
-### Load Balancer Filter
+<a id="load-balancer-filter"></a>
+### Load Balancer Filter { #load-balancer-filter }
 
 | Filter Name    | Description                                        |
 |----------------|----------------------------------------------------|
@@ -361,7 +396,8 @@
 | Member group   | Member group belonging to the listener             |
 | Member         | Member belonging to the member group               |
 
-### Load Balancer Legend
+<a id="load-balancer-legend"></a>
+### Load Balancer Legend { #load-balancer-legend }
 
 | Legend Name     | Description        |
 |-----------------|--------------------|
@@ -370,10 +406,12 @@
 | pool_id         | Member group name  |
 | member_id       | Member name        |
 
-## Direct Connect
+<a id="direct-connect"></a>
+## Direct Connect { #direct-connect }
 - A dictionary that defines metrics that can be monitored for the Direct Connect service on NHN Cloud.
 
-### Metric List
+<a id="direct-connect-metric-list"></a>
+### Metric List { #direct-connect-metric-list }
 
 | Metric Name                               | Resource Name | Default legend (Legend) | Unit                     |
 |-------------------------------------------|---------------|-------------------------|--------------------------|
@@ -385,22 +423,26 @@
 | Network transmitted bits per second (bps) | Network       | {{orderId}}             | Bits per second (bits/s) |
 | Network received bits per second (bps)    | Network       | {{orderId}}             | Bits per second (bits/s) |
 
-### Direct Connect Filter
+<a id="direct-connect-filter"></a>
+### Direct Connect Filter { #direct-connect-filter }
 
 | Filter name | Description                                          |
 |-------------|------------------------------------------------------|
 | Service ID  | Service apply ID used by Direct Connect on NHN Cloud |
 
-### Direct Connect Legend
+<a id="direct-connect-legend"></a>
+### Direct Connect Legend { #direct-connect-legend }
 
 | Legend Name | Description      |
 |-------------|------------------|
 | orderId     | Service apply ID |
 
-## VPC
+<a id="vpc"></a>
+## VPC { #vpc }
 - A dictionary that defines metrics that can be monitored for the VPC service on NHN Cloud.
 
-### Metric List
+<a id="vpc-metric-list"></a>
+### Metric List { #vpc-metric-list }
 
 | Metric Name                               | Resource Name | Default legend (Legend) | Unit                |
 |-------------------------------------------|---------------|-------------------------|---------------------|
@@ -409,22 +451,26 @@
 |VPC Usage|VPC|{{vpc_id}}| Percentage (0-100)  |
 
 
-### VPC Filter
+<a id="vpc-filter"></a>
+### VPC Filter { #vpc-filter }
 
 | Filter name | Description                  |
 |-------------|------------------------------|
 | VPC         | VPC used by Network on NHN Cloud |
 
-### VPC Legend
+<a id="vpc-legend"></a>
+### VPC Legend { #vpc-legend }
 
 | Legend Name | Description |
 |-------------|-------------|
 | vpc_id      | VPC name    |
 
-## Subnet
+<a id="subnet"></a>
+## Subnet { #subnet }
 - A dictionary that defines metrics that can be monitored for the Subnet service on NHN Cloud.
 
-### Metric List
+<a id="subnet-metric-list"></a>
+### Metric List { #subnet-metric-list }
 
 | Metric Name                               | Resource Name | Default legend (Legend) | Unit               |
 |-------------------------------------------|---------------|-------------------------|--------------------|
@@ -433,22 +479,26 @@
 |Subnet Usage|Subnet|{{subnet_id}}| Percentage (0-100) |
 
 
-### Subnet Filter
+<a id="subnet-filter"></a>
+### Subnet Filter { #subnet-filter }
 
 | Filter name | Description                         |
 |-------------|-------------------------------------|
 | Subnet      | Subnet used by Network on NHN Cloud |
 
-### Subnet Legend
+<a id="subnet-legend"></a>
+### Subnet Legend { #subnet-legend }
 
 | Legend Name | Description |
 |-------------|-------------|
 | subnet_id      | Subnet name |
 
-## Floating IP
+<a id="floating-ip"></a>
+## Floating IP { #floating-ip }
 - A dictionary that defines metrics that can be monitored for the Floating IP service on NHN Cloud.
 
-### Metric List
+<a id="floating-ip-metric-list"></a>
+### Metric List { #floating-ip-metric-list }
 
 | Metric Name                               | Resource Name | Default legend (Legend) | Unit               |
 |-------------------------------------------|---------------|-------------------------|--------------------|
@@ -456,10 +506,12 @@
 |Number of Associated Floating IPs|Floating IP|{{nhncloud_region}} - {{status}}|Number|
 |Number of Unassociated Floating IPs|Floating IP|{{nhncloud_region}} - {{status}}|Number|
 
-## SMS
+<a id="sms"></a>
+## SMS { #sms }
 - A dictionary that defines metrics that can be monitored for the SMS service on NHN Cloud.
 
-### Metric List
+<a id="sms-metric-list"></a>
+### Metric List { #sms-metric-list }
 
 | Metric Name                               | Resource Name | Default legend (Legend) | Unit               |
 |----------------------|---------|---------------|-------------|
@@ -470,17 +522,20 @@
 |Delivery failed|International SMS||Number|
 |Send failed|International SMS||Number|
 
-### SMS Filter
+<a id="sms-filter"></a>
+### SMS Filter { #sms-filter }
 
 | Filter name | Description                         |
 |------|---------------------------------------------------------------------------------------------------|
 | Message Type | Message sending type (SMS, LMS, MMS, AUTH)                                                                 |
 | Result code | Message send/receive result codes([Reference](https://docs.nhncloud.com/en/Notification/SMS/en/error-code/)) |
 
-## Cloud Functions
+<a id="cloud-functions"></a>
+## Cloud Functions { #cloud-functions }
 - A dictionary that defines metrics that can be monitored for the Cloud Functions service on NHN Cloud.
 
-### Metric List
+<a id="cloud-functions-metric-list"></a>
+### Metric List { #cloud-functions-metric-list }
 
 | Metric Name                               | Resource Name | Default legend (Legend) | Unit    |
 |----------------------|---------|---------------|---------|
@@ -491,14 +546,16 @@
 |Success Rate|Cloud Functions|{{function_number}}-{{function_name}}|Percentage (0-100)|
 |Number of Function Calls|Cloud Functions|{{function_number}}-{{function_name}}| Number  |
 
-### Cloud Functions Filter
+<a id="cloud-functions-filter"></a>
+### Cloud Functions Filter { #cloud-functions-filter }
 
 | Filter name | Description                                       |
 |-------------|---------------------------------------------------|
 | Function    | User-defined function name |
 | Fucntion ID | Key value of the function   |
 
-### Cloud Functions Legend
+<a id="cloud-functions-legend"></a>
+### Cloud Functions Legend { #cloud-functions-legend }
 
 | Legend Name | Description   |
 |------------|---------------|

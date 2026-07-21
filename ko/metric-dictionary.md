@@ -1,12 +1,17 @@
-## Monitoring > Cloud Monitoring > Metric Dictionary
+<!-- pre-align:aligned sig=1868d30c1606 -->
 
-## Metric Dictionary
+<a id="monitoring-cloud-monitoring-metric-dictionary"></a>
+## Monitoring > Cloud Monitoring > Metric Dictionary { #monitoring-cloud-monitoring-metric-dictionary }
+
+<a id="metric-dictionary"></a>
+## Metric Dictionary { #metric-dictionary }
 - NHN Cloud 내 서비스에 대한 모니터링을 위한 지표들을 정의한 목록입니다.
 - 지표 사전을 통해 모니터링 대상 서비스의 지표를 확인하고, 이해할 수 있습니다.
 - 위젯 구성 시 필요한 지표를 찾아 사용할 수 있습니다. 자세한 내용은 [콘솔 사용 가이드](console-guide.md)를 참고하십시오.
 - **Metric List**에서 각 서비스별 지표 사전 목록을 확인할 수 있습니다.
 
-### 필터(Filter)
+<a id="filter"></a>
+### 필터(Filter) { #filter }
 - 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
   - 예를 들어 리전 필터에 kr1을 적용하면 지표들 중 kr1 리전에 해당하는 지표만 표시됩니다.
@@ -16,7 +21,8 @@
 |-----|--------------|--------------------------------------------------------------------|
 | 리전  | NHN Cloud 리전 | kr1: 한국(판교), kr2: 한국(평촌), kr3: 한국(광주), us1: 미국(캘리포니아), jp1: 일본(도쿄) |
 
-### 범례(Legend)
+<a id="legend"></a>
+### 범례(Legend) { #legend }
 - 지표에 대해 범례를 적용할 수 있습니다.
 - 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
   - 예를 들어 범례에 {{nhncloud_region}}를 적용하면 각 지표들의 이름이 kr1, kr2와 같이 리전명으로 표시됩니다.
@@ -26,10 +32,12 @@
 |-----------------|--------------|--------------------------------------------------------------------|
 | nhncloud_region | NHN Cloud 리전 | kr1: 한국(판교), kr2: 한국(평촌), kr3: 한국(광주), us1: 미국(캘리포니아), jp1: 일본(도쿄) |
 
-## Instance
+<a id="instance"></a>
+## Instance { #instance }
 - NHN Cloud의 Instance 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="metric-list"></a>
+### Metric List { #metric-list }
 | 지표명              | 리소스명    | 기본 범례(Legend)                                                              | 단위(Unit)         |
 |------------------|---------|----------------------------------------------------------------------------|------------------|
 | CPU 사용률          | CPU     |                                                                            | 백분율(0-100)       |
@@ -66,7 +74,8 @@
 | 스왑 사용량(total)    | Swap    | {{nhncloud_instance_id}}                                                   | 바이트(bytes)       |
 | 스왑 사용률           | Swap    | {{nhncloud_instance_id}}                                                   | 비율(0.00 - 1.00)  |
 
-### Instance 필터(Filter)
+<a id="instance-filter"></a>
+### Instance 필터(Filter) { #instance-filter }
 - Instance 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
 
@@ -74,7 +83,8 @@
 |------|------------------------------------------|
 | 인스턴스 | NHN Cloud의 Instance 서비스에서 사용 중인 인스턴스의 이름 |
 
-### Instance 범례(Legend)
+<a id="instance-legend"></a>
+### Instance 범례(Legend) { #instance-legend }
 - Instance 지표에 대해 범례를 적용할 수 있습니다.
 - 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
 
@@ -87,10 +97,12 @@
 | path                 | 인스턴스의 디스크 마운트 경로    |
 | interface            | 인스턴스의 네트워크 인터페이스 이름 |
 
-## NHN Container Service(NCS)
+<a id="nhn-container-servicencs"></a>
+## NHN Container Service(NCS) { #nhn-container-servicencs }
 - NHN Cloud의 NCS 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="nhn-container-servicencs-metric-list"></a>
+### Metric List { #nhn-container-servicencs-metric-list }
 | 지표명           | 리소스명 | 기본 범례(Legend)                                                            | 단위(Unit)        |
 |---------------|------|--------------------------------------------------------------------------|-----------------|
 | CPU 사용률       | NCS  | {{label_ncs_container_nhncloud_com_workload_id}} container={{container}} | 백분율(0-100)      |
@@ -108,7 +120,8 @@
 | 활성화 상태별 작업 수  | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 숫자              |
 | 컨테이너의 프로세스 수  | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 숫자              |
 
-### NCS Filter
+<a id="ncs-filter"></a>
+### NCS Filter { #ncs-filter }
 - NCS 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
 
@@ -118,7 +131,8 @@
 | 타입   | 스토리지 종류                             |
 
 
-### NCS Legend
+<a id="ncs-legend"></a>
+### NCS Legend { #ncs-legend }
 - NCS 지표에 대해 범례를 적용할 수 있습니다.
 - 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
 
@@ -129,10 +143,12 @@
 | type                                         | 스토리지 종류                        |
 | container                                    | 컨테이너의 이름                       |
 
-## GPU
+<a id="10"></a>
+## GPU { #10 }
 - NHN Cloud의 GPU 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="10-metric-list"></a>
+### Metric List { #10-metric-list }
 | 지표명         | 리소스명 | 기본 범례(Legend) | 단위(Unit)   |
 |-------------|------|---------------|------------|
 | GPU 사용률     | GPU  | 없음            | 백분율(0-100) |
@@ -140,7 +156,8 @@
 | GPU 메모리 사용률 | GPU  | 없음            | 백분율(0-100) |
 | GPU 전력 사용량  | GPU  | 없음            | 와트(W)      |
 
-### GPU 필터(Filter)
+<a id="gpu-filter"></a>
+### GPU 필터(Filter) { #gpu-filter }
 - GPU 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터에 맞는 지표만 표시됩니다.
 
@@ -148,7 +165,8 @@
 |------|-------------------------------------|
 | 인스턴스 | NHN Cloud의 GPU 서비스에서 사용 중인 인스턴스의 이름 |
 
-### GPU 범례(Legend)
+<a id="gpu-legend"></a>
+### GPU 범례(Legend) { #gpu-legend }
 - GPU 지표에 대해 범례를 적용할 수 있습니다.
 - 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
 
@@ -156,10 +174,12 @@
 |----------------------|--------------|
 | nhncloud_instance_id | GPU 인스턴스의 이름 |
 
-## Transit Hub
+<a id="transit-hub"></a>
+## Transit Hub { #transit-hub }
 - NHN Cloud의 Transit Hub 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="transit-hub-metric-list"></a>
+### Metric List { #transit-hub-metric-list }
 | 지표명                                | 리소스명 | 기본 범례(Legend) | 단위(Unit)   |
 |------------------------------------|------|---------------|------------|
 | 네트워크 송신 바이트                        | 트랜짓 허브  | {{id}} | 5분 누적 바이트 |
@@ -196,16 +216,19 @@
 | 블랙홀 경로와 일치하여 삭제된 네트워크 초당 비트 수(bps) | 연결  | {{id}} |  초당 비트(bits/s)  |
 
 
-### Transit Hub 필터(Filter)
+<a id="transit-hub-filter"></a>
+### Transit Hub 필터(Filter) { #transit-hub-filter }
 - Transit Hub 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터 조건에 해당하는 지표만 표시됩니다.
 
+<a id="transit-hub-filter-resource-type-applicable-filters-for-transit-hub"></a>
 #### 리소스 유형 > 트랜짓 허브인 경우 적용 가능한 필터
 
 | 필터명 | 설명 |
 | --- | --- |
 | 트랜짓 허브 | NHN Cloud의 Network 서비스에서 사용 중인 트랜짓 허브 |
 
+<a id="transit-hub-filter-resource-type-applicable-filters-for-attachment"></a>
 #### 리소스 유형 > 연결인 경우 적용 가능한 필터
 
 | 필터명 | 설명                                      |
@@ -213,7 +236,8 @@
 | 트랜짓 허브 | 연결과 관련된 트랜짓 허브 |
 | 연결 | NHN Cloud의 Network 서비스에서 사용 중인 트랜짓 허브 연결 |
 
-### Transit Hub 범례(Legend)
+<a id="transit-hub-legend"></a>
+### Transit Hub 범례(Legend) { #transit-hub-legend }
 - Transit Hub 지표에 대해 범례를 적용할 수 있습니다.
 - 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
 
@@ -222,10 +246,12 @@
 | id             | 트랜짓 허브 또는 연결 이름            |
 | transit_hub_id | 트랜짓 허브 이름(리소스가 `연결`인 경우) |
 
-## Internet Gateway
+<a id="internet-gateway"></a>
+## Internet Gateway { #internet-gateway }
 - NHN Cloud의 Internet Gateway 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="internet-gateway-metric-list"></a>
+### Metric List { #internet-gateway-metric-list }
 
 | 지표명                          | 리소스명    | 기본 범례(Legend)          | 단위(Unit)         |
 |------------------------------|---------|------------------------|------------------|
@@ -238,7 +264,8 @@
 | 네트워크 송신 초당 패킷 수(pps)	    | 라우팅 테이블 | {{id}} | 초당 패킷(packets/s) | 
 | 네트워크 수신 초당 패킷 수(pps)	    | 라우팅 테이블 | {{id}} | 초당 패킷(packets/s) | 
 
-### Internet Gateway 필터(Filter)
+<a id="internet-gateway-filter"></a>
+### Internet Gateway 필터(Filter) { #internet-gateway-filter }
 - Internet Gateway 지표에 대해 필터를 적용할 수 있습니다.
 - 필터를 적용하면 해당 필터 조건에 해당하는 지표만 표시됩니다.
 
@@ -246,7 +273,8 @@
 | --- | --- |
 | 라우팅 테이블 | NHN Cloud의 Network 서비스에서 사용 중인 라우팅 테이블 |
 
-### Internet Gateway 범례(Legend)
+<a id="internet-gateway-legend"></a>
+### Internet Gateway 범례(Legend) { #internet-gateway-legend }
 - Internet Gateway 지표에 대해 범례를 적용할 수 있습니다.
 - 범례를 적용하면 해당 지표가 범례 형식으로 적용됩니다.
 
@@ -254,10 +282,12 @@
 |----------------|----------------------------------------|
 | id             | 라우링 테이블 이름  |
 
-## Colocation Gateway
+<a id="colocation-gateway"></a>
+## Colocation Gateway { #colocation-gateway }
 - NHN Cloud의 Colocation Gateway 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="colocation-gateway-metric-list"></a>
+### Metric List { #colocation-gateway-metric-list }
 
 | 지표명                   | 리소스명        | 기본 범례(Legend) | 단위(Unit)         |
 |-----------------------|-------------|---------------|------------------|
@@ -270,22 +300,26 @@
 | 네트워크 송신 초당 패킷 수(pps)	 | 코로케이션 게이트웨이 | {{id}}        | 초당 패킷(packets/s) | 
 | 네트워크 수신 초당 패킷 수(pps)	 | 코로케이션 게이트웨이 | {{id}}        | 초당 패킷(packets/s) |
 
-### Colocation Gateway 필터(Filter)
+<a id="colocation-gateway-filter"></a>
+### Colocation Gateway 필터(Filter) { #colocation-gateway-filter }
 
 | 필터명         | 설명                                        |
 |-------------|-------------------------------------------|
 | 코로케이션 게이트웨이 | NHN Cloud Network 서비스에서 사용 중인 코로케이션 게이트웨이 |
 
-### Colocation Gateway 범례(Legend)
+<a id="colocation-gateway-legend"></a>
+### Colocation Gateway 범례(Legend) { #colocation-gateway-legend }
 
 | 범례명 | 설명             |
 |-----|----------------|
 | id  | 코로케이션 게이트웨이 이름 |
 
-## Load Balancer
+<a id="load-balancer"></a>
+## Load Balancer { #load-balancer }
 - NHN Cloud의 Load Balancer 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="load-balancer-metric-list"></a>
+### Metric List { #load-balancer-metric-list }
 
 | 지표명                                    | 리소스명        | 기본 범례(Legend)                                                 | 단위(Unit)      |
 |----------------------------------------|-------------|---------------------------------------------------------------|---------------|
@@ -351,7 +385,8 @@
 | 멤버 그룹 로드 밸런싱 총 횟수                     | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
 | 멤버 그룹 마지막 세션 경과 시간                    | 로드밸런서 멤버 그룹 | {{loadbalancer_id}}/{{pool_id}}                               | 숫자            |
 
-### Load Balancer 필터(Filter)
+<a id="load-balancer-filter"></a>
+### Load Balancer 필터(Filter) { #load-balancer-filter }
 
 | 필터명    | 설명                                    |
 |--------|---------------------------------------|
@@ -360,7 +395,8 @@
 | 멤버 그룹  | 리스너에 속한 멤버 그룹                         |
 | 멤버     | 멤버 그룹에 속한 멤버                          |
 
-### Load Balancer 범례(Legend)
+<a id="load-balancer-legend"></a>
+### Load Balancer 범례(Legend) { #load-balancer-legend }
 
 | 범례명             | 설명        |
 |-----------------|-----------|
@@ -370,10 +406,12 @@
 | member_id       | 멤버 이름     |
 
 
-## Direct Connect
+<a id="direct-connect"></a>
+## Direct Connect { #direct-connect }
 - NHN Cloud의 Direct Connect 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="direct-connect-metric-list"></a>
+### Metric List { #direct-connect-metric-list }
 
 | 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)      |
 |----------------------|---------|---------------|---------------|
@@ -385,22 +423,26 @@
 | 네트워크 송신 초당 비트 수(bps) | Network | {{orderId}}   | 초당 비트(bits/s) |
 | 네트워크 수신 초당 비트 수(bps) | Network | {{orderId}}   | 초당 비트(bits/s) |
 
-### Direct Connect 필터(Filter)
+<a id="direct-connect-filter"></a>
+### Direct Connect 필터(Filter) { #direct-connect-filter }
 
 | 필터명    | 설명                                              |
 |--------|-------------------------------------------------|
 | 서비스 ID | NHN Cloud의 Direct Connect 서비스에서 사용 중인 서비스 신청 ID |
 
-### Direct Connect 범례(Legend)
+<a id="direct-connect-legend"></a>
+### Direct Connect 범례(Legend) { #direct-connect-legend }
 
 | 범례명     | 설명        |
 |---------|-----------|
 | orderId | 서비스 신청 ID |
 
-## VPC
+<a id="vpc"></a>
+## VPC { #vpc }
 - NHN Cloud의 VPC 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="vpc-metric-list"></a>
+### Metric List { #vpc-metric-list }
 
 | 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)    |
 |----------------------|---------|---------------|-------------|
@@ -409,22 +451,26 @@
 |VPC 사용률|VPC|{{vpc_id}}| 백분율(0-100)  |
 
 
-### VPC 필터(Filter)
+<a id="vpc-filter"></a>
+### VPC 필터(Filter) { #vpc-filter }
 
 | 필터명 | 설명                                |
 |-----|-----------------------------------|
 | VPC | NHN Cloud의 Network 서비스에서 사용 중인 VPC 이름 |
 
-### VPC 범례(Legend)
+<a id="vpc-legend"></a>
+### VPC 범례(Legend) { #vpc-legend }
 
 | 범례명     | 설명        |
 |---------|-----------|
 | vpc_id | VPC 이름 |
 
-## Subnet
+<a id="subnet"></a>
+## Subnet { #subnet }
 - NHN Cloud의 Subnet 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="subnet-metric-list"></a>
+### Metric List { #subnet-metric-list }
 
 | 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)    |
 |----------------------|---------|---------------|-------------|
@@ -433,22 +479,26 @@
 |서브넷 사용률|서브넷|{{subnet_id}}|백분율(0-100)|
 
 
-### Subnet 필터(Filter)
+<a id="subnet-filter"></a>
+### Subnet 필터(Filter) { #subnet-filter }
 
 | 필터명 | 설명                                   |
 |-----|--------------------------------------|
 | 서브넷 | NHN Cloud의 Network 서비스에서 사용 중인 서브넷 이름 |
 
-### Subnet 범례(Legend)
+<a id="subnet-legend"></a>
+### Subnet 범례(Legend) { #subnet-legend }
 
 | 범례명     | 설명     |
 |---------|--------|
 | subnet_id | 서브넷 이름 |
 
-## Floating IP
+<a id="floating-ip"></a>
+## Floating IP { #floating-ip }
 - NHN Cloud의 Floating IP 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="floating-ip-metric-list"></a>
+### Metric List { #floating-ip-metric-list }
 
 | 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)    |
 |----------------------|---------|---------------|-------------|
@@ -456,10 +506,12 @@
 |연결된 플로팅 IP 개수|플로팅 IP|{{nhncloud_region}} - {{status}}|숫자|
 |연결되지 않은 플로팅 IP 개수|플로팅 IP|{{nhncloud_region}} - {{status}}|숫자|
 
-## SMS
+<a id="sms"></a>
+## SMS { #sms }
 - NHN Cloud의 SMS 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="sms-metric-list"></a>
+### Metric List { #sms-metric-list }
 
 | 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)    |
 |----------------------|---------|---------------|-------------|
@@ -470,17 +522,20 @@
 |수신 실패|국제 SMS||숫자|
 |발송 실패|국제 SMS||숫자|
 
-### SMS 필터(Filter)
+<a id="sms-filter"></a>
+### SMS 필터(Filter) { #sms-filter }
 
 | 필터명  | 설명                                                                                                |
 |------|---------------------------------------------------------------------------------------------------|
 | 메시지유형 | 메시지 발송 유형 종류(SMS, LMS, MMS, AUTH)                                                                 |
 | 결과코드 | 메시지 발송 및 수신 결과에 대한 코드([사용자 가이드 참고](https://docs.nhncloud.com/ko/Notification/SMS/ko/error-code/)) |
 
-## Cloud Functions
+<a id="cloud-functions"></a>
+## Cloud Functions { #cloud-functions }
 - NHN Cloud의 Cloud Functions 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
 
-### Metric List
+<a id="cloud-functions-metric-list"></a>
+### Metric List { #cloud-functions-metric-list }
 
 | 지표명                  | 리소스명    | 기본 범례(Legend) | 단위(Unit)   |
 |----------------------|---------|---------------|------------|
@@ -491,14 +546,16 @@
 |성공률|Cloud Functions|{{function_number}}-{{function_name}}| 백분율(0-100) |
 |함수 호출 횟수|Cloud Functions|{{function_number}}-{{function_name}}| 숫자         |
 
-### Cloud Functions 필터(Filter)
+<a id="cloud-functions-filter"></a>
+### Cloud Functions 필터(Filter) { #cloud-functions-filter }
 
 | 필터명   | 설명                                                 |
 |-------|----------------------------------------------------|
 | 함수명   | 사용자 정의 함수 이름 |
 | 함수 ID | 함수의 키값 |
 
-### Cloud Functions 범례(Legend)
+<a id="cloud-functions-legend"></a>
+### Cloud Functions 범례(Legend) { #cloud-functions-legend }
 
 | 범례명        | 설명    |
 |------------|-------|
