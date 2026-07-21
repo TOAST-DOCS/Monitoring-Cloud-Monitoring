@@ -1,4 +1,7 @@
-## Monitoring > Cloud Monitoring > 使用シナリオ
+<!-- pre-align:aligned sig=a00742233e58 -->
+
+<a id="monitoring-cloud-monitoring-usage-scenarios"></a>
+## Monitoring > Cloud Monitoring > 使用シナリオ { #monitoring-cloud-monitoring-usage-scenarios }
 ダッシュボードの構成から通知の作成まで、全体的な使用シナリオを説明します。<br>
 Cloud Monitoringを使用する手順は次のとおりです。
 
@@ -13,7 +16,8 @@ Cloud Monitoringを使用する手順は次のとおりです。
 - 通知作成<br>
  しきい値を設定し、イベント発生時に通知を受けることができます。
 
-## 指標収集設定
+<a id="enable-metric-collection"></a>
+## 指標収集設定 { #enable-metric-collection }
 ダッシュボードを構成するために、まず、サービスごとに指標の収集設定を行います。
 
 1. **Cloud Monitoring > 指標管理**を選択します。
@@ -28,12 +32,14 @@ Cloud Monitoringを使用する手順は次のとおりです。
 - 有効なサービスのみ指標が収集されます。サービスが有効かどうかを確認してください。
 - **指標収集設定**トグルをクリックして無効にすると、その指標の収集が中断され、ダッシュボードに表示されません。
 
-## ダッシュボード構成
+<a id="configure-the-dashboard"></a>
+## ダッシュボード構成 { #configure-the-dashboard }
 これで、ダッシュボードを構成する準備が整いました。<br>
 ダッシュボードを作成し、ウィジェットを追加してみましょう。
 
 
-### ダッシュボードの作成
+<a id="create-a-dashboard"></a>
+### ダッシュボードの作成 { #create-a-dashboard }
 1. **+ダッシュボードの作成**をクリックします。
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_02_01-1.png)
 2. **ダッシュボードの名前**と **説明**を入力した後、**確認**をクリックします。
@@ -41,7 +47,8 @@ Cloud Monitoringを使用する手順は次のとおりです。
 3. 作成されたダッシュボードを確認します。
 
 
-### ウィジェットの追加
+<a id="add-widgets"></a>
+### ウィジェットの追加 { #add-widgets }
 1. **ウィジェットの追加**をクリックしてウィジェット追加ページに移動します。
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_02_02-1.png)
 2. **ウィジェット名**を入力し、**グラフタイプ**と**サービス**を選択します。
@@ -66,7 +73,8 @@ Cloud Monitoringを使用する手順は次のとおりです。
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_02_02-4.png)
 
 
-### ダッシュボード編集
+<a id="edit-dashboard"></a>
+### ダッシュボード編集 { #edit-dashboard }
 ダッシュボードに追加されたウィジェットを確認し、好きな形に編集します。
 
 1. ダッシュボード右上のトグルをクリックして**閲覧モード**から**編集モード**に変更します。
@@ -74,10 +82,12 @@ Cloud Monitoringを使用する手順は次のとおりです。
    - **ウィジェットグループの追加**をクリックすると、下にグループが追加されます。ウィジェットをグループにドラッグアンドドロップして配置します。
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_02_03-1.png)
 
-## 通知設定
+<a id="notification-settings"></a>
+## 通知設定 { #notification-settings }
 より効率的なモニタリングのため、イベント発生時に通知を受信できるように設定します。
 
-### 通知の作成
+<a id="create-a-notification"></a>
+### 通知の作成 { #create-a-notification }
 1. **Cloud Monitoring > 通知管理 > 通知設定**を選択します。
 2. **通知作成**をクリックして作成ページに移動します。
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_03_01-1.png)
@@ -108,7 +118,8 @@ Cloud Monitoringを使用する手順は次のとおりです。
 
 これで設定したしきい値を達成すると通知が発生し、発生履歴は**通知管理 > 通知発生履歴**で確認できます。
 
-## プロジェクトダッシュボードの表示設定
+<a id="project-dashboard-visibility-settings"></a>
+## プロジェクトダッシュボードの表示設定 { #project-dashboard-visibility-settings }
 Cloud Monitoringサービスで作成したダッシュボードをプロジェクトメイン画面で確認できます。
 
 1. **Cloud Monitoring > ダッシュボード > ダッシュボード管理**をクリックします。

@@ -1,12 +1,17 @@
-## Monitoring > Cloud Monitoring > Metric Dictionary
+<!-- pre-align:aligned sig=1868d30c1606 -->
 
-## Metric Dictionary
+<a id="monitoring-cloud-monitoring-metric-dictionary"></a>
+## Monitoring > Cloud Monitoring > Metric Dictionary { #monitoring-cloud-monitoring-metric-dictionary }
+
+<a id="metric-dictionary"></a>
+## Metric Dictionary { #metric-dictionary }
 - NHN Cloud内のサービスに対するモニタリングのための指標を定義したリストです。
 - 指標辞典を通じてモニタリング対象サービスの指標を確認し、理解できます。
 - ウィジェット構成時に必要な指標を検索して使用できます。詳細は[コンソール使用ガイド](console-guide.md)を参照してください。
 - **Metric List**で各サービス別の指標の事前リストを確認できます。
 
-### フィルタ(Filter)
+<a id="filter"></a>
+### フィルタ(Filter) { #filter }
 - 指標に対してフィルタを適用できます。
 - フィルタを適用すると、そのフィルタに合う指標だけが表示されます。
   - 例えば、リージョンフィルターにkr1を適用すると、指標のうちkr1リージョンに該当する指標のみ表示されます。
@@ -16,7 +21,8 @@
 |-----|--------------|--------------------------------------------------------------------|
 | リージョン | NHN Cloudリージョン | kr1:韓国(パンギョ), kr2:韓国(ピョンチョン), kr3:韓国(光州), us1:米国(カリフォルニア), jp1:日本(東京) |
 
-### 凡例(Legend)
+<a id="legend"></a>
+### 凡例(Legend) { #legend }
 - 指標に対して凡例を適用できます。
 - 凡例を適用すると、該当指標が凡例形式で適用されます。
   - 例えば、凡例に{{nhncloud_region}}を適用すると、各指標の名前がkr1、kr2のように地域名で表示されます。
@@ -26,10 +32,12 @@
 |-----------------|--------------|--------------------------------------------------------------------|
 | nhncloud_region | NHN Cloudリージョン | kr1:韓国(パンギョ), kr2:韓国(ピョンチョン), kr3:韓国(光州), us1:米国(カリフォルニア), jp1:日本(東京) |
 
-## Instance
+<a id="instance"></a>
+## Instance { #instance }
 - NHN CloudのInstanceサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="metric-list"></a>
+### Metric List { #metric-list }
 | 指標名            | リソース名  | 基本凡例(Legend)                                                              | 単位(Unit)         |
 |------------------|---------|----------------------------------------------------------------------------|------------------|
 | CPU使用率        | CPU     |                                                                            | パーセンテージ(0-100)       |
@@ -66,7 +74,8 @@
 | スワップ使用量(total)    | Swap    | {{nhncloud_instance_id}}                                                   | バイト(bytes)       |
 | スワップ使用率         | Swap    | {{nhncloud_instance_id}}                                                   | 比率(0.00 - 1.00)  |
 
-### Instanceフィルタ(Filter)
+<a id="instance-filter"></a>
+### Instanceフィルタ(Filter) { #instance-filter }
 - Instance指標に対してフィルタを適用できます。
 - フィルタを適用すると、そのフィルタに合う指標だけが表示されます。
 
@@ -74,7 +83,8 @@
 |------|------------------------------------------|
 | インスタンス | NHN CloudのInstanceサービスで使用中のインスタンスの名前 |
 
-### Instance凡例(Legend)
+<a id="instance-legend"></a>
+### Instance凡例(Legend) { #instance-legend }
 - Instance指標に対して凡例を適用できます。
 - 凡例を適用すると、該当指標が凡例形式で適用されます。
 
@@ -87,10 +97,12 @@
 | path                 | インスタンスのディスクマウントパス  |
 | interface            | インスタンスのネットワークインターフェイス名 |
 
-## NHN Container Service(NCS)
+<a id="nhn-container-servicencs"></a>
+## NHN Container Service(NCS) { #nhn-container-servicencs }
 - NHN CloudのNCSサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="nhn-container-servicencs-metric-list"></a>
+### Metric List { #nhn-container-servicencs-metric-list }
 | 指標名         | リソース名 | 基本凡例(Legend)                                                            | 単位(Unit)        |
 |---------------|------|--------------------------------------------------------------------------|-----------------|
 | CPU使用率     | NCS  | {{label_ncs_container_nhncloud_com_workload_id}} container={{container}} | パーセンテージ(0-100)      |
@@ -108,7 +120,8 @@
 | 有効化状態別作業数 | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 数字            |
 | コンテナのプロセス数 | NCS  | {{label_ncs_container_nhncloud_com_workload_id}}                         | 数字            |
 
-### NCS Filter
+<a id="ncs-filter"></a>
+### NCS Filter { #ncs-filter }
 - NCS指標に対してフィルタを適用できます。
 - フィルタを適用すると、そのフィルタに合う指標だけが表示されます。
 
@@ -118,7 +131,8 @@
 | タイプ | ストレージ種類                           |
 
 
-### NCS Legend
+<a id="ncs-legend"></a>
+### NCS Legend { #ncs-legend }
 - NCS指標に対して凡例を適用できます。
 - 凡例を適用すると、該当指標が凡例形式で適用されます。
 
@@ -129,10 +143,12 @@
 | type                                         | ストレージ種類                      |
 | container                                    | コンテナ名                     |
 
-## GPU
+<a id="10"></a>
+## GPU { #10 }
 - NHN CloudのGPUサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="10-metric-list"></a>
+### Metric List { #10-metric-list }
 | 指標名       | リソース名 | 基本凡例(Legend) | 単位(Unit)   |
 |-------------|------|---------------|------------|
 | GPU使用率   | GPU  | なし           | パーセンテージ(0-100) |
@@ -140,7 +156,8 @@
 | GPUメモリ使用率 | GPU  | なし           | パーセンテージ(0-100) |
 | GPU電力使用量 | GPU  | なし           | ワット(W)      |
 
-### GPUフィルタ(Filter)
+<a id="gpu-filter"></a>
+### GPUフィルタ(Filter) { #gpu-filter }
 - GPU指標に対してフィルタを適用できます。
 - フィルタを適用すると、そのフィルタに合う指標だけが表示されます。
 
@@ -148,7 +165,8 @@
 |------|-------------------------------------|
 | インスタンス | NHN CloudのGPUサービスで使用中のインスタンスの名前 |
 
-### GPU凡例(Legend)
+<a id="gpu-legend"></a>
+### GPU凡例(Legend) { #gpu-legend }
 - GPU指標に対して凡例を適用できます。
 - 凡例を適用すると、該当指標が凡例形式で適用されます。
 
@@ -156,10 +174,12 @@
 |----------------------|--------------|
 | nhncloud_instance_id | GPUインスタンスの名前 |
 
-## Transit Hub
+<a id="transit-hub"></a>
+## Transit Hub { #transit-hub }
 - NHN CloudのTransit Hubサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="transit-hub-metric-list"></a>
+### Metric List { #transit-hub-metric-list }
 | 指標名                               | リソース名 | 基本凡例(Legend) | 単位(Unit)   |
 |------------------------------------|------|---------------|------------|
 | ネットワーク送信バイト                       | トランジットハブ | {{id}} | 5分累積バイト |
@@ -196,16 +216,19 @@
 | ブラックホール経路と一致したため、削除されたネットワーク ビット/秒(bps) | 接続 | {{id}} |  ビット/秒(bits/s)  |
 
 
-### Transit Hubフィルタ(Filter)
+<a id="transit-hub-filter"></a>
+### Transit Hubフィルタ(Filter) { #transit-hub-filter }
 - Transit Hub指標に対してフィルタを適用できます。
 - フィルタを適用すると、該当フィルタ条件に該当する指標のみ表示されます。
 
+<a id="transit-hub-filter-resource-type-applicable-filters-for-transit-hub"></a>
 #### リソースタイプ > トランジットハブの場合に適用可能なフィルタ
 
 | フィルタ名 | 説明 |
 | --- | --- |
 | トランジットハブ | NHN CloudのNetworkサービスで使用中のトランジットハブ |
 
+<a id="transit-hub-filter-resource-type-applicable-filters-for-attachment"></a>
 #### リソースタイプ > 接続の場合、適用可能なフィルタ
 
 | フィルタ名 | 説明                                     |
@@ -213,7 +236,8 @@
 | トランジットハブ | 接続に関連するトランジットハブ |
 | 接続 | NHN CloudのNetworkサービスで使用中のトランジットハブ接続 |
 
-### Transit Hub凡例(Legend)
+<a id="transit-hub-legend"></a>
+### Transit Hub凡例(Legend) { #transit-hub-legend }
 - Transit Hub指標に対して凡例を適用できます。
 - 凡例を適用すると、該当指標が凡例形式で適用されます。
 
@@ -222,10 +246,12 @@
 | id             | トランジットハブまたは接続名           |
 | transit_hub_id | トランジットハブ名(リソースが`接続`の場合) |
 
-## Internet Gateway
+<a id="internet-gateway"></a>
+## Internet Gateway { #internet-gateway }
 - NHN CloudのInternet Gatewayサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="internet-gateway-metric-list"></a>
+### Metric List { #internet-gateway-metric-list }
 
 | 指標名                         | リソース名   | 基本凡例(Legend)          | 単位(Unit)         |
 |------------------------------|---------|------------------------|------------------|
@@ -238,7 +264,8 @@
 | ネットワーク送信 パケット/秒(pps)	    | ルーティングテーブル | {{id}} | パケット/秒(packets/s) | 
 | ネットワーク受信 パケット/秒(pps)	    | ルーティングテーブル | {{id}} | パケット/秒(packets/s) | 
 
-### Internet Gatewayフィルタ(Filter)
+<a id="internet-gateway-filter"></a>
+### Internet Gatewayフィルタ(Filter) { #internet-gateway-filter }
 - Internet Gateway指標に対してフィルタを適用できます。
 - フィルタを適用すると、該当フィルタ条件に該当する指標のみ表示されます。
 
@@ -246,7 +273,8 @@
 | --- | --- |
 | ルーティングテーブル | NHN CloudのNetworkサービスで使用中のルーティングテーブル |
 
-### Internet Gateway凡例(Legend)
+<a id="internet-gateway-legend"></a>
+### Internet Gateway凡例(Legend) { #internet-gateway-legend }
 - Internet Gateway指標に対して凡例を適用できます。
 - 凡例を適用すると、該当指標が凡例形式で適用されます。
 
@@ -254,10 +282,12 @@
 |----------------|----------------------------------------|
 | id             | ルーティングテーブル名 |
 
-## Colocation Gateway
+<a id="colocation-gateway"></a>
+## Colocation Gateway { #colocation-gateway }
 - NHN CloudのColocation Gatewayサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="colocation-gateway-metric-list"></a>
+### Metric List { #colocation-gateway-metric-list }
 
 | 指標名                   | リソース名      | 基本凡例(Legend) | 単位(Unit)          |
 |-----------------------|------------|--------------|-------------------|
@@ -270,22 +300,26 @@
 | ネットワーク送信 パケット/秒(pps)  | ルーティングテーブル | {{id}}       | パケット/秒(packets/s) | 
 | ネットワーク受信 パケット/秒(pps)	 | ルーティングテーブル | {{id}}       | パケット/秒(packets/s) | 
 
-### Colocation Gatewayフィルタ(Filter)
+<a id="colocation-gateway-filter"></a>
+### Colocation Gatewayフィルタ(Filter) { #colocation-gateway-filter }
 
 | フィルタ名         | 説明                                      |
 |---------------|-----------------------------------------|
 | コロケーションゲートウェイ | NHN CloudのNetworkサービスで使用中のコロケーションゲートウェイ |
 
-### Colocation Gateway凡例(Legend)
+<a id="colocation-gateway-legend"></a>
+### Colocation Gateway凡例(Legend) { #colocation-gateway-legend }
 
 | 凡例名 | 説明             |
 |-----|----------------|
 | id  | コロケーションゲートウェイ名 |
 
-## Load Balancer
+<a id="load-balancer"></a>
+## Load Balancer { #load-balancer }
 - NHN CloudのLoad Balancerサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="load-balancer-metric-list"></a>
+### Metric List { #load-balancer-metric-list }
 
 | 指標名                                          | リソース名           | 基本凡例(Legend)                                                  | 単位(Unit)       |
 |----------------------------------------------|-----------------|---------------------------------------------------------------|----------------|
@@ -351,7 +385,8 @@
 | メンバーグループロードバランシング総回数                       | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
 | メンバーグループ最終セッション経過時間                        | ロードバランサーメンバーグループ | {{loadbalancer_id}}/{{pool_id}}                               | 数字             |
 
-### Load Balancerフィルタ(Filter)
+<a id="load-balancer-filter"></a>
+### Load Balancerフィルタ(Filter) { #load-balancer-filter }
 
 | フィルタ名      | 説明                                 |
 |------------|------------------------------------|
@@ -360,7 +395,8 @@
 | メンバーグループ   | リスナーに属するメンバーグループ                   |
 | メンバー       | メンバーグループに属するメンバー                   |
 
-### Load Balancer凡例(Legend)
+<a id="load-balancer-legend"></a>
+### Load Balancer凡例(Legend) { #load-balancer-legend }
 
 | 凡例名             | 説明          |
 |-----------------|-------------|
@@ -369,10 +405,12 @@
 | pool_id         | メンバーグループ名   |
 | member_id       | メンバー名       |
 
-## Direct Connect
+<a id="direct-connect"></a>
+## Direct Connect { #direct-connect }
 - NHN CloudのDirect Connectサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="direct-connect-metric-list"></a>
+### Metric List { #direct-connect-metric-list }
 
 | 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
 |---------------------|---------|--------------|---------------|
@@ -384,23 +422,27 @@
 | ネットワーク送信 ビット/秒(bps) | Network | {{orderId}}  | ビット/秒(bits/s) |
 | ネットワーク受信 ビット/秒(bps) | Network | {{orderId}}  | ビット/秒(bits/s) |
 
-### Direct Connectフィルタ(Filter)
+<a id="direct-connect-filter"></a>
+### Direct Connectフィルタ(Filter) { #direct-connect-filter }
 
 | フィルタ名  | 説明                                        |
 |--------|-------------------------------------------|
 | サービスID | NHN CloudのDirect Connectサービスで使用中のサービス申請ID |
 
 
-### Direct Connect凡例(Legend)
+<a id="direct-connect-legend"></a>
+### Direct Connect凡例(Legend) { #direct-connect-legend }
 
 | 凡例名     | 説明       |
 |---------|----------|
 | orderId | サービス申請ID |
 
-## VPC
+<a id="vpc"></a>
+## VPC { #vpc }
 - NHN CloudのVPCサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="vpc-metric-list"></a>
+### Metric List { #vpc-metric-list }
 
 | 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
 |---------------------|---------|--------------|---------------|
@@ -409,23 +451,27 @@
 |VPC使用率|VPC|{{vpc_id}}|パーセンテージ(0-100)|
 
 
-### VPCフィルタ(Filter)
+<a id="vpc-filter"></a>
+### VPCフィルタ(Filter) { #vpc-filter }
 
 | フィルタ名 | 説明                        |
 |-------|---------------------------|
 | VPC   | NHN CloudのNetworkサービスで使用中のVPC |
 
 
-### VPC凡例(Legend)
+<a id="vpc-legend"></a>
+### VPC凡例(Legend) { #vpc-legend }
 
 | 凡例名    | 説明       |
 |--------|----------|
 | vpc_id | VPCの名前 |
 
-## Subnet
+<a id="subnet"></a>
+## Subnet { #subnet }
 - NHN CloudのSubnetサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="subnet-metric-list"></a>
+### Metric List { #subnet-metric-list }
 
 | 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
 |---------------------|---------|--------------|---------------|
@@ -434,23 +480,27 @@
 |サブネット使用率|Subnet|{{subnet_id}}|パーセンテージ(0-100)|
 
 
-### Subnetフィルタ(Filter)
+<a id="subnet-filter"></a>
+### Subnetフィルタ(Filter) { #subnet-filter }
 
 | フィルタ名 | 説明                        |
 |-------|---------------------------|
 | サブネット   | NHN CloudのNetworkサービスで使用中のサブネット |
 
 
-### Subnet凡例(Legend)
+<a id="subnet-legend"></a>
+### Subnet凡例(Legend) { #subnet-legend }
 
 | 凡例名    | 説明       |
 |--------|----------|
 | subnet_id | サブネットの名前 |
 
-## Floating IP
+<a id="floating-ip"></a>
+## Floating IP { #floating-ip }
 - NHN CloudのFloating IPサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="floating-ip-metric-list"></a>
+### Metric List { #floating-ip-metric-list }
 
 | 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
 |---------------------|---------|--------------|---------------|
@@ -458,10 +508,12 @@
 |接続されたFloating IP数|Floating IP|{{nhncloud_region}} - {{status}}|数字|
 |接続されていないFloating IP数|Floating IP|{{nhncloud_region}} - {{status}}|数字|
 
-## SMS
+<a id="sms"></a>
+## SMS { #sms }
 - NHN Cloudの SMSサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="sms-metric-list"></a>
+### Metric List { #sms-metric-list }
 
 | 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
 |----------------------|---------|---------------|-------------|
@@ -472,17 +524,20 @@
 |受信失敗|国際 SMS||数字|
 |送信失敗|国際 SMS||数字|
 
-### SMSフィルタ(Filter)
+<a id="sms-filter"></a>
+### SMSフィルタ(Filter) { #sms-filter }
 
 | フィルタ名 | 説明                                                                                          |
 | --- |---------------------------------------------------------------------------------------------|
 | メッセージタイプ | メッセージ送信タイプの種類(SMS、LMS、MMS、 AUTH)                                                            |
 | 結果コード | メッセージ送信及び受信結果に関するコード([参考ガイド](https://docs.nhncloud.com/ja/Notification/SMS/ja/error-code/)) |
 
-## Cloud Functions
+<a id="cloud-functions"></a>
+## Cloud Functions { #cloud-functions }
 - NHN CloudのCloud Functionsサービスに対してモニタリングできる指標を定義した辞書です。
 
-### Metric List
+<a id="cloud-functions-metric-list"></a>
+### Metric List { #cloud-functions-metric-list }
 
 | 指標名                 | リソース名   | 基本凡例(Legend) | 単位(Unit)      |
 |---------------------|---------|--------------|---------------|
@@ -493,7 +548,8 @@
 |成功率|Cloud Functions|{{function_number}}-{{function_name}}| パーセンテージ(0-100) |
 |関数呼び出し回数|Cloud Functions|{{function_number}}-{{function_name}}|数字 |
 
-### Cloud Functionsフィルタ(Filter)
+<a id="cloud-functions-filter"></a>
+### Cloud Functionsフィルタ(Filter) { #cloud-functions-filter }
 
 | フィルタ名 | 説明                        |
 |-------|---------------------------|
@@ -501,7 +557,8 @@
 | 関数 ID | 関数のキー値 |
 
 
-### Cloud Functions凡例(Legend)
+<a id="cloud-functions-legend"></a>
+### Cloud Functions凡例(Legend) { #cloud-functions-legend }
 
 | 凡例名    | 説明       |
 |--------|----------|

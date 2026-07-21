@@ -1,6 +1,10 @@
-## Monitoring > Cloud Monitoring > Instance 新規メトリクス連携ガイド
+<!-- pre-align:aligned sig=ba23014c853c -->
 
-## 概要
+<a id="monitoring-cloud-monitoring-instance-new-metrics-integration-guide"></a>
+## Monitoring > Cloud Monitoring > Instance 新規メトリクス連携ガイド { #monitoring-cloud-monitoring-instance-new-metrics-integration-guide }
+
+<a id="overview"></a>
+## 概要 { #overview }
 
 Cloud MonitoringサービスでInstanceの詳細メトリクスを収集するには、新規Agentをインストールする必要があります。
 新規Agentは既存Agentとは別個で動作し、より正確で詳細なインスタンスメトリクスを提供します。
@@ -12,10 +16,13 @@ Cloud MonitoringサービスでInstanceの詳細メトリクスを収集する�
 1. 新規Agentのインストール
 2. 既存Agentの削除(任意)
 
-## 新規Agentインストールガイド
+<a id="new-agent-installation-guide"></a>
+## 新規Agentインストールガイド { #new-agent-installation-guide }
 
-### LinuxインスタンスAgentインストール
+<a id="install-linux-instance-agent"></a>
+### LinuxインスタンスAgentインストール { #install-linux-instance-agent }
 
+<a id="install-linux-instance-agent-installation-script"></a>
 #### インストールスクリプト
 ```bash
 rm -f ./install-nhncloud-telegraf.sh
@@ -24,16 +31,19 @@ chmod 755 ./install-nhncloud-telegraf.sh
 sudo ./install-nhncloud-telegraf.sh
 ```
 
+<a id="install-linux-instance-agent-check-installation"></a>
 #### インストール確認
 ```bash
 sudo systemctl status nhncloud-telegraf
 ```
 
-### WindowsインスタンスAgentインストール
+<a id="install-windows-instance-agent"></a>
+### WindowsインスタンスAgentインストール { #install-windows-instance-agent }
 * PowerShell を管理者権限で実行
    - スタートメニューから **PowerShell** を検索します。
    - **Windows PowerShell** を右クリックし、**管理者として実行**を選択します。
 
+<a id="install-windows-instance-agent-installation-script"></a>
 #### インストールスクリプト
 ```powershell
 Remove-Item install-nhncloud-telegraf.ps1 -ErrorAction SilentlyContinue
@@ -41,23 +51,28 @@ Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-am
 powershell -ExecutionPolicy Bypass -File install-nhncloud-telegraf.ps1
 ```
 
+<a id="install-windows-instance-agent-check-installation"></a>
 #### インストール確認
 ```powershell
 Get-Service -Name "nhncloud-telegraf"
 ```
 
-## 既存Agent削除ガイド(任意)
+<a id="existing-agent-deletion-guide-optional"></a>
+## 既存Agent削除ガイド(任意) { #existing-agent-deletion-guide-optional }
 
 > [参考]
 > 新規Agentと既存Agentを同時に使用することもできます。
 
 既存のSystem Monitoring Agentを削除するガイドです。新規Agentと既存Agentは、同時にインストールされていても問題なく動作します。
 
-### 削除時の注意事項
+<a id="precautions-when-deleting"></a>
+### 削除時の注意事項 { #precautions-when-deleting }
 既存Agentを削除する前に、新規Agentが正常にインストールされて動作しているか必ず確認します。
 
-### Linuxインスタンス既存Agent削除
+<a id="delete-linux-instance-existing-agent"></a>
+### Linuxインスタンス既存Agent削除 { #delete-linux-instance-existing-agent }
 
+<a id="delete-linux-instance-existing-agent-deletion-script"></a>
 #### 削除スクリプト
 ```bash
 curl -s -o uninstall-sysmon-agent.sh 'http://169.254.169.231/monitoring/cloud-agent/linux-amd64/uninstall-sysmon-agent.sh'
@@ -65,26 +80,32 @@ chmod 755 ./uninstall-sysmon-agent.sh
 sudo ./uninstall-sysmon-agent.sh
 ```
 
+<a id="delete-linux-instance-existing-agent-check-deletion"></a>
 #### 削除確認
 既存Agentのサービス状態を確認します(サービスがない状態が正常です)。
 ```bash
 sudo systemctl status toast-sysmon
 ```
 
-### Windowsインスタンス既存Agent削除
+<a id="delete-windows-instance-existing-agent"></a>
+### Windowsインスタンス既存Agent削除 { #delete-windows-instance-existing-agent }
+<a id="delete-windows-instance-existing-agent-deletion-script"></a>
 #### 削除スクリプト
 ```powershell
 & "C:\Program Files (x86)\NHN\TOAST\uninst.exe"
 ```
 
+<a id="delete-windows-instance-existing-agent-check-deletion"></a>
 #### 削除確認
 既存Agentのプロセスが終了したか確認します。
 ```powershell
 Get-Process -Name "toastmon" -ErrorAction SilentlyContinue
 ```
 
-### 新規Agent削除(必要な場合)
+<a id="delete-new-agent-if-necessary"></a>
+### 新規Agent削除(必要な場合) { #delete-new-agent-if-necessary }
 
+<a id="delete-new-agent-if-necessary-delete-linux-instance-new-agent"></a>
 #### Linuxインスタンス新規Agent削除
 
 ##### 削除スクリプト
@@ -95,6 +116,7 @@ chmod 755 ./uninstall-nhncloud-telegraf.sh
 sudo ./uninstall-nhncloud-telegraf.sh
 ```
 
+<a id="delete-new-agent-if-necessary-delete-windows-instance-new-agent"></a>
 #### Windowsインスタンス新規Agent削除
 
 ##### 削除スクリプト
@@ -104,7 +126,8 @@ Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-am
 powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 ```
 
-## Metric Dictionary
+<a id="metric-dictionary"></a>
+## Metric Dictionary { #metric-dictionary }
 
 |メトリクス名|リソース名|デフォルト凡例(Legend)|単位(Unit)|
 |-------|-------|------|------|
@@ -151,7 +174,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |スワップ使用量(free)(Bytes)|Swap (New)|{{nhncloud_instance_id}}|バイト(bytes)|
 |スワップ使用量(total)(Bytes)|Swap (New)|{{nhncloud_instance_id}}|バイト(bytes)|
 
-## GPU Instance Metric Dictionary
+<a id="gpu-instance-metric-dictionary"></a>
+## GPU Instance Metric Dictionary { #gpu-instance-metric-dictionary }
 
 > [参考]
 > GPUメトリクスは、GPU InstanceでDCGM(Data Center GPU Manager)ベースで収集され、新規Cloud Monitoring AgentがインストールされたGPU Instanceでのみ確認できます。
@@ -196,7 +220,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |同期ブーストスロットリング比率(µs/s)|GPUクロックイベント|{{nhncloud_instance_id}} - gpu={{gpu}}|毎秒マイクロ秒(µs/s)|
 |信頼性スロットリング比率(µs/s)|GPUクロックイベント|{{nhncloud_instance_id}} - gpu={{gpu}}|毎秒マイクロ秒(µs/s)|
 
-### GPU Instanceフィルタ(Filter)
+<a id="gpu-instance-filter"></a>
+### GPU Instanceフィルタ(Filter) { #gpu-instance-filter }
 
 |フィルタ名|説明|
 |------|------|
@@ -204,7 +229,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |インスタンス|GPU Instanceの名前|
 |GPU|インスタンス内のGPUデバイス番号|
 
-### GPU Instance凡例(Legend)
+<a id="gpu-instance-legend"></a>
+### GPU Instance凡例(Legend) { #gpu-instance-legend }
 
 |凡例名|説明|
 |------|------|
