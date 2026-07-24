@@ -1,6 +1,10 @@
-## Monitoring > Cloud Monitoring > Instance 신규 지표 연동 가이드
+<!-- pre-align:aligned sig=ba23014c853c -->
 
-## 개요
+<a id="monitoring-cloud-monitoring-instance-new-metrics-integration-guide"></a>
+## Monitoring > Cloud Monitoring > Instance 신규 지표 연동 가이드 { #monitoring-cloud-monitoring-instance-new-metrics-integration-guide }
+
+<a id="overview"></a>
+## 개요 { #overview }
 
 Cloud Monitoring 서비스에서 Instance의 상세 지표를 수집하려면 신규 Agent를 설치해야 합니다.
 신규 Agent는 기존 Agent와는 별개로 동작하며, 더 정확하고 상세한 인스턴스 지표를 제공합니다.
@@ -12,10 +16,13 @@ Cloud Monitoring 서비스에서 Instance의 상세 지표를 수집하려면 �
 1. 신규 Agent 설치
 2. 기존 Agent 삭제(선택 사항)
 
-## 신규 Agent 설치 가이드
+<a id="new-agent-installation-guide"></a>
+## 신규 Agent 설치 가이드 { #new-agent-installation-guide }
 
-### Linux 인스턴스 Agent 설치
+<a id="install-linux-instance-agent"></a>
+### Linux 인스턴스 Agent 설치 { #install-linux-instance-agent }
 
+<a id="install-linux-instance-agent-installation-script"></a>
 #### 설치 스크립트
 ```bash
 rm -f ./install-nhncloud-telegraf.sh
@@ -24,16 +31,19 @@ chmod 755 ./install-nhncloud-telegraf.sh
 sudo ./install-nhncloud-telegraf.sh
 ```
 
+<a id="install-linux-instance-agent-check-installation"></a>
 #### 설치 확인
 ```bash
 sudo systemctl status nhncloud-telegraf
 ```
 
-### Windows 인스턴스 Agent 설치
+<a id="install-windows-instance-agent"></a>
+### Windows 인스턴스 Agent 설치 { #install-windows-instance-agent }
 * PowerShell을 관리자 권한으로 실행
    - 시작 메뉴에서 **PowerShell**을 검색합니다.
    - **Windows PowerShell**을 마우스 오른쪽 버튼으로 클릭한 뒤 **관리자 권한으로 실행**을 선택합니다.
 
+<a id="install-windows-instance-agent-installation-script"></a>
 #### 설치 스크립트
 ```powershell
 Remove-Item install-nhncloud-telegraf.ps1 -ErrorAction SilentlyContinue
@@ -41,23 +51,28 @@ Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-am
 powershell -ExecutionPolicy Bypass -File install-nhncloud-telegraf.ps1
 ```
 
+<a id="install-windows-instance-agent-check-installation"></a>
 #### 설치 확인
 ```powershell
 Get-Service -Name "nhncloud-telegraf"
 ```
 
-## 기존 Agent 삭제 가이드(선택 사항)
+<a id="existing-agent-deletion-guide-optional"></a>
+## 기존 Agent 삭제 가이드(선택 사항) { #existing-agent-deletion-guide-optional }
 
 > [참고]
 > 신규 Agent와 기존 Agent를 동시에 사용할 수도 있습니다.
 
 기존 System Monitoring Agent를 삭제하는 가이드입니다. 신규 Agent와 기존 Agent는 동시에 설치되어 있어도 문제없이 동작합니다.
 
-### 삭제 시 주의 사항
+<a id="precautions-when-deleting"></a>
+### 삭제 시 주의 사항 { #precautions-when-deleting }
 기존 Agent를 삭제하기 전에 신규 Agent가 정상적으로 설치되고 동작하는지 반드시 확인합니다.
 
-### Linux 인스턴스 기존 Agent 삭제
+<a id="delete-linux-instance-existing-agent"></a>
+### Linux 인스턴스 기존 Agent 삭제 { #delete-linux-instance-existing-agent }
 
+<a id="delete-linux-instance-existing-agent-deletion-script"></a>
 #### 삭제 스크립트
 ```bash
 curl -s -o uninstall-sysmon-agent.sh 'http://169.254.169.231/monitoring/cloud-agent/linux-amd64/uninstall-sysmon-agent.sh'
@@ -65,26 +80,32 @@ chmod 755 ./uninstall-sysmon-agent.sh
 sudo ./uninstall-sysmon-agent.sh
 ```
 
+<a id="delete-linux-instance-existing-agent-check-deletion"></a>
 #### 삭제 확인
 기존 Agent의 서비스 상태를 확인합니다(서비스가 없어야 정상).
 ```bash
 sudo systemctl status toast-sysmon
 ```
 
-### Windows 인스턴스 기존 Agent 삭제
+<a id="delete-windows-instance-existing-agent"></a>
+### Windows 인스턴스 기존 Agent 삭제 { #delete-windows-instance-existing-agent }
+<a id="delete-windows-instance-existing-agent-deletion-script"></a>
 #### 삭제 스크립트
 ```powershell
 & "C:\Program Files (x86)\NHN\TOAST\uninst.exe"
 ```
 
+<a id="delete-windows-instance-existing-agent-check-deletion"></a>
 #### 삭제 확인
 기존 Agent 프로세스가 종료되었는지 확인합니다.
 ```powershell
 Get-Process -Name "toastmon" -ErrorAction SilentlyContinue
 ```
 
-### 신규 Agent 삭제(필요 시)
+<a id="delete-new-agent-if-necessary"></a>
+### 신규 Agent 삭제(필요 시) { #delete-new-agent-if-necessary }
 
+<a id="delete-new-agent-if-necessary-delete-linux-instance-new-agent"></a>
 #### Linux 인스턴스 신규 Agent 삭제
 
 ##### 삭제 스크립트
@@ -95,6 +116,7 @@ chmod 755 ./uninstall-nhncloud-telegraf.sh
 sudo ./uninstall-nhncloud-telegraf.sh
 ```
 
+<a id="delete-new-agent-if-necessary-delete-windows-instance-new-agent"></a>
 #### Windows 인스턴스 신규 Agent 삭제
 
 ##### 삭제 스크립트
@@ -104,7 +126,8 @@ Invoke-WebRequest -Uri 'http://169.254.169.231/monitoring/cloud-agent/windows-am
 powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 ```
 
-## Metric Dictionary
+<a id="metric-dictionary"></a>
+## Metric Dictionary { #metric-dictionary }
 
 |지표명|리소스명|기본 범례(Legend)|단위(Unit)|
 |-------|-------|------|------|
@@ -151,7 +174,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |스왑 사용량(free)(Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
 |스왑 사용량(total)(Bytes)|Swap (New)|{{nhncloud_instance_id}}|바이트(bytes)|
 
-## GPU Instance Metric Dictionary
+<a id="gpu-instance-metric-dictionary"></a>
+## GPU Instance Metric Dictionary { #gpu-instance-metric-dictionary }
 
 > [참고]
 > GPU 지표는 GPU Instance에서 DCGM(Data Center GPU Manager) 기반으로 수집되며, 신규 Cloud Monitoring Agent가 설치된 GPU Instance에서만 조회할 수 있습니다.
@@ -196,7 +220,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |동기 부스트 스로틀링 비율(µs/s)|GPU 클럭 이벤트|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 마이크로초(µs/s)|
 |신뢰성 스로틀링 비율(µs/s)|GPU 클럭 이벤트|{{nhncloud_instance_id}} - gpu={{gpu}}|초당 마이크로초(µs/s)|
 
-### GPU Instance 필터(Filter)
+<a id="gpu-instance-filter"></a>
+### GPU Instance 필터(Filter) { #gpu-instance-filter }
 
 |필터명|설명|
 |------|------|
@@ -204,7 +229,8 @@ powershell -ExecutionPolicy Bypass -File uninstall-nhncloud-telegraf.ps1
 |인스턴스|GPU Instance의 이름|
 |GPU|인스턴스 내 GPU 장치 번호|
 
-### GPU Instance 범례(Legend)
+<a id="gpu-instance-legend"></a>
+### GPU Instance 범례(Legend) { #gpu-instance-legend }
 
 |범례명|설명|
 |------|------|
