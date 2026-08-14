@@ -9,28 +9,10 @@ Cloud Monitoring을 사용하는 순서는 다음과 같습니다. 
   Cloud Monitoring은 프로젝트 생성 시 기본으로 제공되는 서비스입니다.<br>
   따라서 별도의 작업 없이 프로젝트를 생성한 후 서비스를 사용할 수 있습니다.<br>
   프로젝트를 생성하는 방법은 [NHN Cloud 콘솔 사용 가이드](https://docs.nhncloud.com/ko/nhncloud/ko/console-guide/)를 참고하십시오.
-- 지표 수집 설정<br>
-  각 서비스별로 지표 수집을 설정합니다.
 - 대시보드 구성<br>
   대시보드에 위젯을 추가하여 자유롭게 구성합니다.
 - 알림 생성<br>
   임계치를 설정하여 이벤트 발생 시 알림을 받을 수 있습니다.
-
-<a id="enable-metric-collection"></a>
-## 지표 수집 설정 { #enable-metric-collection }
-대시보드를 구성하기 위해 먼저 서비스별로 지표 수집 설정을 합니다.
-
-1. **Cloud Monitoring > 지표 관리**를 선택합니다.
-2. 지표 관리 페이지에서 Cloud Monitoring이 제공하는 서비스별 지표를 확인합니다.
-3. 지표를 수집할 서비스의 **지표 수집 설정** 토글을 클릭해 활성화합니다.
-4. ‘지표 수집을 시작하시겠습니까?’ 모달이 표시되면 **확인**을 클릭합니다.
-5. 수집이 시작되면 해당 지표를 사용하여 위젯을 추가할 수 있습니다.
-
-![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_01-1.png)
-
-- Instance, GPU Instance 서비스는 기본으로 제공되는 지표입니다.
-- 활성화된 서비스만 지표가 수집됩니다. 서비스 활성화 여부를 확인하십시오.
-- **지표 수집 설정** 토글을 클릭해 비활성화하면 해당 지표의 수집이 중단되며, 대시보드에서 표시되지 않습니다.
 
 <a id="configure-the-dashboard"></a>
 ## 대시보드 구성 { #configure-the-dashboard }
@@ -52,7 +34,6 @@ Cloud Monitoring을 사용하는 순서는 다음과 같습니다. 
 1. **위젯 추가**를 클릭하여 위젯 추가 페이지로 이동합니다.
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_02_02-1.png)
 2. **위젯 이름**을 입력하고, **그래프 유형**과 **서비스**를 선택합니다.
-   - **지표 관리**에서 수집 설정이 활성화된 서비스만 선택할 수 있습니다.
 3. 선택한 서비스에 해당하는 **리소스 유형**과 **지표 항목**을 선택합니다.
    - 선택한 지표 항목별로 필터와 범례를 설정할 수 있는 박스가 표시됩니다.
 ![image](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_ug_02_02-2.png)
