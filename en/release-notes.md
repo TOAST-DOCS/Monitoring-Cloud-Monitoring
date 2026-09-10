@@ -5,10 +5,11 @@
 <a id="monitoring-cloud-monitoring-release-notes"></a>
 ## Monitoring > Cloud Monitoring > Release Notes { #monitoring-cloud-monitoring-release-notes }
 
-<a id="july-28-2026"></a>
-## September 29, 2026
+<a id="september-29-2026"></a>
+## September 29, 2026 { #september-29-2026 }
 
-### Added Features
+<a id="september-29-2026-added-features"></a>
+### Added Features { #september-29-2026-added-features }
 
 * Added anomaly detection
     * Added an anomaly detection feature that learns historical patterns of metrics collected by Cloud Monitoring and automatically detects abnormalities that deviate from normal behavior.
