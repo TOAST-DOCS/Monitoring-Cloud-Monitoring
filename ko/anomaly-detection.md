@@ -1,3 +1,5 @@
+<!-- pre-align:aligned sig=efabe69d34b4 -->
+
 ## 이상 탐지
 
 **Monitoring > Cloud Monitoring > 이상 탐지**는 Cloud Monitoring이 수집한 지표 패턴을 학습하여 평소와 다른 이상 징후를 자동으로 감지합니다.
