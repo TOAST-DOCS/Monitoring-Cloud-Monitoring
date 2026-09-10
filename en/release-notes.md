@@ -1,6 +1,6 @@
 <!-- machine_translated: true -->
 
-<!-- pre-align:aligned sig=31661ef58a0f -->
+<!-- pre-align:aligned sig=aa188e604cd8 -->
 
 <a id="monitoring-cloud-monitoring-release-notes"></a>
 ## Monitoring > Cloud Monitoring > Release Notes { #monitoring-cloud-monitoring-release-notes }
