@@ -1,11 +1,13 @@
-<!-- pre-align:aligned sig=31661ef58a0f -->
+<!-- pre-align:aligned sig=aa188e604cd8 -->
 
 <a id="monitoring-cloud-monitoring-release-notes"></a>
 ## Monitoring > Cloud Monitoring > 릴리스 노트 { #monitoring-cloud-monitoring-release-notes }
 
-## 2026. 09. 29.
+<a id="september-29-2026"></a>
+## 2026. 09. 29. { #september-29-2026 }
 
-### 신규 기능 추가
+<a id="september-29-2026-added-features"></a>
+### 신규 기능 추가 { #september-29-2026-added-features }
 
 * 이상 탐지 기능 추가
     * Cloud Monitoring이 수집한 지표의 과거 패턴을 학습하여 평소와 다른 이상 징후를 자동으로 감지하는 이상 탐지 기능이 추가되었습니다.

@@ -1,7 +1,20 @@
-<!-- pre-align:aligned sig=31661ef58a0f -->
+<!-- machine_translated: true -->
+
+<!-- pre-align:aligned sig=aa188e604cd8 -->
 
 <a id="monitoring-cloud-monitoring-release-notes"></a>
 ## Monitoring > Cloud Monitoring > リリースノート { #monitoring-cloud-monitoring-release-notes }
+
+<a id="september-29-2026"></a>
+## 2026. 09. 29. { #september-29-2026 }
+
+<a id="september-29-2026-added-features"></a>
+### 新規機能追加 { #september-29-2026-added-features }
+
+* 異常検知機能の追加
+    * Cloud Monitoringが収集した指標データの過去のパターンを学習し、通常とは異なる異常兆候を自動的に検知する異常検知機能が追加されました。
+    * 異常検知する指標とリソースを選択して異常検知項目を作成すると、異常検知ダッシュボードのウィジェットチャートで指標値とScore、Scoreのしきい値を確認できます。
+    * 作成した異常検知項目で通知を設定し、異常発生時に通知を受信できます。
 
 <a id="july-28-2026"></a>
 ## 2026. 07. 28. { #july-28-2026 }
