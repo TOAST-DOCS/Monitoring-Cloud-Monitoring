@@ -1,5 +1,7 @@
 <!-- machine_translated: true -->
 
+<!-- pre-align:aligned sig=efabe69d34b4 -->
+
 ## 異常検知
 
 **Monitoring > Cloud Monitoring > 異常検知** は、Cloud Monitoring が収集した指標パターンを学習し、平常時と異なる異常兆候を自動的に検知します。
