@@ -375,7 +375,7 @@ For each notification, click **View** in the **View Notification Send History** 
 
 ![View Notification Send History Modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_02_02_b-1.png)
 
-In the history modal, you can view detailed information on notification settings such as **Occurred Date**, ** Duration**, **Metric Item**, **집계**, **Result**, **Notification Conditions**, and **Occurred Location**.
+In the history modal, you can view detailed information on notification settings such as **Occurred Date**, **Duration**, **Metric Item**, **집계**, **Result**, **Notification Conditions**, and **Occurred Location**.
 
 The actual history of sending notifications is also provided in a table. You can see the notification sending date, notification method, recipient, and notification result for each notification sending history.
 You can change the table sorting by notification date, notification method, and notification time.
