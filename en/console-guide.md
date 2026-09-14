@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=781e4ded30b6 -->
+<!-- machine_translated: true -->
+
+<!-- pre-align:aligned sig=503aff601f8b -->
 
 <a id="monitoring-cloud-monitoring-console-user-guide"></a>
 ## Monitoring > Cloud Monitoring > Console User Guide { #monitoring-cloud-monitoring-console-user-guide }
@@ -404,6 +406,180 @@ When you start/stop collecting metrics, a confirmation modal opens.
 ![Example of the widget when metrics are being collected](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-5.png)
 
 If you stop collecting metrics, the metrics are no longer displayed in widgets that you've created using metrics from that service, and the metrics' legends are disabled.
+
+<a id="anomaly-detection"></a>
+## Anomaly Detection { #anomaly-detection }
+
+**Monitoring > Cloud Monitoring > Anomaly Detection** learns the metric patterns collected by Cloud Monitoring and automatically detects abnormalities that differ from normal behavior.
+
+Unlike regular notifications where you must set thresholds manually, anomaly detection automatically calculates a Score and a Score Threshold at each point in time based on historical metric patterns. Both the Score and the Score Threshold are values in the range from 0 to 100, and when the Score exceeds the Score Threshold, the state is determined to be anomalous.
+
+Use anomaly detection in the following order:
+
+1. Create an anomaly detection item by selecting the metrics and resources to monitor for anomalies.
+2. Check the Score and Score Threshold in the widget chart to identify the periods when anomalies occur.
+3. Set up anomaly detection notifications to receive alerts when an anomaly occurs.
+
+!!! tip "Note"
+    Anomaly detection items are evaluated at 1-minute intervals.
+
+<a id="create-anomaly-detection"></a>
+### Create Anomaly Detection { #create-anomaly-detection }
+
+Click **Create Anomaly Detection** to go to the anomaly detection creation screen. You can create an anomaly detection by selecting a service and targets.
+
+- **Service**: Only NHN Cloud services that support anomaly detection are displayed, and only a single selection is allowed.
+- **Target**: Configure the following items in order:
+  - **Type**: Select the metric type for the service.
+  - **Metric Item**: Metric items belonging to the selected type are displayed, and you can select multiple items. The number of selected resources is shown for each metric item.
+  - **Resource**: Resources belonging to the selected type/metric item among the resources created in NHN Cloud are displayed, and you can select multiple resources.
+
+One anomaly detection item is created for each combination of the selected metric item and resource, and the anomaly detection name is automatically generated based on the selected metric item and resource.
+
+You cannot create additional items using a combination that has already been created. In such cases, the combination is displayed as **Already Created**.
+
+You can preview the name, metric, and resource of the anomaly detection items to be created in a table using **Creation Item Preview**.
+When **Create** is complete, the items shown in the preview are each created as individual anomaly detection items. At that point, you can choose whether to navigate immediately to the notification settings screen for those items.
+
+!!! danger "Caution"
+    Creation is processed as either a complete success or a complete failure.
+    If even one of the selected items cannot be created, none of the items are created.
+
+Immediately after creation, the anomaly detection status is **Active - Waiting**. Once the training and inference for anomaly detection are complete, the status changes to **Active - Normal**. Until the status changes to Active - Normal, the Score and Score threshold may not be displayed in the chart.
+For more information, see the anomaly detection statuses below.
+
+<a id="anomaly-detection-list"></a>
+### Anomaly Detection List { #anomaly-detection-list }
+
+The Anomaly Detection screen consists of a list area on the left and a dashboard area on the right. Each anomaly detection item in the list is displayed as a separate widget on the right dashboard.
+
+For each item in the list, you can view the anomaly detection name, service, creation date and time, and status information. The check box for each item is used when processing multiple items at once, such as for deletion.
+
+- Filters, sorting, and search are applied simultaneously to both the left list and the right dashboard area.
+- **Filter**: You can filter items displayed in the list and dashboard by using the service and target filters. Filters are configured based on the anomaly detection items that have been created. For example, if there are only items for the Instance service, only Instance is displayed in the service filter.
+- **Sort**: You can sort items in descending order by latest or oldest.
+- **Search**: You can search by anomaly detection name.
+
+
+<a id="anomaly-detection-dashboard"></a>
+### Anomaly Detection Dashboard { #anomaly-detection-dashboard }
+
+All anomaly detection items that have been created are automatically configured as individual widgets on the anomaly detection dashboard.
+
+- If you select **View active (normal) status only**, only widgets with **Active-Normal** status are displayed.
+- In **Download Widget Data**, you can download the widget data displayed on the dashboard as a .csv or .xlsx file.
+
+!!! tip "Note"
+    You can add anomaly detection widgets not only to the anomaly detection dashboard, but also to dashboards that you configured yourself on the Dashboard tab.
+
+<a id="anomaly-detection-dashboard-anomaly-detection-widget-chart"></a>
+#### Anomaly Detection Widget Chart
+
+The widget chart displays the following elements together.
+
+- **Metric value**: The actual collected value of the metric selected as the anomaly detection target. Displayed based on the left Y axis.
+- **Score**: A value from 0 to 100 that indicates how much the current data deviates from historical patterns. A value closer to 100 indicates greater Abnormalities from the usual pattern. Displayed based on the right Y axis.
+- **Score threshold**: If the Score exceeds the threshold, the data is determined to be anomalous. Displayed based on the same right Y axis as the Score.
+
+The interval where the Score exceeds the Score threshold is the interval that is determined to be in an anomalous state.
+
+<a id="anomaly-detection-dashboard-delete-anomaly-detection"></a>
+#### Delete Anomaly Detection
+
+You can delete a selected item from the anomaly detection list.
+
+- If you create a new item with the same metric item and resource combination as the deleted item, it is automatically re-linked to the widgets and notifications that were previously linked to the deleted item (however, the data collection process may start again).
+
+!!! danger "Caution"
+    Deleting an anomaly detection item does not automatically delete the widgets or notifications that use that item.
+    Widgets that use the deleted item will no longer display anomaly detection data, and notifications will no longer occur, so you must manually clean them up if they are no longer needed.
+
+<a id="anomaly-detection-dashboard-set-up-anomaly-detection-activation"></a>
+#### Anomaly detection activation settings
+
+You can change the activation status of a selected item in the anomaly detection list.
+
+- **Enable**: When you create an anomaly detection, it is automatically set to enabled by default. If you switch from disabled to enabled, data collection may resume.
+- **Disable**: Anomaly detection for the selected item stops immediately. Anomaly detection data is no longer displayed in widgets created from that anomaly detection, and notifications are no longer generated.
+
+<a id="anomaly-detection-dashboard-set-up-anomaly-detection-notifications"></a>
+#### Set Up Anomaly Detection Notifications
+
+You can set up notifications for the item selected in the anomaly detection list.
+
+- You are taken to the notification creation screen with the selected item already configured. Since each notification can only be created with the metric items of a single service, this is only available when you select anomaly detection items from the same service.
+
+
+<a id="anomaly-detection-status"></a>
+### Anomaly detection status { #anomaly-detection-status }
+
+| Status | Description | 
+| --- | --- |
+| Enabled - Normal | - Anomaly detection is enabled and operating normally. <br> - Anomaly detection data is displayed in the widget and notifications occur.  |
+| Enabled - Pending | - Anomaly detection is enabled and data collection is in progress. <br> - Collecting the data required for anomaly detection training and inference may take up to about 6 hours. Anomaly detection data is displayed and notifications occur once data collection is complete. | 
+| Enabled - Insufficient Data | - Anomaly detection is not operating due to insufficient collected metric data for the anomaly detection target. <br> - This can occur due to service failures or resource deletion. Check the resource status in each service console. <br>(If the resource has been deleted, delete the corresponding anomaly detection configuration. If this status persists despite no issues, contact customer support.) | 
+| Enabled - Suspended | - Anomaly detection has been temporarily suspended due to a transient issue. <br> - The system recovers automatically, and an additional data collection process for analysis may proceed after recovery is complete. <br> (If this status persists for an extended period, contact the customer support center.) |
+| Disabled |  - Anomaly detection is disabled and not operating. <br> - You can reactivate anomaly detection by enabling the setting. <br>(Note that when enabled, additional time is required to collect data, and anomaly detection data will be displayed and notifications will occur only after data collection is complete.) | 
+
+!!! tip "Note"
+    For all statuses other than Enabled - Normal, no anomaly detection data is generated, and therefore no notifications occur.
+
+
+
+<a id="use-anomaly-detection"></a>
+### Use Anomaly Detection { #use-anomaly-detection }
+
+<a id="use-anomaly-detection-add-anomaly-detection-widget"></a>
+#### Add an anomaly detection widget
+
+You can freely add an anomaly detection widget to any dashboard that you have created.
+
+- On the Add Widget screen, select **Anomaly Detection** for **Target Type**.
+- **Graph Type** is fixed to `Anomaly Detection`.
+- When you select a service, a list of anomaly detections created for that service is displayed. If the anomaly detection item you want is not in the list, you must create it first on the Anomaly Detection tab.
+- One Metric Setting Block is added for each anomaly detection item that you select.
+- The Query Setting Block automatically places three legends: the metric value, Score, and Score threshold. Widgets created with anomaly detection always display these three pieces of data together (however, they may not be displayed depending on the status). The legend name, unit, and Y-axis position of Score and Score threshold are fixed values.
+- For metrics that support aggregation, you can use the aggregation settings, and the configured aggregation applies to the metric value, Score, and Score threshold.
+
+!!! danger "Caution"
+    If the anomaly detection item used in a widget is deleted, you can still view and save the widget, but you cannot change the query settings of the deleted item.
+
+##### Specify threshold manually
+
+Anomaly detection determines the threshold for each data point on its own, so the reference value varies depending on the point in time. To use a fixed reference, select **Specify Threshold Manually** and enter a value.
+
+- The threshold value must be a number between 0 and 100.
+- When you specify a threshold manually, anomalies are determined based on the value that you entered, regardless of the data point.
+- If you deselect this option, the chart displays data according to the threshold determined by anomaly detection.
+
+<a id="use-anomaly-detection-anomaly-detection-notifications"></a>
+#### Anomaly detection notifications
+
+To receive notifications when an anomaly is detected, create an anomaly detection notification. You can create anomaly detection notifications on the **Notification Management** tab > **Create Notification** screen, just like regular metric notifications.
+
+##### Set threshold
+
+Anomaly detection automatically determines the threshold for each data point, so the reference value varies by time. To use a fixed reference, select **Specify Directly** for each condition and enter a value.
+
+- Only numbers between 0 and 100 (inclusive) can be entered for the threshold.
+- If you select Specify Directly, anomalies are evaluated against the value you entered, regardless of data points, and a notification is fired.
+- If deselected, a notification is fired when the anomaly detection determines that the threshold-exceeded state has persisted for 5 minutes.
+
+##### View anomaly detection notifications
+
+- Anomaly detection notifications can be viewed on the Notification Settings tab and the Notification History tab, just like regular metric notifications. Anomaly detection notifications are displayed with a separate badge to distinguish them.
+- In the Notification History, you can use the **Target Type** filter to view only anomaly detection notifications.
+
+!!! danger "Caution"
+    Notifications are only fired when the anomaly detection item is in an **Active-Normal** state. Notification conditions are not evaluated when the status is collecting data, disabled, insufficient data, or suspended. You can check the status of items on the **Anomaly Detection** screen.
+    If an anomaly detection item used in a notification is deleted, you can still view and save the notification, but you cannot change the notification conditions for the deleted item.
+
+
+<a id="use-anomaly-detection-notes"></a>
+#### Notes
+
+- Immediately after creating an item, the Score and Score Threshold may not be displayed until the training and inference for anomaly detection are complete.
+- If the source metric used by anomaly detection is not collected for 30 consecutive minutes, the status changes to a data-insufficient state, and the Score and Score Threshold are no longer generated. When metric collection resumes, the status is restored to "Active - Waiting" or "Active - Normal".
 
 <a id="example-screen"></a>
 ## Example Screen { #example-screen }
