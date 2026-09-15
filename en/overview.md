@@ -15,7 +15,7 @@ System metrics are automatically collected when the instance is running because 
 
 <a id="metric-dashboard"></a>
 ### Metric Dashboard { #metric-dashboard }
-You can understand the status of each server with charts for various system metrics of server instances created in ** Compute > Instance** and resources in NHN Cloud.
+You can understand the status of each server with charts for various system metrics of server instances created in **Compute > Instance** and resources in NHN Cloud.
 You can select a metric widget and place it on the dashboard, and create multiple dashboards to manage according to your purpose.
 
 Metrics are collected every minute and kept for up to 52 weeks.
