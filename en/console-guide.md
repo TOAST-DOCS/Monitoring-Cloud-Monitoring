@@ -522,9 +522,8 @@ You can set up notifications for the item selected in the anomaly detection list
 | Disabled |  - Anomaly detection is disabled and not operating. <br> - You can reactivate anomaly detection by enabling the setting. <br>(Note that when enabled, additional time is required to collect data, and anomaly detection data will be displayed and notifications will occur only after data collection is complete.) | 
 
 !!! tip "Note"
-    For all statuses other than Enabled - Normal, no anomaly detection data is generated, and therefore no notifications occur.
-
-
+    All statuses except Active-Normal do not generate anomaly detection data, and therefore no notifications are triggered.
+    If a suspension occurs in a non-Active-Normal status (Active-Waiting, Active-Insufficient Data), the process of acquiring data for training and inference may be reset. In this case, at least 6 additional hours may be required depending on the status prior to the suspension.
 
 <a id="use-anomaly-detection"></a>
 ### Use Anomaly Detection { #use-anomaly-detection }
