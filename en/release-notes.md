@@ -1,7 +1,26 @@
+<!-- machine_translated: true -->
+
 <!-- pre-align:aligned sig=31661ef58a0f -->
 
 <a id="monitoring-cloud-monitoring-release-notes"></a>
 ## Monitoring > Cloud Monitoring > Release Notes { #monitoring-cloud-monitoring-release-notes }
+
+<a id="september-29-2026"></a>
+## September 29, 2026 { #september-29-2026 }
+
+### Added Features
+
+* Added anomaly detection
+    * Added an anomaly detection feature that learns historical patterns of metrics collected by Cloud Monitoring and automatically detects abnormalities that differ from normal behavior.
+    * When you create an anomaly detection item by selecting the metrics and resources to monitor, you can view the metric values, Score, and Score Threshold in the widget chart on the anomaly detection dashboard.
+    * You can set notifications using the anomaly detection items you created to receive alerts when anomalies occur.
+
+<a id="september-29-2026-feature-updates"></a>
+### Feature Updates { #september-29-2026-feature-updates }
+
+* Removed the Metric Management feature
+    * Metrics for all services are now collected automatically without requiring Metric Collection Settings per service.
+    * Metrics for services that were previously configured to disable collection can now be viewed.
 
 <a id="july-28-2026"></a>
 ## July 28, 2026 { #july-28-2026 }
