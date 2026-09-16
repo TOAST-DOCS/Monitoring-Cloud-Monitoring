@@ -1,6 +1,6 @@
 <!-- machine_translated: true -->
 
-<!-- pre-align:aligned sig=503aff601f8b -->
+<!-- pre-align:aligned sig=c59095c2b7da -->
 
 <a id="monitoring-cloud-monitoring-console-user-guide"></a>
 ## Monitoring > Cloud Monitoring > コンソール使用ガイド { #monitoring-cloud-monitoring-console-user-guide }
@@ -381,31 +381,6 @@ Agentのタイプによってサポートされる指標が異なるため、選
 
 通知を実際に送信した履歴も表形式で提供します。各通知送信履歴の通知送信日時、通知方法、受信対象、通知送信結果を確認できます。
 通知送信日時、通知方法でテーブルのソートを変更できます。
-
-<a id="manage-metrics"></a>
-## 指標管理 { #manage-metrics }
-
-**Monitoring > Cloud Monitoring > 指標管理**では、NHN Cloudリソースのサービス別の指標を収集するかどうかを設定できます。
-
-<a id="set-up-metric-collection"></a>
-### 指標収集設定 { #set-up-metric-collection }
-
-![指標管理画面](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-1.png)
-
-サービス別の指標収集を設定できるテーブルが表示されます。
-サービスごとに**カテゴリ**、**サービス**、**サービス有効化有無**、**指標収集設定**の内容を確認することができ、**指標収集設定**トグルをクリックして指標収集の有無を設定できます。
-
-![指標収集開始確認モーダル](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-2.png)
-
-![指標収集中断確認モーダル](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-3.png)
-
-指標の収集を開始/中断する場合、確認モーダルが開きます。
-
-![指標が中断されたウィジェットの例](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-4.png)
-
-![指標収集中のウィジェットの例](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-5.png)
-
-指標の収集を中断した場合、当該サービスの指標を使用して作成したウィジェットでは、当該指標が表示されなくなり、当該指標の凡例が無効になります。
 
 <a id="anomaly-detection"></a>
 ## 異常検知 { #anomaly-detection }
