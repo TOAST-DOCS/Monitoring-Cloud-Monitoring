@@ -358,29 +358,6 @@ Aggregation On은 평균 집계를 사용한 경우입니다. 각 구간 내 모
 알림을 실제로 발송한 이력도 테이블 형태로 제공합니다. 각 알림 발송 이력의 알림 발송 일시, 알림 방법, 수신 대상, 알림 발송 결과를 확인할 수 있습니다.
 알림 발송 일시, 알림 방법으로 테이블 정렬을 변경할 수 있습니다.
 
-## 지표 관리
-
-**Monitoring > Cloud Monitoring > 지표 관리**에서는 NHN Cloud 리소스에 대한 서비스별 지표 수집 여부를 설정할 수 있습니다.
-
-### 지표 수집 설정
-
-![지표 관리 화면](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-1.png)
-
-서비스별 지표 수집을 설정할 수 있는 테이블이 표시됩니다.
-서비스마다 **카테고리**, **서비스**, **서비스 활성화 여부**, **지표 수집 설정** 내용을 확인할 수 있고, **지표 수집 설정** 토글을 클릭해 지표 수집 여부를 설정할 수 있습니다.
-
-![지표 수집 시작 확인 모달](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-2.png)
-
-![지표 수집 중단 확인 모달](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-3.png)
-
-지표 수집을 시작/중단하는 경우 확인 모달이 열립니다.
-
-![지표 중단된 위젯의 예시](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-4.png)
-
-![지표 수집 중일 때 위젯의 예시](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-5.png)
-
-지표 수집을 중단한 경우, 해당 서비스의 지표를 사용해서 생성해 둔 위젯에서 해당 지표가 더 이상 표시되지 않고 해당 지표의 범례가 비활성화됩니다.
-
 ## 예시 화면
 
 ![대시보드 예시](https://static.toastoven.net/prod_cloud_monitoring/Overview.png)

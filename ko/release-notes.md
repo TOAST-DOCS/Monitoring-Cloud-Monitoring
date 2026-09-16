@@ -3,7 +3,8 @@
 <a id="monitoring-cloud-monitoring-release-notes"></a>
 ## Monitoring > Cloud Monitoring > 릴리스 노트 { #monitoring-cloud-monitoring-release-notes }
 
-## 2026. 09. 29.
+<a id="september-29-2026"></a>
+## 2026. 09. 29. { #september-29-2026 }
 
 ### 신규 기능 추가
 
@@ -11,6 +12,13 @@
     * Cloud Monitoring이 수집한 지표의 과거 패턴을 학습하여 평소와 다른 이상 징후를 자동으로 감지하는 이상 탐지 기능이 추가되었습니다.
     * 이상 탐지할 지표와 리소스를 선택하여 이상 탐지 항목을 생성하면, 이상 탐지 대시보드의 위젯 차트에서 지표 값과 Score, Score 임계치를 확인할 수 있습니다.
     * 생성한 이상 탐지 항목으로 알림을 설정하여, 이상 발생 시 알림을 수신할 수 있습니다.
+
+<a id="september-29-2026-feature-updates"></a>
+### 기능 개선/변경 { #september-29-2026-feature-updates }
+
+* 지표 관리 기능 제거
+    * 서비스별 지표 수집 설정 없이 모든 서비스의 지표가 자동으로 수집됩니다.
+    * 기존에 수집을 사용하지 않도록 설정한 서비스의 지표도 조회할 수 있습니다.
 
 <a id="july-28-2026"></a>
 ## 2026. 07. 28. { #july-28-2026 }
