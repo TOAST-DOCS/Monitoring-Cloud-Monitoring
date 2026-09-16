@@ -382,31 +382,6 @@ In the history modal, you can view detailed information on notification settings
 The actual history of sending notifications is also provided in a table. You can see the notification sending date, notification method, recipient, and notification result for each notification sending history.
 You can change the table sorting by notification date, notification method, and notification time.
 
-<a id="manage-metrics"></a>
-## Manage Metrics { #manage-metrics }
-
-In **Monitoring > Cloud Monitoring > Manage Metrics**, you can set whether to collect service-specific metrics for NHN Cloud resources.
-
-<a id="set-up-metric-collection"></a>
-### Set up Metric Collection { #set-up-metric-collection }
-
-![Manage metrics screen](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-1.png)
-
-A table displays where you can set up metric collection by service.
-For each service, you can see the **category**, **service**, **whether the service is enabled**, and **metric collection settings**, and you can click the **Metric Collection Settings** toggle to set whether metrics are collected.
-
-![Confirmation to start collecting metrics modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-2.png)
-
-![Metric collection stop confirmation modal](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-3.png)
-
-When you start/stop collecting metrics, a confirmation modal opens.
-
-![Example of a broken metric widget](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-4.png)
-
-![Example of the widget when metrics are being collected](https://static.toastoven.net/prod_cloud_monitoring/cloud_monitoring_03_01-5.png)
-
-If you stop collecting metrics, the metrics are no longer displayed in widgets that you've created using metrics from that service, and the metrics' legends are disabled.
-
 <a id="anomaly-detection"></a>
 ## Anomaly Detection { #anomaly-detection }
 
