@@ -530,7 +530,7 @@
 | フィルタ名 | 説明                                                                                          |
 | --- |---------------------------------------------------------------------------------------------|
 | メッセージタイプ | メッセージ送信タイプの種類(SMS、LMS、MMS、 AUTH)                                                            |
-| 結果コード | メッセージ送信及び受信結果に関するコード([参考ガイド](https://docs.nhncloud.com/ja/Notification/SMS/ja/error-code/)) |
+| 結果コード | メッセージ送信及び受信結果に関するコード([参考ガイド](/Notification/SMS/ja/error-code/)) |
 
 <a id="cloud-functions"></a>
 ## Cloud Functions { #cloud-functions }

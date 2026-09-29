@@ -528,7 +528,7 @@
 | Filter name | Description                         |
 |------|---------------------------------------------------------------------------------------------------|
 | Message Type | Message sending type (SMS, LMS, MMS, AUTH)                                                                 |
-| Result code | Message send/receive result codes([Reference](https://docs.nhncloud.com/en/Notification/SMS/en/error-code/)) |
+| Result code | Message send/receive result codes([Reference](/Notification/SMS/en/error-code/)) |
 
 <a id="cloud-functions"></a>
 ## Cloud Functions { #cloud-functions }
