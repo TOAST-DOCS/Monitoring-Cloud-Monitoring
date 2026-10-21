@@ -270,3 +270,42 @@
 | pool_id         | 멤버 그룹 이름  |
 | member_id       | 멤버 이름     |
 
+## API Gateway
+- NHN Cloud의 API Gateway 서비스에 대해 모니터링할 수 있는 지표를 정의한 사전입니다.
+
+### Metric List
+
+| 지표명 | 리소스명 | 기본 범례(Legend) | 단위(Unit) |
+|---|---|---|---|
+|리소스 별 호출 수 (2XX)|API 요청|{{stage_url}} {{method}} {{uri}} 2XX|숫자|
+|리소스 별 호출 수 (3XX)|API 요청|{{stage_url}} {{method}} {{uri}} 3XX|숫자|
+|리소스 별 호출 수 (4XX)|API 요청|{{stage_url}} {{method}} {{uri}} 4XX|숫자|
+|리소스 별 호출 수 (5XX)|API 요청|{{stage_url}} {{method}} {{uri}} 5XX|숫자|
+|스테이지 별 호출 수 (2XX)|API 요청|{{stage_url}} 2XX|숫자|
+|스테이지 별 호출 수 (3XX)|API 요청|{{stage_url}} 3XX|숫자|
+|스테이지 별 호출 수 (4XX)|API 요청|{{stage_url}} 4XX|숫자|
+|스테이지 별 호출 수 (5XX)|API 요청|{{stage_url}} 5XX|숫자|
+|리소스 별 평균 응답 시간|API 요청|{{stage_url}} {{method}} {{uri}}|ms|
+|스테이지 별 평균 응답 시간|API 요청|{{stage_url}}|ms|
+|리소스 별 네트워크 아웃바운드 트래픽|API 요청|{{stage_url}} {{method}} {{uri}}|바이트(bytes)|
+|스테이지 별 네트워크 아웃바운드 트래픽|API 요청|{{stage_url}}|바이트(bytes)|
+
+### API Gateway 필터(Filter)
+
+| 필터명 | 설명 |
+|---|---|
+| 도메인 | API Gateway 서비스에 연결된 도메인 |
+| 스테이지 URL | API를 호출한 스테이지의 URL |
+| 메서드 | HTTP 메서드(GET, POST 등) |
+| URI | 호출한 API의 리소스 경로 |
+| 상태 코드 | HTTP 응답 상태 코드 |
+| 서비스 ID | API Gateway 서비스의 ID |
+| 백엔드 엔드포인트 | 요청이 전달된 백엔드 엔드포인트 URL |
+
+### API Gateway 범례(Legend)
+
+| 범례명 | 설명 |
+|---|---|
+| stage_url | 스테이지 URL |
+| method | HTTP 메서드 |
+| uri | 리소스 경로 |
