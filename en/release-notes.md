@@ -5,6 +5,17 @@
 <a id="monitoring-cloud-monitoring-release-notes"></a>
 ## Monitoring > Cloud Monitoring > Release Notes { #monitoring-cloud-monitoring-release-notes }
 
+<a id="october-27-2026"></a>
+## October 27, 2026 { #october-27-2026 }
+
+<a id="october-27-2026-added-features"></a>
+### Added Features { #october-27-2026-added-features }
+
+* Added a new service to view metrics
+    * Added a new service for which metrics can be viewed in Cloud Monitoring.
+    * Metrics for the services below are available in the dashboard.
+        * API Gateway
+
 <a id="september-29-2026"></a>
 ## September 29, 2026 { #september-29-2026 }
 
