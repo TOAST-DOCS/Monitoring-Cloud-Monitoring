@@ -3,6 +3,17 @@
 <a id="monitoring-cloud-monitoring-release-notes"></a>
 ## Monitoring > Cloud Monitoring > 릴리스 노트 { #monitoring-cloud-monitoring-release-notes }
 
+<a id="october-27-2026"></a>
+## 2026. 10. 27. { #october-27-2026 }
+
+<a id="october-27-2026-added-features"></a>
+### 신규 기능 추가 { #october-27-2026-added-features }
+
+* 지표 조회 가능 서비스 추가
+    * Cloud Monitoring에서 지표 조회가 가능한 서비스가 추가되었습니다.
+    * 아래 서비스의 지표를 대시보드에서 확인할 수 있습니다.
+        * API Gateway
+
 <a id="september-29-2026"></a>
 ## 2026. 09. 29. { #september-29-2026 }
 
