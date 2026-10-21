@@ -1,3 +1,5 @@
+<!-- machine_translated: true -->
+
 <!-- pre-align:aligned sig=1868d30c1606 -->
 
 <a id="monitoring-cloud-monitoring-metric-dictionary"></a>
@@ -564,3 +566,47 @@
 |--------|----------|
 | function_name | 関数 |
 | function_number | 関数 ID |
+
+<a id="api-gateway"></a>
+## API Gateway { #api-gateway }
+- NHN CloudのAPI Gatewayサービスに対してモニタリングできる指標を定義したMetric Dictionaryです。
+
+<a id="api-gateway-metric-list"></a>
+### Metric List { #api-gateway-metric-list }
+
+| 指標名 | リソース名 | デフォルト凡例(Legend) | 単位(Unit) |
+|---|---|---|---|
+|リソース別呼び出し数 (2XX)|APIリクエスト|{{stage_url}} {{method}} {{uri}} 2XX|数値|
+|リソース別呼び出し数 (3XX)|APIリクエスト|{{stage_url}} {{method}} {{uri}} 3XX|数値|
+|リソース別呼び出し数 (4XX)|APIリクエスト|{{stage_url}} {{method}} {{uri}} 4XX|数値|
+|リソース別呼び出し数 (5XX)|APIリクエスト|{{stage_url}} {{method}} {{uri}} 5XX|数値|
+|ステージ別呼び出し数 (2XX)|APIリクエスト|{{stage_url}} 2XX|数値|
+|ステージ別呼び出し数 (3XX)|APIリクエスト|{{stage_url}} 3XX|数値|
+|ステージ別呼び出し数 (4XX)|APIリクエスト|{{stage_url}} 4XX|数値|
+|ステージ別呼び出し数 (5XX)|APIリクエスト|{{stage_url}} 5XX|数値|
+|リソース別平均応答時間|APIリクエスト|{{stage_url}} {{method}} {{uri}}|ms|
+|ステージ別平均応答時間|APIリクエスト|{{stage_url}}|ms|
+|リソース別ネットワークアウトバウンドトラフィック|APIリクエスト|{{stage_url}} {{method}} {{uri}}|バイト(bytes)|
+|ステージ別ネットワークアウトバウンドトラフィック|APIリクエスト|{{stage_url}}|バイト(bytes)|
+
+<a id="api-gateway-filter"></a>
+### API Gateway Filter { #api-gateway-filter }
+
+| フィルター名 | 説明 |
+|---|---|
+| ドメイン | API Gatewayサービスに接続されたドメイン |
+| ステージURL | APIを呼び出したステージのURL |
+| メソッド | HTTPメソッド(GET、POSTなど) |
+| URI | 呼び出したAPIのリソースパス |
+| ステータスコード | HTTP応答ステータスコード |
+| サービスID | API GatewayサービスのID |
+| バックエンドエンドポイント | リクエストが転送されたバックエンドエンドポイントURL |
+
+<a id="api-gateway-legend"></a>
+### API Gateway凡例(Legend) { #api-gateway-legend }
+
+| 凡例名 | 説明 |
+|---|---|
+| stage_url | ステージURL |
+| method | HTTPメソッド |
+| uri | リソースパス |
