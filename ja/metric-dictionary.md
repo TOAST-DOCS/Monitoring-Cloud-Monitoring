@@ -1,6 +1,6 @@
 <!-- machine_translated: true -->
 
-<!-- pre-align:aligned sig=1868d30c1606 -->
+<!-- pre-align:aligned sig=bdf6a28ed15e -->
 
 <a id="monitoring-cloud-monitoring-metric-dictionary"></a>
 ## Monitoring > Cloud Monitoring > Metric Dictionary { #monitoring-cloud-monitoring-metric-dictionary }
