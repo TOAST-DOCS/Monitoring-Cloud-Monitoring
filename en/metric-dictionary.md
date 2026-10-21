@@ -1,3 +1,5 @@
+<!-- machine_translated: true -->
+
 <!-- pre-align:aligned sig=1868d30c1606 -->
 
 <a id="monitoring-cloud-monitoring-metric-dictionary"></a>
@@ -561,3 +563,47 @@
 |------------|---------------|
 | function_name | Function Name |
 | function_number | Function ID   |
+
+<a id="api-gateway"></a>
+## API Gateway { #api-gateway }
+- A dictionary that defines metrics that can be monitored for the API Gateway service on NHN Cloud.
+
+<a id="api-gateway-metric-list"></a>
+### Metric List { #api-gateway-metric-list }
+
+| Metric Name | Resource Name | Default legend (Legend) | Unit |
+|---|---|---|---|
+|Call Count Per Resource (2XX)|API Request|{{stage_url}} {{method}} {{uri}} 2XX|Number|
+|Call Count Per Resource (3XX)|API Request|{{stage_url}} {{method}} {{uri}} 3XX|Number|
+|Call Count Per Resource (4XX)|API Request|{{stage_url}} {{method}} {{uri}} 4XX|Number|
+|Call Count Per Resource (5XX)|API Request|{{stage_url}} {{method}} {{uri}} 5XX|Number|
+|Call Count Per Stage (2XX)|API Request|{{stage_url}} 2XX|Number|
+|Call Count Per Stage (3XX)|API Request|{{stage_url}} 3XX|Number|
+|Call Count Per Stage (4XX)|API Request|{{stage_url}} 4XX|Number|
+|Call Count Per Stage (5XX)|API Request|{{stage_url}} 5XX|Number|
+|Average Response Time Per Resource|API Request|{{stage_url}} {{method}} {{uri}}|ms|
+|Average Response Time Per Stage|API Request|{{stage_url}}|ms|
+|Network Outbound Traffic Per Resource|API Request|{{stage_url}} {{method}} {{uri}}|Bytes (bytes)|
+|Network Outbound Traffic Per Stage|API Request|{{stage_url}}|Bytes (bytes)|
+
+<a id="api-gateway-filter"></a>
+### API Gateway Filter { #api-gateway-filter }
+
+| Filter Name | Description |
+|---|---|
+| Domain | Domain connected to the API Gateway service |
+| Stage URL | URL of the stage from which the API was called |
+| Method | HTTP method (GET, POST, etc.) |
+| URI | Resource path of the called API |
+| Status Code | HTTP response status code |
+| Service ID | ID of the API Gateway service |
+| Backend Endpoint | Backend endpoint URL to which the request was forwarded |
+
+<a id="api-gateway-legend"></a>
+### API Gateway Legend { #api-gateway-legend }
+
+| Legend | Description |
+|---|---|
+| stage_url | Stage URL |
+| method | HTTP method |
+| uri | Resource path |
