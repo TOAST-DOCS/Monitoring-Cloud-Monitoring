@@ -571,18 +571,18 @@
 
 | 지표명 | 리소스명 | 기본 범례(Legend) | 단위(Unit) |
 |---|---|---|---|
-|리소스별 호출 수(2XX)|API 요청|{{stage_url}} {{method}} {{uri}} 2XX|숫자|
-|리소스별 호출 수(3XX)|API 요청|{{stage_url}} {{method}} {{uri}} 3XX|숫자|
-|리소스별 호출 수(4XX)|API 요청|{{stage_url}} {{method}} {{uri}} 4XX|숫자|
-|리소스별 호출 수(5XX)|API 요청|{{stage_url}} {{method}} {{uri}} 5XX|숫자|
-|스테이지별 호출 수(2XX)|API 요청|{{stage_url}} 2XX|숫자|
-|스테이지별 호출 수(3XX)|API 요청|{{stage_url}} 3XX|숫자|
-|스테이지별 호출 수(4XX)|API 요청|{{stage_url}} 4XX|숫자|
-|스테이지별 호출 수(5XX)|API 요청|{{stage_url}} 5XX|숫자|
-|리소스별 평균 응답 시간|API 요청|{{stage_url}} {{method}} {{uri}}|ms|
-|스테이지별 평균 응답 시간|API 요청|{{stage_url}}|ms|
-|리소스별 네트워크 아웃바운드 트래픽|API 요청|{{stage_url}} {{method}} {{uri}}|바이트(bytes)|
-|스테이지별 네트워크 아웃바운드 트래픽|API 요청|{{stage_url}}|바이트(bytes)|
+|리소스 별 호출 수 (2XX)|API 요청|{{stage_url}} {{method}} {{uri}} 2XX|숫자|
+|리소스 별 호출 수 (3XX)|API 요청|{{stage_url}} {{method}} {{uri}} 3XX|숫자|
+|리소스 별 호출 수 (4XX)|API 요청|{{stage_url}} {{method}} {{uri}} 4XX|숫자|
+|리소스 별 호출 수 (5XX)|API 요청|{{stage_url}} {{method}} {{uri}} 5XX|숫자|
+|스테이지 별 호출 수 (2XX)|API 요청|{{stage_url}} 2XX|숫자|
+|스테이지 별 호출 수 (3XX)|API 요청|{{stage_url}} 3XX|숫자|
+|스테이지 별 호출 수 (4XX)|API 요청|{{stage_url}} 4XX|숫자|
+|스테이지 별 호출 수 (5XX)|API 요청|{{stage_url}} 5XX|숫자|
+|리소스 별 평균 응답 시간|API 요청|{{stage_url}} {{method}} {{uri}}|ms|
+|스테이지 별 평균 응답 시간|API 요청|{{stage_url}}|ms|
+|리소스 별 네트워크 아웃바운드 트래픽|API 요청|{{stage_url}} {{method}} {{uri}}|바이트(bytes)|
+|스테이지 별 네트워크 아웃바운드 트래픽|API 요청|{{stage_url}}|바이트(bytes)|
 
 <a id="api-gateway-filter"></a>
 ### API Gateway 필터(Filter) { #api-gateway-filter }
