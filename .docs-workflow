@@ -1,0 +1,7 @@
+# .docs-workflow — 문서 파이프라인(한글 검수 · 번역 · 문서 정비) 설정
+# 설명: https://content-agent.cloud.toastoven.net/?tab=help&help=docs-workflow
+
+# 지표 사전은 검수·번역·정비에서 제외한다. 지표명·필터명이 콘솔 사전 등록값 그대로라
+# 검수 기준과 맞지 않고, en/ja 는 등록값으로 직접 작성한다. ko 를 적으면 en/ja/zh 판본도 함께 빠진다.
+ignore:
+  - ko/metric-dictionary*.md
