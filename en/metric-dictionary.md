@@ -561,3 +561,47 @@
 |------------|---------------|
 | function_name | Function Name |
 | function_number | Function ID   |
+
+<a id="api-gateway"></a>
+## API Gateway { #api-gateway }
+- A dictionary that defines metrics that can be monitored for the API Gateway service on NHN Cloud.
+
+<a id="api-gateway-metric-list"></a>
+### Metric List { #api-gateway-metric-list }
+
+| Metric Name | Resource Name | Default legend (Legend) | Unit |
+|---|---|---|---|
+|Number of Calls by Resource (2XX)|API Request|{{stage_url}} {{method}} {{uri}} 2XX|Number|
+|Number of Calls by Resource (3XX)|API Request|{{stage_url}} {{method}} {{uri}} 3XX|Number|
+|Number of Calls by Resource (4XX)|API Request|{{stage_url}} {{method}} {{uri}} 4XX|Number|
+|Number of Calls by Resource (5XX)|API Request|{{stage_url}} {{method}} {{uri}} 5XX|Number|
+|Number of Calls by Stage (2XX)|API Request|{{stage_url}} 2XX|Number|
+|Number of Calls by Stage (3XX)|API Request|{{stage_url}} 3XX|Number|
+|Number of Calls by Stage (4XX)|API Request|{{stage_url}} 4XX|Number|
+|Number of Calls by Stage (5XX)|API Request|{{stage_url}} 5XX|Number|
+|Average Response Time by Resource|API Request|{{stage_url}} {{method}} {{uri}}|Millisecond|
+|Average Response Time by Stage|API Request|{{stage_url}}|Millisecond|
+|Network Outbound Traffic by Resource|API Request|{{stage_url}} {{method}} {{uri}}|Bytes|
+|Network Outbound Traffic by Stage|API Request|{{stage_url}}|Bytes|
+
+<a id="api-gateway-filter"></a>
+### API Gateway Filter { #api-gateway-filter }
+
+| Filter name | Description |
+|---|---|
+| Domain | Domain connected to the API Gateway service |
+| Stage URL | URL of the stage that called the API |
+| Method | HTTP method (GET, POST, etc.) |
+| URI | Resource path of the called API |
+| Status Code | HTTP response status code |
+| Service ID | ID of the API Gateway service |
+| Backend Endpoint | URL of the backend endpoint the request was forwarded to |
+
+<a id="api-gateway-legend"></a>
+### API Gateway Legend { #api-gateway-legend }
+
+| Legend Name | Description |
+|---|---|
+| stage_url | Stage URL |
+| method | HTTP method |
+| uri | Resource path |
