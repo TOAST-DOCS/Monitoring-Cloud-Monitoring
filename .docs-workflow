@@ -1,0 +1,4 @@
+# 문서 파이프라인(검수·번역·정비) 설정 — https://content-agent.cloud.toastoven.net/?tab=help&help=docs-workflow
+
+console_glossary:
+  - i18n: [SERVICE_MONITORING]   # 콘솔 다국어 DB 카테고리 — 번역 시 굵게 쓴 콘솔 UI 라벨은 콘솔 문자열을 따른다
