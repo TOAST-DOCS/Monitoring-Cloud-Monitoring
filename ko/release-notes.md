@@ -1,4 +1,4 @@
-<!-- pre-align:aligned sig=10f48a1bb4c0 -->
+<!-- pre-align:aligned sig=a41cd75bfd3b -->
 
 <a id="monitoring-cloud-monitoring-release-notes"></a>
 ## Monitoring > Cloud Monitoring > 릴리스 노트 { #monitoring-cloud-monitoring-release-notes }
