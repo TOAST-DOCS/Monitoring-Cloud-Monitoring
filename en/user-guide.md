@@ -11,7 +11,7 @@ To use Cloud Monitoring, follow the steps below.
 - Select Service<br>
   Cloud Monitoring is provided by default when you create a project.<br>
   So you can use the service after creating a project without doing anything else.<br>
-  To create a project, see the [NHN Cloud Console User Guide](https://docs.nhncloud.com/en/nhncloud/en/console-guide/).
+  To create a project, see the [NHN Cloud Console User Guide](/nhncloud/en/console-guide/).
 - Configure Dashboard<br>
   Add widgets to the dashboard to configure it freely.
 - Create Notification<br>
