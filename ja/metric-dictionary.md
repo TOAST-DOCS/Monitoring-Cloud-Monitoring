@@ -530,7 +530,7 @@
 | フィルタ名 | 説明                                                                                          |
 | --- |---------------------------------------------------------------------------------------------|
 | メッセージタイプ | メッセージ送信タイプの種類(SMS、LMS、MMS、 AUTH)                                                            |
-| 結果コード | メッセージ送信及び受信結果に関するコード([参考ガイド](https://docs.nhncloud.com/ja/Notification/SMS/ja/error-code/)) |
+| 結果コード | メッセージ送信及び受信結果に関するコード([参考ガイド](/Notification/SMS/ja/error-code/)) |
 
 <a id="cloud-functions"></a>
 ## Cloud Functions { #cloud-functions }
@@ -564,3 +564,47 @@
 |--------|----------|
 | function_name | 関数 |
 | function_number | 関数 ID |
+
+<a id="api-gateway"></a>
+## API Gateway { #api-gateway }
+- NHN CloudのAPI Gatewayサービスに対してモニタリングできる指標を定義した辞書です。
+
+<a id="api-gateway-metric-list"></a>
+### Metric List { #api-gateway-metric-list }
+
+| 指標名 | リソース名 | 基本凡例(Legend) | 単位(Unit) |
+|---|---|---|---|
+|リソース別呼び出し数(2XX)|API リクエスト|{{stage_url}} {{method}} {{uri}} 2XX|数字|
+|リソース別呼び出し数(3XX)|API リクエスト|{{stage_url}} {{method}} {{uri}} 3XX|数字|
+|リソース別呼び出し数(4XX)|API リクエスト|{{stage_url}} {{method}} {{uri}} 4XX|数字|
+|リソース別呼び出し数(5XX)|API リクエスト|{{stage_url}} {{method}} {{uri}} 5XX|数字|
+|ステージ別呼び出し数(2XX)|API リクエスト|{{stage_url}} 2XX|数字|
+|ステージ別呼び出し数(3XX)|API リクエスト|{{stage_url}} 3XX|数字|
+|ステージ別呼び出し数(4XX)|API リクエスト|{{stage_url}} 4XX|数字|
+|ステージ別呼び出し数(5XX)|API リクエスト|{{stage_url}} 5XX|数字|
+|リソース別平均レスポンス時間|API リクエスト|{{stage_url}} {{method}} {{uri}}|ミリ秒|
+|ステージ別平均レスポンス時間|API リクエスト|{{stage_url}}|ミリ秒|
+|リソース別ネットワークアウトバウンドトラフィック|API リクエスト|{{stage_url}} {{method}} {{uri}}|バイト(bytes)|
+|ステージ別ネットワークアウトバウンドトラフィック|API リクエスト|{{stage_url}}|バイト(bytes)|
+
+<a id="api-gateway-filter"></a>
+### API Gatewayフィルタ(Filter) { #api-gateway-filter }
+
+| フィルタ名 | 説明 |
+|---|---|
+| ドメイン | API Gatewayサービスに接続されたドメイン |
+| ステージURL | APIを呼び出したステージのURL |
+| メソッド | HTTPメソッド(GET、POSTなど) |
+| URI | 呼び出したAPIのリソースパス |
+| ステータスコード | HTTPレスポンスのステータスコード |
+| サービスID | API GatewayサービスのID |
+| バックエンドエンドポイント | リクエストが転送されたバックエンドエンドポイントのURL |
+
+<a id="api-gateway-legend"></a>
+### API Gateway凡例(Legend) { #api-gateway-legend }
+
+| 凡例名 | 説明 |
+|---|---|
+| stage_url | ステージURL |
+| method | HTTPメソッド |
+| uri | リソースパス |

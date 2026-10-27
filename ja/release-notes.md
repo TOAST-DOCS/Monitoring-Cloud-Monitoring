@@ -1,9 +1,20 @@
 <!-- machine_translated: true -->
 
-<!-- pre-align:aligned sig=10f48a1bb4c0 -->
+<!-- pre-align:aligned sig=a41cd75bfd3b -->
 
 <a id="monitoring-cloud-monitoring-release-notes"></a>
 ## Monitoring > Cloud Monitoring > リリースノート { #monitoring-cloud-monitoring-release-notes }
+
+<a id="october-27-2026"></a>
+## 2026. 10. 27. { #october-27-2026 }
+
+<a id="october-27-2026-added-features"></a>
+### 新規機能追加 { #october-27-2026-added-features }
+
+* 指標照会可能なサービスの追加
+    * Cloud Monitoringで指標照会が可能なサービスが追加されました。
+    * 以下のサービスの指標をダッシュボードで確認できます。
+        * API Gateway
 
 <a id="september-29-2026"></a>
 ## 2026. 09. 29. { #september-29-2026 }
